@@ -269,9 +269,6 @@
                 s.push("</div>");
                 return s.join("");
             }
-            function totext(json) {
-                return tohtml(json).replace(/<\/?[a-z]+( [a-z]+(=[^=>]+)?)*>/gi, "").replace(/\s+/g, " ").replace(/&lt;/g, "<");
-            }
             function fields(json) {
                 return [json.selmaho || null, json.rafsi || null, json.definition, json.word, json.glosswords || null, json.notes || null];
             }
@@ -309,7 +306,6 @@
                         var html = tohtml(entry);
                         for (var field of fields(entry)) {
                             var score = 6 - fields(entry).indexOf(field);
-                            
                             switch (field) {
                                 case entry.word:
                                     if (field.startsWith(query)) {
