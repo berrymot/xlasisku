@@ -363,11 +363,13 @@
             function load(res, page) {
                 const start = page * 100;
                 const end = (page + 1) * 100;
+                var html = [];
                 for (var i = start; i < end; i++) {
                     if (res[i]) {
-                        id("results").insertAdjacentHTML("beforeend", res[i]/* [0] */);
+                        html.push(res[i]);
                     }
                 }
+                id("results").insertAdjacentHTML("beforeend", html.join(""));
                 // latex
                 renderMathInElement(document.body, {
                     "delimiters": [
