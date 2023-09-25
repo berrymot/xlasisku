@@ -366,7 +366,7 @@
                 var html = [];
                 for (var i = start; i < end; i++) {
                     if (res[i]) {
-                        html.push(res[i]);
+                        html.push(res[i][0]);
                     }
                 }
                 id("results").insertAdjacentHTML("beforeend", html.join(""));
@@ -384,6 +384,7 @@
             id("search").addEventListener("input", function() {
                 clearTimeout(timer);
                 const q = id("search").value.toLowerCase();
+                id("results").innerHTML = "";
                 id("status").innerHTML = "<span>.....</span>";
                 let page = 0;
                 if (observer) {
