@@ -230,6 +230,7 @@
             var observer;
             var rhyme = false;
             function tohtml(json) {
+                // dw everything's sanitized :3
                 var s = [];
                 s.push("<div class=entry>");
                 s.push("<p><b>" + json.word + "</b> ");
@@ -244,12 +245,13 @@
                     s.push("-]</code> ");
                 }
                 const url = json.word.replace(/ /g, "%20");
+                s.push("<a href=https://jbovlaste.lojban.org/dict/" + url + ">");
                 if (json.score < -1) {
-                    s.push("<a href=https://jbovlaste.lojban.org/dict/" + url + "><b class=warn>" + json.score + "</b> ↗</a></p> ");
+                    s.push("<b class=warn>" + json.score + "</b> ↗</a></p> ");
                 } else if (json.score > 1000) {
-                    s.push("<a href=https://jbovlaste.lojban.org/dict/" + url + ">official ↗</a></p> ");
+                    s.push("official ↗</a></p> ");
                 } else {
-                    s.push("<a href=https://jbovlaste.lojban.org/dict/" + url + ">↗</a></p> ");
+                    s.push("↗</a></p> ");
                 }
                 s.push("<p>" + json.definition + "</p> ");
                 if (json.notes) {
@@ -365,13 +367,12 @@
             function load(res, page) {
                 const start = page * 100;
                 const end = (page + 1) * 100;
-                var html = [];
                 for (var i = start; i < end; i++) {
                     if (res[i]) {
-                        html.push(res[i]/* [0] */);
+                        id("results").insertAdjacentHTML("beforeend", res[i]/* [0] */);
                     }
                 }
-                id("results").innerHTML += html.join("");
+                // latex
                 renderMathInElement(document.body, {
                     "delimiters": [
                         { "left": "$$",    "right": "$$",    "display": true  },
