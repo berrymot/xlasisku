@@ -1,0 +1,153 @@
+* {
+    box-sizing: border-box;
+    -webkit-text-size-adjust: 100%;
+}
+:root {
+    --pinkfg: #ff1492;
+    --pinkbg: #603;
+    --purplefg: #8e46e0;
+    --purplebg: #306;
+    --bodyfg: #fff;
+    --searchbg: #000;
+    --entrybg: #0008;
+    --notesfg: #fffc;
+    --link: #9cf;
+    --warnfg: #fc9;
+    --sans: "Noto Sans", "Open Sans", ui-sans-serif, sans-serif;
+    --mono: "Noto Sans Mono", "Consolas", ui-monospace, monospace;
+}
+body {
+    font-family: var(--sans);
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 8px;
+    background: var(--pinkbg);
+    word-wrap: break-word;
+    color: var(--bodyfg);
+}
+body.rhyme {
+    background: var(--purplebg);
+}
+code {
+    font-family: var(--mono);
+}
+#search {
+    font-family: var(--sans);
+    width: 100%;
+    padding: 4px 12px;
+    font-size: 1.5em;
+    border-radius: 16px;
+    background: var(--searchbg);
+    border: 2px solid var(--bodyfg);
+    border-bottom: 5px solid var(--bodyfg);
+    color: var(--bodyfg) !important;
+    position: sticky;
+    top: 0;
+}
+#search:disabled {
+    opacity: 1;
+    color: var(--notesfg);
+    border-color: var(--notesfg);
+    background-color: var(--entrybg);
+}
+#search::placeholder {
+    color: var(--notesfg);
+}
+.entry {
+    display: block;
+    margin: 8px 0;
+    padding: 4px 16px;
+    background: var(--entrybg);
+    border-radius: 16px;
+    color: var(--bodyfg);
+}
+.entry .selmaho {
+    font-family: var(--mono);
+    color: var(--notesfg);
+}
+.entry > .notes {
+    color: var(--notesfg);
+    margin: 16px 0;
+}
+summary {
+    font-weight: bold;
+    cursor: pointer;
+    content: "test";
+}
+.entry > .glosswords {
+    font-style: italic;
+}
+.warn {
+    color: var(--warnfg);
+}
+.nobr {
+    white-space: nowrap;
+}
+ul li {
+    list-style-type: disc;
+}
+a {
+    color: var(--link);
+    text-decoration: none;
+}
+.opt {
+    color: var(--bodyfg);
+    border: 1px solid var(--bodyfg);
+    border-radius: 16px;
+    display: inline-block;
+}
+.group {
+    border: 2px solid var(--bodyfg);
+    border-radius: 16px;
+    margin: 8px 0;
+    display: block;
+}
+.group > :first-child {
+    margin-top: 0;
+}
+.group > :last-child {
+    margin-bottom: 0;
+}
+.opt label {
+    padding: 4px 8px;
+    display: inline-block;
+    border-radius: 16px;
+    cursor: pointer;
+}
+[type="radio"] {
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+}
+.opt :focus + label {
+    outline: -webkit-focus-ring-color auto 1px;
+}
+.opt :checked + label {
+    background: var(--pinkfg);
+    color: white;
+}
+.opt :disabled + label {
+    color: var(--notesfg);
+}
+body.rhyme .opt :checked + label {
+    background: var(--purplefg);
+}
+math {
+    font-size: 1.1em;
+}
+@media (prefers-color-scheme: light) {
+    :root {
+        --pinkfg: #ff1493;
+        --pinkbg: #ffe2f2;
+        --purplefg: #712ce8;
+        --purplebg: #ece6f4;
+        --bodyfg: #000;
+        --searchbg: #fff;
+        --entrybg: #fff8;
+        --notesfg: #000c;
+        --link: #0067ca;
+        --warnfg: #ba6805;
+    }
+}
