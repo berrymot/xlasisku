@@ -40,22 +40,6 @@
             code {
                 font-family: var(--mono);
             }
-            #status {
-                margin: 0 8px;
-                flex: 0;
-                color: var(--bodyfg);
-                background: 0;
-                border: 0;
-                border-radius: 16px;
-                font-family: var(--mono);
-            }
-            #status:empty {
-                display: none;
-            }
-            #status span {
-                color: var(--notesfg);
-                font-weight: normal;
-            }
             #search {
                 font-family: var(--sans);
                 width: 100%;
@@ -66,28 +50,17 @@
                 border: 2px solid var(--bodyfg);
                 border-bottom: 5px solid var(--bodyfg);
                 color: var(--bodyfg) !important;
-                flex: 1;
+                position: sticky;
+                top: 0;
             }
             #search:disabled {
                 opacity: 1;
                 color: var(--notesfg);
                 border-color: var(--notesfg);
-                background-color: transparent;
-            }
-            #stick:has(> :disabled) {
                 background-color: var(--entrybg);
             }
             #search::placeholder {
                 color: var(--notesfg);
-            }
-            #stick {
-                background: var(--searchbg);
-                color: var(--bodyfg);
-                position: sticky;
-                top: 0;
-                border-radius: 16px;
-                display: flex;
-                align-items: center;
             }
             .entry {
                 display: block;
@@ -202,10 +175,7 @@
                 <input type="radio" name="mode" id="sm" checked disabled /><label for="sm">normal</label><input type="radio" name="mode" id="rm" disabled /><label for="rm">rhyme</label>
             </span>
         </p>
-        <div id="stick">
-            <h2 id="status"><span>.....</span></h2>
-            <input type="text" id="search" placeholder="loading" disabled />
-        </div>
+        <input type="text" id="search" placeholder="loading" disabled />
         <div id="results"></div>
         <h2 id="bottom">most recent update</h2>
         <p><b>2023-09-24</b></p>
@@ -383,7 +353,6 @@
                 clearTimeout(timer);
                 const q = id("search").value.toLowerCase();
                 id("results").innerHTML = "";
-                id("status").innerHTML = "<span>.....</span>";
                 let page = 0;
                 if (observer) {
                     observer.disconnect();
@@ -393,7 +362,6 @@
                     if ((rhyme ? q.replace(/[^aeiouy]/gi, "") : q).length) {
                         const res = search(q);
                         id("results").innerHTML = "";
-                        id("status").innerHTML = "";
                         load(res, page);
                         observer = new IntersectionObserver((entries) => {
                             if (entries[0].isIntersecting) {
@@ -407,7 +375,6 @@
                         const url = "https://berrymot.github.io/xlasisku/?" + params.toString().replace(/=$/, "");
                         window.history.pushState(null, null, url);
                     } else {
-                        id("status").innerHTML = "";
                         id("results").innerHTML = "";
                         page = 0;
                         const url = "https://berrymot.github.io/xlasisku/" + (rhyme ? "?rhyme" : "");
@@ -431,7 +398,6 @@
                 id("search").dispatchEvent(new Event("input", {"bubbles": true}));
             }
             // ready for stuff to happen
-            id("status").innerHTML = "";
             id("sm").removeAttribute("disabled");
             id("rm").removeAttribute("disabled");
             id("search").removeAttribute("disabled");
