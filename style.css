@@ -24,6 +24,7 @@ body {
     background: var(--pinkbg);
     word-wrap: break-word;
     color: var(--bodyfg);
+    line-height: 1.4;
 }
 body.rhyme {
     background: var(--purplebg);
