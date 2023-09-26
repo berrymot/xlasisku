@@ -352,6 +352,9 @@
             id("search").addEventListener("input", function() {
                 clearTimeout(timer);
                 const q = id("search").value.toLowerCase().trim();
+                if (q != id("search").value) {
+                    id("search").value = q
+                };
                 id("results").innerHTML = "";
                 let page = 0;
                 if (observer) {
