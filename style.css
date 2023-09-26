@@ -13,8 +13,8 @@
     --notesfg: #fffc;
     --link: #9cf;
     --warnfg: #fc9;
-    --sans: "Overused Grotesk", "Noto Sans", "Open Sans", ui-sans-serif, sans-serif;
-    --mono: "JuliaMono", "Noto Sans Mono", "Consolas", ui-monospace, monospace;
+    --sans: "Inter", "Noto Sans", ui-sans-serif, sans-serif;
+    --mono: "JuliaMono", "Noto Sans Mono", ui-monospace, monospace;
 }
 body {
     font-family: var(--sans);
@@ -30,6 +30,7 @@ body.rhyme {
 }
 code {
     font-family: var(--mono);
+    font-size: 0.9em;
 }
 #search {
     font-family: var(--sans);
