@@ -1,3 +1,5 @@
 *.java
-data*
+data-*
+data.json
+data.html
 *.xml
