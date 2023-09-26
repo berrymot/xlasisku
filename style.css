@@ -13,8 +13,8 @@
     --notesfg: #fffc;
     --link: #9cf;
     --warnfg: #fc9;
-    --sans: "Noto Sans", "Open Sans", ui-sans-serif, sans-serif;
-    --mono: "Noto Sans Mono", "Consolas", ui-monospace, monospace;
+    --sans: "Overused Grotesk", "Noto Sans", "Open Sans", ui-sans-serif, sans-serif;
+    --mono: "JuliaMono", "Noto Sans Mono", "Consolas", ui-monospace, monospace;
 }
 body {
     font-family: var(--sans);
