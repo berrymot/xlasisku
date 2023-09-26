@@ -106,7 +106,7 @@ code {
     font-family: var(--mono);
     color: var(--notesfg);
 }
-.entry > .notes {
+.entry .notes {
     color: var(--notesfg);
     margin: 16px 0;
 }
@@ -115,7 +115,7 @@ summary {
     cursor: pointer;
     content: "test";
 }
-.entry > .glosswords {
+.entry .glosswords {
     font-style: italic;
 }
 .warn {

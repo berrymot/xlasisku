@@ -31,9 +31,9 @@ function tohtml(json) {
         s.push("<details class=notes><summary>more info</summary> <p>" + json.notes + "</p></details> ");
     }
     if (json.glosswords) {
-        s.push("<p class=glosswords>");
+        s.push("<p>");
         for (var i = 0; i < json.glosswords.length; i++) {
-            s.push("<i>" + json.glosswords[i] + "</i>, ");
+            s.push("<i class=glosswords>" + json.glosswords[i] + "</i>, ");
         }
         var last = s[s.length - 1];
         s[s.length - 1] = last.substring(0, last.length - 2);
