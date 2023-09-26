@@ -279,7 +279,6 @@
                 return a == aa && (b == bb || b == null) && (!c || cc);
             }
             function search(query) {
-                var spec = 0;
                 var results = [];
                 if (rhyme) {
                     // TODO: sort
@@ -298,7 +297,6 @@
                             results.push(["<x-exact class=group>", 10]);
                             results.push([tohtml(entry), 10]);
                             results.push(["</x-exact>", 10]);
-                            spec += 2;
                             break;
                         }
                     }
@@ -358,7 +356,7 @@
                     }
                     return acc;
                 }, []);
-                return [results.length - spec, results];
+                return results;
             }
             function load(res, page) {
                 const start = page * 100;
@@ -393,11 +391,7 @@
                 // for debouncing
                 timer = setTimeout(function() {
                     if ((rhyme ? q.replace(/[^aeiouy]/gi, "") : q).length) {
-                        const s = search(q);
-                        const l = String(s[0]);
-                        const res = s[1];
-                        const pad = "<span>" + "0".repeat(5 - l.length) + "</span>";
-                        id("status").innerHTML = pad + l;
+                        const res = search(q);
                         id("results").innerHTML = "";
                         load(res, page);
                         observer = new IntersectionObserver((entries) => {
@@ -405,9 +399,9 @@
                                 page++;
                                 load(res, page);
                             }
-                        }, {root: null, rootMargin: "200px"});
+                        }, {"root": null, "rootMargin": "200px"});
                         observer.observe(id("bottom"));
-                        const params = new URLSearchParams({ "q": q });
+                        const params = new URLSearchParams({"q": q});
                         if (rhyme) params.append("rhyme", "");
                         const url = "https://berrymot.github.io/xlasisku/?" + params.toString().replace(/=$/, "");
                         window.history.pushState(null, null, url);
@@ -427,13 +421,13 @@
                 id("sm").checked = true;
                 rhyme = false;
                 document.body.classList.remove("rhyme");
-                id("search").dispatchEvent(new Event("input", { "bubbles": true }));
+                id("search").dispatchEvent(new Event("input", {"bubbles": true}));
             }
             function rhymemode() {
                 id("rm").checked = true;
                 rhyme = true;
                 document.body.classList.add("rhyme");
-                id("search").dispatchEvent(new Event("input", { "bubbles": true }));
+                id("search").dispatchEvent(new Event("input", {"bubbles": true}));
             }
             // ready for stuff to happen
             id("status").innerHTML = "";
@@ -450,7 +444,7 @@
                 }
                 if (q) {
                     id("search").value = q;
-                    id("search").dispatchEvent(new Event("input", { "bubbles": true }));
+                    id("search").dispatchEvent(new Event("input", {"bubbles": true}));
                 }
             });
         </script>
