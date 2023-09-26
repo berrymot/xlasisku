@@ -137,7 +137,7 @@ function load(res, page) {
     var html = [];
     for (var i = start; i < end; i++) {
         if (res[i]) {
-            html.push(res[i][0]);
+            html.push(res[i]);
         }
     }
     id("results").insertAdjacentHTML("beforeend", html.join(""));
