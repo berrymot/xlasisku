@@ -110,7 +110,7 @@
                 cursor: pointer;
                 content: "test";
             }
-            .entry > .glosswords {
+            .entry .glosswords {
                 font-style: italic;
             }
             .warn {
@@ -225,49 +225,49 @@
         <p>wanna help? xlasisku is <a href="https://github.com/berrymot/xlasisku">open source</a> :3</p>
         <script src="jbo.js"></script>
         <script>
+            // useful
             const id = (x) => document.getElementById(x);
+            function mkelem(tag, props, children) {
+                const e = document.createElement(tag);
+                Object.assign(e, props);
+                for (const c of children) {
+                    e.appendChild(c);
+                }
+                return e;
+            }
+            function mktext(s) {
+                return document.createTextNode(s);
+            }
             // searching & rendering
             var observer;
             var rhyme = false;
             function tohtml(json) {
-                // dw everything's sanitized :3
-                var s = [];
-                s.push("<div class=entry>");
-                s.push("<p><b>" + json.word + "</b> ");
-                if (json.selmaho) {
-                    s.push("<code class=selmaho>" + json.selmaho + "</code> ");
-                }
-                if (json.rafsi) {
-                    s.push("<code>[");
-                    for (var i = 0; i < json.rafsi.length; i++) {
-                        s.push("-" + json.rafsi[i]);
-                    }
-                    s.push("-]</code> ");
-                }
-                const url = json.word.replace(/ /g, "%20");
-                s.push("<a href=https://jbovlaste.lojban.org/dict/" + url + ">");
-                if (json.score < -1) {
-                    s.push("<b class=warn>" + json.score + "</b> ↗</a></p> ");
-                } else if (json.score > 1000) {
-                    s.push("official ↗</a></p> ");
-                } else {
-                    s.push("↗</a></p> ");
-                }
-                s.push("<p>" + json.definition + "</p> ");
-                if (json.notes) {
-                    s.push("<details class=notes><summary>more info</summary> <p>" + json.notes + "</p></details> ");
-                }
-                if (json.glosswords) {
-                    s.push("<p class=glosswords>");
-                    for (var i = 0; i < json.glosswords.length; i++) {
-                        s.push("<i>" + json.glosswords[i] + "</i>, ");
-                    }
-                    var last = s[s.length - 1];
-                    s[s.length - 1] = last.substring(0, last.length - 2);
-                    s.push("</p>");
-                }
-                s.push("</div>");
-                return s.join("");
+                const entry = mkelem("div", {"class": "entry"}, [
+                    mkelem("p", null, [
+                        mkelem("b", null, [mktext(json.word)]),
+                        mktext(" "),
+                        json.selmaho ? mkelem("code", {"class": "selmaho"}, [mktext(json.selmaho)]) : null,
+                        mktext(" "),
+                        json.rafsi ? mkelem("code", null, [
+                            mktext("["), ...(json.rafsi.map(i => "-" + i)), mktext("-]")
+                        ]) : null,
+                        mktext(" "),
+                        mkelem("a", {
+                            "href": "https://jbovlaste.lojban.org/dict/" + json.word.replace(/ /g, "%20")
+                        }, [
+                            json.score < -1 ? mkelem("b", {"class": "warn"}, [mktext(json.score)]) :
+                            json.score >= 1000 ? mktext("official") : null,
+                            mktext(" ↗")
+                        ])
+                    ]),
+                    mkelem("p", null, [json.definition]),
+                    json.notes ? mkelem("details", null, [
+                        mkelem("summary", null, [mktext("more info")]),
+                        mkelem("p", null, json.notes)
+                    ]) : null,
+                    json.glosswords ? mkelem("p", null, json.glosswords.map(i => mkelem("i", null, [mktext(i)]))) : null
+                ]);
+                return entry;
             }
             function fields(json) {
                 return [json.selmaho || null, json.rafsi || null, json.definition, json.word, json.glosswords || null, json.notes || null];
@@ -363,13 +363,13 @@
             function load(res, page) {
                 const start = page * 100;
                 const end = (page + 1) * 100;
-                var html = [];
+                var nodes = [];
                 for (var i = start; i < end; i++) {
                     if (res[i]) {
-                        html.push(res[i][0]);
+                        nodes.push(res[i][0]);
                     }
                 }
-                id("results").insertAdjacentHTML("beforeend", html.join(""));
+                id("results").append(...nodes);
                 // latex
                 renderMathInElement(document.body, {
                     "delimiters": [
@@ -405,7 +405,7 @@
                                 page++;
                                 load(res, page);
                             }
-                        }, {root: null, rootMargin: "200px"});
+                        }, {"root": null, "rootMargin": "200px"});
                         observer.observe(id("bottom"));
                         const params = new URLSearchParams({ "q": q });
                         if (rhyme) params.append("rhyme", "");
@@ -427,13 +427,13 @@
                 id("sm").checked = true;
                 rhyme = false;
                 document.body.classList.remove("rhyme");
-                id("search").dispatchEvent(new Event("input", { "bubbles": true }));
+                id("search").dispatchEvent(new Event("input", {"bubbles": true}));
             }
             function rhymemode() {
                 id("rm").checked = true;
                 rhyme = true;
                 document.body.classList.add("rhyme");
-                id("search").dispatchEvent(new Event("input", { "bubbles": true }));
+                id("search").dispatchEvent(new Event("input", {"bubbles": true}));
             }
             // ready for stuff to happen
             id("status").innerHTML = "";
@@ -450,7 +450,7 @@
                 }
                 if (q) {
                     id("search").value = q;
-                    id("search").dispatchEvent(new Event("input", { "bubbles": true }));
+                    id("search").dispatchEvent(new Event("input", {"bubbles": true}));
                 }
             });
         </script>
