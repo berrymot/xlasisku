@@ -71,7 +71,6 @@ body.rhyme {
 }
 code {
     font-family: var(--mono);
-    font-size: 0.9em;
 }
 #search {
     font-family: var(--sans);
