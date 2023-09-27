@@ -20,21 +20,21 @@
 }
 @font-face {
     font-family: "iosevka";
-    src: url("fonts/iosevka-regular.ttf");
+    src: url("fonts/iosevka-extendedregular.ttf");
 }
 @font-face {
     font-family: "iosevka";
-    src: url("fonts/iosevka-italic.ttf");
+    src: url("fonts/iosevka-extendeditalic.ttf");
     font-style: italic;
 }
 @font-face {
     font-family: "iosevka";
-    src: url("fonts/iosevka-bold.ttf");
+    src: url("fonts/iosevka-extendedbold.ttf");
     font-weight: bold;
 }
 @font-face {
     font-family: "iosevka";
-    src: url("fonts/iosevka-bolditalic.ttf");
+    src: url("fonts/iosevka-extendedbolditalic.ttf");
     font-weight: bold;
     font-style: italic;
 }
