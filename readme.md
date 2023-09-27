@@ -11,7 +11,7 @@
 
 the TeX is rendered with [temml](https://temml.org). safari/android might have some rendering bugs
 
-fonts: inter (v4.0-β9h), juliamono (v0.051)
+fonts: inter (v4.0-β9h), iosevka (v27.0.2)
 
 thanku beberka and uakci and lynn for being cool :3
 
