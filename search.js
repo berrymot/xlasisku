@@ -153,6 +153,7 @@ function load(res, page) {
 }
 var timer;
 id("search").addEventListener("input", function() {
+    // FIXME: doesn't clear?
     clearTimeout(timer);
     var q = id("search").value.trim().toLowerCase();
     id("results").innerHTML = "";

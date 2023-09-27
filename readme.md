@@ -2,6 +2,7 @@
 
 ## todolist
 
+- improve speed
 - sort things usefully
 - clean the database
 - make lujvo (de)composer
