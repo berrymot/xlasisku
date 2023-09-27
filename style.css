@@ -54,7 +54,7 @@
     --link: #9cf;
     --warnfg: #fc9;
     --sans: "Inter", "Noto Sans", ui-sans-serif, sans-serif;
-    --mono: "JuliaMono", "Noto Sans Mono", ui-monospace, monospace;
+    --mono: "iosevka", "Noto Sans Mono", ui-monospace, monospace;
 }
 body {
     font-family: var(--sans);
