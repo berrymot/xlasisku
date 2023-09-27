@@ -178,6 +178,9 @@ body.rhyme .opt :checked + label {
 math {
     font-size: 1.1em;
 }
+hr {
+    border: 1px solid var(--bodyfg);
+}
 @media (prefers-color-scheme: light) {
     :root {
         --pinkfg: #ff1493;

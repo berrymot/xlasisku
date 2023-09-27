@@ -154,11 +154,7 @@ function load(res, page) {
 var timer;
 id("search").addEventListener("input", function() {
     clearTimeout(timer);
-    var q = id("search").value.trim();
-    if (q != id("search").value) {
-        id("search").value = q;
-    }
-    q = q.toLowerCase();
+    var q = id("search").value.trim().toLowerCase();
     id("results").innerHTML = "";
     let page = 0;
     if (observer) {
