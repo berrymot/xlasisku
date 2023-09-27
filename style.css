@@ -19,22 +19,22 @@
     font-style: italic;
 }
 @font-face {
-    font-family: "JuliaMono";
-    src: url("fonts/JuliaMono-Regular.ttf");
+    font-family: "iosevka";
+    src: url("fonts/iosevka-regular.ttf");
 }
 @font-face {
-    font-family: "JuliaMono";
-    src: url("fonts/JuliaMono-RegularItalic.ttf");
+    font-family: "iosevka";
+    src: url("fonts/iosevka-italic.ttf");
     font-style: italic;
 }
 @font-face {
-    font-family: "JuliaMono";
-    src: url("fonts/JuliaMono-Bold.ttf");
+    font-family: "iosevka";
+    src: url("fonts/iosevka-bold.ttf");
     font-weight: bold;
 }
 @font-face {
-    font-family: "JuliaMono";
-    src: url("fonts/JuliaMono-BoldItalic.ttf");
+    font-family: "iosevka";
+    src: url("fonts/iosevka-bolditalic.ttf");
     font-weight: bold;
     font-style: italic;
 }
