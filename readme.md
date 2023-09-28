@@ -10,9 +10,9 @@
 
 ## credits + how to contribute
 
-the TeX is rendered with [temml](https://temml.org). safari/android might have some rendering bugs
+the TeX is rendered with [temml](https://github.com/ronkok/Temml). safari/android might have some rendering bugs
 
-fonts: inter (v4.0-β9h), iosevka (v27.0.2)
+fonts: [inter](https://github.com/rsms/inter) (v4.0-β9h), [iosevka](https://github.com/be5invis/Iosevka) (v27.0.2)
 
 thanku beberka and uakci and lynn for being cool :3
 
