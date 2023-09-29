@@ -81,7 +81,7 @@ function search(query) {
     }
     results = results.sort((a, b) => b[1] - a[1]).reduce((acc, curr) => {
         const x = acc.find(item => item[0] == curr[0]);
-        if (!x || x == curr) {
+        if (!x) {
             acc.push(curr);
         }
         return acc;
