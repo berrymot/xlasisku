@@ -2,7 +2,9 @@ function mkelem(tag, props, children) {
     const e = document.createElement(tag);
     Object.assign(e, props);
     for (const c of children) {
-        e.append(c);
+        if (c != null) {
+            e.append(c);
+        }
     }
     return e;
 }
