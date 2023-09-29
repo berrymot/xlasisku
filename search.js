@@ -114,7 +114,7 @@ function search(query) {
                         }
                         break;
                     default:
-                        if (field && new RegExp(`\\P{L}${query}(e?s)?\\P{L}`, "u").test(field.toLowerCase())) {
+                        if (field && new RegExp(`\\b${query}(e?s)?\\b`, "u").test(field.toLowerCase())) {
                             results.push([html, score]);
                         }
                         break;
