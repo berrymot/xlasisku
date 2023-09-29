@@ -71,7 +71,7 @@ function search(query) {
                         }
                         break;
                     default:
-                        if (field && new RegExp(`\\b${query}e?s?\\b`, "u").test(field.toLowerCase())) {
+                        if (field && [...new Intl.Segmenter("en", {"granularity": "word"}).segment(field.toLowerCase())].includes(query)) {
                             results.push([html, score]);
                         }
                         break;
