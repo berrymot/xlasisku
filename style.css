@@ -180,7 +180,7 @@ math {
 hr {
     border: 1px solid var(--bodyfg);
 }
-:not(input):empty {
+:not(input, hr):empty {
     display: none;
 }
 @media (prefers-color-scheme: light) {
