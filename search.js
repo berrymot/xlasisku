@@ -1,47 +1,6 @@
 const id = (x) => document.getElementById(x);
 // searching & rendering
-var observer;
 var rhyme = false;
-function tohtml(json) {
-    // TODO: rework
-    var s = [];
-    s.push("<div class=entry>");
-    s.push("<p><b>" + json.word + "</b> ");
-    if (json.selmaho) {
-        s.push("<code class=selmaho>" + json.selmaho + "</code> ");
-    }
-    if (json.rafsi) {
-        s.push("<code>[");
-        for (var i = 0; i < json.rafsi.length; i++) {
-            s.push("-" + json.rafsi[i]);
-        }
-        s.push("-]</code> ");
-    }
-    const url = json.word.replace(/ /g, "%20");
-    s.push("<a href=https://jbovlaste.lojban.org/dict/" + url + ">");
-    if (json.score < -1) {
-        s.push("<b class=warn>" + json.score + "</b> ↗</a></p> ");
-    } else if (json.score > 1000) {
-        s.push("official ↗</a></p> ");
-    } else {
-        s.push("↗</a></p> ");
-    }
-    s.push("<p>" + json.definition + "</p> ");
-    if (json.notes) {
-        s.push("<details class=notes><summary>more info</summary> <p>" + json.notes + "</p></details> ");
-    }
-    if (json.glosswords) {
-        s.push("<p>");
-        for (var i = 0; i < json.glosswords.length; i++) {
-            s.push("<i class=glosswords>" + json.glosswords[i] + "</i>, ");
-        }
-        var last = s[s.length - 1];
-        s[s.length - 1] = last.substring(0, last.length - 2);
-        s.push("</p>");
-    }
-    s.push("</div>");
-    return s.join("");
-}
 function fields(json) {
     return [json.selmaho || null, json.rafsi || null, json.definition, json.word, json.glosswords || null, json.notes || null];
 }
@@ -114,11 +73,11 @@ function search(query) {
                         }
                         break;
                     default:
-                        if (field && new RegExp(`\\b${query}(e?s)?\\b`, "u").test(field.toLowerCase())) {
+                        if (field && new RegExp(`\\b${query}e?s?\\b`, "u").test(field.toLowerCase())) {
                             results.push([html, score]);
                         }
                         break;
-                }
+                    }
             }
         }
     }
@@ -134,13 +93,13 @@ function search(query) {
 function load(res, page) {
     const start = page * 100;
     const end = (page + 1) * 100;
-    var html = [];
+    var nodes = [];
     for (var i = start; i < end; i++) {
         if (res[i]) {
-            html.push(res[i]);
+            nodes.push(res[i][0]);
         }
     }
-    id("results").insertAdjacentHTML("beforeend", html.join(""));
+    id("results").append(...nodes);
     // latex
     renderMathInElement(document.body, {
         "delimiters": [
@@ -152,6 +111,7 @@ function load(res, page) {
     });
 }
 var timer;
+var observer;
 id("search").addEventListener("input", function() {
     // FIXME: doesn't clear?
     clearTimeout(timer);

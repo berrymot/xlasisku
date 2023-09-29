@@ -180,6 +180,9 @@ math {
 hr {
     border: 1px solid var(--bodyfg);
 }
+:empty {
+    display: none;
+}
 @media (prefers-color-scheme: light) {
     :root {
         --pinkfg: #ff1493;
