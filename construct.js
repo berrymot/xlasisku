@@ -12,11 +12,11 @@ function mktext(s) {
     return document.createTextNode(s);
 }
 function tohtml(json) {
-    const entry = mkelem("div", {"class": "entry"}, [
+    const entry = mkelem("div", {"className": "entry"}, [
         mkelem("p", null, [
             mkelem("b", null, [mktext(json.word)]),
             mktext(" "),
-            json.selmaho ? mkelem("code", {"class": "selmaho"}, [mktext(json.selmaho)]) : null,
+            json.selmaho ? mkelem("code", {"className": "selmaho"}, [mktext(json.selmaho)]) : null,
             mktext(" "),
             json.rafsi ? mkelem("code", null, [
                 mktext("["), ...(json.rafsi.map(i => "-" + i)), mktext("-]")
@@ -25,7 +25,7 @@ function tohtml(json) {
             mkelem("a", {
                 "href": "https://jbovlaste.lojban.org/dict/" + json.word.replace(/ /g, "%20")
             }, [
-                json.score < -1 ? mkelem("b", {"class": "warn"}, [mktext(json.score)]) :
+                json.score < -1 ? mkelem("b", {"className": "warn"}, [mktext(json.score)]) :
                 json.score >= 1000 ? mktext("official") : null,
                 mktext(" ↗")
             ])
