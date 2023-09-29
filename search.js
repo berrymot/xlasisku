@@ -72,12 +72,14 @@ function search(query) {
                         break;
                     default:
                         if (field) {
-                            const words = [...new Intl.Segmenter("en", {"granularity": "word"}).segment(field.toLowerCase())];
+                            const words = [...new Intl.Segmenter("en", {"granularity": "word"}).segment(field.toLowerCase()).segment];
                             console.log(words);
-                            results.push([html, score]);
+                            if (words.match(new RegExp(`^${query}$`))) {
+                                results.push([html, score]);
+                            }
                         }
                         break;
-                    }
+                }
             }
         }
     }
