@@ -26,9 +26,7 @@ function search(query) {
         for (const entry of jbo) {
             const text = entry.word.replace(/\s+/g, " ").replace(/&lt;/g, "<");
             if (text == query) {
-                results.push(["<x-exact class=group>", 10]);
-                results.push([tohtml(entry), 10]);
-                results.push(["</x-exact>", 10]);
+                results.push([mkelem("x-exact", {"className": "group"}, [tohtml(entry)]), 10]);
                 break;
             }
         }
