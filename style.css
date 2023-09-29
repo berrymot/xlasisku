@@ -106,7 +106,7 @@ code {
     font-family: var(--mono);
     color: var(--notesfg);
 }
-.entry .notes {
+.entry details {
     color: var(--notesfg);
     margin: 16px 0;
 }
