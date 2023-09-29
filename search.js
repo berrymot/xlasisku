@@ -74,8 +74,10 @@ function search(query) {
                         if (field) {
                             const words = [...new Intl.Segmenter("en", {"granularity": "word"}).segment(field.toLowerCase())].map((item) => item.segment);
                             console.log(words);
-                            if (words.match(new RegExp(`^${query}$`))) {
-                                results.push([html, score]);
+                            for (const w of words) {
+                                if (w.match(new RegExp(`^${query}$`))) {
+                                    results.push([html, score]);
+                                }
                             }
                         }
                         break;
