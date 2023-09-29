@@ -71,7 +71,9 @@ function search(query) {
                         }
                         break;
                     default:
-                        if (field && [...new Intl.Segmenter("en", {"granularity": "word"}).segment(field.toLowerCase())].includes(query)) {
+                        if (field) {
+                            const words = [...new Intl.Segmenter("en", {"granularity": "word"}).segment(field.toLowerCase())];
+                            console.log(words);
                             results.push([html, score]);
                         }
                         break;
