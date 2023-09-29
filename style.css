@@ -113,7 +113,6 @@ code {
 summary {
     font-weight: bold;
     cursor: pointer;
-    content: "test";
 }
 .entry .glosswords {
     font-style: italic;
