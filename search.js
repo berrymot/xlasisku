@@ -94,7 +94,7 @@ function load(res, page) {
     var nodes = [];
     for (var i = start; i < end; i++) {
         if (res[i]) {
-            nodes.push(res[i][1] == 10 ? mkelem("x-exact", {"class": "group"}, [res[i][0]]) : res[i][0]);
+            nodes.push(res[i][1] == 10 ? mkelem("x-exact", {"className": "group"}, [res[i][0]]) : res[i][0]);
         }
     }
     id("results").append(...nodes);
