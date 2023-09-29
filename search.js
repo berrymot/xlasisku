@@ -72,8 +72,7 @@ function search(query) {
                         break;
                     default:
                         if (field) {
-                            const words = [...new Intl.Segmenter("en", {"granularity": "word"}).segment(field.toLowerCase())];
-                            words = words.map((item) => item.segment);
+                            const words = [...new Intl.Segmenter("en", {"granularity": "word"}).segment(field.toLowerCase())].map((item) => item.segment);
                             console.log(words);
                             if (words.match(new RegExp(`^${query}$`))) {
                                 results.push([html, score]);
