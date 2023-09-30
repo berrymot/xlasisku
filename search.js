@@ -71,7 +71,7 @@ function search(query) {
                         }
                         break;
                     default:
-                        if (field && field.match(new RegExp(`[^\\p{L}\\p{Mc}\\p{Me}]${query}e?s?[^\\p{L}\\p{Mc}\\p{Me}]`, "u"))) {
+                        if (field && new RegExp(`[^\\p{L}\\p{Mc}\\p{Me}]${query}e?s?[^\\p{L}\\p{Mc}\\p{Me}]`, "u").test(field)) {
                             results.push([html, score]);
                         }
                         break;
