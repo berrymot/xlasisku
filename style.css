@@ -1,40 +1,48 @@
 @font-face {
     font-family: "Inter";
     src: url("fonts/Inter-Regular.ttf");
+    font-display: swap;
 }
 @font-face {
     font-family: "Inter";
     src: url("fonts/Inter-Italic.ttf");
+    font-display: swap;
     font-style: italic;
 }
 @font-face {
     font-family: "Inter";
     src: url("fonts/Inter-Bold.ttf");
+    font-display: swap;
     font-weight: bold;
 }
 @font-face {
     font-family: "Inter";
     src: url("fonts/Inter-BoldItalic.ttf");
+    font-display: swap;
     font-weight: bold;
     font-style: italic;
 }
 @font-face {
     font-family: "iosevka";
     src: url("fonts/iosevka-extended.ttf");
+    font-display: swap;
 }
 @font-face {
     font-family: "iosevka";
     src: url("fonts/iosevka-extendeditalic.ttf");
+    font-display: swap;
     font-style: italic;
 }
 @font-face {
     font-family: "iosevka";
     src: url("fonts/iosevka-extendedbold.ttf");
+    font-display: swap;
     font-weight: bold;
 }
 @font-face {
     font-family: "iosevka";
     src: url("fonts/iosevka-extendedbolditalic.ttf");
+    font-display: swap;
     font-weight: bold;
     font-style: italic;
 }
