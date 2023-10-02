@@ -23,7 +23,8 @@ function tohtml(json) {
             ]) : null,
             mktext(" "),
             mkelem("a", {
-                "href": "https://jbovlaste.lojban.org/dict/" + json.word.replace(/ /g, "%20")
+                "href": "https://jbovlaste.lojban.org/dict/" + json.word.replace(/ /g, "%20"),
+                "target": "_blank"
             }, [
                 json.score < -1 ? mkelem("b", {"className": "warn"}, [mktext(json.score)]) :
                 json.score >= 1000 ? mktext("official") : null,
