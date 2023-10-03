@@ -34,12 +34,15 @@ function search(query) {
             var html = tohtml(entry);
             for (var field of fields(entry)) {
                 var score = 6 - fields(entry).indexOf(field);
+                var added = false;
                 switch (field) {
                     case entry.word:
                         if (field.startsWith(query)) {
                             results.push([html, score + 0.5 + query.length / field.length / 2]);
+                            added = true;
                         } else if (field.includes(query)) {
                             results.push([html, score + query.length / field.length / 2]);
+                            added = true;
                         }
                         break;
                     case entry.rafsi:
@@ -48,6 +51,7 @@ function search(query) {
                             for (const r of field) {
                                 if (r == query) {
                                     results.push([html, score]);
+                                    added = true;
                                 }
                             }
                         }
@@ -58,6 +62,7 @@ function search(query) {
                         // if (field) {
                         //     if (selmahois(bits, selmaho(field))) {
                         //         results.push([html, score]);
+                        //         added = true;
                         //     }
                         // }
                         break;
@@ -66,6 +71,7 @@ function search(query) {
                             for (const g of field) {
                                 if (g == query) {
                                     results.push([html, score]);
+                                    added = true;
                                 }
                             }
                         }
@@ -74,11 +80,12 @@ function search(query) {
                         const regex = query.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
                         if (field && new RegExp(`[^\\p{L}\\p{Mc}\\p{Me}]${regex}e?s?[^\\p{L}\\p{Mc}\\p{Me}]`, "u").test(field)) {
                             results.push([html, score]);
+                            added = true;
                         }
                         break;
                 }
                 // we don't need to be in here still
-                continue e; // next entry
+                if (added) continue e; // next entry
             }
         }
     }
