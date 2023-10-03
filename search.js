@@ -30,7 +30,7 @@ function search(query) {
                 break;
             }
         }
-        for (const entry of jbo) {
+        e: for (const entry of jbo) {
             var html = tohtml(entry);
             for (var field of fields(entry)) {
                 var score = 6 - fields(entry).indexOf(field);
@@ -78,7 +78,7 @@ function search(query) {
                         break;
                 }
                 // we don't need to be in here still
-                break; // next entry
+                continue e; // next entry
             }
         }
     }
