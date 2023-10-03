@@ -77,6 +77,8 @@ function search(query) {
                         }
                         break;
                 }
+                // we don't need to be in here still
+                break; // next entry
             }
         }
     }
