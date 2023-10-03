@@ -64,7 +64,7 @@ function search(query) {
                     case entry.glosswords:
                         if (field) {
                             for (const g of field) {
-                                if (g.includes(query)) {
+                                if (g == query) {
                                     results.push([html, score]);
                                 }
                             }
