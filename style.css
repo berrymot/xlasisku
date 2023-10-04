@@ -163,6 +163,9 @@ a {
     cursor: pointer;
     background: none;
     border: none;
+    color: var(--bodyfg);
+    font-size: 1em;
+    font-family: var(--sans);
 }
 .opt .checked {
     background: var(--pinkfg);
