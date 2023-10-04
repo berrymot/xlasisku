@@ -156,30 +156,22 @@ a {
 .group > :last-child {
     margin-bottom: 0;
 }
-.opt label {
+.opt button {
     padding: 4px 8px;
     display: inline-block;
     border-radius: 16px;
     cursor: pointer;
+    background: none;
+    border: none;
 }
-[type="radio"] {
-    width: 0;
-    height: 0;
-    padding: 0;
-    margin: 0;
-    opacity: 0;
-}
-.opt :focus + label {
-    outline: -webkit-focus-ring-color auto 1px;
-}
-.opt :checked + label {
+.opt .checked {
     background: var(--pinkfg);
     color: white;
 }
-.opt :disabled + label {
+.opt :disabled {
     color: var(--notesfg);
 }
-body.rhyme .opt :checked + label {
+body.rhyme .opt .checked {
     background: var(--purplefg);
 }
 math {

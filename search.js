@@ -155,17 +155,19 @@ id("search").addEventListener("input", function() {
     }, 100);
 });
 // rhyming
-id("sm").addEventListener("change", searchmode);
-id("rm").addEventListener("change", rhymemode);
+id("sm").addEventListener("click", searchmode);
+id("rm").addEventListener("click", rhymemode);
 function searchmode() {
-    id("sm").checked = true;
-    rhyme = false;
     document.body.classList.remove("rhyme");
+    id("sm").classList.add("checked");
+    id("rm").classList.remove("checked");
+    rhyme = false;
     id("search").dispatchEvent(new Event("input", {"bubbles": true}));
 }
 function rhymemode() {
-    id("rm").checked = true;
-    rhyme = true;
     document.body.classList.add("rhyme");
+    id("rm").classList.add("checked");
+    id("sm").classList.remove("checked");
+    rhyme = true;
     id("search").dispatchEvent(new Event("input", {"bubbles": true}));
 }
