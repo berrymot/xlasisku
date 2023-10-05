@@ -37,10 +37,10 @@
             function redir(params) {
                 var vars = params ? "?" : "";
                 if (params) {
-                    if (params.has("q")) vars += "q=" + params.get("q");
+                    if (params.has("q")) vars += "&q=" + params.get("q");
                     if (params.has("rhyme")) vars += "&rhyme=" + params.get("rhyme");
                 }
-                vars = vars.replace(/=&/g, "&").replace(/=$/, "");
+                vars = vars.replace(/\?&/g, "?").replace(/=&/g, "&").replace(/=$/, "");
                 window.history.pushState(null, null, window.location.href.split("?")[0] + vars);
             }
             window.addEventListener("DOMContentLoaded", () => {

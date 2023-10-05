@@ -154,7 +154,9 @@ id("search").addEventListener("input", function() {
         } else {
             id("results").innerHTML = "";
             page = 0;
-            redir(null);
+            const params = new URLSearchParams({});
+            if (rhyme) params.append("rhyme", y ? "y" : "");
+            redir(params);
         }
     }, 100);
 });
