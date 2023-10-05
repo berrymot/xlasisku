@@ -177,6 +177,9 @@ a {
 body.rhyme .opt .checked {
     background: var(--purplefg);
 }
+body:not(.rhyme) #y {
+    display: none;
+}
 math {
     font-size: 1.1em;
 }

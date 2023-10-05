@@ -1,6 +1,7 @@
 const id = (x) => document.getElementById(x);
 // searching & rendering
 var rhyme = false;
+var y = false;
 function fields(json) {
     return [json.selmaho || null, json.rafsi || null, json.definition, json.word, json.glosswords || null, json.notes || null];
 }
@@ -15,8 +16,9 @@ function search(query) {
     if (rhyme) {
         // TODO: sort
         for (const entry of jbo) {
-            vowels = query.replace(/[^aeiouy]/gi, "");
-            var text = entry.word.replace(/[^aeiouy]/gi, "");
+            const regex = y ? /[^aeiouy]/gi : /[^aeiou]/gi;
+            vowels = query.replace(regex, "");
+            var text = entry.word.replace(regex, "");
             if (text.endsWith(vowels)) {
                 results.push([tohtml(entry), 1]);
             }
@@ -147,20 +149,19 @@ id("search").addEventListener("input", function() {
             }, {"root": null, "rootMargin": "200px"});
             observer.observe(id("bottom"));
             const params = new URLSearchParams({"q": q});
-            if (rhyme) params.append("rhyme", "");
-            const url = "https://berrymot.github.io/xlasisku/?" + params.toString().replace(/=$/, "");
-            window.history.pushState(null, null, url);
+            if (rhyme) params.append("rhyme", y ? "y" : "");
+            redir(params);
         } else {
             id("results").innerHTML = "";
             page = 0;
-            const url = "https://berrymot.github.io/xlasisku/" + (rhyme ? "?rhyme" : "");
-            window.history.pushState(null, null, url);
+            redir(null);
         }
     }, 100);
 });
 // rhyming
 id("sm").addEventListener("click", searchmode);
-id("rm").addEventListener("click", rhymemode);
+id("rm").addEventListener("click", function() {rhymemode(false);});
+id("y").addEventListener("click", function() {rhymemode(true);});
 function searchmode() {
     clearTimeout(timer);
     document.body.classList.remove("rhyme");
@@ -169,11 +170,17 @@ function searchmode() {
     rhyme = false;
     id("search").dispatchEvent(new Event("input", {"bubbles": true}));
 }
-function rhymemode() {
+function rhymemode(t) {
     clearTimeout(timer);
     document.body.classList.add("rhyme");
     id("rm").classList.add("checked");
     id("sm").classList.remove("checked");
     rhyme = true;
+    if (t) y = !y; // this was painful actually
+    if (y) {
+        id("y").classList.add("checked");
+    } else {
+        id("y").classList.remove("checked");
+    }
     id("search").dispatchEvent(new Event("input", {"bubbles": true}));
 }

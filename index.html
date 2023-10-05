@@ -18,6 +18,7 @@
         <p>
             <b>mode</b>
             <span class="nobr opt"><button id="sm" disabled class="checked">normal</button><button id="rm" disabled>rhyme</button></span>
+            <span class="nobr opt"><button id="y" disabled>y-sensitive</button></span>
         </p>
         <input type="text" id="search" placeholder="loading" disabled />
         <div id="results"></div>
@@ -29,14 +30,25 @@
             // ready for stuff to happen
             id("sm").removeAttribute("disabled");
             id("rm").removeAttribute("disabled");
+            id("y").removeAttribute("disabled");
             id("search").removeAttribute("disabled");
             id("search").setAttribute("placeholder", "search");
-            // get url params
+            // url things
+            function redir(params) {
+                var vars = params ? "?" : "";
+                if (params) {
+                    if (params.has("q")) vars += "q=" + params.get("q");
+                    if (params.has("rhyme")) vars += "&rhyme=" + params.get("rhyme");
+                }
+                vars = vars.replace(/=&/g, "&").replace(/=$/, "");
+                window.history.pushState(null, null, window.location.href.split("?")[0] + vars);
+            }
             window.addEventListener("DOMContentLoaded", () => {
                 const params = new URLSearchParams(window.location.search);
                 const q = params.get("q");
                 if (params.has("rhyme")) {
-                    rhymemode();
+                    y = (params.get("rhyme") == "y");
+                    rhymemode(false);
                 }
                 if (q) {
                     id("search").value = q;
