@@ -158,6 +158,7 @@ id("search").addEventListener("input", function() {
 id("sm").addEventListener("click", searchmode);
 id("rm").addEventListener("click", rhymemode);
 function searchmode() {
+    clearTimeout(timer);
     document.body.classList.remove("rhyme");
     id("sm").classList.add("checked");
     id("rm").classList.remove("checked");
@@ -165,6 +166,7 @@ function searchmode() {
     id("search").dispatchEvent(new Event("input", {"bubbles": true}));
 }
 function rhymemode() {
+    clearTimeout(timer);
     document.body.classList.add("rhyme");
     id("rm").classList.add("checked");
     id("sm").classList.remove("checked");
