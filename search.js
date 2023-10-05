@@ -148,16 +148,13 @@ id("search").addEventListener("input", function() {
                 }
             }, {"root": null, "rootMargin": "200px"});
             observer.observe(id("bottom"));
-            const params = new URLSearchParams({"q": q});
-            if (rhyme) params.append("rhyme", y ? "y" : "");
-            redir(params);
         } else {
             id("results").innerHTML = "";
             page = 0;
-            const params = new URLSearchParams({});
-            if (rhyme) params.append("rhyme", y ? "y" : "");
-            redir(params);
         }
+        const params = new URLSearchParams({"q": q});
+        if (rhyme) params.append("rhyme", y ? "y" : "");
+        redir(params);
     }, 100);
 });
 // rhyming
