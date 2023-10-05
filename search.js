@@ -78,7 +78,7 @@ function search(query) {
                         break;
                     default:
                         const regex = query.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-                        if (field && new RegExp(`[^\\p{L}\\p{Mc}\\p{Me}]${regex}e?s?[^\\p{L}\\p{Mc}\\p{Me}]`, "iu").test(field)) {
+                        if (field && new RegExp(`(^|[^\\p{L}\\p{Mc}\\p{Me}])${regex}e?s?($|[^\\p{L}\\p{Mc}\\p{Me}])`, "iu").test(field)) {
                             results.push([html, score]);
                             added = true;
                         }
@@ -87,16 +87,20 @@ function search(query) {
                 // we don't need to be in here still
                 if (added) continue e; // next entry
             }
+            results = dedup(results);
         }
     }
-    results = results.sort((a, b) => b[1] - a[1]).reduce((acc, curr) => {
+    return results;
+}
+function dedup(list) {
+    const l = list.sort((a, b) => b[1] - a[1]).reduce((acc, curr) => {
         const x = acc.find(item => item[0].isEqualNode(curr[0]));
         if (!x) {
             acc.push(curr);
         }
         return acc;
     }, []);
-    return results;
+    return l;
 }
 function load(res, page) {
     const start = page * 100;
@@ -144,13 +148,13 @@ id("search").addEventListener("input", function() {
             observer.observe(id("bottom"));
             const params = new URLSearchParams({"q": q});
             if (rhyme) params.append("rhyme", "");
-            const url = "https://berrymot.github.io/xlasisku/?" + params.toString().replace(/=$/, "");
-            window.history.pushState(null, null, url);
+            // const url = "https://berrymot.github.io/xlasisku/?" + params.toString().replace(/=$/, "");
+            // window.history.pushState(null, null, url);
         } else {
             id("results").innerHTML = "";
             page = 0;
-            const url = "https://berrymot.github.io/xlasisku/" + (rhyme ? "?rhyme" : "");
-            window.history.pushState(null, null, url);
+            // const url = "https://berrymot.github.io/xlasisku/" + (rhyme ? "?rhyme" : "");
+            // window.history.pushState(null, null, url);
         }
     }, 100);
 });
