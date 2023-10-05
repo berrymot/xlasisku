@@ -49,6 +49,8 @@
                 if (params.has("rhyme")) {
                     y = (params.get("rhyme") == "y");
                     rhymemode(false);
+                } else {
+                    y = true;
                 }
                 if (q) {
                     id("search").value = q;
