@@ -40,7 +40,7 @@
                     if (params.has("q") && params.get("q") /* yes */) vars += "&q=" + params.get("q");
                     if (params.has("rhyme")) vars += "&rhyme=" + params.get("rhyme");
                 }
-                vars = vars.replace(/\?&/g, "?").replace(/=&/g, "&").replace(/=$/, "");
+                vars = vars.replace(/\?&/g, "?").replace(/=&/g, "&").replace(/[=?]$/, "");
                 window.history.pushState(null, null, window.location.href.split("?")[0] + vars);
             }
             window.addEventListener("DOMContentLoaded", () => {
