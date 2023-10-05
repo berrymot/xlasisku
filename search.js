@@ -148,13 +148,13 @@ id("search").addEventListener("input", function() {
             observer.observe(id("bottom"));
             const params = new URLSearchParams({"q": q});
             if (rhyme) params.append("rhyme", "");
-            // const url = "https://berrymot.github.io/xlasisku/?" + params.toString().replace(/=$/, "");
-            // window.history.pushState(null, null, url);
+            const url = "https://berrymot.github.io/xlasisku/?" + params.toString().replace(/=$/, "");
+            window.history.pushState(null, null, url);
         } else {
             id("results").innerHTML = "";
             page = 0;
-            // const url = "https://berrymot.github.io/xlasisku/" + (rhyme ? "?rhyme" : "");
-            // window.history.pushState(null, null, url);
+            const url = "https://berrymot.github.io/xlasisku/" + (rhyme ? "?rhyme" : "");
+            window.history.pushState(null, null, url);
         }
     }, 100);
 });
