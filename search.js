@@ -137,7 +137,7 @@ id("search").addEventListener("input", function() {
     }
     // for debouncing
     timer = setTimeout(function() {
-        if ((rhyme ? (y ? /[^aeiouy]/gi : /[^aeiou]/gi) : q).length) {
+        if ((rhyme ? q.replace(y ? /[^aeiouy]/gi : /[^aeiou]/gi, "") : q).length) {
             const res = search(q);
             id("results").innerHTML = "";
             load(res, page);
