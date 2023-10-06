@@ -31,7 +31,7 @@ function search(query) {
                 rgx = new RegExp(query);
             } catch (e) {
                 results.push([mkelem("div", {"className": "err"}, [
-                    e.message
+                    e.message.split(": ").slice(-1)[0]
                 ]), 0]);
                 return results;
             }

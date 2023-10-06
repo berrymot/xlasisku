@@ -179,6 +179,9 @@ a {
     font-size: 1em;
     font-family: var(--sans);
 }
+.opt button:not(:last-child) {
+    margin-right: -8px;
+}
 .opt .checked {
     background: var(--pinkfg);
     color: white;
