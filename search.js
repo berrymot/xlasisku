@@ -31,8 +31,7 @@ function search(query) {
                 rgx = new RegExp(query);
             } catch (e) {
                 results.push([mkelem("div", {"className": "err"}, [
-                    mkelem("b", null, [mktext("invalid regex: ")]),
-                    e.message.split(": ")[2].toLowerCase()
+                    e.message
                 ]), 0]);
                 return results;
             }
@@ -146,7 +145,8 @@ var observer;
 id("search").addEventListener("input", function() {
     // FIXME: doesn't clear?
     clearTimeout(timer);
-    var q = id("search").value.trim().toLowerCase();
+    var q = id("search").value;
+    if (!regex) q = q.trim().toLowerCase();
     id("results").innerHTML = "";
     let page = 0;
     if (observer) {
