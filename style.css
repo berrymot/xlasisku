@@ -55,6 +55,8 @@
     --pinkbg: #603;
     --purplefg: #8e46e0;
     --purplebg: #306;
+    --tealfg: #0c9381;
+    --tealbg: #044;
     --bodyfg: #fff;
     --searchbg: #000;
     --entrybg: #0008;
@@ -77,6 +79,9 @@ body {
 body.rhyme {
     background: var(--purplebg);
 }
+body.regex {
+    background: var(--tealbg);
+}
 code {
     font-family: var(--mono);
 }
@@ -92,6 +97,9 @@ code {
     color: var(--bodyfg) !important;
     position: sticky;
     top: 0;
+}
+body.regex #search {
+    font-family: "iosevka";
 }
 #search:disabled {
     opacity: 1;
@@ -127,6 +135,10 @@ summary {
 }
 .warn {
     color: var(--warnfg);
+}
+.err {
+    margin-top: 16px;
+    padding: 8px 0;
 }
 .nobr {
     white-space: nowrap;
@@ -177,6 +189,9 @@ a {
 body.rhyme .opt .checked {
     background: var(--purplefg);
 }
+body.regex .opt .checked {
+    background: var(--tealfg);
+}
 body:not(.rhyme) .hide {
     display: none;
 }
@@ -195,6 +210,8 @@ hr {
         --pinkbg: #ffe2f2;
         --purplefg: #712ce8;
         --purplebg: #ece6f4;
+        --tealfg: #0c9381;
+        --tealbg: #e1f2f0;  
         --bodyfg: #000;
         --searchbg: #fff;
         --entrybg: #fff8;

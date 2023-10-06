@@ -17,7 +17,11 @@
         <p><a href="https://github.com/berrymot/xlasisku">github repo</a></p>
         <p>
             <b>mode</b>
-            <span class="nobr opt"><button id="sm" disabled class="checked">normal</button><button id="rm" disabled>rhyme</button></span>
+            <span class="nobr opt">
+                <button id="sm" disabled class="checked">normal</button>
+                <button id="xm" disabled>regex</button>
+                <button id="rm" disabled>rhyme</button>
+            </span>
             <span class="nobr opt hide"><button id="y" disabled>y-sensitive</button></span>
         </p>
         <input type="text" id="search" placeholder="loading" disabled />
@@ -30,6 +34,7 @@
             // ready for stuff to happen
             id("sm").removeAttribute("disabled");
             id("rm").removeAttribute("disabled");
+            id("xm").removeAttribute("disabled");
             id("y").removeAttribute("disabled");
             id("search").removeAttribute("disabled");
             id("search").setAttribute("placeholder", "search");
@@ -39,6 +44,7 @@
                 if (params) {
                     if (params.has("q") && params.get("q") /* yes */) vars += "&q=" + params.get("q");
                     if (params.has("rhyme")) vars += "&rhyme=" + params.get("rhyme");
+                    if (params.has("regex")) vars += "&regex";
                 }
                 vars = vars.replace(/\?&/g, "?").replace(/=&/g, "&").replace(/[=?]$/, "");
                 window.history.pushState(null, null, window.location.href.split("?")[0] + vars);
@@ -51,6 +57,9 @@
                     rhymemode(false);
                 } else {
                     y = true;
+                }
+                if (params.has("regex")) {
+                    regexmode();
                 }
                 if (q) {
                     id("search").value = q;

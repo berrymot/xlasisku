@@ -1,6 +1,7 @@
 const id = (x) => document.getElementById(x);
 // searching & rendering
 var rhyme = false;
+var regex = false;
 var y = false;
 function fields(json) {
     return [json.selmaho || null, json.rafsi || null, json.definition, json.word, json.glosswords || null, json.notes || null];
@@ -16,10 +17,26 @@ function search(query) {
     if (rhyme) {
         // TODO: sort
         for (const entry of jbo) {
-            const regex = y ? /[^aeiouy]/gi : /[^aeiou]/gi;
-            vowels = query.replace(regex, "");
-            var text = entry.word.replace(regex, "");
+            const rgx = y ? /[^aeiouy]/gi : /[^aeiou]/gi;
+            vowels = query.replace(rgx, "");
+            var text = entry.word.replace(rgx, "");
             if (text.endsWith(vowels)) {
+                results.push([tohtml(entry), 1]);
+            }
+        }
+    } else if (regex) {
+        for (const entry of jbo) {
+            var rgx;
+            try {
+                rgx = new RegExp(query);
+            } catch (e) {
+                results.push([mkelem("div", {"className": "err"}, [
+                    mkelem("b", null, [mktext("invalid regex: ")]),
+                    e.message.split(": ")[2].toLowerCase()
+                ]), 0]);
+                return results;
+            }
+            if (rgx.test(entry.word)) {
                 results.push([tohtml(entry), 1]);
             }
         }
@@ -79,8 +96,8 @@ function search(query) {
                         }
                         break;
                     default:
-                        const regex = query.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-                        if (field && new RegExp(`(^|[^\\p{L}\\p{Mc}\\p{Me}])${regex}e?s?($|[^\\p{L}\\p{Mc}\\p{Me}])`, "iu").test(field)) {
+                        const rgx = query.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+                        if (field && new RegExp(`(^|[^\\p{L}\\p{Mc}\\p{Me}])${rgx}e?s?($|[^\\p{L}\\p{Mc}\\p{Me}])`, "iu").test(field)) {
                             results.push([html, score]);
                             added = true;
                         }
@@ -154,27 +171,46 @@ id("search").addEventListener("input", function() {
         }
         const params = new URLSearchParams({"q": q});
         if (rhyme) params.append("rhyme", y ? "y" : "");
+        if (regex) params.append("regex", "");
         redir(params);
     }, 100);
 });
 // rhyming
 id("sm").addEventListener("click", searchmode);
 id("rm").addEventListener("click", function() {rhymemode(false);});
+id("xm").addEventListener("click", regexmode);
 id("y").addEventListener("click", function() {rhymemode(true);});
 function searchmode() {
     clearTimeout(timer);
     document.body.classList.remove("rhyme");
-    id("sm").classList.add("checked");
+    document.body.classList.remove("regex");
     id("rm").classList.remove("checked");
+    id("xm").classList.remove("checked");
+    id("sm").classList.add("checked");
     rhyme = false;
+    regex = false;
+    id("search").dispatchEvent(new Event("input", {"bubbles": true}));
+}
+function regexmode() {
+    clearTimeout(timer);
+    document.body.classList.remove("rhyme");
+    document.body.classList.add("regex");
+    id("sm").classList.remove("checked");
+    id("rm").classList.remove("checked");
+    id("xm").classList.add("checked");
+    rhyme = false;
+    regex = true;
     id("search").dispatchEvent(new Event("input", {"bubbles": true}));
 }
 function rhymemode(t) {
     clearTimeout(timer);
+    document.body.classList.remove("regex");
     document.body.classList.add("rhyme");
-    id("rm").classList.add("checked");
     id("sm").classList.remove("checked");
+    id("xm").classList.remove("checked");
+    id("rm").classList.add("checked");
     rhyme = true;
+    regex = false;
     if (t) y = !y; // this was painful actually
     if (y) {
         id("y").classList.add("checked");
