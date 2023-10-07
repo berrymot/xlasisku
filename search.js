@@ -18,7 +18,7 @@ function search(query) {
         // TODO: sort
         for (const entry of jbo) {
             const rgx = y ? /[^aeiouy]/gi : /[^aeiou]/gi;
-            vowels = query.replace(rgx, "");
+            const vowels = query.replace(rgx, "");
             var text = entry.word.replace(rgx, "");
             if (text.endsWith(vowels)) {
                 results.push([tohtml(entry), 1]);
@@ -31,7 +31,7 @@ function search(query) {
                 rgx = new RegExp(query);
             } catch (e) {
                 results.push([mkelem("div", {"className": "err"}, [
-                    e.message.split(": ").slice(-1)[0]
+                    e.message.split(": ").slice(-1)[0].toLowerCase()
                 ]), 0]);
                 return results;
             }
@@ -48,19 +48,16 @@ function search(query) {
                 break;
             }
         }
-        e: for (const entry of jbo) {
+        for (const entry of jbo) {
             var html = tohtml(entry);
             for (var field of fields(entry)) {
                 var score = 6 - fields(entry).indexOf(field);
-                var added = false;
                 switch (field) {
                     case entry.word:
                         if (field.startsWith(query)) {
                             results.push([html, score + 0.5 + query.length / field.length / 2]);
-                            added = true;
                         } else if (field.includes(query)) {
                             results.push([html, score + query.length / field.length / 2]);
-                            added = true;
                         }
                         break;
                     case entry.rafsi:
@@ -69,7 +66,6 @@ function search(query) {
                             for (const r of field) {
                                 if (r == query) {
                                     results.push([html, score]);
-                                    added = true;
                                 }
                             }
                         }
@@ -80,7 +76,6 @@ function search(query) {
                         // if (field) {
                         //     if (selmahois(bits, selmaho(field))) {
                         //         results.push([html, score]);
-                        //         added = true;
                         //     }
                         // }
                         break;
@@ -89,7 +84,6 @@ function search(query) {
                             for (const g of field) {
                                 if (g == query) {
                                     results.push([html, score]);
-                                    added = true;
                                 }
                             }
                         }
@@ -98,16 +92,13 @@ function search(query) {
                         const rgx = query.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
                         if (field && new RegExp(`(^|[^\\p{L}\\p{Mc}\\p{Me}])${rgx}e?s?($|[^\\p{L}\\p{Mc}\\p{Me}])`, "iu").test(field)) {
                             results.push([html, score]);
-                            added = true;
                         }
                         break;
                 }
-                // we don't need to be in here still
-                if (added) continue e; // next entry
             }
-            results = dedup(results);
         }
     }
+    results = dedup(results);
     return results;
 }
 function dedup(list) {

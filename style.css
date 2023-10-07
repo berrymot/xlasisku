@@ -24,24 +24,24 @@
 }
 @font-face {
     font-family: "iosevka";
-    src: url("fonts/iosevka-extended.ttf");
+    src: url("fonts/iosevka-regular.ttf");
     font-display: swap;
 }
 @font-face {
     font-family: "iosevka";
-    src: url("fonts/iosevka-extendeditalic.ttf");
+    src: url("fonts/iosevka-italic.ttf");
     font-display: swap;
     font-style: italic;
 }
 @font-face {
     font-family: "iosevka";
-    src: url("fonts/iosevka-extendedbold.ttf");
+    src: url("fonts/iosevka-bold.ttf");
     font-display: swap;
     font-weight: bold;
 }
 @font-face {
     font-family: "iosevka";
-    src: url("fonts/iosevka-extendedbolditalic.ttf");
+    src: url("fonts/iosevka-bolditalic.ttf");
     font-display: swap;
     font-weight: bold;
     font-style: italic;
@@ -99,7 +99,7 @@ code {
     top: 0;
 }
 body.regex #search {
-    font-family: "iosevka";
+    font-family: var(--mono);
 }
 #search:disabled {
     opacity: 1;
@@ -195,7 +195,7 @@ body.rhyme .opt .checked {
 body.regex .opt .checked {
     background: var(--tealfg);
 }
-body:not(.rhyme) .hide {
+body:not(.rhyme) .rhymeonly {
     display: none;
 }
 math {
