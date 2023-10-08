@@ -24,7 +24,7 @@ function tohtml(json) {
                 "target": "_blank"
             }, [
                 json.score < -1 ? mkelem("b", {"className": "warn"}, [json.score]) :
-                json.score >= 1000 ? mktext("official") : null,
+                json.score >= 1000 ? "official" : null,
                 " ↗"
             ])
         ]),
