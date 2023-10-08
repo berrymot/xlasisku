@@ -8,33 +8,30 @@ function mkelem(tag, props, children) {
     }
     return e;
 }
-function mktext(s) {
-    return document.createTextNode(s);
-}
 function tohtml(json) {
     const entry = mkelem("div", {"className": "entry"}, [
         mkelem("p", null, [
-            mkelem("b", null, [mktext(json.word)]),
-            mktext(" "),
-            json.selmaho ? mkelem("code", {"className": "selmaho"}, [mktext(json.selmaho)]) : null,
-            mktext(" "),
+            mkelem("b", null, [json.word]),
+            " ",
+            json.selmaho ? mkelem("code", {"className": "selmaho"}, [json.selmaho]) : null,
+            " ",
             json.rafsi ? mkelem("code", null, [
-                mktext("["), ...(json.rafsi.map(i => "-" + i)), mktext("-]")
+                "[", ...json.rafsi.map(i => "-" + i), "-]"
             ]) : null,
-            mktext(" "),
+            " ",
             mkelem("a", {
                 "href": "https://jbovlaste.lojban.org/dict/" + json.word.replace(/ /g, "%20"),
                 "target": "_blank"
             }, [
-                json.score < -1 ? mkelem("b", {"className": "warn"}, [mktext(json.score)]) :
+                json.score < -1 ? mkelem("b", {"className": "warn"}, [json.score]) :
                 json.score >= 1000 ? mktext("official") : null,
-                mktext(" ↗")
+                " ↗"
             ])
         ]),
         mkelem("p", null, [json.definition]),
         json.notes ? mkelem("details", null, [
-            mkelem("summary", null, [mktext("more info")]),
-            mkelem("p", null, json.notes)
+            mkelem("summary", null, ["more info"]),
+            mkelem("p", null, [json.notes])
         ]) : null
     ]);
     return entry;
