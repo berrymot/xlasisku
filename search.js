@@ -12,7 +12,7 @@ function selmahois(x, y) {
     const [aa, bb, cc] = y;
     return a == aa && (b == bb || b == null) && (!c || cc);
 }
-function search(query) {
+function search(query, jvo = true) {
     var results = [];
     if (rhyme) {
         // TODO: sort
@@ -44,10 +44,11 @@ function search(query) {
         try {
             if (/\s/.test(query)) {
                 const [lujvo, _] = getLujvo(query.split(/\s+/));
-                id("lujvo").innerHTML = "→ " + lujvo;
+                if (jvo) id("lujvo").innerHTML = lujvo;
+                console.log(search(lujvo, false));
             } else {
                 const parts = jvokaha(query);
-                id("lujvo").innerHTML = "← " + parts.map(i => searchSelrafsiFromRafsi(i)).join(" ");
+                if (jvo) id("lujvo").innerHTML = parts.map(i => searchSelrafsiFromRafsi(i)).join(" ");
             }
         } catch (e) {
             id("lujvo").innerHTML = "";
@@ -159,7 +160,7 @@ id("search").addEventListener("input", function() {
     // for debouncing
     timer = setTimeout(function() {
         if ((rhyme ? q.replace(y ? /[^aeiouy]/gi : /[^aeiou]/gi, "") : q).length) {
-            const res = search(q);
+            const res = search(q, true);
             id("results").innerHTML = "";
             load(res, page);
             observer = new IntersectionObserver((entries) => {

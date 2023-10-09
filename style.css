@@ -69,10 +69,9 @@
 body {
     font-family: var(--sans);
     margin: 0 auto;
-    max-width: 600px;
+    max-width: 700px;
     padding: 8px;
     background: var(--pinkbg);
-    word-wrap: break-word;
     color: var(--bodyfg);
     line-height: 1.4;
 }
@@ -86,8 +85,9 @@ code {
     font-family: var(--mono);
 }
 #search {
-    font-family: var(--sans);
+    display: block;
     width: 100%;
+    font-family: var(--sans);
     padding: 4px 12px;
     font-size: 1.5em;
     border-radius: 16px;
@@ -95,23 +95,10 @@ code {
     border: 2px solid var(--bodyfg);
     border-bottom: 5px solid var(--bodyfg);
     color: var(--bodyfg) !important;
-    position: sticky;
-    top: 0;
-}
-#search:has(+ #lujvo:not(:empty)) {
-    border-radius: 16px 16px 0 0;
-    border-bottom: none;
-    margin-bottom: 0;
 }
 #lujvo {
-    padding: 4px 12px;
-    font-size: 1.5em;
-    border-radius: 0 0 16px 16px;
-    margin: 0;
-    border: 2px solid var(--bodyfg);
-    border-top: 0;
-    border-bottom: 5px solid var(--bodyfg);
-    background-color: var(--searchbg);
+    font-size: 1.25em;
+    margin-top: 8px;
     color: var(--notesfg);
     font-style: italic;
 }
