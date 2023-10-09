@@ -1,8 +1,0 @@
-[submodule "latkerlo-jvotci"]
-    path = latkerlo-jvotci
-    url = https://github.com/latkerlo/latkerlo-jvotci.git
-[submodule "Temml"]
-	path = Temml
-	url = https://github.com/ronkok/Temml.git
-
-# .uanai
