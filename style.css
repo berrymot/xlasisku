@@ -98,6 +98,23 @@ code {
     position: sticky;
     top: 0;
 }
+#search:has(+ #lujvo:not(:empty)) {
+    border-radius: 16px 16px 0 0;
+    border-bottom: none;
+    margin-bottom: 0;
+}
+#lujvo {
+    padding: 4px 12px;
+    font-size: 1.5em;
+    border-radius: 0 0 16px 16px;
+    margin-top: 0;
+    border: 2px solid var(--bodyfg);
+    border-top: 0;
+    border-bottom: 5px solid var(--bodyfg);
+    background-color: var(--searchbg);
+    color: var(--notesfg);
+    font-style: italic;
+}
 body.regex #search {
     font-family: var(--mono);
 }

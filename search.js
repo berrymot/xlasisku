@@ -40,6 +40,18 @@ function search(query) {
             }
         }
     } else {
+        // lujvo
+        try {
+            if (/\s/.test(query)) {
+                const [lujvo, _] = getLujvo(query.split(/\s+/));
+                id("lujvo").innerHTML = "→ " + lujvo;
+            } else {
+                const parts = jvokaha(query);
+                id("lujvo").innerHTML = "← " + parts.map(i => searchSelrafsiFromRafsi(i)).join(" ");
+            }
+        } catch (e) {
+            id("lujvo").innerHTML = "";
+        }
         // exact matches
         for (const entry of jbo) {
             const text = entry.word.replace(/\s+/g, " ").replace(/&lt;/g, "<");
@@ -139,6 +151,7 @@ id("search").addEventListener("input", function() {
     var q = id("search").value;
     if (!regex) q = q.trim().toLowerCase();
     id("results").innerHTML = "";
+    id("lujvo").innerHTML = "";
     let page = 0;
     if (observer) {
         observer.disconnect();
@@ -158,6 +171,7 @@ id("search").addEventListener("input", function() {
             observer.observe(id("bottom"));
         } else {
             id("results").innerHTML = "";
+            id("lujvo").innerHTML = "";
             page = 0;
         }
         const params = new URLSearchParams({"q": q});
