@@ -1,0 +1,6 @@
+[submodule "temml"]
+	path = temml
+	url = https://github.com/ronkok/Temml.git
+[submodule "latkerlo-jvotci"]
+	path = latkerlo-jvotci
+	url = https://github.com/latkerlo/latkerlo-jvotci
