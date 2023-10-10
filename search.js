@@ -43,12 +43,29 @@ function search(query, jvo = true) {
         // lujvo
         try {
             if (/\s/.test(query)) {
-                const [lujvo, _] = getLujvo(query.split(/\s+/));
-                if (jvo) id("lujvo").innerHTML = lujvo;
+                const [lujvo, _] = getLujvo(query);
+                if (jvo){
+                    id("lujvo").append(mkelem("p", null, [
+                        mkelem("b", null, "lujvo: "),
+                        mkelem("i", null, lujvo)
+                    ]));
+                }
                 console.log(search(lujvo, false));
             } else {
-                const parts = jvokaha(query);
-                if (jvo) id("lujvo").innerHTML = parts.map(i => searchSelrafsiFromRafsi(i)).join(" ");
+                const parts = jvokaha(query).map(i => searchSelrafsiFromRafsi(i)).join(" ");
+                if (jvo) {
+                    id("lujvo").append(mkelem("p", null, [
+                        mkelem("b", null, "tanru: "),
+                        mkelem("i", null, parts)
+                    ]));
+                    const [best, _] = getLujvo(parts);
+                    if (query != best) {
+                        id("lujvo").append(mkelem("p", null, [
+                            mkelem("b", null, "best: "),
+                            mkelem("i", null, best)
+                        ]));
+                    }
+                }
             }
         } catch (e) {
             id("lujvo").innerHTML = "";

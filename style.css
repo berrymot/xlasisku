@@ -100,7 +100,9 @@ code {
     font-size: 1.25em;
     margin-top: 8px;
     color: var(--notesfg);
-    font-style: italic;
+}
+#lujvo p {
+    margin: 6px 0;
 }
 body.regex #search {
     font-family: var(--mono);
