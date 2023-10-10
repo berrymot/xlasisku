@@ -3,6 +3,9 @@ const id = (x) => document.getElementById(x);
 var rhyme = false;
 var regex = false;
 var y = false;
+function h(t) {
+    return t.replace(/[h‘’]/igu, "'");
+}
 function fields(json) {
     return [json.selmaho || null, json.rafsi || null, json.definition, json.word, json.glosswords || null, json.notes || null];
 }
@@ -43,19 +46,19 @@ function search(query, jvo = true) {
         // lujvo
         try {
             if (/\s/.test(query)) {
-                const [lujvo, _] = getLujvo(query);
-                if (jvo){
+                const [lujvo, _] = getLujvo(h(query));
+                if (jvo) {
                     id("lujvo").append(mkelem("p", null, [
-                        mkelem("b", null, "lujvo: "),
+                        "→ ",
                         mkelem("i", null, lujvo)
                     ]));
                 }
                 console.log(search(lujvo, false));
             } else {
-                const parts = jvokaha(query).map(i => searchSelrafsiFromRafsi(i)).join(" ");
+                const parts = jvokaha(h(query)).map(i => searchSelrafsiFromRafsi(i)).join(" ");
                 if (jvo) {
                     id("lujvo").append(mkelem("p", null, [
-                        mkelem("b", null, "tanru: "),
+                        "↑ ",
                         mkelem("i", null, parts)
                     ]));
                 }
@@ -82,7 +85,7 @@ function search(query, jvo = true) {
         // exact matches
         for (const entry of jbo) {
             const text = entry.word.replace(/\s+/g, " ").replace(/&lt;/g, "<");
-            if (text == query) {
+            if (text == h(query)) {
                 results.push([tohtml(entry), 10]);
                 break;
             }
@@ -103,7 +106,7 @@ function search(query, jvo = true) {
                         if (field) {
                             score = 8;
                             for (const r of field) {
-                                if (r == query) {
+                                if (r == h(query)) {
                                     results.push([html, score]);
                                 }
                             }
