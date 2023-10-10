@@ -124,8 +124,13 @@ body.regex #search {
     border-radius: 16px;
     color: var(--bodyfg);
 }
+.entry a:first-child {
+    color: var(--bodyfg);
+}
 .entry .selmaho {
     font-family: var(--mono);
+}
+.entry :is(.selmaho, .rafsi) {
     color: var(--notesfg);
 }
 .entry details {
@@ -155,6 +160,9 @@ ul li {
 a {
     color: var(--link);
     text-decoration: none;
+}
+:is(a, button, summary):hover {
+    text-decoration: underline;
 }
 .opt {
     color: var(--bodyfg);

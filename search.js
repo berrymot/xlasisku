@@ -58,17 +58,26 @@ function search(query, jvo = true) {
                         mkelem("b", null, "tanru: "),
                         mkelem("i", null, parts)
                     ]));
-                    const [best, _] = getLujvo(parts);
-                    if (query != best) {
-                        id("lujvo").append(mkelem("p", null, [
-                            mkelem("b", null, "best: "),
-                            mkelem("i", null, best)
-                        ]));
-                    }
                 }
             }
         } catch (e) {
-            id("lujvo").innerHTML = "";
+            switch (e.message.charAt(0)) {
+                case "m": // tosmabru
+                    const correct = e.message.split("{")[2].slice(0, -1);
+                    id("lujvo").append(mkelem("p", null, [
+                        "do you mean ",
+                        mkelem("a", {
+                            "href": "?q=" + correct
+                        }, [mkelem("i", null, [
+                            correct
+                        ])]),
+                        "?"
+                    ]));
+                    break;
+                default:
+                    id("lujvo").innerHTML = "";
+                    break;
+            }
         }
         // exact matches
         for (const entry of jbo) {
