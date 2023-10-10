@@ -50,7 +50,7 @@ function search(query, jvo = true) {
                 if (jvo) {
                     id("lujvo").append(mkelem("p", null, [
                         "→ ",
-                        mkelem("i", null, lujvo)
+                        mkelem("i", null, [lujvo])
                     ]));
                 }
                 console.log(search(lujvo, false));
@@ -59,7 +59,7 @@ function search(query, jvo = true) {
                 if (jvo) {
                     id("lujvo").append(mkelem("p", null, [
                         "↑ ",
-                        mkelem("i", null, parts)
+                        mkelem("i", null, [parts])
                     ]));
                 }
             }
