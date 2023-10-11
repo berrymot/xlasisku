@@ -80,7 +80,7 @@ function search(query, jvo = true) {
                 case "m": // tosmabru
                     const correct = e.message.split("{")[2].slice(0, -1);
                     id("lujvo").append(mkelem("p", null, [
-                        "do you mean ",
+                        "→ ",
                         mkelem("a", {
                             "href": "?q=" + correct
                         }, [mkelem("i", null, [
