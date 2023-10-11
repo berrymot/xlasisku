@@ -64,8 +64,9 @@ function search(query, jvo = true) {
             } else {
                 var parts = jvokaha(h(query));
                 for (var i = 0; i < parts.length; i++) {
-                    const p = searchSelrafsiFromRafsi(parts[i]) || "-" + parts[i] + "-";
-                    parts[i] = p.length > 4 ? p : "";
+                    var p = searchSelrafsiFromRafsi(parts[i]) || "-" + parts[i] + "-";
+                    if (parts[i].length == 1) p = ""; 
+                    parts[i] = p;
                 }
                 if (jvo) {
                     id("lujvo").append(mkelem("p", null, [
