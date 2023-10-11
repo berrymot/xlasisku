@@ -161,9 +161,6 @@ a {
     color: var(--link);
     text-decoration: none;
 }
-:is(a, button, summary):hover {
-    text-decoration: underline;
-}
 .opt {
     color: var(--bodyfg);
     border: 1px solid var(--bodyfg);
@@ -235,5 +232,10 @@ hr {
         --notesfg: #000c;
         --link: #0067ca;
         --warnfg: #ba6805;
+    }
+}
+@media (hover: hover) {
+    :is(a, button, summary):hover {
+        text-decoration: underline;
     }
 }
