@@ -234,6 +234,16 @@ hr {
         --warnfg: #ba6805;
     }
 }
+@media (prefers-contrast: more) {
+    a, button, summary {
+        text-decoration: underline;
+    }
+}
+@media (forced-colors: active) {
+    .opt button.checked::before {
+        content: "✓ ";
+    }
+}
 @media (hover: hover) {
     :is(a, button, summary):hover {
         text-decoration: underline;
