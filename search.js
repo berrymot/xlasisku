@@ -43,6 +43,14 @@ function search(query, jvo = true) {
             }
         }
     } else {
+        // exact matches
+        for (const entry of jbo) {
+            const text = entry.word.replace(/\s+/g, " ").replace(/&lt;/g, "<");
+            if (text == h(query)) {
+                results.push([tohtml(entry), 10]);
+                break;
+            }
+        }
         // lujvo
         try {
             if (/\s/.test(query)) {
@@ -53,7 +61,6 @@ function search(query, jvo = true) {
                         mkelem("i", null, [lujvo])
                     ]));
                 }
-                console.log(search(lujvo, false));
             } else {
                 const parts = jvokaha(h(query)).map(i => searchSelrafsiFromRafsi(i)).join(" ");
                 if (jvo) {
@@ -80,14 +87,6 @@ function search(query, jvo = true) {
                 default:
                     id("lujvo").innerHTML = "";
                     break;
-            }
-        }
-        // exact matches
-        for (const entry of jbo) {
-            const text = entry.word.replace(/\s+/g, " ").replace(/&lt;/g, "<");
-            if (text == h(query)) {
-                results.push([tohtml(entry), 10]);
-                break;
             }
         }
         for (const entry of jbo) {
