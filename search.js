@@ -62,11 +62,15 @@ function search(query, jvo = true) {
                     ]));
                 }
             } else {
-                const parts = jvokaha(h(query)).map(i => searchSelrafsiFromRafsi(i)).join(" ");
+                var parts = jvokaha(h(query));
+                for (var i = 0; i < parts.length; i++) {
+                    const p = searchSelrafsiFromRafsi(parts[i]) || "-" + parts[i] + "-";
+                    parts[i] = p.length > 4 ? p : "";
+                }
                 if (jvo) {
                     id("lujvo").append(mkelem("p", null, [
                         "↑ ",
-                        mkelem("i", null, [parts])
+                        mkelem("i", null, [parts.join(" ")])
                     ]));
                 }
             }
