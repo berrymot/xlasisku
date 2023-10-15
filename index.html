@@ -48,7 +48,7 @@
             id("search").setAttribute("placeholder", "search");
             // url things
             function redir(params) {
-                var vars = params ? "?" : "";
+                var vars = "?";
                 if (params) {
                     if (params.has("q") && params.get("q") /* yes */) vars += "&q=" + encodeURIComponent(params.get("q"));
                     if (params.has("rhyme")) vars += "&rhyme=" + encodeURIComponent(params.get("rhyme"));
