@@ -135,14 +135,12 @@ public class Lojbanparse {
         s.replaceAll("\"", "\\\\\"").replaceAll("\\\\", "\\\\\\\\")
         // html entities
         .replaceAll("&amp;", "&").replaceAll("&lt;", "<").replaceAll("&gt;", ">").replaceAll("&apos;", "'").replaceAll("&quot;", "\\\\\"")
-        // haha no xss for u >:3
-        .replaceAll("<(?=\\/?\\w+)", "&lt;");
+        ;
     }
     public static String fixdata(String s) {
         return
         // html entities
         s.replaceAll("&amp;", "&").replaceAll("&lt;", "<").replaceAll("&gt;", ">").replaceAll("&apos;", "'").replaceAll("&quot;", "\"")
-        // haha no xss for u >:3
-        .replaceAll("<(?=\\/?\\w+)", "&lt;");
+        ;
     }
 }

@@ -63,6 +63,7 @@
     --notesfg: #fffc;
     --link: #9cf;
     --warnfg: #fc9;
+    --errfg: #f99;
     --sans: "Inter", ui-sans-serif, sans-serif;
     --mono: "iosevka", ui-monospace, monospace;
 }
@@ -218,6 +219,12 @@ hr {
 :not(input, hr):empty {
     display: none;
 }
+.temml-error {
+    color: var(--errfg) !important;
+    white-space: pre-wrap !important;
+    font-family: var(--mono);
+    display: block;
+}
 @media (prefers-color-scheme: light) {
     :root {
         --pinkfg: #ff1493;
@@ -232,6 +239,7 @@ hr {
         --notesfg: #000c;
         --link: #0067ca;
         --warnfg: #ba6805;
+        --errfg: #d12929;
     }
 }
 @media (prefers-contrast: more) {
