@@ -6,7 +6,7 @@ the TeX is rendered with [temml](https://github.com/ronkok/Temml). safari/androi
 
 xlasisku uses [latkerlo-jvotci](https://github.com/latkerlo/latkerlo-jvotci) as its lujvo thing doer.
 
-fonts: [inter](https://github.com/rsms/inter) (v4.0-β9h), [iosevka](https://github.com/be5invis/Iosevka) (v27.0.2)
+fonts: [inter](https://github.com/rsms/inter) (v4.0-β9h), [iosevka](https://github.com/be5invis/Iosevka) (v27.2.1)
 
 thanku roljbogu'e inhabitants for being cool :3
 
