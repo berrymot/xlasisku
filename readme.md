@@ -1,12 +1,5 @@
 # xlasisku
 
-## todolist
-
-- improve speed
-- sort things usefully
-- clean the database
-- rhyme: implement diphthongs
-
 ## credits + how to contribute
 
 the TeX is rendered with [temml](https://github.com/ronkok/Temml). safari/android might have some rendering bugs
