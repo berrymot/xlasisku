@@ -1,7 +1,4 @@
-D*.java
-M*.java
 data-*
 data.json
-data.html
 *.xml
 notes/
