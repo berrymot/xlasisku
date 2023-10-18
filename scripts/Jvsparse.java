@@ -118,10 +118,4 @@ public class Jvsparse {
         .replaceAll("&amp;", "&").replaceAll("&lt;", "<").replaceAll("&gt;", ">").replaceAll("&apos;", "'").replaceAll("&quot;", "\\\\\"")
         ;
     }
-    // public static String fixdata(String s) {
-    //     return
-    //     // html entities
-    //     s.replaceAll("&amp;", "&").replaceAll("&lt;", "<").replaceAll("&gt;", ">").replaceAll("&apos;", "'").replaceAll("&quot;", "\"")
-    //     ;
-    // }
 }
