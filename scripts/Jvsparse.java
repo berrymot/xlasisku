@@ -43,6 +43,9 @@ public class Jvsparse {
                 line = br.readLine();
                 line = br.readLine();
                 String score = line.substring(line.indexOf("<score>") + 7, line.indexOf("</score>"));
+                if (Integer.valueOf(score) < -1) {
+                    continue;
+                }
                 while (!line.contains("<notes>") && !line.contains("<glossword word=\"") && !line.contains("</valsi>")) {
                     line = br.readLine();
                 }

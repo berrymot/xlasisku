@@ -28,7 +28,6 @@ function tohtml(json) {
                 "href": "https://jbovlaste.lojban.org/dict/" + json.word.replace(/ /g, "%20"),
                 "target": "_blank"
             }, [
-                json.score < -1 ? mkelem("b", {"className": "warn"}, [json.score]) :
                 json.score >= 1000 ? "official" :
                 json.score == -1 ? json.score : "+" + json.score,
                 " ↗"
