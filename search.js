@@ -33,7 +33,7 @@ function search(query, jvo = true) {
         for (const entry of jbo) {
             var text = vowels(entry.word);
             if (v != "" && text.endsWith(v)) {
-                results.push([tohtml(entry), 1]);
+                results.push([tohtml(entry), -entry.word.length]);
             }
         }
     } else if (regex) {
@@ -109,9 +109,9 @@ function search(query, jvo = true) {
                 var score = 6 - fields(entry).indexOf(field);
                 switch (field) {
                     case entry.word:
-                        if (field.startsWith(query)) {
+                        if (field.startsWith(h(query))) {
                             results.push([html, score + 0.5 + query.length / field.length / 2]);
-                        } else if (field.includes(query)) {
+                        } else if (field.includes(h(query))) {
                             results.push([html, score + query.length / field.length / 2]);
                         }
                         break;
