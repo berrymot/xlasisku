@@ -29,9 +29,6 @@
                 <button id="xm" disabled>regex</button>
                 <button id="rm" disabled>rhyme</button>
             </span>
-            <span class="nobr opt rhymeonly">
-                <button id="y" disabled>y-sensitive</button>
-            </span>
         </p>
         <input type="text" id="search" autocomplete="off" spellcheck="false" placeholder="loading" disabled />
         <div id="lujvo"></div>
@@ -43,7 +40,6 @@
             id("sm").removeAttribute("disabled");
             id("rm").removeAttribute("disabled");
             id("xm").removeAttribute("disabled");
-            id("y").removeAttribute("disabled");
             id("search").removeAttribute("disabled");
             id("search").setAttribute("placeholder", "search");
             // url things
@@ -51,7 +47,7 @@
                 var vars = "?";
                 if (params) {
                     if (params.has("q") && params.get("q") /* yes */) vars += "&q=" + encodeURIComponent(params.get("q"));
-                    if (params.has("rhyme")) vars += "&rhyme=" + encodeURIComponent(params.get("rhyme"));
+                    if (params.has("rhyme")) vars += "&rhyme";
                     if (params.has("regex")) vars += "&regex";
                 }
                 vars = vars.replace(/\?&/g, "?").replace(/=&/g, "&").replace(/[=?]$/, "");
@@ -61,10 +57,7 @@
                 const params = new URLSearchParams(window.location.search);
                 const q = params.get("q");
                 if (params.has("rhyme")) {
-                    y = (params.get("rhyme") == "y");
-                    rhymemode(false);
-                } else {
-                    y = true;
+                    rhymemode();
                 }
                 if (params.has("regex")) {
                     regexmode();

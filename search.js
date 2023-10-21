@@ -2,7 +2,6 @@ const id = (x) => document.getElementById(x);
 // searching & rendering
 var rhyme = false;
 var regex = false;
-var y = false;
 function h(t) {
     return t.replace(/[h‘’]/igu, "'");
 }
@@ -15,15 +14,25 @@ function selmahois(x, y) {
     const [aa, bb, cc] = y;
     return a == aa && (b == bb || b == null) && (!c || cc);
 }
+function vowels(str) {
+    var the = str.toLowerCase();
+    the = the.replace(/(?<=[aeoy])i/g, "ĭ").replace(/(?<=[aeoy])u/g, "ŭ");
+    while (/[iu]/.test(the)) {
+        the = the
+        .replace(/i(?![aeiouyīū])/gu, "ī").replace(/u(?![aeiouyīū])/gu, "ū")
+        .replace(/i(?=[aeoyīū])/gu, "ị").replace(/u(?=[aeīoūy])/gu, "ụ")
+        ;
+    }
+    the = the.replace(/[^aeiouyĭŭīūịụ]/gu, "");
+    return the;
+}
 function search(query, jvo = true) {
     var results = [];
     if (rhyme) {
-        // TODO: sort
+        const v = vowels(query);
         for (const entry of jbo) {
-            const rgx = y ? /[^aeiouy]/gi : /[^aeiou]/gi;
-            const vowels = query.replace(rgx, "");
-            var text = entry.word.replace(rgx, "");
-            if (text.endsWith(vowels)) {
+            var text = vowels(entry.word);
+            if (text.endsWith(v)) {
                 results.push([tohtml(entry), 1]);
             }
         }
@@ -192,7 +201,7 @@ id("search").addEventListener("input", function() {
     }
     // for debouncing
     timer = setTimeout(function() {
-        if ((rhyme ? q.replace(y ? /[^aeiouy]/gi : /[^aeiou]/gi, "") : q).length) {
+        if (q.length) {
             const res = search(q, true);
             id("results").innerHTML = "";
             load(res, page);
@@ -209,7 +218,7 @@ id("search").addEventListener("input", function() {
             page = 0;
         }
         const params = new URLSearchParams({"q": q});
-        if (rhyme) params.append("rhyme", y ? "y" : "");
+        if (rhyme) params.append("rhyme", "");
         if (regex) params.append("regex", "");
         redir(params);
     }, 100);
@@ -218,7 +227,6 @@ id("search").addEventListener("input", function() {
 id("sm").addEventListener("click", searchmode);
 id("rm").addEventListener("click", function() {rhymemode(false);});
 id("xm").addEventListener("click", regexmode);
-id("y").addEventListener("click", function() {rhymemode(true);});
 function searchmode() {
     clearTimeout(timer);
     document.body.classList.remove("rhyme");
@@ -241,7 +249,7 @@ function regexmode() {
     regex = true;
     id("search").dispatchEvent(new Event("input", {"bubbles": true}));
 }
-function rhymemode(t) {
+function rhymemode() {
     clearTimeout(timer);
     document.body.classList.remove("regex");
     document.body.classList.add("rhyme");
@@ -250,11 +258,5 @@ function rhymemode(t) {
     id("rm").classList.add("checked");
     rhyme = true;
     regex = false;
-    if (t) y = !y; // this was painful actually
-    if (y) {
-        id("y").classList.add("checked");
-    } else {
-        id("y").classList.remove("checked");
-    }
     id("search").dispatchEvent(new Event("input", {"bubbles": true}));
 }
