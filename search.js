@@ -32,7 +32,7 @@ function search(query, jvo = true) {
         const v = vowels(query);
         for (const entry of jbo) {
             var text = vowels(entry.word);
-            if (text.endsWith(v)) {
+            if (v != "" && text.endsWith(v)) {
                 results.push([tohtml(entry), 1]);
             }
         }
