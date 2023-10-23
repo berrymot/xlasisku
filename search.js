@@ -42,10 +42,8 @@ function search(query, jvo = true) {
             try {
                 rgx = new RegExp(query);
             } catch (e) {
-                results.push([mkelem("div", {"className": "err"}, [
-                    e.message.split(": ").slice(-1)[0].toLowerCase()
-                ]), 0]);
-                return results;
+                id("info").innerText = e.message.split(": ").slice(-1)[0].toLowerCase();
+                return [];
             }
             if (rgx.test(entry.word)) {
                 results.push([tohtml(entry), 1]);
@@ -65,7 +63,7 @@ function search(query, jvo = true) {
             if (/\s/.test(query)) {
                 const [lujvo, _] = getLujvo(h(query));
                 if (jvo) {
-                    id("lujvo").append(mkelem("p", null, [
+                    id("info").append(mkelem("p", null, [
                         "→ ",
                         mkelem("i", null, [lujvo])
                     ]));
@@ -78,7 +76,7 @@ function search(query, jvo = true) {
                     parts[i] = p;
                 }
                 if (jvo) {
-                    id("lujvo").append(mkelem("p", null, [
+                    id("info").append(mkelem("p", null, [
                         "↑ ",
                         mkelem("i", null, [parts.join(" ")])
                     ]));
@@ -88,7 +86,7 @@ function search(query, jvo = true) {
             switch (e.message.charAt(0)) {
                 case "m": // tosmabru
                     const correct = e.message.split("{")[2].slice(0, -1);
-                    id("lujvo").append(mkelem("p", null, [
+                    id("info").append(mkelem("p", null, [
                         "→ ",
                         mkelem("a", {
                             "href": "?q=" + correct
@@ -99,7 +97,7 @@ function search(query, jvo = true) {
                     ]));
                     break;
                 default:
-                    id("lujvo").innerHTML = "";
+                    id("info").innerHTML = "";
                     break;
             }
         }
@@ -194,7 +192,7 @@ id("search").addEventListener("input", function() {
     var q = id("search").value;
     if (!regex) q = q.trim().toLowerCase();
     id("results").innerHTML = "";
-    id("lujvo").innerHTML = "";
+    id("info").innerHTML = "";
     let page = 0;
     if (observer) {
         observer.disconnect();
@@ -214,7 +212,7 @@ id("search").addEventListener("input", function() {
             observer.observe(id("bottom"));
         } else {
             id("results").innerHTML = "";
-            id("lujvo").innerHTML = "";
+            id("info").innerHTML = "";
             page = 0;
         }
         const params = new URLSearchParams({"q": q});

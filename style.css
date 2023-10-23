@@ -51,7 +51,7 @@
     -webkit-text-size-adjust: 100%;
 }
 :root {
-    --pinkfg: #ff1492;
+    --pinkfg: #ff1493;
     --pinkbg: #603;
     --purplefg: #8e46e0;
     --purplebg: #306;
@@ -97,7 +97,7 @@ code {
     border-bottom: 5px solid var(--bodyfg);
     color: var(--bodyfg) !important;
 }
-#lujvo {
+#info {
     font-size: 1.25em;
     margin-top: 8px;
     color: var(--notesfg);
@@ -147,10 +147,6 @@ summary {
 }
 .warn {
     color: var(--warnfg);
-}
-.err {
-    margin-top: 16px;
-    padding: 8px 0;
 }
 .nobr {
     white-space: nowrap;
