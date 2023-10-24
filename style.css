@@ -102,7 +102,7 @@ code {
     margin-top: 8px;
     color: var(--notesfg);
 }
-#lujvo p {
+#info p {
     margin: 6px 0;
 }
 body.regex #search {
