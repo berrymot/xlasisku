@@ -8889,6 +8889,7 @@ en   bruNAIS
 en   bruneleska
 en   bruneleskia
 en   brupu'i
+en   bruseldamri
 en   bryklyn
 en   bu
 en   bu'a
@@ -13888,6 +13889,7 @@ en   jorne bu
 en   jorny'utka
 en   joryru'u
 en   joska'e
+en   jostolcru
 en   jo'u
 en   ju
 en   ju'a
@@ -14567,6 +14569,7 @@ en   kijyselspo
 en   kijytoldustersabji
 en   kiknoia
 en   kilcrigau
+en   kilga
 en   kilga'a
 en   kilga'axa'i
 en   kilpunli
@@ -17845,6 +17848,7 @@ en   pavysmu
 en   pavytabjoikijno
 en   pavytai
 en   pavyvanci
+en   pavyvi'i
 en   pavyxalka
 en   pavyxilma'e
 en   pavzilcatra
@@ -18794,6 +18798,7 @@ en   reltracinse
 en   reltu'edzu
 en   relvanci
 en   relveljvojvo
+en   relvi'i
 en   relxalka
 en   relxilkarce
 en   relxilma'e
@@ -19515,6 +19520,7 @@ en   sakcpa
 en   sakcpu
 en   sakcti
 en   sakli
+en   sakprtlfmsnge'a
 en   saksna
 en   saksofono
 en   saksrsporte
@@ -23377,6 +23383,7 @@ en   ve'u
 en   vi
 en   vi'a
 en   vi'amde
+en   vi'arzu'i
 en   vibgle
 en   vibna
 en   vibnrbarpinji
@@ -23487,6 +23494,7 @@ en   vistci
 en   visycu'i
 en   visygau
 en   visysanji
+en   visyzu'i
 en   vitci
 en   vitke
 en   vitno
@@ -25516,6 +25524,7 @@ sv   nipon
 sv   pamglepe'o
 sv   selkeima'e
 sv   velda'iglu
+test   cmuru
 test   testest
 test   texsuto
 test   vlalalavlala
