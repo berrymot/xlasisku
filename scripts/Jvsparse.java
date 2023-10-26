@@ -21,7 +21,7 @@ public class Jvsparse {
             if (line.contains("<valsi")) {
                 String word = line.substring(line.indexOf("word=\"") + 6, line.indexOf("\"", line.indexOf("word=\"") + 6));
                 String type = line.substring(line.indexOf("type=\"") + 6, line.indexOf("\"", line.indexOf("type=\"") + 6));
-                if (type.startsWith("obs")) {
+                if (type.startsWith("obs") || word.equals(".i")) {
                     continue;
                 }
                 String selmaho = "";
@@ -107,8 +107,7 @@ public class Jvsparse {
             bw.println(line);
         }
         br.close();
-        File temp = new File("temp");
-        temp.delete();
+        output.delete();
         bw.close();
         long end = System.currentTimeMillis();
         System.out.println((end - start) + " ms");
