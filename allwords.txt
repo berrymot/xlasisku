@@ -8726,6 +8726,7 @@ en   bolrbolingo
 en   bolrgolfo
 en   bolrkriketi
 en   bolrkroke
+en   bolrtenis
 en   bolrvolei
 en   bolstropfedo
 en   boltabno
@@ -13906,6 +13907,7 @@ en   judrysni
 en   judryuidje
 en   ju'e
 en   ju'ei
+en   ju'erboijvi
 en   jufmei
 en   jufpau
 en   jufra
@@ -15241,6 +15243,7 @@ en   lanjanbe
 en   lanka
 en   lanku'i
 en   lankurji
+en   lankyboijvi
 en   lanli
 en   lanma'i
 en   lanme
@@ -17056,6 +17059,7 @@ en   nenmu
 en   nenri
 en   nenrxamilto
 en   nenymivyslerango
+en   nenzengau
 en   ne'o
 en   ne'o'a
 en   ne'o'au
@@ -18071,6 +18075,8 @@ en   piltapla
 en   piltisna
 en   pilvi'u
 en   pilzeni
+en   pimboi
+en   pimboijvi
 en   pimdu'i
 en   pimlu
 en   pimo'a
@@ -21751,6 +21757,7 @@ en   tamsmi
 en   tamtigypre
 en   tamxri
 en   tanbargu
+en   tanbla
 en   tanblo
 en   tanbo
 en   tance
