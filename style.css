@@ -105,9 +105,6 @@ code {
 #info p {
     margin: 6px 0;
 }
-body.regex #search {
-    font-family: var(--mono);
-}
 #search:disabled {
     opacity: 1;
     color: var(--notesfg);
