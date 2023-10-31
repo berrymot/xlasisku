@@ -197,6 +197,10 @@ id("search").addEventListener("input", function() {
     if (observer) {
         observer.disconnect();
     }
+    const params = new URLSearchParams({"q": q});
+    if (rhyme) params.append("rhyme", "");
+    if (regex) params.append("regex", "");
+    redir(params);
     // for debouncing
     timer = setTimeout(function() {
         if (q.length) {
@@ -215,10 +219,6 @@ id("search").addEventListener("input", function() {
             id("info").innerHTML = "";
             page = 0;
         }
-        const params = new URLSearchParams({"q": q});
-        if (rhyme) params.append("rhyme", "");
-        if (regex) params.append("regex", "");
-        redir(params);
     }, 100);
 });
 // rhyming
