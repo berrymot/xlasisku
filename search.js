@@ -83,23 +83,7 @@ function search(query, jvo = true) {
                 }
             }
         } catch (e) {
-            switch (e.message.charAt(0)) {
-                case "m": // tosmabru
-                    const correct = e.message.split("{")[2].slice(0, -1);
-                    id("info").append(mkelem("p", null, [
-                        "→ ",
-                        mkelem("a", {
-                            "href": "?q=" + correct
-                        }, [mkelem("i", null, [
-                            correct
-                        ])]),
-                        "?"
-                    ]));
-                    break;
-                default:
-                    id("info").innerHTML = "";
-                    break;
-            }
+            // naljvo
         }
         for (const entry of jbo) {
             var html = tohtml(entry);
