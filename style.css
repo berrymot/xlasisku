@@ -52,11 +52,11 @@
 }
 :root {
     --pinkfg: #ff1493;
-    --pinkbg: #603;
-    --purplefg: #8e46e0;
-    --purplebg: #306;
     --tealfg: #0c9381;
-    --tealbg: #044;
+    --purplefg: #8e46e0;
+    --pinkbg: #280014;
+    --tealbg: #001e1e;
+    --purplebg: #140028;
     --bodyfg: #fff;
     --searchbg: #000;
     --entrybg: #0008;
@@ -163,6 +163,7 @@ a {
     border: 1px solid var(--bodyfg);
     border-radius: 16px;
     display: inline-block;
+    margin-top: 4px;
 }
 .group {
     border: 2px solid var(--bodyfg);
@@ -203,7 +204,7 @@ body.rhyme .opt .checked {
 body.regex .opt .checked {
     background: var(--tealfg);
 }
-body:not(.rhyme) .rhymeonly {
+body[class^=r] .normalonly {
     display: none;
 }
 math {
@@ -224,11 +225,11 @@ hr {
 @media (prefers-color-scheme: light) {
     :root {
         --pinkfg: #ff1493;
-        --pinkbg: #ffe2f2;
-        --purplefg: #712ce8;
-        --purplebg: #ece6f4;
         --tealfg: #0c9381;
+        --purplefg: #712ce8;
+        --pinkbg: #ffe2f2;
         --tealbg: #e1f2f0;  
+        --purplebg: #ece6f4;
         --bodyfg: #000;
         --searchbg: #fff;
         --entrybg: #fff8;

@@ -21,7 +21,7 @@ function tohtml(json) {
             json.rafsi ? mkelem("i", {"className": "rafsi"}, [
                 ...json.rafsi.map(i => "-" + i), "-"
             ]) : null,
-            " • ",
+            " ",
             json.selmaho ? mkelem("code", {"className": "selmaho"}, [json.selmaho]) : null,
             " ",
             mkelem("a", {
