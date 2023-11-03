@@ -213,6 +213,9 @@ hr {
 :not(input, hr, br):empty {
     display: none;
 }
+h1, h1 + p {
+    margin: 0;
+}
 h2 {
     border-top: 3px solid var(--notesfg);
 }
