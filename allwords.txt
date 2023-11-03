@@ -14029,6 +14029,7 @@ en   jvamapti
 en   jvame'o
 en   jvamle
 en   jvarafsi
+en   jvegana
 en   jvencuio
 en   jventrajmaumce
 en   jvicpe
@@ -15299,6 +15300,7 @@ en   latmrlatino
 en   latmrstici
 en   latna
 en   latnytse
+en   latpre
 en   latpukcmo
 en   latrbirmani
 en   latrnorgo
@@ -15519,6 +15521,7 @@ en   lingona
 en   lingote
 en   lingua
 en   linji
+en   linkara
 en   linlani
 en   linsi
 en   linto
@@ -16015,6 +16018,7 @@ en   me'au
 en   mebmla
 en   mebri
 en   mebybo'u
+en   meckai
 en   meckanpe
 en   mecmlerai
 en   mecna'u
@@ -21371,6 +21375,7 @@ en   spranto
 en   sprirni
 en   spuda
 en   spunera
+en   spupi
 en   spusku
 en   sputnike
 en   sputu
@@ -23920,6 +23925,7 @@ en   xatcepsut
 en   xatmira
 en   xatra
 en   xatsi
+en   xa'u
 en   xau
 en   xau'a
 en   xa'ucne
