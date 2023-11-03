@@ -210,8 +210,11 @@ math {
 hr {
     border: 1px solid var(--bodyfg);
 }
-:not(input, hr):empty {
+:not(input, hr, br):empty {
     display: none;
+}
+h2 {
+    border-top: 3px solid var(--notesfg);
 }
 .temml-error {
     color: var(--errfg) !important;
