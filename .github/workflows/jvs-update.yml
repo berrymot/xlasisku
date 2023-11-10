@@ -1,0 +1,32 @@
+name: grab jvs and parse into stuff
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: 30 18 * * 5
+
+jobs:
+  jvs-update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: fetch, parse
+        run: |
+          for lang in en am ar art-guaspi art-loglan be bg br ca ch cs cy da de el en-bpfk en-simple eo es et eu fa fi fr-facile fr ga gl gu he hi hr hu ia id it ja jbo ka ko kw la lt lv mg ne nl no pl pt-br pt ro ru sa sk sl so sq sr sv ta test tlh tok tpi tr uk vi wa zh; do
+            curl "https://jbovlaste.lojban.org/export/xml-export.html?lang=$lang&positive_scores_only=0&bot_key=z2BsnKYJhAB0VNsl" > "jvs/jbovlaste-$lang.xml"
+          done
+          cd scripts; java jvsparse.java; java allwords.java; java datawrite.java; java dataparse.java
+
+      - name: create pr
+        id: cpr
+        uses: peter-evans/create-pull-request@v5
+        with:
+          commit-message: weekly jvs update
+          committer: GitHub <noreply@github.com>
+          author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
+          signoff: false
+          branch: jvs-update
+          delete-branch: true
+          title: 'weekly jvs update'
+          assignees: berrymot
+          reviewers: berrymot
