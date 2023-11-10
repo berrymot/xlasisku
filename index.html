@@ -8,7 +8,6 @@
         <meta name="description" content="" />
         <link rel="shortcut icon" href="cmaxra.png" type="image/png" />
         <link rel="stylesheet" href="style.css" />
-        <script defer src="jbo.js"></script>
         <script defer src="temml/dist/temml.min.js"></script>
         <script defer src="temml/contrib/auto-render/dist/auto-render.min.js"></script>
         <script src="latkerlo-jvotci/js/docs/data.js"></script>
@@ -17,24 +16,39 @@
         <script src="latkerlo-jvotci/js/docs/tools.js"></script>
         <script src="latkerlo-jvotci/js/docs/jvozba.js"></script>
         <script src="latkerlo-jvotci/js/docs/katna.js"></script>
-        <script src="construct.js"></script>
     </head>
     <body>
         <h1>la xlasisku</h1>
         <p>last data update 2023‑10‑27 &bull; <a href="https://github.com/berrymot/xlasisku">github repo</a></p>
         <p>
-            <b>mode</b>
             <span class="nobr opt">
                 <button id="sm" disabled class="checked">normal</button>
                 <button id="xm" disabled>regex</button>
                 <button id="rm" disabled>rhyme</button>
             </span>
+            <span class="normalonly">
+                | <b>jvoptions</b>
+                <span class="nobr opt">
+                    <button id="jvo-rn" disabled class="checked" value="s">CLL</button>
+                    <button id="jvo-rny" disabled value="a">allow 'y</button>
+                    <button id="jvo-y" disabled value="f">force 'y</button>
+                </span>
+                <span class="nobr opt">
+                    <button id="jvo-xr" disabled>exp rafsi</button>
+                </span>
+                <span class="nobr opt">
+                    <button id="jvo-mz" disabled>mz</button>
+                </span>
+                <a href="jvoptions.html" target="_blank"><b>?</b></a>
+            </span>
         </p>
         <input type="text" id="search" autocomplete="off" spellcheck="false" placeholder="loading" disabled />
         <div id="info"></div>
+        <div id="length"></div>
         <div id="results"></div>
-        <div id="bottom"><hr /></div>
-        <script src="search.js"></script>
+        <div id="bottom"></div>
+        <script src="helper.js"></script>
+        <script src="events.js"></script>
         <script>
             // ready for stuff to happen
             id("sm").removeAttribute("disabled");

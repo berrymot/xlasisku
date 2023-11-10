@@ -61,6 +61,7 @@
     --searchbg: #000;
     --entrybg: #0008;
     --notesfg: #fffc;
+    --disabledfg: #fffc;
     --link: #9cf;
     --warnfg: #fc9;
     --errfg: #f99;
@@ -75,6 +76,7 @@ body {
     background: var(--pinkbg);
     color: var(--bodyfg);
     line-height: 1.4;
+    word-break: break-word;
 }
 body.rhyme {
     background: var(--purplebg);
@@ -195,6 +197,9 @@ a {
 .opt :disabled {
     color: var(--notesfg);
 }
+.opt .checked:disabled {
+    color: var(--disabledfg);
+}
 body.rhyme .opt .checked {
     background: var(--purplefg);
 }
@@ -225,6 +230,11 @@ h2 {
     font-family: var(--mono);
     display: block;
 }
+#length, #bottom {
+    text-align: center;
+    margin: 8px 0;
+    font-size: 1.25em;
+}
 @media (prefers-color-scheme: light) {
     :root {
         --pinkfg: #ff1493;
@@ -236,10 +246,14 @@ h2 {
         --bodyfg: #000;
         --searchbg: #fff;
         --entrybg: #fff8;
+        --disabledfg: #fffc;
         --notesfg: #0008;
         --link: #0067ca;
         --warnfg: #ba6805;
         --errfg: #d12929;
+    }
+    button.checked:disabled {
+        color: var(--disabledfg);
     }
 }
 @media (prefers-contrast: more) {

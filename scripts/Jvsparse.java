@@ -12,7 +12,7 @@ public class Jvsparse {
         }
         output.createNewFile();
         PrintWriter bw = new PrintWriter("temp");
-        bw.print("const jbo=[");
+        bw.print("export const jbo=[");
         String line;
         while ((line = br.readLine()) != null) {
             if (!line.contains("<valsi") && !line.contains("</valsi>")) {
