@@ -12,6 +12,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: fetch, parse
         run: |
+          mkdir jvs
           for lang in en am ar art-guaspi art-loglan be bg br ca ch cs cy da de el en-bpfk en-simple eo es et eu fa fi fr-facile fr ga gl gu he hi hr hu ia id it ja jbo ka ko kw la lt lv mg ne nl no pl pt-br pt ro ru sa sk sl so sq sr sv ta test tlh tok tpi tr uk vi wa zh; do
             curl "https://jbovlaste.lojban.org/export/xml-export.html?lang=$lang&positive_scores_only=0&bot_key=z2BsnKYJhAB0VNsl" > "jvs/jbovlaste-$lang.xml"
           done
