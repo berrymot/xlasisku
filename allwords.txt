@@ -10941,6 +10941,7 @@ en   dinko
 en   dinkra
 en   dinkrnite
 en   dinpliselpla
+en   dinra'a
 en   dinra'e
 en   dinsauru
 en   dinsefygundi
@@ -13117,6 +13118,8 @@ en   i,ov
 en   ipka
 en   ipkota
 en   ipna
+en   ipta'i
+en   iptcu
 en   iptsa
 en   irbisa
 en   irci
@@ -13818,6 +13821,7 @@ en   jisrxananase
 en   jisygau
 en   jisygauple
 en   jisystota'u
+en   jitcau
 en   jitfa
 en   jitni
 en   jitro
@@ -14543,6 +14547,7 @@ en   kibromge
 en   kibyca'o
 en   kibycpa
 en   kibyka'i
+en   kibyka'ixra
 en   kibykarni
 en   kibypapri
 en   kibypidyfi'a
@@ -15192,6 +15197,7 @@ en   la'erji'i
 en   la'erlai
 en   lafmi'i
 en   lafmuvgau
+en   lafre'e
 en   lafti
 en   lagbractebi
 en   lagyfe'a
@@ -15778,6 +15784,7 @@ en   makfa
 en   makfartci
 en   makfyfi'a
 en   makintoc
+en   maklafre'e
 en   maknas
 en   makpapi
 en   maksi
@@ -16169,6 +16176,7 @@ en   mibypre
 en   mic
 en   micka'agau
 en   micka'aku'a
+en   micra'a
 en   micydi'u
 en   micynimre
 en   micyske
@@ -20354,6 +20362,7 @@ en   sexmti
 en   sezau
 en   sezbanzu
 en   sezbarkle
+en   sezbordinra'a
 en   sezborsigmyfrica
 en   sezborsigmysmi
 en   sezdargau
@@ -22867,6 +22876,7 @@ en   tsirkuso
 en   tsirmiristika
 en   tsirvanila
 en   tsiselcigla
+en   tsisifo
 en   tsispa
 en   tsoiteku
 en   tsubame
@@ -25131,7 +25141,6 @@ jbo   je'oi
 jbo   jikci'e
 jbo   jiksi'u
 jbo   jisrycfu
-jbo   jitcau
 jbo   jmivyckape
 jbo   jonma'o
 jbo   jufsle
