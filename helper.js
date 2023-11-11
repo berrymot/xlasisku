@@ -37,10 +37,20 @@ function tohtml(json) {
         mkelem("p", null, [json.definition]),
         json.notes ? mkelem("details", null, [
             mkelem("summary", null, ["more info"]),
-            mkelem("p", null, [json.notes])
+            mkelem("p", null, replacelinks(json.notes))
         ]) : null
     ]);
     return entry;
+}
+function replacelinks(str) {
+    return str.replace(/\{/g, "📦{").replace(/\}/g, "}📦").split("📦").map((item) =>
+        /\{[a-z']+\}/.test(item) ? mkelem("a", {
+            "href": "?q=" + item.slice(1, -1),
+            "target": rhyme || regex ? "_blank" : "_self"
+        }, item.slice(1, -1)) : item
+    );
+    // TODO: concatenate adj text nodes
+    // FIXME: tex
 }
 function load(res, page) {
     const start = page * 100;

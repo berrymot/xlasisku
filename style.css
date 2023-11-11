@@ -124,7 +124,7 @@ code {
     border-radius: 16px;
     color: var(--bodyfg);
 }
-.entry a:first-child {
+.entry p:first-child a:first-child {
     color: var(--bodyfg);
 }
 .entry .selmaho {
