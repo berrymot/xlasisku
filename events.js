@@ -31,6 +31,7 @@ id("search").addEventListener("input", function() {
     clearTimeout(timer);
     var q = id("search").value;
     if (!regex) q = q.trim().toLowerCase();
+    results = null;
     id("results").innerHTML = "";
     id("info").innerHTML = "";
     id("bottom").innerHTML = "loading...";
@@ -76,6 +77,7 @@ id("search").addEventListener("input", function() {
             console.log("sending stuff to worker");
             worker.postMessage({"query": q, "rhyme": rhyme, "regex": regex});
         } else {
+            results = null;
             id("results").innerHTML = "";
             id("info").innerHTML = "";
             id("bottom").innerHTML = "";
