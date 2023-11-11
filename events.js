@@ -34,7 +34,6 @@ id("search").addEventListener("input", function() {
     results = null;
     id("results").innerHTML = "";
     id("info").innerHTML = "";
-    id("bottom").innerHTML = "loading...";
     id("length").innerHTML = "";
     const params = new URLSearchParams({"q": q});
     if (rhyme) params.append("rhyme", "");
@@ -42,6 +41,7 @@ id("search").addEventListener("input", function() {
     redir(params);
     timer = setTimeout(function() {
         if (q.length) {
+            id("bottom").innerHTML = "loading...";
             if (!rhyme && !regex) {
                 // lujvo things
                 try {
