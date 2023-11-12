@@ -47,21 +47,14 @@ id("search").addEventListener("input", function() {
                 // lujvo things
                 try {
                     if (/\s/.test(q)) {
-                        const lujvo = getLujvo(h(q))[0];
                         id("info").append(mkelem("p", null, [
                             "→ ",
-                            mkelem("i", null, [lujvo])
+                            mkelem("i", null, [getLujvo(h(q))[0]])
                         ]));
                     } else {
-                        var parts = jvokaha(h(q));
-                        for (var i = 0; i < parts.length; i++) {
-                            var p = searchSelrafsiFromRafsi(parts[i]) || "-" + parts[i] + "-";
-                            if (["r", "n", "y", "y'", "'y", "'y'"].includes(parts[i])) p = ""; // hyphens
-                            parts[i] = p;
-                        }
                         id("info").append(mkelem("p", null, [
                             "↑ ",
-                            mkelem("i", null, [parts.join(" ")])
+                            mkelem("i", null, [getVeljvo(h(q)).join(" ")])
                         ]));
                     }
                 } catch (e) {
