@@ -51,11 +51,10 @@ function search(query) {
         }
     } else {
         // exact matches
-        for (const entry of jbo) {
-            const text = entry.word.replace(/\s+/g, " ").replace(/&lt;/g, "<");
-            if (text == h(query)) {
-                results.push([entry, 10]);
-                break;
+        for (const w of query.split(/\s+/)) {
+            const exact = jbo.find(entry => entry.word == h(w));
+            if (exact) {
+                results.push([exact, 10]);
             }
         }
         for (const entry of jbo) {

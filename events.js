@@ -74,7 +74,7 @@ id("search").addEventListener("input", function() {
             id("results").innerHTML = "";
             id("info").innerHTML = "";
             id("bottom").innerHTML = "";
-            id("length").innerHTML = "";        
+            id("length").innerHTML = "";
             page = 0;
         }
     }, 100);
