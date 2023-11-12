@@ -50,7 +50,6 @@ function replacelinks(str) {
                 bits[i] = bits[i].slice(1);
                 bits[i - 1] = bits[i - 1] + "$";
             }
-            // FIXME: why are the links turning to strings of url
             bits[i] = bits[i].replace(/\{/g, "📦{").replace(/\}/g, "}📦").split("📦").map((item) =>
                 /\{[a-z'., ]+\}/.test(item) ? mkelem("a", {
                     "href": "?q=" + item.slice(1, -1),
