@@ -1,23 +1,23 @@
 @font-face {
-    font-family: "Inter";
-    src: url("fonts/Inter-Regular.ttf");
+    font-family: "IBM Plex Sans";
+    src: url("fonts/IBMPlexSans-Text.ttf");
     font-display: swap;
 }
 @font-face {
-    font-family: "Inter";
-    src: url("fonts/Inter-Italic.ttf");
+    font-family: "IBM Plex Sans";
+    src: url("fonts/IBMPlexSans-TextItalic.ttf");
     font-display: swap;
     font-style: italic;
 }
 @font-face {
-    font-family: "Inter";
-    src: url("fonts/Inter-Bold.ttf");
+    font-family: "IBM Plex Sans";
+    src: url("fonts/IBMPlexSans-Bold.ttf");
     font-display: swap;
     font-weight: bold;
 }
 @font-face {
-    font-family: "Inter";
-    src: url("fonts/Inter-BoldItalic.ttf");
+    font-family: "IBM Plex Sans";
+    src: url("fonts/IBMPlexSans-BoldItalic.ttf");
     font-display: swap;
     font-weight: bold;
     font-style: italic;
@@ -65,7 +65,7 @@
     --link: #9cf;
     --warnfg: #fc9;
     --errfg: #f99;
-    --sans: "Inter", ui-sans-serif, sans-serif;
+    --sans: "IBM Plex Sans", ui-sans-serif, sans-serif;
     --mono: "iosevka", ui-monospace, monospace;
 }
 body {
@@ -199,6 +199,9 @@ a {
 }
 .opt .checked:disabled {
     color: var(--disabledfg);
+}
+.opt:not(:has(:not([disabled]))) {
+    border-color: var(--notesfg);
 }
 body.rhyme .opt .checked {
     background: var(--purplefg);
