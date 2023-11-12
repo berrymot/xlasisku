@@ -70,7 +70,7 @@ id("search").addEventListener("input", function() {
             } else if (regex) {
                 // bad regex
                 try {
-                    var rgx = new RegExp(q);
+                    _ = new RegExp(q);
                 } catch (e) {
                     id("info").append(mkelem("p", null, [e.message.split(": ").slice(-1)[0].toLowerCase()]));
                 }
