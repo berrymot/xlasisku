@@ -9,7 +9,7 @@ function h(t) {
 worker.addEventListener("message", function(e) {
     results = e.data;
     id("results").innerHTML = "";
-    id("length").innerHTML = results.length + " result" + (results.length != 1 ? "s" : "");
+    id("length").innerHTML = results.length + " result" + (results.length == 1 ? "" : "s");
     page = 0;
     load(results, page);
     checklength();
@@ -23,7 +23,7 @@ window.addEventListener("scroll", function(e) {
 });
 function checklength() {
     if ((page + 1) * 100 - 1 >= results.length) {
-        id("bottom").innerHTML = "no more results";
+        id("bottom").innerHTML = results.length == 0 ? "" : "no more results";
     }
 }
 var timer;
