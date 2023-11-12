@@ -34,7 +34,7 @@ function tohtml(json) {
                 " ↗"
             ])
         ]),
-        mkelem("p", null, [json.definition]),
+        mkelem("p", null, replacelinks(json.definition)),
         json.notes ? mkelem("details", null, [
             mkelem("summary", null, ["more info"]),
             mkelem("p", null, replacelinks(json.notes))
@@ -43,14 +43,23 @@ function tohtml(json) {
     return entry;
 }
 function replacelinks(str) {
-    return str.replace(/\{/g, "📦{").replace(/\}/g, "}📦").split("📦").map((item) =>
-        /\{[a-z']+\}/.test(item) ? mkelem("a", {
-            "href": "?q=" + item.slice(1, -1),
-            "target": rhyme || regex ? "_blank" : "_self"
-        }, item.slice(1, -1)) : item
-    );
-    // TODO: concatenate adj text nodes
-    // FIXME: tex
+    var bits = str.replace(/\$/g, "💵$").split("💵");
+    for (var i = 0; i < bits.length; i++) {
+        if (i % 2 == 0 || i == bits.length - 1) {
+            if (i != 0) {
+                bits[i] = bits[i].slice(1);
+                bits[i - 1] = bits[i - 1] + "$";
+            }
+            // FIXME: why are the links turning to strings of url
+            bits[i] = bits[i].replace(/\{/g, "📦{").replace(/\}/g, "}📦").split("📦").map((item) =>
+                /\{[a-z'., ]+\}/.test(item) ? mkelem("a", {
+                    "href": "?q=" + item.slice(1, -1),
+                    "target": rhyme || regex ? "_blank" : "_self"
+                }, item.slice(1, -1)) : item
+            );
+        }
+    }
+    return bits.flat();
 }
 function load(res, page) {
     const start = page * 100;

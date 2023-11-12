@@ -122,11 +122,9 @@ function dedup(list) {
     return l;
 }
 onmessage = function(e) {
-    console.log("recieved stuff from page");
     const query = e.data.query;
     rhyme = e.data.rhyme || false;
     regex = e.data.regex || false;
     const res = search(query);
-    console.log("sending results to page");
     postMessage(res);
 };

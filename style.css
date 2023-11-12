@@ -23,25 +23,25 @@
     font-style: italic;
 }
 @font-face {
-    font-family: "iosevka";
-    src: url("fonts/iosevka-regular.ttf");
+    font-family: "IBM Plex Mono";
+    src: url("fonts/IBMPlexMono-Text.ttf");
     font-display: swap;
 }
 @font-face {
-    font-family: "iosevka";
-    src: url("fonts/iosevka-italic.ttf");
+    font-family: "IBM Plex Mono";
+    src: url("fonts/IBMPlexMono-TextItalic.ttf");
     font-display: swap;
     font-style: italic;
 }
 @font-face {
-    font-family: "iosevka";
-    src: url("fonts/iosevka-bold.ttf");
+    font-family: "IBM Plex Mono";
+    src: url("fonts/IBMPlexMono-Bold.ttf");
     font-display: swap;
     font-weight: bold;
 }
 @font-face {
-    font-family: "iosevka";
-    src: url("fonts/iosevka-bolditalic.ttf");
+    font-family: "IBM Plex Mono";
+    src: url("fonts/IBMPlexMono-BoldItalic.ttf");
     font-display: swap;
     font-weight: bold;
     font-style: italic;
@@ -66,12 +66,12 @@
     --warnfg: #fc9;
     --errfg: #f99;
     --sans: "IBM Plex Sans", ui-sans-serif, sans-serif;
-    --mono: "iosevka", ui-monospace, monospace;
+    --mono: "IBM Plex Mono", ui-monospace, monospace;
 }
 body {
     font-family: var(--sans);
     margin: 0 auto;
-    max-width: 700px;
+    max-width: 600px;
     padding: 8px;
     background: var(--pinkbg);
     color: var(--bodyfg);
@@ -83,9 +83,6 @@ body.rhyme {
 }
 body.regex {
     background: var(--tealbg);
-}
-code {
-    font-family: var(--mono);
 }
 #search {
     display: block;
@@ -124,11 +121,14 @@ code {
     border-radius: 16px;
     color: var(--bodyfg);
 }
+.entry :is(p:first-child, summary) {
+    font-family: var(--sans);
+}
 .entry p:first-child a:first-child {
     color: var(--bodyfg);
 }
 .entry .selmaho {
-    font-family: var(--mono);
+    font-family: var(--sans);
 }
 .entry :is(.selmaho, .rafsi) {
     color: var(--notesfg);

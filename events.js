@@ -35,6 +35,7 @@ id("search").addEventListener("input", function() {
     id("results").innerHTML = "";
     id("info").innerHTML = "";
     id("length").innerHTML = "";
+    id("bottom").innerHTML = "";
     const params = new URLSearchParams({"q": q});
     if (rhyme) params.append("rhyme", "");
     if (regex) params.append("regex", "");
@@ -74,7 +75,6 @@ id("search").addEventListener("input", function() {
                     id("info").append(mkelem("p", null, [e.message.split(": ").slice(-1)[0].toLowerCase()]));
                 }
             }
-            console.log("sending stuff to worker");
             worker.postMessage({"query": q, "rhyme": rhyme, "regex": regex});
         } else {
             results = null;
