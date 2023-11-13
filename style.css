@@ -181,6 +181,9 @@ a {
     margin-bottom: 0;
 }
 */
+p:has(.opt) {
+    text-align: center;
+}
 .opt button {
     padding: 4px 8px;
     display: inline-block;
