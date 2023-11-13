@@ -164,6 +164,7 @@ a {
     display: inline-block;
     margin-top: 4px;
 }
+/*
 .group {
     border: 2px solid var(--bodyfg);
     border-radius: 16px;
@@ -176,6 +177,7 @@ a {
 .group > :last-child {
     margin-bottom: 0;
 }
+*/
 .opt button {
     padding: 4px 8px;
     display: inline-block;
@@ -223,6 +225,7 @@ hr {
 }
 h1, h1 + p {
     margin: 0;
+    text-align: center;
 }
 h2 {
     border-top: 3px solid var(--notesfg);
