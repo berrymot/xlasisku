@@ -47,14 +47,20 @@ id("search").addEventListener("input", function() {
                 // lujvo things
                 try {
                     if (/\s/.test(q)) {
+                        const lujvo = getLujvo(h(q))[0];
                         id("info").append(mkelem("p", null, [
                             "→ ",
-                            mkelem("i", null, [getLujvo(h(q))[0]])
+                            mkelem("a", {"href": "?q=" + encodeURIComponent(lujvo)}, 
+                                [mkelem("i", null, [lujvo])]
+                            )
                         ]));
                     } else {
+                        const veljvo = getVeljvo(h(q)).join(" ")
                         id("info").append(mkelem("p", null, [
                             "↑ ",
-                            mkelem("i", null, [getVeljvo(h(q)).join(" ")])
+                            mkelem("a", {"href": "?q=" + encodeURIComponent(veljvo)}, 
+                                [mkelem("i", null, [veljvo])]
+                            )
                         ]));
                     }
                 } catch (e) {
@@ -79,10 +85,10 @@ id("search").addEventListener("input", function() {
         }
     }, 100);
 });
+// modes
 id("sm").addEventListener("click", searchmode);
 id("rm").addEventListener("click", function() {rhymemode(false);});
 id("xm").addEventListener("click", regexmode);
-// modes
 function searchmode() {
     clearTimeout(timer);
     document.body.classList.remove("rhyme");

@@ -104,6 +104,9 @@ body.regex {
 #info p {
     margin: 6px 0;
 }
+#info a {
+    color: inherit;
+}
 #search:disabled {
     opacity: 1;
     color: var(--notesfg);
