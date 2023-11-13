@@ -27,7 +27,8 @@ function tohtml(json) {
             " ",
             mkelem("a", {
                 "href": "https://jbovlaste.lojban.org/dict/" + json.word.replace(/ /g, "%20"),
-                "target": "_blank"
+                "target": "_blank",
+                "className": "nobr"
             }, [
                 json.score >= 1000 ? "official" :
                 json.score == -1 ? json.score : "+" + json.score,
