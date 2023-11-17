@@ -9527,6 +9527,7 @@ en   cinjikca
 en   cinkemprezumpo'e
 en   cinki
 en   cinkrtenebri
+en   cinkrxironomidai
 en   cinkycti
 en   cinkyctispa
 en   cinkyre'u
@@ -15639,6 +15640,7 @@ en   lorsmani
 en   lorvera
 en   lorxu
 en   losanjylys
+en   losto
 en   losupan
 en   lotkle
 en   lotkuti
@@ -15818,6 +15820,7 @@ en   malmi'o
 en   malmliselgu'i
 en   malmys
 en   malne'u
+en   malpanci
 en   malpli
 en   malsamtci
 en   malselfu'a
