@@ -1,5 +1,7 @@
 # xlasisku
 
+Can be visited [here](https://berrymot.github.io/xlasisku)!
+
 ## credits + how to contribute
 
 the TeX is rendered with [temml](https://github.com/ronkok/Temml). safari/android might have some rendering bugs
