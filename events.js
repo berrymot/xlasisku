@@ -51,18 +51,18 @@ id("search").addEventListener("input", function() {
                 try {
                     if (/\s/.test(q)) {
                         const lujvo = getLujvo(h(q))[0];
-                        id("info").append(mkelem("p", null, [
+                        id("info").append(createHTMLElement("p", null, [
                             "→ ",
-                            mkelem("a", {"href": "?q=" + encodeURIComponent(lujvo)}, 
-                                [mkelem("i", null, [lujvo])]
+                            createHTMLElement("a", {"href": "?q=" + encodeURIComponent(lujvo)}, 
+                                [createHTMLElement("i", null, [lujvo])]
                             )
                         ]));
                     } else {
                         const veljvo = getVeljvo(h(q)).join(" ")
-                        id("info").append(mkelem("p", null, [
+                        id("info").append(createHTMLElement("p", null, [
                             "↑ ",
-                            mkelem("a", {"href": "?q=" + encodeURIComponent(veljvo)}, 
-                                [mkelem("i", null, [veljvo])]
+                            createHTMLElement("a", {"href": "?q=" + encodeURIComponent(veljvo)}, 
+                                [createHTMLElement("i", null, [veljvo])]
                             )
                         ]));
                     }
@@ -74,7 +74,7 @@ id("search").addEventListener("input", function() {
                 try {
                     _ = new RegExp(q);
                 } catch (e) {
-                    id("info").append(mkelem("p", null, [e.message.split(": ").slice(-1)[0].toLowerCase()]));
+                    id("info").append(createHTMLElement("p", null, [e.message.split(": ").slice(-1)[0].toLowerCase()]));
                 }
             }
             worker.postMessage({"query": q, "rhyme": rhyme, "regex": regex});
