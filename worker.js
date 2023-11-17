@@ -12,17 +12,18 @@ function selmahois(x, y) {
     const [yname, ydigit, ysub, ystar] = y;
     return xname == yname && (xdigit == ydigit || xdigit == null) && (xsub == ysub || xsub == null) && (!xstar || ystar);
 }
-function vowels(str) {
-    var the = str.toLowerCase();
-    the = the.replace(/(?<=[aeoy])i/g, "ĭ").replace(/(?<=[aeoy])u/g, "ŭ");
-    while (/[iu]/.test(the)) {
-        the = the
+function getVowelsFrom(str) {
+    var vowels = str.toLowerCase();
+    vowels = vowels.replace(/(?<=[aeoy])i/g, "ĭ").replace(/(?<=[aeoy])u/g, "ŭ");
+    
+    while (/[iu]/.test(modifiedStr)) {
+        vowels = vowels
         .replace(/i(?![aeiouyīū])/gu, "ī").replace(/u(?![aeiouyīū])/gu, "ū")
-        .replace(/i(?=[aeoyīū])/gu, "ị").replace(/u(?=[aeīoūy])/gu, "ụ")
-        ;
+        .replace(/i(?=[aeoyīū])/gu, "ị").replace(/u(?=[aeīoūy])/gu, "ụ");
     }
-    the = the.replace(/[^aeiouyĭŭīūịụ]/gu, "");
-    return the;
+    
+    vowels = vowels.replace(/[^aeiouyĭŭīūịụ]/gu, "");
+    return vowels;
 }
 function xusegismu_zo(g) {
     return /^[bcdfgjklmnprstvxz]([aeiou][bcdfgjklmnprstvxz]|[bcdfgjklmnprstvxz][aeiou])[bcdfgjklmnprstvxz][aeiou]$/.test(g);
@@ -30,9 +31,9 @@ function xusegismu_zo(g) {
 function search(query) {
     var results = [];
     if (rhyme) {
-        const v = vowels(query);
+        const v = getVowelsFrom(query);
         for (const entry of jbo) {
-            var text = vowels(entry.word);
+            var text = getVowelsFrom(entry.word);
             if (v != "" && text.endsWith(v)) {
                 results.push([entry, -entry.word.length]);
             }
@@ -107,18 +108,18 @@ function search(query) {
             }
         }
     }
-    results = dedup(results);
+    results = removeDuplicates(results);
     return results;
 }
-function dedup(list) {
-    var l = list.sort((a, b) => b[1] - a[1]);
+function removeDuplicates(list) {
+    var sortedList = list.sort((a, b) => b[1] - a[1]);  // Sort the list in descending order based on the second element of each entry
     const logged = {};
-    l = l.filter(entry => {
-        if (logged[entry[0].word]) return false;
-        logged[entry[0].word] = true;
-        return true;
+    sortedList = sortedList.filter(entry => {
+      if (logged[entry[0].word]) return false;
+      logged[entry[0].word] = true;
+      return true;
     });
-    return l;
+    return sortedList;
 }
 onmessage = function(e) {
     const query = e.data.query;
