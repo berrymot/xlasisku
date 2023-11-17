@@ -15,8 +15,7 @@ function selmahois(x, y) {
 function getVowelsFrom(str) {
     var vowels = str.toLowerCase();
     vowels = vowels.replace(/(?<=[aeoy])i/g, "ĭ").replace(/(?<=[aeoy])u/g, "ŭ");
-    
-    while (/[iu]/.test(modifiedStr)) {
+    while (/[iu]/.test(vowels)) {
         vowels = vowels
         .replace(/i(?![aeiouyīū])/gu, "ī").replace(/u(?![aeiouyīū])/gu, "ū")
         .replace(/i(?=[aeoyīū])/gu, "ị").replace(/u(?=[aeīoūy])/gu, "ụ");

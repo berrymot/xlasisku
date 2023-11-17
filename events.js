@@ -88,9 +88,9 @@ id("search").addEventListener("input", function() {
     }, 100);
 });
 // modes
-id("sm").addEventListener("click", searchmode);
-id("rm").addEventListener("click", function() {rhymemode(false);});
-id("xm").addEventListener("click", regexmode);
+id("sm").addEventListener("click", searchMode);
+id("rm").addEventListener("click", function() {rhymeMode(false);});
+id("xm").addEventListener("click", regexMode);
 
 function removeClasses() {
     document.body.classList.remove("rhyme");

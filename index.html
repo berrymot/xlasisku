@@ -71,10 +71,10 @@
                 const params = new URLSearchParams(window.location.search);
                 const q = params.get("q");
                 if (params.has("rhyme")) {
-                    rhymemode();
+                    rhymeMode();
                 }
                 if (params.has("regex")) {
-                    regexmode();
+                    regexMode();
                 }
                 if (q) {
                     id("search").value = q;
