@@ -12,18 +12,18 @@ function selmahois(x, y) {
     const [yname, ydigit, ysub, ystar] = y;
     return xname == yname && (xdigit == ydigit || xdigit == null) && (xsub == ysub || xsub == null) && (!xstar || ystar);
 }
-function modifyVowels(str) {
-    var modifiedStr = str.toLowerCase();
-    modifiedStr = modifiedStr.replace(/(?<=[aeoy])i/g, "ĭ").replace(/(?<=[aeoy])u/g, "ŭ");
+function getVowelsFrom(str) {
+    var vowels = str.toLowerCase();
+    vowels = vowels.replace(/(?<=[aeoy])i/g, "ĭ").replace(/(?<=[aeoy])u/g, "ŭ");
     
     while (/[iu]/.test(modifiedStr)) {
-      modifiedStr = modifiedStr
+        vowels = vowels
         .replace(/i(?![aeiouyīū])/gu, "ī").replace(/u(?![aeiouyīū])/gu, "ū")
         .replace(/i(?=[aeoyīū])/gu, "ị").replace(/u(?=[aeīoūy])/gu, "ụ");
     }
     
-    modifiedStr = modifiedStr.replace(/[^aeiouyĭŭīūịụ]/gu, "");
-    return modifiedStr;
+    vowels = vowels.replace(/[^aeiouyĭŭīūịụ]/gu, "");
+    return vowels;
 }
 function xusegismu_zo(g) {
     return /^[bcdfgjklmnprstvxz]([aeiou][bcdfgjklmnprstvxz]|[bcdfgjklmnprstvxz][aeiou])[bcdfgjklmnprstvxz][aeiou]$/.test(g);
@@ -31,9 +31,9 @@ function xusegismu_zo(g) {
 function search(query) {
     var results = [];
     if (rhyme) {
-        const v = modifyVowels(query);
+        const v = getVowelsFrom(query);
         for (const entry of jbo) {
-            var text = modifyVowels(entry.word);
+            var text = getVowelsFrom(entry.word);
             if (v != "" && text.endsWith(v)) {
                 results.push([entry, -entry.word.length]);
             }
