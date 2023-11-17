@@ -3,9 +3,7 @@ function mkelem(tag, props, children) {
     const e = document.createElement(tag);
     Object.assign(e, props);
     for (const c of children) {
-        if (c != null) {
-            e.append(c);
-        }
+        if (c) { e.append(c); }
     }
     return e;
 }
@@ -51,6 +49,7 @@ function replacelinks(str) {
                 bits[i] = bits[i].slice(1);
                 bits[i - 1] = bits[i - 1] + "$";
             }
+            
             bits[i] = bits[i].replace(/\{/g, "📦{").replace(/\}/g, "}📦").split("📦").map((item) =>
                 /\{[a-z'., ]+\}/.test(item) ? mkelem("a", {
                     "href": "?q=" + item.slice(1, -1),
