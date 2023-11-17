@@ -93,11 +93,13 @@ function removeClasses() {
     document.body.classList.remove("rhyme");
     document.body.classList.remove("regex");
 }
-function addClassById(id, className) {
-    id(id).classList.add(className);
+
+function addClassById(_id, className) {
+    id(_id).classList.add(className);
 }
-function removeClassById(id, className) {
-    id(id).classList.remove(className);
+
+function removeClassById(_id, className) {
+    id(_id).classList.remove(className);
 }
 function dispatchSearchInputEvent() {
     id("search").dispatchEvent(new Event("input", {"bubbles": true}));
