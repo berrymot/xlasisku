@@ -93,11 +93,12 @@ function removeClasses() {
     document.body.classList.remove("rhyme");
     document.body.classList.remove("regex");
 }
-
+function setBodyClass(className) {
+    document.body.classList.add(className);
+}
 function addClassById(_id, className) {
     id(_id).classList.add(className);
 }
-
 function removeClassById(_id, className) {
     id(_id).classList.remove(className);
 }
@@ -117,6 +118,7 @@ function searchMode() {
 function regexMode() {
     clearTimeout(timer);
     removeClasses();
+    setBodyClass("regex");
     removeClassById("sm", "checked");
     removeClassById("rm", "checked");
     addClassById("xm", "checked");
@@ -127,6 +129,7 @@ function regexMode() {
 function rhymeMode() {
     clearTimeout(timer);
     removeClasses();
+    setBodyClass("rhyme");
     removeClassById("sm", "checked");
     removeClassById("xm", "checked");
     addClassById("rm", "checked");
