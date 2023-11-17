@@ -63,16 +63,16 @@ public class Jvsparse {
                     }
                 }
                 while (!line.contains("</valsi>")) {
-                    if (line.contains("<glossword")) {
-                        break;
-                    }
+                    // if (line.contains("<glossword")) {
+                    //     break;
+                    // }
                     line = br.readLine();
                 }
-                ArrayList<String> glosswords = new ArrayList<String>();
-                while (line.contains("<glossword word=\"")) {
-                    glosswords.add(line.substring(line.indexOf("word=\"") + 6, line.indexOf("\"", line.indexOf("word=\"") + 6)));
-                    line = br.readLine();
-                }
+                // ArrayList<String> glosswords = new ArrayList<String>();
+                // while (line.contains("<glossword word=\"")) {
+                //     glosswords.add(line.substring(line.indexOf("word=\"") + 6, line.indexOf("\"", line.indexOf("word=\"") + 6)));
+                //     line = br.readLine();
+                // }
                 bw.print("{\"word\":\"" + word + "\",");
                 if (!selmaho.equals("")) {
                     bw.print("\"selmaho\":\"" + selmaho + "\",");
@@ -88,13 +88,13 @@ public class Jvsparse {
                 if (!notes.equals("")) {
                     bw.print("\"notes\":\"" + fixjson(notes) + "\",");
                 }
-                if (glosswords.size() > 0) {
-                    bw.print("\"glosswords\":[");
-                    for (int i = 0; i < glosswords.size() - 1; i++) {
-                        bw.print("\"" + fixjson(glosswords.get(i)) + "\",");
-                    }
-                    bw.print("\"" + fixjson(glosswords.get(glosswords.size() - 1)) + "\"]");
-                }
+                // if (glosswords.size() > 0) {
+                //     bw.print("\"glosswords\":[");
+                //     for (int i = 0; i < glosswords.size() - 1; i++) {
+                //         bw.print("\"" + fixjson(glosswords.get(i)) + "\",");
+                //     }
+                //     bw.print("\"" + fixjson(glosswords.get(glosswords.size() - 1)) + "\"]");
+                // }
                 bw.print("},");
             }
         }

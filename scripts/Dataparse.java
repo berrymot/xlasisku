@@ -23,7 +23,6 @@ public class Dataparse {
                 String[] rafsilist = null;
                 ArrayList<String> defns = new ArrayList<>();
                 ArrayList<String> notes = new ArrayList<>();
-                ArrayList<String> gloss = new ArrayList<>();
                 if (wordline.length < 4) {
                     errors.add(word + ": Not enough word-line fields");
                     // break;
@@ -81,26 +80,26 @@ public class Dataparse {
                 }
                 // definitions
                 line = read.readLine();
-                while (!Arrays.asList(new String[]{"-n", "-g", "---"}).contains(line)) {
+                while (!Arrays.asList(new String[]{"-n", "---"}).contains(line)) {
                     defns.add(line);
                     line = read.readLine();
                 }
                 if (line.equals("-n")) {
                     // notes
                     line = read.readLine();
-                    while (!Arrays.asList(new String[]{"-g", "---"}).contains(line)) {
+                    while (!line.equals("---")) {
                         notes.add(line);
                         line = read.readLine();
                     }
                 }
-                if (line.equals("-g")) {
-                    // gloss
-                    line = read.readLine();
-                    while (!line.equals("---")) {
-                        gloss.add(line);
-                        line = read.readLine();
-                    }
-                }
+                // if (line.equals("-g")) {
+                //     // gloss
+                //     line = read.readLine();
+                //     while (!line.equals("---")) {
+                //         gloss.add(line);
+                //         line = read.readLine();
+                //     }
+                // }
                 // writing
                 jsonwrite.print("{\"word\":\"" + word + "\",");
                 jsonwrite.print("\"pos\":\"" + pos + "\",");
@@ -127,13 +126,6 @@ public class Dataparse {
                     jsonwrite.print("\"notes\":[");
                     for (int i = 0; i < notes.size(); i++) {
                         jsonwrite.print("\"" + notes.get(i) + "\",");
-                    }
-                    jsonwrite.print("],");
-                }
-                if (gloss.size() != 0) {
-                    jsonwrite.print("\"gloss\": [");
-                    for (int i = 0; i < gloss.size(); i++) {
-                        jsonwrite.print("\"" + gloss.get(i) + "\",");
                     }
                     jsonwrite.print("],");
                 }

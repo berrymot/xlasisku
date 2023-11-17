@@ -70,16 +70,16 @@ public class Datawrite {
                 }
             }
             while (!line.contains("</valsi>")) {
-                if (line.contains("<glossword")) {
-                    break;
-                }
+                // if (line.contains("<glossword")) {
+                //     break;
+                // }
                 line = xml.readLine();
             }
-            ArrayList<String> glosswords = new ArrayList<String>();
-            while (line.contains("<glossword word=\"")) {
-                glosswords.add(line.substring(line.indexOf("word=\"") + 6, line.indexOf("\"", line.indexOf("word=\"") + 6)));
-                line = xml.readLine();
-            }
+            // ArrayList<String> glosswords = new ArrayList<String>();
+            // while (line.contains("<glossword word=\"")) {
+            //     glosswords.add(line.substring(line.indexOf("word=\"") + 6, line.indexOf("\"", line.indexOf("word=\"") + 6)));
+            //     line = xml.readLine();
+            // }
             bw.print("---\n" + despace(w) + " " + despace(type) + " ");
             if (!selmaho.equals("")) {
                 bw.print(despace(dehtml(selmaho).replace("'", "h")) + " ");
@@ -95,12 +95,12 @@ public class Datawrite {
             if (!notes.equals("")) {
                 bw.print("-n\n" + dehtml(notes) + "\n");
             }
-            if (glosswords.size() > 0) {
-                bw.print("-g\n");
-                for (int i = 0; i < glosswords.size(); i++) {
-                    bw.print(dehtml(glosswords.get(i)) + "\n");
-                }
-            }
+            // if (glosswords.size() > 0) {
+            //     bw.print("-g\n");
+            //     for (int i = 0; i < glosswords.size(); i++) {
+            //         bw.print(dehtml(glosswords.get(i)) + "\n");
+            //     }
+            // }
         }
         bw.print("---");
         br.close();
