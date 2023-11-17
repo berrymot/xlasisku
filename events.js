@@ -26,14 +26,12 @@ function checkLength() {
         id("bottom").innerHTML = results.length == 0 ? "" : "no more results";
     }
 }
-
 function clearResults() {
     id("results").innerHTML = "";
     id("info").innerHTML = "";
     id("bottom").innerHTML = "";
     id("length").innerHTML = "";
 }
-
 var timer;
 id("search").addEventListener("input", function() {
     clearTimeout(timer);
@@ -91,7 +89,6 @@ id("search").addEventListener("input", function() {
 id("sm").addEventListener("click", searchMode);
 id("rm").addEventListener("click", function() {rhymeMode(false);});
 id("xm").addEventListener("click", regexMode);
-
 function removeClasses() {
     document.body.classList.remove("rhyme");
     document.body.classList.remove("regex");
@@ -104,11 +101,9 @@ function addClassById(_id, className) {
 function removeClassById(_id, className) {
     id(_id).classList.remove(className);
 }
-
 function dispatchSearchInputEvent() {
     id("search").dispatchEvent(new Event("input", {"bubbles": true}));
 }
-
 function searchMode() {
     clearTimeout(timer);
     removeClasses();
@@ -119,7 +114,6 @@ function searchMode() {
     regex = false;
     dispatchSearchInputEvent();
 }
-
 function regexMode() {
     clearTimeout(timer);
     removeClasses();
@@ -130,7 +124,6 @@ function regexMode() {
     regex = true;
     dispatchSearchInputEvent();
 }
-
 function rhymeMode() {
     clearTimeout(timer);
     removeClasses();
