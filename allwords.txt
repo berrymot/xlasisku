@@ -8353,6 +8353,8 @@ en   begru'u
 en   begygu'e
 en   be'i
 en   bei
+en   bei'a
+en   bei'au
 en   beiblo
 en   beicka
 en   beiDJIN
@@ -15517,6 +15519,7 @@ en   limnada
 en   limna'i
 en   limpastu
 en   limxone
+en   lincarka'a
 en   lince
 en   lindar
 en   lindari
@@ -17733,6 +17736,7 @@ en   panonomei
 en   panpi
 en   panra
 en   panratetfusi
+en   panrkolone
 en   panryki'i
 en   panrykle
 en   panryseltirna
@@ -20706,6 +20710,7 @@ en   slinkuui
 en   sliri
 en   sliryslami
 en   slogane
+en   slosi'i
 en   sloska
 en   slovako
 en   slovensk
@@ -23819,6 +23824,7 @@ en   xakyziflogji
 en   xalbarja
 en   xalbebna
 en   xalbo
+en   xalbyfanza
 en   xalda
 en   xaldaio
 en   xalitc
@@ -23876,6 +23882,7 @@ en   xanmi
 en   xano
 en   xanono
 en   xanri
+en   xanri'u
 en   xansa
 en   xanse'agle
 en   xanselrerbamsoi
