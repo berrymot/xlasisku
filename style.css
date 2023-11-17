@@ -61,7 +61,7 @@
     --searchbg: #000;
     --entrybg: #0008;
     --notesfg: #fffc;
-    --disabledfg: #fffc;
+    --disabledfg: #fffd;
     --link: #9cf;
     --warnfg: #fc9;
     --errfg: #f99;
@@ -258,8 +258,8 @@ h2 {
         --bodyfg: #000;
         --searchbg: #fff;
         --entrybg: #fff8;
-        --disabledfg: #fffc;
-        --notesfg: #0008;
+        --disabledfg: #fffe;
+        --notesfg: #000a;
         --link: #0067ca;
         --warnfg: #ba6805;
         --errfg: #d12929;
