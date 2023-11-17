@@ -1,29 +1,31 @@
 const id = (x) => document.getElementById(x);
-function mkelem(tag, props, children) {
-    const e = document.createElement(tag);
-    Object.assign(e, props);
-    for (const c of children) {
-        if (c) { e.append(c); }
+function createHTMLElement(tag, props, children) {
+    const element = document.createElement(tag); 
+    Object.assign(element, props);
+    for (const child of children) {
+      if (child) {
+        element.append(child);
+      }
     }
-    return e;
+    return element;
 }
-function tohtml(json) {
-    const entry = mkelem("div", {"className": "entry"}, [
-        mkelem("p", null, [
-            mkelem("a", {
+function convertJSONToHTMLElement(json) {
+    const entry = createHTMLElement("div", {"className": "entry"}, [
+        createHTMLElement("p", null, [
+            createHTMLElement("a", {
                 "href": "?q=" + json.word,
                 "target": rhyme || regex ? "_blank" : "_self"
             }, [
-                mkelem("b", null, [json.word])
+                createHTMLElement("b", null, [json.word])
             ]),
             " ",
-            json.rafsi ? mkelem("i", {"className": "rafsi"}, [
+            json.rafsi ? createHTMLElement("i", {"className": "rafsi"}, [
                 ...json.rafsi.map(i => "-" + i), "-"
             ]) : null,
             " ",
-            json.selmaho ? mkelem("code", {"className": "selmaho"}, [json.selmaho]) : null,
+            json.selmaho ? createHTMLElement("code", {"className": "selmaho"}, [json.selmaho]) : null,
             " ",
-            mkelem("a", {
+            createHTMLElement("a", {
                 "href": "https://jbovlaste.lojban.org/dict/" + json.word.replace(/ /g, "%20"),
                 "target": "_blank",
                 "className": "nobr"
@@ -33,25 +35,25 @@ function tohtml(json) {
                 " ↗"
             ])
         ]),
-        mkelem("p", null, replacelinks(json.definition)),
-        json.notes ? mkelem("details", null, [
-            mkelem("summary", null, ["more info"]),
-            mkelem("p", null, replacelinks(json.notes))
+        createHTMLElement("p", null, replaceLinks(json.definition)),
+        json.notes ? createHTMLElement("details", null, [
+            createHTMLElement("summary", null, ["more info"]),
+            createHTMLElement("p", null, replaceLinks(json.notes))
         ]) : null
     ]);
     return entry;
 }
-function replacelinks(str) {
+function replaceLinks(str) {
     var bits = str.replace(/\$/g, "💵$").split("💵");
     for (var i = 0; i < bits.length; i++) {
         if (i % 2 == 0 || i == bits.length - 1) {
-            if (i != 0) {
+            if (i) {
                 bits[i] = bits[i].slice(1);
                 bits[i - 1] = bits[i - 1] + "$";
             }
-            
+
             bits[i] = bits[i].replace(/\{/g, "📦{").replace(/\}/g, "}📦").split("📦").map((item) =>
-                /\{[a-z'., ]+\}/.test(item) ? mkelem("a", {
+                /\{[a-z'., ]+\}/.test(item) ? createHTMLElement("a", {
                     "href": "?q=" + item.slice(1, -1),
                     "target": rhyme || regex ? "_blank" : "_self"
                 }, item.slice(1, -1)) : item
@@ -66,7 +68,7 @@ function load(res, page) {
     var nodes = [];
     for (var i = start; i < end; i++) {
         if (res[i]) {
-            res[i] = [tohtml(res[i][0]), res[i][1]];
+            res[i] = [convertJSONToHTMLElement(res[i][0]), res[i][1]];
             nodes.push(res[i][0]);
         }
     }
