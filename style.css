@@ -93,7 +93,7 @@ body.regex {
     border-radius: 16px;
     background: var(--searchbg);
     border: 2px solid var(--bodyfg);
-    border-bottom: 5px solid var(--bodyfg);
+    box-shadow: var(--bodyfg) 0 3px;
     color: var(--bodyfg) !important;
 }
 #info {
