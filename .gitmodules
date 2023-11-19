@@ -1,6 +1,9 @@
 [submodule "temml"]
-	path = temml
-	url = https://github.com/ronkok/Temml.git
+    path = temml
+    url = https://github.com/ronkok/Temml
 [submodule "latkerlo-jvotci"]
-	path = latkerlo-jvotci
-	url = https://github.com/latkerlo/latkerlo-jvotci
+    path = latkerlo-jvotci
+    url = https://github.com/latkerlo/latkerlo-jvotci
+[submodule "plex"]
+    path = plex
+    url = https://github.com/IBM/plex
