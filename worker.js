@@ -99,7 +99,7 @@ function search(query) {
                         break;
                     default:
                         const rgx = query.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-                        if (field && new RegExp(`\\b${rgx}e?s?\\b`, "iu").test(field)) {
+                        if (field && new RegExp(`[^a-z0-9]${rgx}e?s?[^a-z0-9]`, "iu").test(field)) {
                             results.push([entry, score + gismubonus]);
                         }
                         break;
