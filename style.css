@@ -1,47 +1,47 @@
 @font-face {
     font-family: "IBM Plex Sans";
-    src: url("fonts/IBMPlexSans-Text.ttf");
+    src: url("plex/IBM-Plex-Sans/fonts/complete/ttf/IBMPlexSans-Text.ttf");
     font-display: swap;
 }
 @font-face {
     font-family: "IBM Plex Sans";
-    src: url("fonts/IBMPlexSans-TextItalic.ttf");
+    src: url("plex/IBM-Plex-Sans/fonts/complete/ttf/IBMPlexSans-TextItalic.ttf");
     font-display: swap;
     font-style: italic;
 }
 @font-face {
     font-family: "IBM Plex Sans";
-    src: url("fonts/IBMPlexSans-Bold.ttf");
+    src: url("plex/IBM-Plex-Sans/fonts/complete/ttf/IBMPlexSans-Bold.ttf");
     font-display: swap;
     font-weight: bold;
 }
 @font-face {
     font-family: "IBM Plex Sans";
-    src: url("fonts/IBMPlexSans-BoldItalic.ttf");
+    src: url("plex/IBM-Plex-Sans/fonts/complete/ttf/IBMPlexSans-BoldItalic.ttf");
     font-display: swap;
     font-weight: bold;
     font-style: italic;
 }
 @font-face {
     font-family: "IBM Plex Mono";
-    src: url("fonts/IBMPlexMono-Text.ttf");
+    src: url("plex/IBM-Plex-Mono/fonts/complete/ttf/IBMPlexMono-Text.ttf");
     font-display: swap;
 }
 @font-face {
     font-family: "IBM Plex Mono";
-    src: url("fonts/IBMPlexMono-TextItalic.ttf");
+    src: url("plex/IBM-Plex-Mono/fonts/complete/ttf/IBMPlexMono-TextItalic.ttf");
     font-display: swap;
     font-style: italic;
 }
 @font-face {
     font-family: "IBM Plex Mono";
-    src: url("fonts/IBMPlexMono-Bold.ttf");
+    src: url("plex/IBM-Plex-Mono/fonts/complete/ttf/IBMPlexMono-Bold.ttf");
     font-display: swap;
     font-weight: bold;
 }
 @font-face {
     font-family: "IBM Plex Mono";
-    src: url("fonts/IBMPlexMono-BoldItalic.ttf");
+    src: url("plex/IBM-Plex-Mono/fonts/complete/ttf/IBMPlexMono-BoldItalic.ttf");
     font-display: swap;
     font-weight: bold;
     font-style: italic;
