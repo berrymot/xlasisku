@@ -1,6 +1,9 @@
 const worker = new Worker("worker.js", {"type": "module"});
-var rhyme = false;
-var regex = false;
+var config = {
+    "rhyme": false,
+    "regex": false,
+    "regex.insensitive": false
+};
 let page;
 var q = "";
 var results;
@@ -37,14 +40,14 @@ var timer;
 id("search").addEventListener("input", function() {
     clearTimeout(timer);
     q = id("search").value;
-    if (!regex) q = q.trim().toLowerCase();
+    if (!config["regex"]) q = q.trim().toLowerCase();
     results = null;
     clearResults();
     redirect();
     timer = setTimeout(function() {
         if (q.length) {
             id("bottom").innerHTML = "loading...";
-            if (!rhyme && !regex) {
+            if (!config["rhyme"] && !config["regex"]) {
                 // lujvo things
                 try {
                     if (/\s/.test(q)) {
@@ -67,7 +70,7 @@ id("search").addEventListener("input", function() {
                 } catch (e) {
                     // not lujvo
                 }
-            } else if (regex) {
+            } else if (config["regex"]) {
                 // bad regex
                 try {
                     _ = new RegExp(q);
@@ -75,7 +78,7 @@ id("search").addEventListener("input", function() {
                     id("info").append(createHTMLElement("p", null, [e.message.split(": ").slice(-1)[0].toLowerCase()]));
                 }
             }
-            worker.postMessage({"query": q, "rhyme": rhyme, "regex": regex});
+            worker.postMessage({"query": q, "config": config});
         } else {
             results = null;
             clearResults();
@@ -85,8 +88,9 @@ id("search").addEventListener("input", function() {
 });
 // modes
 id("sm").addEventListener("click", searchMode);
-id("rm").addEventListener("click", function() {rhymeMode(false);});
+id("rm").addEventListener("click", rhymeMode);
 id("xm").addEventListener("click", regexMode);
+id("regex-i").addEventListener("click", function() {regexMode(true);});
 function removeClasses() {
     document.body.classList.remove("rhyme");
     document.body.classList.remove("regex");
@@ -100,6 +104,13 @@ function addClassById(_id, className) {
 function removeClassById(_id, className) {
     id(_id).classList.remove(className);
 }
+function toggleClassById(_id, className) {
+    if (id(_id).classList.contains(className))
+        id(_id).classList.remove(className);
+    else
+        id(_id).classList.add(className);
+
+}
 function dispatchSearchInputEvent() {
     id("search").dispatchEvent(new Event("input", {"bubbles": true}));
 }
@@ -109,19 +120,23 @@ function searchMode() {
     removeClassById("rm", "checked");
     removeClassById("xm", "checked");
     addClassById("sm", "checked");
-    rhyme = false;
-    regex = false;
+    config["rhyme"] = false;
+    config["regex"] = false;
     dispatchSearchInputEvent();
 }
-function regexMode() {
+function regexMode(toggle = false) {
     clearTimeout(timer);
     removeClasses();
     setBodyClass("regex");
     removeClassById("sm", "checked");
     removeClassById("rm", "checked");
     addClassById("xm", "checked");
-    rhyme = false;
-    regex = true;
+    config["rhyme"] = false;
+    config["regex"] = true;
+    if (toggle) {
+        toggleClassById("regex-i", "checked");
+        config["regex.insensitive"] = !config["regex.insensitive"];
+    }
     dispatchSearchInputEvent();
 }
 function rhymeMode() {
@@ -131,7 +146,7 @@ function rhymeMode() {
     removeClassById("sm", "checked");
     removeClassById("xm", "checked");
     addClassById("rm", "checked");
-    rhyme = true;
-    regex = false;
+    config["rhyme"] = true;
+    config["regex"] = false;
     dispatchSearchInputEvent();
 }

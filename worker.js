@@ -1,5 +1,5 @@
 import {jbo} from "./jbo.js";
-var rhyme, regex;
+var config;
 function h(t) {
     return t.replace(/[h‘’]/igu, "'");
 }
@@ -20,7 +20,6 @@ function getVowelsFrom(str) {
         .replace(/i(?![aeiouyīū])/gu, "ī").replace(/u(?![aeiouyīū])/gu, "ū")
         .replace(/i(?=[aeoyīū])/gu, "ị").replace(/u(?=[aeīoūy])/gu, "ụ");
     }
-    
     vowels = vowels.replace(/[^aeiouyĭŭīūịụ]/gu, "");
     return vowels;
 }
@@ -29,7 +28,7 @@ function xusegismu_zo(g) {
 }
 function search(query) {
     var results = [];
-    if (rhyme) {
+    if (config["rhyme"]) {
         const v = getVowelsFrom(query);
         for (const entry of jbo) {
             var text = getVowelsFrom(entry.word);
@@ -37,11 +36,11 @@ function search(query) {
                 results.push([entry, -entry.word.length]);
             }
         }
-    } else if (regex) {
+    } else if (config["regex"]) {
         for (const entry of jbo) {
             var rgx;
             try {
-                rgx = new RegExp(query);
+                rgx = new RegExp(query, config["regex.insensitive"] ? "i" : "");
             } catch (e) {
                 return [];
             }
@@ -122,8 +121,7 @@ function removeDuplicates(list) {
 }
 onmessage = function(e) {
     const query = e.data.query;
-    rhyme = e.data.rhyme || false;
-    regex = e.data.regex || false;
+    config = e.data.config;
     const res = search(query);
     postMessage(res);
 };

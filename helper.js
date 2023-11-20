@@ -14,7 +14,7 @@ function convertJSONToHTMLElement(json) {
         createHTMLElement("p", null, [
             createHTMLElement("a", {
                 "href": "?q=" + json.word,
-                "target": rhyme || regex ? "_blank" : "_self"
+                "target": config["rhyme"] || config["regex"] ? "_blank" : "_self"
             }, [
                 createHTMLElement("b", null, [json.word])
             ]),
@@ -55,7 +55,7 @@ function replaceLinks(str) {
             bits[i] = bits[i].replace(/\{/g, "📦{").replace(/\}/g, "}📦").split("📦").map((item) =>
                 /\{[a-z'., ]+\}/.test(item) ? createHTMLElement("a", {
                     "href": "?q=" + item.slice(1, -1),
-                    "target": rhyme || regex ? "_blank" : "_self"
+                    "target": config["rhyme"] || config["regex"] ? "_blank" : "_self"
                 }, item.slice(1, -1)) : item
             );
         }

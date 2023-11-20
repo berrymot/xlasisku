@@ -29,7 +29,7 @@
             <br />
             <span class="nobr normalonly">
                 <span class="nobr opt">
-                    <button id="jvo-rn" disabled class="checked" value="s">CLL</button>
+                    <button id="jvo-rn" disabled value="s">CLL</button>
                     <button id="jvo-rny" disabled value="a">allow 'y</button>
                     <button id="jvo-y" disabled value="f">force 'y</button>
                 </span>
@@ -40,6 +40,11 @@
                     <button id="jvo-mz" disabled>mz</button>
                 </span>
                 <a href="jvoptions.html" target="_blank"><b>?</b></a>
+            </span>
+            <span class="nobr regexonly">
+                <span class="nobr opt">
+                    <button id="regex-i">case insensitive</button>
+                </span>
             </span>
         </p>
         <input type="text" id="search" autocomplete="off" spellcheck="false" placeholder="loading" disabled />
@@ -59,9 +64,12 @@
             // url things
             function redirect() {
                 var vars = "?";
-                if (q) vars += "&q=" + encodeURIComponent(params.get("q"));
-                if (rhyme) vars += "&rhyme";
-                if (regex) vars += "&regex";
+                if (q)
+                    vars += "&q=" + encodeURIComponent(q);
+                if (config["rhyme"])
+                    vars += "&rhyme";
+                if (config["regex"])
+                    vars += "&regex=" + (config["regex.insensitive"] ? "i" : "");
                 vars = vars.replace(/\?&/g, "?").replace(/=&/g, "&").replace(/[=?]$/, "");
                 window.history.pushState(null, null, window.location.href.split("?")[0] + vars);
             }
@@ -72,11 +80,11 @@
                     rhymeMode();
                 }
                 if (params.has("regex")) {
-                    regexMode();
+                    regexMode(params.get("regex"));
                 }
                 if (qpar) {
                     id("search").value = qpar;
-                    id("search").dispatchEvent(new Event("input", {"bubbles": true}));
+                    dispatchSearchInputEvent();
                 }
             });
         </script>
