@@ -31,7 +31,7 @@ function checkLength() {
     if ((page + 1) * 100 - 1 >= results.length) {
         id("bottom").innerHTML = results.length == 0 ? "" : "no more results";
     }
-    if (!results[0] || results[0][1] != 10 && config["fromwordlink"] && /^[a-g'i-pr-vx-z., ]+$/.test(h(q))) {
+    if ((!results[0] || results[0][1]) != 10 && config["fromwordlink"] && /^[a-g'i-pr-vx-z., ]+$/.test(h(q))) {
         id("length").append(createHTMLElement("a",
             {
                 "href": "https://jbovlaste.lojban.org/dict/" + encodeURIComponent(h(q)),
