@@ -49,6 +49,7 @@
 * {
     box-sizing: border-box;
     -webkit-text-size-adjust: 100%;
+    transition: color 0.2s, background-color 0.2s;
 }
 :root {
     --pinkfg: #ff1493;
@@ -273,5 +274,10 @@ h2 {
 @media (hover: hover) {
     :is(a, button, summary):hover {
         text-decoration: underline;
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none;
     }
 }
