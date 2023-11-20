@@ -5,5 +5,5 @@
     path = latkerlo-jvotci
     url = https://github.com/latkerlo/latkerlo-jvotci
 [submodule "plex"]
-    path = plex
-    url = https://github.com/IBM/plex
+	path = plex
+	url = https://github.com/IBM/plex
