@@ -209,6 +209,9 @@ body[class^=r] .normalonly {
 body:not([class^=re]) .regexonly {
     display: none;
 }
+body:not([class^=rh]) .rhymeonly {
+    display: none;
+}
 math {
     font-size: 1.1em;
 }

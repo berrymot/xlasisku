@@ -1,6 +1,7 @@
 const worker = new Worker("worker.js", {"type": "module"});
 var config = {
     "rhyme": false,
+    "rhyme.ignorey": false,
     "regex": false,
     "regex.insensitive": false
 };
@@ -87,10 +88,11 @@ id("search").addEventListener("input", function() {
     }, 100);
 });
 // modes
-id("sm").addEventListener("click", searchMode);
-id("rm").addEventListener("click", rhymeMode);
-id("xm").addEventListener("click", function() {regexMode(false);} );
-id("regex-i").addEventListener("click", function() {regexMode(true);});
+id("sm")     .addEventListener("click",             searchMode        );
+id("rm")     .addEventListener("click", function() {rhymeMode(false);});
+id("rhyme-y").addEventListener("click", function() {rhymeMode(true) ;});
+id("xm")     .addEventListener("click", function() {regexMode(false);});
+id("regex-i").addEventListener("click", function() {regexMode(true) ;});
 function removeClasses() {
     document.body.classList.remove("rhyme");
     document.body.classList.remove("regex");
@@ -138,7 +140,7 @@ function regexMode(toggle) {
     }
     dispatchSearchInputEvent();
 }
-function rhymeMode() {
+function rhymeMode(toggle) {
     clearTimeout(timer);
     removeClasses();
     setBodyClass("rhyme");
@@ -147,5 +149,9 @@ function rhymeMode() {
     addClassById("rm", "checked");
     config["rhyme"] = true;
     config["regex"] = false;
+    if (toggle) {
+        toggleClassById("rhyme-y", "checked");
+        config["rhyme.ignorey"] = !config["rhyme.ignorey"];
+    }
     dispatchSearchInputEvent();
 }
