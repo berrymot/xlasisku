@@ -89,7 +89,7 @@ id("search").addEventListener("input", function() {
 // modes
 id("sm").addEventListener("click", searchMode);
 id("rm").addEventListener("click", rhymeMode);
-id("xm").addEventListener("click", regexMode);
+id("xm").addEventListener("click", function() {regexMode(false);} );
 id("regex-i").addEventListener("click", function() {regexMode(true);});
 function removeClasses() {
     document.body.classList.remove("rhyme");
@@ -109,7 +109,6 @@ function toggleClassById(_id, className) {
         id(_id).classList.remove(className);
     else
         id(_id).classList.add(className);
-
 }
 function dispatchSearchInputEvent() {
     id("search").dispatchEvent(new Event("input", {"bubbles": true}));
@@ -124,7 +123,7 @@ function searchMode() {
     config["regex"] = false;
     dispatchSearchInputEvent();
 }
-function regexMode(toggle = false) {
+function regexMode(toggle) {
     clearTimeout(timer);
     removeClasses();
     setBodyClass("regex");

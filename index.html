@@ -69,7 +69,7 @@
                 if (config["rhyme"])
                     vars += "&rhyme";
                 if (config["regex"])
-                    vars += "&regex=" + (config["regex.insensitive"] ? "i" : "");
+                    vars += "&regex=" + (config["regex.insensitive"]? "i" : "");
                 vars = vars.replace(/\?&/g, "?").replace(/=&/g, "&").replace(/[=?]$/, "");
                 window.history.pushState(null, null, window.location.href.split("?")[0] + vars);
             }
@@ -80,7 +80,7 @@
                     rhymeMode();
                 }
                 if (params.has("regex")) {
-                    regexMode(params.get("regex"));
+                    regexMode(params.get("regex") == "i");
                 }
                 if (qpar) {
                     id("search").value = qpar;
