@@ -75,6 +75,8 @@
                     vars += "&rhyme=" + (config["rhyme.ignorey"]? "y" : "");
                 if (config["regex"])
                     vars += "&regex=" + (config["regex.insensitive"]? "i" : "");
+                if (config["fromwordlink"])
+                    vars += "&fromwordlink";
                 vars = vars.replace(/\?&/g, "?").replace(/=&/g, "&").replace(/[=?]$/, "");
                 window.history.pushState(null, null, window.location.href.split("?")[0] + vars);
             }
@@ -86,6 +88,9 @@
                 }
                 if (params.has("regex")) {
                     regexMode(params.get("regex") == "i");
+                }
+                if (params.has("fromwordlink")) {
+                    config["fromwordlink"] = true;
                 }
                 if (qpar) {
                     id("search").value = qpar;

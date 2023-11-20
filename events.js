@@ -3,7 +3,8 @@ var config = {
     "rhyme": false,
     "rhyme.ignorey": false,
     "regex": false,
-    "regex.insensitive": false
+    "regex.insensitive": false,
+    "fromwordlink": false
 };
 let page;
 var q = "";
@@ -30,6 +31,18 @@ function checkLength() {
     if ((page + 1) * 100 - 1 >= results.length) {
         id("bottom").innerHTML = results.length == 0 ? "" : "no more results";
     }
+    if (results[0][1] != 10 && config["fromwordlink"] && /^[a-g'i-pr-vx-z., ]+$/.test(h(q))) {
+        id("length").append(createHTMLElement("a",
+            {
+                "href": "https://jbovlaste.lojban.org/dict/" + encodeURIComponent(h(q)),
+                "target": "_blank"
+            }, [
+                createHTMLElement("br", null, []),
+                "check jbovlaste? ↗"
+            ]
+        ));
+    }
+    config["fromwordlink"] = false;
 }
 function clearResults() {
     id("results").innerHTML = "";
@@ -56,7 +69,7 @@ id("search").addEventListener("input", function() {
                         id("info").append(createHTMLElement("p", null, [
                             "→ ",
                             createHTMLElement("a", {"href": "?q=" + encodeURIComponent(lujvo)}, 
-                                [createHTMLElement("i", null, [lujvo])]
+                            [createHTMLElement("i", null, [lujvo])]
                             )
                         ]));
                     } else {
@@ -64,7 +77,7 @@ id("search").addEventListener("input", function() {
                         id("info").append(createHTMLElement("p", null, [
                             "↑ ",
                             createHTMLElement("a", {"href": "?q=" + encodeURIComponent(veljvo)}, 
-                                [createHTMLElement("i", null, [veljvo])]
+                            [createHTMLElement("i", null, [veljvo])]
                             )
                         ]));
                     }
