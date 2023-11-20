@@ -167,20 +167,6 @@ a {
     display: inline-block;
     margin-top: 4px;
 }
-/*
-.group {
-    border: 2px solid var(--bodyfg);
-    border-radius: 16px;
-    margin: 8px 0;
-    display: block;
-}
-.group > :first-child {
-    margin-top: 0;
-}
-.group > :last-child {
-    margin-bottom: 0;
-}
-*/
 p:has(.opt) {
     text-align: center;
 }
@@ -218,6 +204,9 @@ body.regex .opt .checked {
     background: var(--tealfg);
 }
 body[class^=r] .normalonly {
+    display: none;
+}
+body:not([class^=re]) .regexonly {
     display: none;
 }
 math {

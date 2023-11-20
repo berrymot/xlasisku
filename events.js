@@ -40,10 +40,7 @@ id("search").addEventListener("input", function() {
     if (!regex) q = q.trim().toLowerCase();
     results = null;
     clearResults();
-    const params = new URLSearchParams({"q": q});
-    if (rhyme) params.append("rhyme", "");
-    if (regex) params.append("regex", "");
-    redir(params);
+    redirect();
     timer = setTimeout(function() {
         if (q.length) {
             id("bottom").innerHTML = "loading...";

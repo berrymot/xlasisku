@@ -57,13 +57,11 @@
             id("search").removeAttribute("disabled");
             id("search").setAttribute("placeholder", "search");
             // url things
-            function redir(params) {
+            function redirect() {
                 var vars = "?";
-                if (params) {
-                    if (params.has("q") && params.get("q") /* yes */) vars += "&q=" + encodeURIComponent(params.get("q"));
-                    if (params.has("rhyme")) vars += "&rhyme";
-                    if (params.has("regex")) vars += "&regex";
-                }
+                if (q) vars += "&q=" + encodeURIComponent(params.get("q"));
+                if (rhyme) vars += "&rhyme";
+                if (regex) vars += "&regex";
                 vars = vars.replace(/\?&/g, "?").replace(/=&/g, "&").replace(/[=?]$/, "");
                 window.history.pushState(null, null, window.location.href.split("?")[0] + vars);
             }
