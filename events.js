@@ -2,6 +2,7 @@ const worker = new Worker("worker.js", {"type": "module"});
 var rhyme = false;
 var regex = false;
 let page;
+var q = "";
 var results;
 function h(t) {
     return t.replace(/[h‘’]/igu, "'");
@@ -35,7 +36,7 @@ function clearResults() {
 var timer;
 id("search").addEventListener("input", function() {
     clearTimeout(timer);
-    var q = id("search").value;
+    q = id("search").value;
     if (!regex) q = q.trim().toLowerCase();
     results = null;
     clearResults();

@@ -69,15 +69,15 @@
             }
             window.addEventListener("DOMContentLoaded", () => {
                 const params = new URLSearchParams(window.location.search);
-                const q = params.get("q");
+                const qpar = params.get("q");
                 if (params.has("rhyme")) {
                     rhymeMode();
                 }
                 if (params.has("regex")) {
                     regexMode();
                 }
-                if (q) {
-                    id("search").value = q;
+                if (qpar) {
+                    id("search").value = qpar;
                     id("search").dispatchEvent(new Event("input", {"bubbles": true}));
                 }
             });
