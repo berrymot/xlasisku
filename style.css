@@ -90,16 +90,18 @@ body {
     box-shadow: rgb(var(--fg)) 0 3px;
     padding: 4px 12px;
     align-items: baseline;
+    height: 1lh;
+    font-size: 1.5em;
+    box-sizing: content-box;
 }
 #search {
     display: block;
-    /* width: 100%; */
     padding: 0;
     margin: 0;
     flex: 1;
     border-radius: 0;
     font-family: var(--sans);
-    font-size: 1.5em;
+    font-size: inherit;
     background: transparent;
     border: none;
     color: rgb(var(--fg)) !important;
@@ -116,7 +118,6 @@ body {
     color: rgba(var(--fg), var(--op-c));
 }
 .always {
-    font-size: 1.5em;
     color: rgba(var(--fg), var(--op-c));
     padding: 0;
 }
