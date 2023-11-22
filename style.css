@@ -82,17 +82,43 @@ body {
     line-height: 1.4;
     word-break: break-word;
 }
-#search {
-    display: block;
-    width: 100%;
-    font-family: var(--sans);
-    padding: 4px 12px;
-    font-size: 1.5em;
+#fakebox {
+    display: flex;
     border-radius: 16px;
     background: rgb(var(--inv));
     border: 2px solid rgb(var(--fg));
     box-shadow: rgb(var(--fg)) 0 3px;
+    padding: 4px 12px;
+    align-items: baseline;
+}
+#search {
+    display: block;
+    /* width: 100%; */
+    padding: 0;
+    margin: 0;
+    flex: 1;
+    border-radius: 0;
+    font-family: var(--sans);
+    font-size: 1.5em;
+    background: transparent;
+    border: none;
     color: rgb(var(--fg)) !important;
+    height: 1lh;
+    box-sizing: content-box;
+}
+#search:disabled {
+    opacity: 1;
+    color: rgba(var(--fg), var(--op-c));
+    border-color: rgba(var(--fg), var(--op-c));
+    background-color: rgba(var(--inv), var(--op-8));
+}
+#search::placeholder {
+    color: rgba(var(--fg), var(--op-c));
+}
+.always {
+    font-size: 1.5em;
+    color: rgba(var(--fg), var(--op-c));
+    padding: 0;
 }
 #info {
     font-size: 1.25em;
@@ -104,15 +130,6 @@ body {
 }
 #info a {
     color: inherit;
-}
-#search:disabled {
-    opacity: 1;
-    color: rgba(var(--fg), var(--op-c));
-    border-color: rgba(var(--fg), var(--op-c));
-    background-color: rgba(var(--inv), var(--op-8));
-}
-#search::placeholder {
-    color: rgba(var(--fg), var(--op-c));
 }
 .entry {
     display: block;
@@ -207,7 +224,7 @@ math {
 hr {
     border: 1px solid rgb(var(--fg));
 }
-:not(input, hr, br):empty {
+:not(input, hr, br, .always):empty {
     display: none;
 }
 h1, h1 + p {

@@ -43,7 +43,10 @@ function search(query) {
         for (const entry of jbo) {
             var rgx;
             try {
-                rgx = new RegExp(query, config["regex.insensitive"] ? "i" : "");
+                rgx = new RegExp(
+                    config["regex.tight"] ? "^" + query + "$" : query,
+                    config["regex.insensitive"] ? "i" : ""
+                );
             } catch (e) {
                 return [];
             }

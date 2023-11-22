@@ -1,11 +1,5 @@
 const worker = new Worker("worker.js", {"type": "module"});
-var config = {
-    "rhyme": false,
-    "rhyme.ignorey": false,
-    "regex": false,
-    "regex.insensitive": false,
-    "fromwordlink": false
-};
+var config = {};
 let page;
 var q = "";
 var results;
@@ -101,11 +95,12 @@ id("search").addEventListener("input", function() {
     }, 100);
 });
 // modes
-id("sm")     .addEventListener("click",             searchMode        );
-id("rm")     .addEventListener("click", function() {rhymeMode(false);});
-id("rhyme-y").addEventListener("click", function() {rhymeMode(true) ;});
-id("xm")     .addEventListener("click", function() {regexMode(false);});
-id("regex-i").addEventListener("click", function() {regexMode(true) ;});
+id("sm")         .addEventListener("click",             searchMode               );
+id("rm")         .addEventListener("click", function() {rhymeMode(false       );});
+id("rhyme-y")    .addEventListener("click", function() {rhymeMode(true        );});
+id("xm")         .addEventListener("click", function() {regexMode(false, false);});
+id("regex-i")    .addEventListener("click", function() {regexMode(true , false);});
+id("regex-tight").addEventListener("click", function() {regexMode(false, true );});
 function removeClasses() {
     document.body.classList.remove("rhyme");
     document.body.classList.remove("regex");
@@ -128,6 +123,10 @@ function toggleClassById(_id, className) {
 function dispatchSearchInputEvent() {
     id("search").dispatchEvent(new Event("input", {"bubbles": true}));
 }
+function wrapSearchbar(before, after) {
+    id("before").innerHTML = before;
+    id("after").innerHTML = after;
+}
 function searchMode() {
     clearTimeout(timer);
     removeClasses();
@@ -136,9 +135,10 @@ function searchMode() {
     addClassById("sm", "checked");
     config["rhyme"] = false;
     config["regex"] = false;
+    wrapSearchbar("", "");
     dispatchSearchInputEvent();
 }
-function regexMode(toggle) {
+function regexMode(togglei, toggletight) {
     clearTimeout(timer);
     removeClasses();
     setBodyClass("regex");
@@ -147,10 +147,17 @@ function regexMode(toggle) {
     addClassById("xm", "checked");
     config["rhyme"] = false;
     config["regex"] = true;
-    if (toggle) {
+    if (togglei) {
         toggleClassById("regex-i", "checked");
         config["regex.insensitive"] = !config["regex.insensitive"];
     }
+    if (toggletight) {
+        toggleClassById("regex-tight", "checked");
+        config["regex.tight"] = !config["regex.tight"];
+    }
+    wrapSearchbar(
+        "/" + (config["regex.tight"] ? "^" : ""),
+        (config["regex.tight"] ? "$" : "") + "/" + (config["regex.insensitive"] ? "i" : ""));
     dispatchSearchInputEvent();
 }
 function rhymeMode(toggle) {
@@ -162,6 +169,7 @@ function rhymeMode(toggle) {
     addClassById("rm", "checked");
     config["rhyme"] = true;
     config["regex"] = false;
+    wrapSearchbar("", "");
     if (toggle) {
         toggleClassById("rhyme-y", "checked");
         config["rhyme.ignorey"] = !config["rhyme.ignorey"];

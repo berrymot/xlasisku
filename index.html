@@ -43,6 +43,9 @@
             </span>
             <span class="nobr regexonly">
                 <span class="nobr opt">
+                    <button id="regex-tight">wrap in ^...$</button>
+                </span>
+                <span class="nobr opt">
                     <button id="regex-i">ignore case</button>
                 </span>
             </span>
@@ -52,7 +55,11 @@
                 </span>
             </span>
         </p>
-        <input type="text" id="search" autocomplete="off" spellcheck="false" placeholder="loading" disabled />
+        <div id="fakebox">
+            <span class="always" id="before"></span>
+            <input type="text" id="search" autocomplete="off" spellcheck="false" placeholder="loading" disabled />
+            <span class="always" id="after"></span>
+        </div>
         <div id="info"></div>
         <div id="length"></div>
         <div id="results"></div>
@@ -73,8 +80,12 @@
                     vars += "&q=" + encodeURIComponent(q);
                 if (config["rhyme"])
                     vars += "&rhyme=" + (config["rhyme.ignorey"]? "y" : "");
-                if (config["regex"])
-                    vars += "&regex=" + (config["regex.insensitive"]? "i" : "");
+                if (config["regex"]) {
+                    var options = [];
+                    if (config["regex.insensitive"]) options.push("i");
+                    if (config["regex.tight"]) options.push("tight");
+                    vars += "&regex=" + options.join(",");
+                }
                 if (config["fromwordlink"])
                     vars += "&fromwordlink";
                 vars = vars.replace(/\?&/g, "?").replace(/=&/g, "&").replace(/[=?]$/, "");
@@ -87,7 +98,8 @@
                     rhymeMode(params.get("rhyme") == "y");
                 }
                 if (params.has("regex")) {
-                    regexMode(params.get("regex") == "i");
+                    var options = params.get("regex").split(",");
+                    regexMode(options.includes("i"), options.includes("tight"));
                 }
                 if (params.has("fromwordlink")) {
                     config["fromwordlink"] = true;
