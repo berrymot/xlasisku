@@ -46,44 +46,41 @@
     font-weight: bold;
     font-style: italic;
 }
-* {
+*, input, button {
     box-sizing: border-box;
     -webkit-text-size-adjust: 100%;
     transition: color 0.2s, background-color 0.2s;
 }
 :root {
-    --pinkfg: #ff1493;
-    --tealfg: #0c9381;
-    --purplefg: #8e46e0;
-    --pinkbg: #280317;
-    --tealbg: #021714;
-    --purplebg: #160b23;
-    --bodyfg: #fff;
-    --searchbg: #000;
-    --entrybg: #0008;
-    --notesfg: #fffc;
-    --disabledfg: #fffd;
-    --link: #9cf;
-    --warnfg: #fc9;
-    --errfg: #f99;
+    --bg: 38, 3, 22;
+    --checked: 255, 20, 146;
+    --fg: 255, 255, 255;
+    --inv: 0, 0, 0;
+    --op-c: 0.8;
+    --op-a: calc(2/3);
+    --op-8: calc(8/15);
+    --link: 153, 204, 255;
+    --err: 255, 153, 153;
     --sans: "IBM Plex Sans", ui-sans-serif, sans-serif;
     --mono: "IBM Plex Mono", ui-monospace, monospace;
+}
+body.regex {
+    --bg: 3, 23, 20;
+    --checked: 12, 147, 129;
+}
+body.rhyme {
+    --bg: 22, 10, 36;
+    --checked: 143, 72, 224;
 }
 body {
     font-family: var(--sans);
     margin: 0 auto;
     max-width: 600px;
     padding: 8px;
-    background: var(--pinkbg);
-    color: var(--bodyfg);
+    background: rgb(var(--bg));
+    color: rgb(var(--fg));
     line-height: 1.4;
     word-break: break-word;
-}
-body.rhyme {
-    background: var(--purplebg);
-}
-body.regex {
-    background: var(--tealbg);
 }
 #search {
     display: block;
@@ -92,15 +89,15 @@ body.regex {
     padding: 4px 12px;
     font-size: 1.5em;
     border-radius: 16px;
-    background: var(--searchbg);
-    border: 2px solid var(--bodyfg);
-    box-shadow: var(--bodyfg) 0 3px;
-    color: var(--bodyfg) !important;
+    background: rgb(var(--inv));
+    border: 2px solid rgb(var(--fg));
+    box-shadow: rgb(var(--fg)) 0 3px;
+    color: rgb(var(--fg)) !important;
 }
 #info {
     font-size: 1.25em;
     margin-top: 8px;
-    color: var(--notesfg);
+    color: rgba(var(--fg), var(--op-c));
 }
 #info p {
     margin: 6px 0;
@@ -110,35 +107,35 @@ body.regex {
 }
 #search:disabled {
     opacity: 1;
-    color: var(--notesfg);
-    border-color: var(--notesfg);
-    background-color: var(--entrybg);
+    color: rgba(var(--fg), var(--op-c));
+    border-color: rgba(var(--fg), var(--op-c));
+    background-color: rgba(var(--inv), var(--op-8));
 }
 #search::placeholder {
-    color: var(--notesfg);
+    color: rgba(var(--fg), var(--op-c));
 }
 .entry {
     display: block;
     margin: 8px 0;
     padding: 4px 16px;
-    background: var(--entrybg);
+    background: rgba(var(--inv), var(--op-8));
     border-radius: 16px;
-    color: var(--bodyfg);
+    color: rgb(var(--fg));
 }
 .entry :is(p:first-child, summary) {
     font-family: var(--sans);
 }
 .entry p:first-child a:first-child {
-    color: var(--bodyfg);
+    color: rgb(var(--fg));
 }
 .entry .selmaho {
     font-family: var(--sans);
 }
 .entry :is(.selmaho, .rafsi) {
-    color: var(--notesfg);
+    color: rgba(var(--fg), var(--op-c));
 }
 .entry details {
-    color: var(--notesfg);
+    color: rgba(var(--fg), var(--op-c));
     margin: 16px 0;
 }
 summary {
@@ -148,9 +145,6 @@ summary {
 .entry .glosswords {
     font-style: italic;
 }
-.warn {
-    color: var(--warnfg);
-}
 .nobr {
     white-space: nowrap;
 }
@@ -158,12 +152,12 @@ ul li {
     list-style-type: disc;
 }
 a {
-    color: var(--link);
+    color: rgb(var(--link));
     text-decoration: none;
 }
 .opt {
-    color: var(--bodyfg);
-    border: 1px solid var(--bodyfg);
+    color: rgb(var(--fg));
+    border: 1px solid rgb(var(--fg));
     border-radius: 16px;
     display: inline-block;
     margin-top: 4px;
@@ -176,9 +170,9 @@ p:has(.opt) {
     display: inline-block;
     border-radius: 16px;
     cursor: pointer;
-    background: none;
+    background: rgb(var(--checked), 0);
     border: none;
-    color: var(--bodyfg);
+    color: rgb(var(--fg));
     font-size: 1em;
     font-family: var(--sans);
 }
@@ -186,23 +180,17 @@ p:has(.opt) {
     margin-right: -8px;
 }
 .opt .checked {
-    background: var(--pinkfg);
+    background: rgb(var(--checked));
     color: white;
 }
 .opt :disabled {
-    color: var(--notesfg);
+    color: rgba(var(--fg), var(--op-c));
 }
 .opt .checked:disabled {
-    color: var(--disabledfg);
+    color: #fffd;
 }
 .opt:not(:has(:not([disabled]))) {
-    border-color: var(--notesfg);
-}
-body.rhyme .opt .checked {
-    background: var(--purplefg);
-}
-body.regex .opt .checked {
-    background: var(--tealfg);
+    border-color: rgba(var(--fg), var(--op-c));
 }
 body[class^=r] .normalonly {
     display: none;
@@ -217,7 +205,7 @@ math {
     font-size: 1.1em;
 }
 hr {
-    border: 1px solid var(--bodyfg);
+    border: 1px solid rgb(var(--fg));
 }
 :not(input, hr, br):empty {
     display: none;
@@ -227,10 +215,10 @@ h1, h1 + p {
     text-align: center;
 }
 h2 {
-    border-top: 3px solid var(--notesfg);
+    border-top: 3px solid rgba(var(--fg), var(--op-c));
 }
 .temml-error {
-    color: var(--errfg) !important;
+    color: rgb(var(--err)) !important;
     white-space: pre-wrap !important;
     font-family: var(--mono);
     display: block;
@@ -242,24 +230,25 @@ h2 {
 }
 @media (prefers-color-scheme: light) {
     :root {
-        --pinkfg: #ff1493;
-        --tealfg: #0c9381;
-        --purplefg: #712ce8;
-        --pinkbg: #ffe2f2;
-        --tealbg: #e1f2f0;
-        --purplebg: #ece6f4;
-        --bodyfg: #000;
-        --searchbg: #fff;
-        --entrybg: #fff8;
-        --disabledfg: #fffe;
-        --notesfg: #000a;
-        --link: #0067ca;
-        --warnfg: #ba6805;
-        --errfg: #d12929;
+        --bg: 255, 224, 241;
+        --checked: 255, 20, 146;
+        --fg: 0, 0, 0;
+        --inv: 255, 255, 255;
+        --op-c: 0.8;
+        --op-a: calc(2/3);
+        --op-8: calc(8/15);
+        --link: 0, 105, 204;
+        --err: 209, 41, 41;
+        --sans: "IBM Plex Sans", ui-sans-serif, sans-serif;
+        --mono: "IBM Plex Mono", ui-monospace, monospace;
     }
-    button.checked:disabled {
-        color: var(--disabledfg);
+    body.regex {
+        --bg: 224, 242, 240;
     }
+    body.rhyme {
+        --bg: 236, 230, 245;
+        --checked: 113, 44, 232;
+    }    
 }
 @media (prefers-contrast: more) {
     a, button, summary {
