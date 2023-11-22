@@ -135,7 +135,7 @@ function searchMode() {
     addClassById("sm", "checked");
     config["rhyme"] = false;
     config["regex"] = false;
-    wrapSearchbar("", "");
+    wrapSearchbar("&ZeroWidthSpace;", "&ZeroWidthSpace;");
     dispatchSearchInputEvent();
 }
 function regexMode(togglei, toggletight) {
@@ -157,7 +157,8 @@ function regexMode(togglei, toggletight) {
     }
     wrapSearchbar(
         "/" + (config["regex.tight"] ? "^" : ""),
-        (config["regex.tight"] ? "$" : "") + "/" + (config["regex.insensitive"] ? "i" : ""));
+        (config["regex.tight"] ? "$" : "") + "/" + (config["regex.insensitive"] ? "i" : "")
+    );
     dispatchSearchInputEvent();
 }
 function rhymeMode(toggle) {
@@ -169,7 +170,7 @@ function rhymeMode(toggle) {
     addClassById("rm", "checked");
     config["rhyme"] = true;
     config["regex"] = false;
-    wrapSearchbar("", "");
+    wrapSearchbar("&ZeroWidthSpace;", "&ZeroWidthSpace;");
     if (toggle) {
         toggleClassById("rhyme-y", "checked");
         config["rhyme.ignorey"] = !config["rhyme.ignorey"];
