@@ -65,7 +65,7 @@ function search(query) {
         for (const entry of jbo) {
             for (var field of fields(entry)) {
                 var score = 6 - fields(entry).indexOf(field);
-                const gismubonus = xusegismu_zo(entry.word) ? 0.5 : 0;
+                const bonus = (entry.score >= 1000 ? 0.25 : 0) + (xusegismu_zo(entry.word) ? 0.25 : 0);
                 switch (field) {
                     case entry.word:
                         if (field.startsWith(h(query))) {
@@ -97,7 +97,7 @@ function search(query) {
                         if (field) {
                             for (const g of field) {
                                 if (g == query) {
-                                    results.push([entry, gismubonus]);
+                                    results.push([entry, bonus]);
                                 }
                             }
                         }
@@ -105,7 +105,7 @@ function search(query) {
                     default:
                         const rgx = query.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
                         if (field && new RegExp(`[^a-z0-9]${rgx}e?s?[^a-z0-9]`, "iu").test(field)) {
-                            results.push([entry, score + gismubonus]);
+                            results.push([entry, score + bonus]);
                         }
                         break;
                 }
