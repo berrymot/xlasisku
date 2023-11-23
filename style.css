@@ -59,6 +59,8 @@
     --op-c: 0.8;
     --op-a: calc(2/3);
     --op-8: calc(8/15);
+    --op-4: calc(4/15);
+    --op-2: calc(2/15);
     --link: 153, 204, 255;
     --err: 255, 153, 153;
     --sans: "IBM Plex Sans", ui-sans-serif, sans-serif;
@@ -193,6 +195,7 @@ p:has(.opt) {
     color: rgb(var(--fg));
     font-size: 1em;
     font-family: var(--sans);
+    position: relative;
 }
 .opt button:not(:last-child) {
     margin-right: -8px;
@@ -249,12 +252,8 @@ h2 {
 @media (prefers-color-scheme: light) {
     :root {
         --bg: 255, 224, 241;
-        --checked: 255, 20, 146;
         --fg: 0, 0, 0;
         --inv: 255, 255, 255;
-        --op-c: 0.8;
-        --op-a: calc(2/3);
-        --op-8: calc(8/15);
         --link: 0, 105, 204;
         --err: 209, 41, 41;
         --sans: "IBM Plex Sans", ui-sans-serif, sans-serif;
@@ -266,7 +265,7 @@ h2 {
     body.rhyme {
         --bg: 236, 230, 245;
         --checked: 113, 44, 232;
-    }    
+    }
 }
 @media (prefers-contrast: more) {
     a, button, summary {
@@ -279,9 +278,32 @@ h2 {
     }
 }
 @media (hover: hover) {
-    :is(a, button, summary):hover {
-        text-decoration: underline;
+    :is(a, summary, #fakebox):hover {
+        background: rgba(var(--fg), var(--op-4));
     }
+    .opt ::before {
+        content: "";
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        border-radius: 16px;
+        background-color: transparent;
+        transition: background-color 0.2s;
+    }
+    .opt :hover::before {
+        z-index: 1;
+        background: rgba(var(--fg), var(--op-4));
+    }    
+}
+@media (hover: hover) and (prefers-color-scheme: light) {
+    :is(a, summary, #fakebox):hover {
+        background: rgba(var(--fg), var(--op-2));
+    }
+    .opt :hover::before {
+        background: rgba(var(--fg), var(--op-2));
+    }    
 }
 @media (prefers-reduced-motion: reduce) {
     * {
