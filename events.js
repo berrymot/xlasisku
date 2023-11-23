@@ -61,7 +61,7 @@ id("search").addEventListener("input", function() {
                     if (/\s/.test(q)) {
                         const lujvo = getLujvo(h(q))[0];
                         id("info").append(createHTMLElement("p", null, [
-                            "→ ",
+                            "→\u{a0}",
                             createHTMLElement("a", {"href": "?q=" + encodeURIComponent(lujvo)}, 
                             [createHTMLElement("i", null, [lujvo])]
                             )
@@ -69,7 +69,7 @@ id("search").addEventListener("input", function() {
                     } else {
                         const veljvo = getVeljvo(h(q)).join(" ")
                         id("info").append(createHTMLElement("p", null, [
-                            "↑ ",
+                            "↑\u{a0}",
                             createHTMLElement("a", {"href": "?q=" + encodeURIComponent(veljvo)}, 
                             [createHTMLElement("i", null, [veljvo])]
                             )
