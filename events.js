@@ -99,12 +99,12 @@ id("search").addEventListener("input", function() {
     }, 100);
 });
 // modes
-id("sm")         .addEventListener("click",             searchMode               );
-id("rm")         .addEventListener("click", function() {rhymeMode(false       );});
-id("rhyme-y")    .addEventListener("click", function() {rhymeMode(true        );});
-id("xm")         .addEventListener("click", function() {regexMode(false, false);});
-id("regex-i")    .addEventListener("click", function() {regexMode(true , false);});
-id("regex-tight").addEventListener("click", function() {regexMode(false, true );});
+id("sm").addEventListener("click", searchMode);
+id("rm").addEventListener("click", function() {rhymeMode(false);});
+id("rhyme-y").addEventListener("click", function() {rhymeMode(true);});
+id("xm").addEventListener("click", function() {regexMode(false, false);});
+id("regex-i").addEventListener("click", function() {regexMode(true, false);});
+id("regex-tight").addEventListener("click", function() {regexMode(false, true);});
 function removeClasses() {
     document.body.classList.remove("rhyme");
     document.body.classList.remove("regex");
