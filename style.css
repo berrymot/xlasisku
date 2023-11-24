@@ -268,11 +268,11 @@ h2 {
     font-size: 1rem;
 }
 /* hover/focus */
-:is(a, summary, #fakebox):is(:hover, :focus, :focus-within) {
+:is(a, summary, #fakebox):is(:hover, :focus-visible, :focus-within) {
     background: rgba(var(--fg), var(--op-4));
     outline: none;
 }
-#search:focus {
+#search:focus-visible {
     outline: none;
 }
 .opt ::before {
@@ -286,10 +286,10 @@ h2 {
     background-color: transparent;
     transition: background-color 0.2s;
 }
-.opt :is(:hover, :focus) {
+.opt :is(:hover, :focus-visible) {
     outline: none;
 }
-.opt :is(:hover, :focus)::before {
+.opt :is(:hover, :focus-visible)::before {
     z-index: 1;
     background: rgba(var(--fg), var(--op-4));
 }
@@ -311,10 +311,10 @@ h2 {
         --bg: 236, 230, 245;
         --checked: 113, 44, 232;
     }
-    :is(a, summary, #fakebox):is(:hover, :focus, :focus-within) {
+    :is(a, summary, #fakebox):is(:hover, :focus-visible, :focus-within) {
         background: rgba(var(--fg), var(--op-2));
     }
-    .opt :is(:hover, :focus)::before {
+    .opt :is(:hover, :focus-visible)::before {
         background: rgba(var(--fg), var(--op-2));
     }
 }
