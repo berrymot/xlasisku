@@ -1,3 +1,4 @@
+/* fonts */
 @font-face {
     font-family: "IBM Plex Sans";
     src: url("plex/IBM-Plex-Sans/fonts/complete/ttf/IBMPlexSans-Text.ttf");
@@ -46,10 +47,11 @@
     font-weight: bold;
     font-style: italic;
 }
+/* main */
 *, input, button {
     box-sizing: border-box;
     -webkit-text-size-adjust: 100%;
-    transition: color 0.2s, background-color 0.2s;
+    transition: color 0.2s, background 0.2s, border 0.2s, box-shadow 0.2s;
 }
 :root {
     --bg: 38, 3, 22;
@@ -84,6 +86,7 @@ body {
     line-height: 1.4;
     word-break: break-word;
 }
+/* searchbar */
 #fakebox {
     display: flex;
     border-radius: 16px;
@@ -110,19 +113,27 @@ body {
     height: 1lh;
     box-sizing: content-box;
 }
+#fakebox:has(> #search:disabled) {
+    opacity: 1;
+    color: rgba(var(--fg), var(--op-8));
+    border-color: rgba(var(--fg), var(--op-8));
+    background-color: rgba(var(--inv), var(--op-8));
+    box-shadow: rgba(var(--fg), var(--op-8)) 0 3px;
+}
 #search:disabled {
     opacity: 1;
-    color: rgba(var(--fg), var(--op-c));
-    border-color: rgba(var(--fg), var(--op-c));
-    background-color: rgba(var(--inv), var(--op-8));
 }
 #search::placeholder {
     color: rgba(var(--fg), var(--op-c));
+}
+#search:disabled::placeholder {
+    color: rgba(var(--fg), var(--op-8));
 }
 .always {
     color: rgba(var(--fg), var(--op-c));
     padding: 0;
 }
+/* lujvo things / regex errors */
 #info {
     font-size: 1.25em;
     margin-top: 8px;
@@ -134,6 +145,7 @@ body {
 #info a {
     color: inherit;
 }
+/* results */
 .entry {
     display: block;
     margin: 8px 0;
@@ -165,12 +177,14 @@ summary {
 .entry .glosswords {
     font-style: italic;
 }
+/* misc */
 .nobr {
     white-space: nowrap;
 }
 ul li {
     list-style-type: disc;
 }
+/* links/buttons */
 a {
     color: rgb(var(--link));
     text-decoration: none;
@@ -222,6 +236,7 @@ body:not([class^=re]) .regexonly {
 body:not([class^=rh]) .rhymeonly {
     display: none;
 }
+/* misc 2 */
 math {
     font-size: 1.1em;
 }
@@ -252,6 +267,33 @@ h2 {
 :is(#length, #bottom) small {
     font-size: 1rem;
 }
+/* hover/focus */
+:is(a, summary, #fakebox):is(:hover, :focus, :focus-within) {
+    background: rgba(var(--fg), var(--op-4));
+    outline: none;
+}
+#search:focus {
+    outline: none;
+}
+.opt ::before {
+    content: "";
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    border-radius: 16px;
+    background-color: transparent;
+    transition: background-color 0.2s;
+}
+.opt :is(:hover, :focus) {
+    outline: none;
+}
+.opt :is(:hover, :focus)::before {
+    z-index: 1;
+    background: rgba(var(--fg), var(--op-4));
+}
+/* light mode */
 @media (prefers-color-scheme: light) {
     :root {
         --bg: 255, 224, 241;
@@ -269,7 +311,14 @@ h2 {
         --bg: 236, 230, 245;
         --checked: 113, 44, 232;
     }
+    :is(a, summary, #fakebox):is(:hover, :focus, :focus-within) {
+        background: rgba(var(--fg), var(--op-2));
+    }
+    .opt :is(:hover, :focus)::before {
+        background: rgba(var(--fg), var(--op-2));
+    }
 }
+/* other media queries */
 @media (prefers-contrast: more) {
     a, button, summary {
         text-decoration: underline;
@@ -279,34 +328,6 @@ h2 {
     .opt button.checked::before {
         content: "✓ ";
     }
-}
-@media (hover: hover) {
-    :is(a, summary, #fakebox):hover {
-        background: rgba(var(--fg), var(--op-4));
-    }
-    .opt ::before {
-        content: "";
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        position: absolute;
-        border-radius: 16px;
-        background-color: transparent;
-        transition: background-color 0.2s;
-    }
-    .opt :hover::before {
-        z-index: 1;
-        background: rgba(var(--fg), var(--op-4));
-    }    
-}
-@media (hover: hover) and (prefers-color-scheme: light) {
-    :is(a, summary, #fakebox):hover {
-        background: rgba(var(--fg), var(--op-2));
-    }
-    .opt :hover::before {
-        background: rgba(var(--fg), var(--op-2));
-    }    
 }
 @media (prefers-reduced-motion: reduce) {
     * {
