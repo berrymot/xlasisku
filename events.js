@@ -139,7 +139,7 @@ function searchMode() {
     addClassById("sm", "checked");
     config["rhyme"] = false;
     config["regex"] = false;
-    wrapSearchbar("&ZeroWidthSpace;", "&ZeroWidthSpace;");
+    wrapSearchbar("<wbr />", "<wbr />");
     dispatchSearchInputEvent();
 }
 function regexMode(togglei, toggletight) {
@@ -174,7 +174,7 @@ function rhymeMode(toggle) {
     addClassById("rm", "checked");
     config["rhyme"] = true;
     config["regex"] = false;
-    wrapSearchbar("&ZeroWidthSpace;", "&ZeroWidthSpace;");
+    wrapSearchbar("<wbr />", "<wbr />");
     if (toggle) {
         toggleClassById("rhyme-y", "checked");
         config["rhyme.ignorey"] = !config["rhyme.ignorey"];
