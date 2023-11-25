@@ -65,7 +65,7 @@ function search(query) {
         for (const entry of jbo) {
             for (var field of fields(entry)) {
                 var score = 6 - fields(entry).indexOf(field);
-                const bonus = (entry.score >= 1000 ? 0.25 : 0) + (xusegismu_zo(entry.word) ? 0.25 : 0);
+                const bonus = (entry.score >= 1000 ? 0.375 : 0) + (xusegismu_zo(entry.word) ? 0.125 : 0);
                 switch (field) {
                     case entry.word:
                         if (field.startsWith(h(query))) {
