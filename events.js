@@ -1,4 +1,4 @@
-const worker = new Worker("worker.js", {"type": "module"});
+// const worker = new Worker("worker.js", {"type": "module"});
 var config = {};
 let page;
 var q = "";
@@ -6,14 +6,14 @@ var results;
 function h(t) {
     return t.replace(/[h‘’]/igu, "'");
 }
-worker.addEventListener("message", function(e) {
-    results = e.data;
-    id("results").innerHTML = "";
-    id("length").innerHTML = results.length + " result" + (results.length == 1 ? "" : "s");
-    page = 0;
-    load(results, page);
-    checkLength();
-});
+// worker.addEventListener("message", function(e) {
+//     results = e.data;
+//     id("results").innerHTML = "";
+//     id("length").innerHTML = results.length + " result" + (results.length == 1 ? "" : "s");
+//     page = 0;
+//     load(results, page);
+//     checkLength();
+// });
 window.addEventListener("scroll", function(e) {
     if (window.innerHeight + window.scrollY >= document.body.scrollHeight - 100) {
         page++;
@@ -181,3 +181,23 @@ function rhymeMode(toggle) {
     }
     dispatchSearchInputEvent();
 }
+// theme (mi lebna ti la lalxu)
+function setTheme(dark) {
+    document.documentElement.className = dark ? "dark" : "";
+    try {
+        localStorage.setItem("theme", dark ? "dark" : "light");
+    } catch (e) {
+        //
+    }    
+}
+var theme = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)") ? "dark" : "light";
+try {
+    theme = localStorage.getItem("theme") || theme;
+} catch (e) {
+    //
+}
+setTheme(theme == "dark");
+setTimeout(() => {document.body.style.transition = "color 0.2s, background 0.2s, border 0.2s, box-shadow 0.2s";}, 0);
+id("theme").addEventListener("click", function() {
+    setTheme(document.documentElement.className != "dark");
+});

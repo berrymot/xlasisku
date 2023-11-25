@@ -22,9 +22,12 @@
         <p><a href="https://github.com/berrymot/xlasisku" target="_blank">github repo</a></p>
         <p>
             <span class="nobr opt">
-                <button id="sm" disabled class="checked">normal</button>
+                <button id="sm" disabled>normal</button>
                 <button id="xm" disabled>regex</button>
                 <button id="rm" disabled>rhyme</button>
+            </span>
+            <span class="nobr opt">
+                <button id="theme">theme</button>
             </span>
             <br />
             <span class="nobr normalonly">
@@ -100,6 +103,9 @@
                 if (params.has("regex")) {
                     var options = params.get("regex").split(",");
                     regexMode(options.includes("i"), options.includes("tight"));
+                }
+                if (!params.has("regex") && !params.has("rhyme")) {
+                    searchMode();
                 }
                 if (params.has("fromwordlink")) {
                     config["fromwordlink"] = true;
