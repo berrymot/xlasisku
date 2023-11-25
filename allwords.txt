@@ -260,6 +260,7 @@ en   atriium
 en   atspiri
 en   a'u
 en   au
+en   au'a
 en   a'ucu'i
 en   aucu'i
 en   audji
@@ -17663,6 +17664,7 @@ en   pagzu'e
 en   pa'i
 en   pai
 en   pai'e
+en   pai'i
 en   paijdi
 en   pairkamni
 en   pairkamnycmi
@@ -17854,6 +17856,7 @@ en   pavycinse
 en   pavyfau
 en   pavyfautci
 en   pavyfu'ivla
+en   pavykamre
 en   pavykarsna
 en   pavypavma'i
 en   pavypavmasti
@@ -18193,6 +18196,7 @@ en   pitxona
 en   pitybli
 en   pitytre
 en   pi'u
+en   pi'u'e
 en   pixra
 en   pixrlate
 en   pixsaktu'u
@@ -20431,6 +20435,7 @@ en   sfirnidai
 en   sfiseteroi
 en   sfite
 en   sfofa
+en   sfopu
 en   sfubu
 en   sfumabru
 en   sfumatura
