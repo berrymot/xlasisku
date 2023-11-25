@@ -1,4 +1,4 @@
-// const worker = new Worker("worker.js", {"type": "module"});
+const worker = new Worker("worker.js", {"type": "module"});
 var config = {};
 let page;
 var q = "";
@@ -6,14 +6,14 @@ var results;
 function h(t) {
     return t.replace(/[h‘’]/igu, "'");
 }
-// worker.addEventListener("message", function(e) {
-//     results = e.data;
-//     id("results").innerHTML = "";
-//     id("length").innerHTML = results.length + " result" + (results.length == 1 ? "" : "s");
-//     page = 0;
-//     load(results, page);
-//     checkLength();
-// });
+worker.addEventListener("message", function(e) {
+    results = e.data;
+    id("results").innerHTML = "";
+    id("length").innerHTML = results.length + " result" + (results.length == 1 ? "" : "s");
+    page = 0;
+    load(results, page);
+    checkLength();
+});
 window.addEventListener("scroll", function(e) {
     if (window.innerHeight + window.scrollY >= document.body.scrollHeight - 100) {
         page++;
