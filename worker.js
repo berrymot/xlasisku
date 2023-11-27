@@ -58,7 +58,7 @@ function search(query) {
     } else {
         // exact matches
         for (const w of query.split(/\s+/)) {
-            const exact = jbo.find(entry => entry.word == h(w));
+            const exact = jbo.find(entry => entry.word.toLowerCase() == h(w));
             if (exact) {
                 results.push([exact, 10]);
             }
@@ -69,9 +69,9 @@ function search(query) {
                 const bonus = (entry.score >= 1000 ? 0.375 : 0) + (xusegismu_zo(entry.word) ? 0.125 : 0);
                 switch (field) {
                     case entry.word:
-                        if (field.startsWith(h(query))) {
+                        if (field.toLowerCase().startsWith(h(query))) {
                             results.push([entry, score + 0.5 + query.length / field.length / 2]);
-                        } else if (field.includes(h(query))) {
+                        } else if (field.toLowerCase().includes(h(query))) {
                             results.push([entry, score + query.length / field.length / 2]);
                         }
                         break;
