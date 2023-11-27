@@ -28,11 +28,10 @@ function convertJSONToHTMLElement(json) {
             createHTMLElement("a", {
                 "href": "https://jbovlaste.lojban.org/dict/" + json.word.replace(/ /g, "%20"),
                 "target": "_blank",
-                "className": "nobr"
             }, [
                 json.score >= 1000 ? "official" :
                 json.score == -1 ? json.score : "+" + json.score,
-                " ↗"
+                "\u{a0}↗"
             ])
         ]),
         createHTMLElement("p", null, replaceLinks(json.definition)),
@@ -75,10 +74,10 @@ function load(res, page) {
     // latex
     renderMathInElement(document.body, {
         "delimiters": [
-            { "left": "$$",    "right": "$$",    "display": true  },
-            { "left": "$",     "right": "$",     "display": false },
-            { "left": "\\(",   "right": "\\)",   "display": false },
-            { "left": "\\[",   "right": "\\]",   "display": true  }
+            {"left": "$$",  "right": "$$",  "display": true },
+            {"left": "$",   "right": "$",   "display": false},
+            {"left": "\\(", "right": "\\)", "display": false},
+            {"left": "\\[", "right": "\\]", "display": true }
         ]
     });
 }
