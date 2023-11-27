@@ -52,7 +52,7 @@ function replaceLinks(str) {
                 bits[i - 1] = bits[i - 1] + "$";
             }
             bits[i] = bits[i].replace(/\{/g, "📦{").replace(/\}/g, "}📦").split("📦").map((item) =>
-                /\{[a-z'., ]+\}/i.test(item) ? createHTMLElement("a", {
+                /\{[a-g'i-pr-vx-z., ]+\}/i.test(item) ? createHTMLElement("a", {
                     "href": "?q=" + item.slice(1, -1) + "&fromwordlink",
                     "target": config["rhyme"] || config["regex"] ? "_blank" : "_self"
                 }, item.slice(1, -1)) : item
