@@ -36,7 +36,7 @@ function search(query) {
         for (const entry of jbo) {
             var text = getVowelsFrom(entry.word);
             if (v != "" && text.endsWith(v)) {
-                results.push([entry, -entry.word.length]);
+                results.push([entry, v.length - text.length]);
             }
         }
     } else if (config["regex"]) {
