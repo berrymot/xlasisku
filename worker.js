@@ -117,7 +117,7 @@ function search(query) {
     return results;
 }
 function removeDuplicates(list) {
-    var sortedList = list.sort((a, b) => b[1] - a[1]);  // Sort the list in descending order based on the second element of each entry
+    var sortedList = list.sort((a, b) => b[1] - a[1]);
     const logged = {};
     sortedList = sortedList.filter(entry => {
       if (logged[entry[0].word]) return false;
