@@ -40,16 +40,17 @@ function search(query) {
             }
         }
     } else if (config["regex"]) {
+        var rgx;
+        query = query.replace(/\\C/g, "[bcdfgjklmnprstvxz]").replace(/\\V/g, "[aeiou]")
+        try {
+            rgx = new RegExp(
+                config["regex.tight"] ? "^" + query + "$" : query,
+                config["regex.insensitive"] ? "i" : ""
+            );
+        } catch (e) {
+            return [];
+        }
         for (const entry of jbo) {
-            var rgx;
-            try {
-                rgx = new RegExp(
-                    config["regex.tight"] ? "^" + query + "$" : query,
-                    config["regex.insensitive"] ? "i" : ""
-                );
-            } catch (e) {
-                return [];
-            }
             if (rgx.test(entry.word)) {
                 results.push([entry, 1]);
             }
