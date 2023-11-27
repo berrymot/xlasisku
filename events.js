@@ -66,7 +66,7 @@ id("search").addEventListener("input", function() {
                         const lujvo = getLujvo(h(q))[0];
                         id("info").append(createHTMLElement("p", null, [
                             "→\u{a0}",
-                            createHTMLElement("a", {"href": "?q=" + encodeURIComponent(lujvo)}, 
+                            createHTMLElement("a", {"href": "?q=" + encodeURIComponent(lujvo)},
                             [createHTMLElement("i", null, [lujvo])]
                             )
                         ]));
@@ -74,7 +74,7 @@ id("search").addEventListener("input", function() {
                         const veljvo = getVeljvo(h(q)).join(" ")
                         id("info").append(createHTMLElement("p", null, [
                             "↑\u{a0}",
-                            createHTMLElement("a", {"href": "?q=" + encodeURIComponent(veljvo)}, 
+                            createHTMLElement("a", {"href": "?q=" + encodeURIComponent(veljvo)},
                             [createHTMLElement("i", null, [veljvo])]
                             )
                         ]));
@@ -188,7 +188,7 @@ function setTheme(dark) {
         localStorage.setItem("theme", dark ? "dark" : "light");
     } catch (e) {
         //
-    }    
+    }
 }
 var theme = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)") ? "dark" : "light";
 try {

@@ -1,6 +1,6 @@
 const id = (x) => document.getElementById(x);
 function createHTMLElement(tag, props, children) {
-    const element = document.createElement(tag); 
+    const element = document.createElement(tag);
     Object.assign(element, props);
     for (const child of children) {
       if (child) {
