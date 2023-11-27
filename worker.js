@@ -4,7 +4,7 @@ function h(t) {
     return t.replace(/[h‘’]/igu, "'");
 }
 function fields(json) {
-    return [json.selmaho || null, json.rafsi || null, json.definition, json.word, json.glosswords || null, json.notes || null];
+    return [json.selmaho || null, json.rafsi || null, json.definition, json.word, json.notes || null];
 }
 // TODO: selmaho() - parse into ↓
 function selmahois(x, y) {
@@ -93,15 +93,6 @@ function search(query) {
                         //         results.push([html, score]);
                         //     }
                         // }
-                        break;
-                    case entry.glosswords:
-                        if (field) {
-                            for (const g of field) {
-                                if (g == query) {
-                                    results.push([entry, bonus]);
-                                }
-                            }
-                        }
                         break;
                     default:
                         const rgx = query.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
