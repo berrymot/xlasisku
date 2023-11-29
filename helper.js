@@ -66,8 +66,8 @@ function load(res, page) {
     var nodes = [];
     for (var i = start; i < end; i++) {
         if (res[i]) {
-            res[i] = [convertJSONToHTMLElement(res[i][0]), res[i][1]];
-            nodes.push(res[i][0]);
+            res[i] = convertJSONToHTMLElement(res[i][0]);
+            nodes.push(res[i]);
         }
     }
     id("results").append(...nodes);
