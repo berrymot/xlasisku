@@ -261,6 +261,9 @@ h2 {
     font-family: var(--mono);
     display: block;
 }
+.err {
+    color: rgb(var(--err));
+}
 #length, #bottom {
     text-align: center;
     margin: 8px 0;

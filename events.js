@@ -74,6 +74,27 @@ id("search").addEventListener("input", function() {
                             "↑\u{a0}",
                             createHTMLElement("a", {"href": "?q=" + encodeURIComponent(veljvo)}, [createHTMLElement("i", null, [veljvo])])
                         ]));
+                        if (h(q) != getLujvo(veljvo)[0]) {
+                            id("info").append(createHTMLElement("p", {"id": "best"}, ["best:\u{a0}"]));
+                            const mabla = jvokaha(h(q));
+                            const best = jvokaha(getLujvo(veljvo)[0]);
+                            console.log(mabla, best);
+                            const hyphens = ["r", "n", "y", "'y", "y'", "'y'"];
+                            for (var m = 0, b = 0; m < mabla.length; m++, b++) {
+                                if (hyphens.includes(mabla[m])) {
+                                    m++;
+                                }
+                                if (hyphens.includes(best[b])) {
+                                    id("best").append(createHTMLElement("i", null, [best[b]]));
+                                    b++;
+                                }
+                                if (mabla[m] != best[b]) {
+                                    id("best").append(createHTMLElement("i", {"className": "err"}, [best[b]]));
+                                } else {
+                                    id("best").append(createHTMLElement("i", null, [best[b]]));
+                                }
+                            }
+                        }
                     }
                 } catch (e) {
                     // not lujvo
