@@ -53,7 +53,7 @@
     -webkit-text-size-adjust: 100%;
 }
 *:not(body), input, button {
-    transition: color 0.2s, background 0.2s, border 0.2s, box-shadow 0.2s;
+    transition: background 0.2s;
 }
 :root {
     --bg: 255, 224, 241;
@@ -144,8 +144,8 @@ body {
 #info p {
     margin: 6px 0;
 }
-#info a {
-    color: inherit;
+#info :not(.err) {
+    color: rgba(var(--fg), var(--op-c));
 }
 /* results */
 .entry {

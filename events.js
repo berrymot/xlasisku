@@ -214,7 +214,7 @@ try {
     //
 }
 setTheme(theme == "dark");
-setTimeout(() => {document.body.style.transition = "color 0.2s, background 0.2s, border 0.2s, box-shadow 0.2s";}, 0);
+setTimeout(() => {document.body.style.transition = "background 0.2s"}, 0);
 id("theme").addEventListener("click", function() {
     setTheme(document.documentElement.className != "dark");
 });
