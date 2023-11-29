@@ -33,7 +33,7 @@ function checkLength() {
                     "href": "https://jbovlaste.lojban.org/dict/" + encodeURIComponent(h(q)),
                     "target": "_blank"
                 }, [
-                    "check jbovlaste? ↗",
+                    "check jbovlaste? ↗ (" + results[0][0].word + " " + results[0][1] + ")",
                 ]
             ),
             createHTMLElement("br", null, []),
