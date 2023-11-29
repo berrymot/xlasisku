@@ -75,7 +75,13 @@ id("search").addEventListener("input", function() {
                             createHTMLElement("a", {"href": "?q=" + encodeURIComponent(veljvo)}, [createHTMLElement("i", null, [veljvo])])
                         ]));
                         if (h(q) != getLujvo(veljvo)[0]) {
-                            id("info").append(createHTMLElement("p", {"id": "best"}, ["best:\u{a0}"]));
+                            id("info").append(createHTMLElement("p", null, [
+                                "best:\u{a0}",
+                                createHTMLElement("a", {
+                                    "id": "best",
+                                    "href": "?q=" + encodeURIComponent(getLujvo(veljvo)[0])
+                                }, [])
+                            ]));
                             const mabla = jvokaha(h(q));
                             const best = jvokaha(getLujvo(veljvo)[0]);
                             console.log(mabla, best);
