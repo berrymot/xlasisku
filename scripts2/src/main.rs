@@ -29,19 +29,17 @@ impl Entry {
 
 fn main() -> Result<(), Box<dyn std::error::Error>> {
     let start = Instant::now();
+    // parse the xml
     let f = fs::File::open("../jvs/jbovlaste-en.xml")?;
     let mut reader = reader::EventReader::new(f); // we don't need the file anymore
     let mut words = Vec::<Entry>::new();
     let mut current_tag = String::new();
     let mut entry = Entry::new();
     let mut skip = false;
+    println!("parsing xml...");
     loop {
         match reader.next()? {
-            XmlEvent::StartDocument { .. } => {
-                println!("start of xml :3");
-            }
             XmlEvent::EndDocument { .. } => {
-                println!("end of xml :3");
                 break;
             }
             XmlEvent::StartElement { name, attributes, .. } => {
@@ -78,11 +76,9 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
                         } else {
                             skip = true;
                         }
-                        current_tag.clear();
                     }
                     "rafsi" => {
                         entry.rafsi.push(text);
-                        current_tag.clear();
                     }
                     "selmaho" => {
                         entry.selmaho = text;
@@ -95,6 +91,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
                     }
                     _ => ()
                 }
+                current_tag.clear();
             }
             XmlEvent::EndElement { name } => {
                 let tagname = name.borrow().local_name;
@@ -105,10 +102,13 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
             _ => ()
         }
     }
+    // write to json
+    println!("writing to json...");
     let json_str = serde_json::to_string_pretty(&words)?;
     fs::write("output.json", json_str)?;
     let duration = start.elapsed();
-    println!("took {:?} s :3", duration.as_secs_f64());
+    // .i mulno .ui
+    println!("done :3 took {:?} s", duration.as_secs_f64());
     Ok(())
 }
 
