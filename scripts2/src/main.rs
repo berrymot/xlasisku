@@ -43,7 +43,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
                 break;
             }
             XmlEvent::StartElement { name, attributes, .. } => {
-                let tagname = name.local_name.clone();
+                let tagname = name.local_name;
                 match tagname.as_str() {
                     "valsi" => {
                         entry = Entry::new();
@@ -94,7 +94,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
                 current_tag.clear();
             }
             XmlEvent::EndElement { name } => {
-                let tagname = name.borrow().local_name;
+                let tagname = name.local_name;
                 if tagname == "valsi" && !skip {
                     words.push(entry.clone());
                 }
@@ -113,5 +113,5 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 }
 
 fn attr(v: &[OwnedAttribute], n: &str) -> String {
-    v.iter().find(|&x| x.name.borrow().local_name == n).unwrap().value.to_string()
+    v.iter().find(|&x| x.name.local_name == n).unwrap().value.to_string()
 }
