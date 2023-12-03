@@ -76,7 +76,7 @@ public class Jvsparse {
                     }
                     bw.print("\"" + rafsi.get(rafsi.size() - 1) + "\"],");
                 }
-                bw.print("\"score\": " + score + ",\"definition\":\"" + fixjson(definition) + "\"");
+                bw.print("\"score\":" + score + ",\"definition\":\"" + fixjson(definition) + "\"");
                 if (!notes.equals("")) {
                     bw.print(",\"notes\":\"" + fixjson(notes) + "\"");
                 }

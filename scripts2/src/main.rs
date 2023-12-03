@@ -104,10 +104,10 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     }
     // write to json
     println!("writing to json...");
-    let json_str = serde_json::to_string_pretty(&words)?;
+    let json_str = serde_json::to_string(&words)?;
     fs::write("output.json", json_str)?;
-    let duration = start.elapsed();
     // .i mulno .ui
+    let duration = start.elapsed();
     println!("done :3 took {:?} s", duration.as_secs_f64());
     Ok(())
 }
