@@ -17,12 +17,12 @@ struct Entry {
 impl Entry {
     fn new() -> Self {
         Self {
-            word: "".to_string(),
+            word: String::new(),
             rafsi: Vec::new(),
-            selmaho: "".to_string(),
+            selmaho: String::new(),
             score: 0,
-            definition: "".to_string(),
-            notes: "".to_string()
+            definition: String::new(),
+            notes: String::new()
         }
     }
 }
