@@ -64,7 +64,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
                     _ => {
                         if tagname != "dictionary" && tagname != "direction" {
                             // we don't care about this
-                            let _ = reader.skip();
+                            reader.skip()?;
                         }
                     }
                 }
