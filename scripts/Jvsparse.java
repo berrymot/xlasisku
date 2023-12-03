@@ -12,7 +12,7 @@ public class Jvsparse {
         }
         output.createNewFile();
         PrintWriter bw = new PrintWriter("temp");
-        bw.println("export const jbo=[");
+        bw.print("export const jbo=[");
         String line;
         while ((line = br.readLine()) != null) {
             if (!line.contains("<valsi") && !line.contains("</valsi>")) {
@@ -63,41 +63,24 @@ public class Jvsparse {
                     }
                 }
                 while (!line.contains("</valsi>")) {
-                    // if (line.contains("<glossword")) {
-                    //     break;
-                    // }
                     line = br.readLine();
                 }
-                // ArrayList<String> glosswords = new ArrayList<String>();
-                // while (line.contains("<glossword word=\"")) {
-                //     glosswords.add(line.substring(line.indexOf("word=\"") + 6, line.indexOf("\"", line.indexOf("word=\"") + 6)));
-                //     line = br.readLine();
-                // }
-                bw.println("  {\n    \"word\": \"" + word + "\",");
+                bw.print("{\"word\":\"" + word + "\",");
                 if (!selmaho.equals("")) {
-                    bw.println("    \"selmaho\": \"" + selmaho + "\",");
+                    bw.print("\"selmaho\":\"" + selmaho + "\",");
                 }
                 if (rafsi.size() > 0) {
-                    bw.println("    \"rafsi\": [");
+                    bw.print("\"rafsi\":[");
                     for (int i = 0; i < rafsi.size() - 1; i++) {
-                        bw.println("      \"" + rafsi.get(i) + "\",");
+                        bw.print("\"" + rafsi.get(i) + "\",");
                     }
-                    bw.println("      \"" + rafsi.get(rafsi.size() - 1) + "\"\n    ],");
+                    bw.print("\"" + rafsi.get(rafsi.size() - 1) + "\"],");
                 }
-                bw.print("    \"score\": " + score + ",\n    \"definition\": \"" + fixjson(definition) + "\"");
+                bw.print("\"score\": " + score + ",\"definition\":\"" + fixjson(definition) + "\"");
                 if (!notes.equals("")) {
-                    bw.println(",\n    \"notes\": \"" + fixjson(notes) + "\"");
-                } else {
-                    bw.println();
+                    bw.print(",\"notes\":\"" + fixjson(notes) + "\"");
                 }
-                // if (glosswords.size() > 0) {
-                //     bw.print("\"glosswords\":[");
-                //     for (int i = 0; i < glosswords.size() - 1; i++) {
-                //         bw.print("\"" + fixjson(glosswords.get(i)) + "\",");
-                //     }
-                //     bw.print("\"" + fixjson(glosswords.get(glosswords.size() - 1)) + "\"]");
-                // }
-                bw.println("  },");
+                bw.print("},");
             }
         }
         bw.println("];");
@@ -115,9 +98,9 @@ public class Jvsparse {
         System.out.println((end - start) + " ms");
     }
     public static String fixjson(String s) {
-        return
+        return s
         // backslashes pain
-        s.replaceAll("\"", "\\\\\"").replaceAll("\\\\", "\\\\\\\\")
+        .replaceAll("\"", "\\\\\"").replaceAll("\\\\", "\\\\\\\\")
         // html entities
         .replaceAll("&amp;", "&").replaceAll("&lt;", "<").replaceAll("&gt;", ">").replaceAll("&apos;", "'").replaceAll("&quot;", "\\\\\"")
         ;

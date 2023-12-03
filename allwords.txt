@@ -11375,6 +11375,7 @@ en   elsa'a
 en   elsna
 en   eltada
 en   elvada
+en   elxa
 en   Elynor
 en   embira
 en   emkuni
@@ -12374,6 +12375,7 @@ en   glagau
 en   glajarpatxu
 en   glajukpa
 en   glaladyckafi
+en   glamau
 en   glamre
 en   glamretci
 en   glanejni
@@ -13346,9 +13348,26 @@ en   javdzau
 en   javni
 en   javniso
 en   javnitabu
+en   jaxfenki
+en   jaxfi'u
+en   jaxlerci
+en   jaxmu'i
+en   jaxnabmi
 en   jaxnalvai
 en   jaxnunco'e
 en   jaxpu'a
+en   jaxri'a
+en   jaxtcica
+en   jaxyclira
+en   jaxydicra
+en   jaxyjde
+en   jaxyjenca
+en   jaxyjursa
+en   jaxyka'a
+en   jaxyki'u
+en   jaxyvlile
+en   jaxyxai
+en   jaxyxaksu
 en   jbabaji
 en   jbakiui
 en   jbama
@@ -13426,6 +13445,7 @@ en   jbopa'e
 en   jbope'o
 en   jbopli
 en   jbopomofo
+en   jboponei
 en   jbopre
 en   jborefota
 en   jbosarxe
@@ -14561,8 +14581,10 @@ en   kibysnustu
 en   kibystu
 en   kibzva
 en   kicne
+en   kicnunda'a
 en   kicotes
 en   kicra
+en   kicyda'a
 en   kicymatci
 en   ki'e
 en   ki'enai
@@ -14742,6 +14764,7 @@ en   kluce'u
 en   klulei
 en   klulele
 en   kluni'i
+en   klupanido
 en   klupau
 en   klupe
 en   klura'a
@@ -14795,6 +14818,7 @@ en   kolon bu
 en   kolonel
 en   kolsupare
 en   komcu
+en   komitcidus
 en   komka'a
 en   kompadi
 en   kompaso
@@ -16036,6 +16060,7 @@ en   meckai
 en   meckanpe
 en   mecmlerai
 en   mecna'u
+en   mecnei
 en   mecrai
 en   mecraizmana'u
 en   mecroi
@@ -19708,6 +19733,7 @@ en   sa'o
 en   sa'oi
 en   sa'orgau
 en   sa'orkurfa
+en   sapmau
 en   sapna'u
 en   sapselga'e
 en   saptoda
@@ -22863,6 +22889,7 @@ en   tsar
 en   tsarainaitrusi'o
 en   tsaslu
 en   tsasmani
+en   tsatmatatnaxtsa'a
 en   tsauai
 en   tsauga
 en   tsautu
