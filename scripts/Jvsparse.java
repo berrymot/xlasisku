@@ -12,7 +12,7 @@ public class Jvsparse {
         }
         output.createNewFile();
         PrintWriter bw = new PrintWriter("temp");
-        bw.print("export const jbo=[");
+        bw.println("export const jbo=[");
         String line;
         while ((line = br.readLine()) != null) {
             if (!line.contains("<valsi") && !line.contains("</valsi>")) {
@@ -57,7 +57,7 @@ public class Jvsparse {
                         notes = line.substring(line.indexOf("<notes>") + 7);
                         while (!line.contains("</notes>")) {
                             line = br.readLine();
-                            notes += line;
+                            notes += " " + line;
                         }
                         notes = notes.substring(0, notes.indexOf("</notes>"));
                     }
@@ -73,20 +73,22 @@ public class Jvsparse {
                 //     glosswords.add(line.substring(line.indexOf("word=\"") + 6, line.indexOf("\"", line.indexOf("word=\"") + 6)));
                 //     line = br.readLine();
                 // }
-                bw.print("{\"word\":\"" + word + "\",");
+                bw.println("  {\n    \"word\": \"" + word + "\",");
                 if (!selmaho.equals("")) {
-                    bw.print("\"selmaho\":\"" + selmaho + "\",");
+                    bw.println("    \"selmaho\": \"" + selmaho + "\",");
                 }
                 if (rafsi.size() > 0) {
-                    bw.print("\"rafsi\":[");
+                    bw.println("    \"rafsi\": [");
                     for (int i = 0; i < rafsi.size() - 1; i++) {
-                        bw.print("\"" + rafsi.get(i) + "\",");
+                        bw.println("      \"" + rafsi.get(i) + "\",");
                     }
-                    bw.print("\"" + rafsi.get(rafsi.size() - 1) + "\"],");
+                    bw.println("      \"" + rafsi.get(rafsi.size() - 1) + "\"\n    ],");
                 }
-                bw.print("\"score\":" + score + ",\"definition\":\"" + fixjson(definition) + "\",");
+                bw.print("    \"score\": " + score + ",\n    \"definition\": \"" + fixjson(definition) + "\"");
                 if (!notes.equals("")) {
-                    bw.print("\"notes\":\"" + fixjson(notes) + "\",");
+                    bw.println(",\n    \"notes\": \"" + fixjson(notes) + "\"");
+                } else {
+                    bw.println();
                 }
                 // if (glosswords.size() > 0) {
                 //     bw.print("\"glosswords\":[");
@@ -95,7 +97,7 @@ public class Jvsparse {
                 //     }
                 //     bw.print("\"" + fixjson(glosswords.get(glosswords.size() - 1)) + "\"]");
                 // }
-                bw.print("},");
+                bw.println("  },");
             }
         }
         bw.println("];");
