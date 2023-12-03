@@ -38,10 +38,10 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     loop {
         match reader.next()? {
             XmlEvent::StartDocument { .. } => {
-                println!("start of xml :3");
+                println!("start of xml");
             }
             XmlEvent::EndDocument { .. } => {
-                println!("end of xml :3");
+                println!("end of xml");
                 break;
             }
             XmlEvent::StartElement { name, attributes, .. } => {
@@ -107,8 +107,8 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     }
     let json_str = serde_json::to_string_pretty(&words)?;
     fs::write("output.json", json_str)?;
-    let end = Instant::now();
-    println!("took {:?} s to find {} words", (end - start).as_millis() as f64 / 1000.0, words.len());
+    let duration = start.elapsed();
+    println!("took {:?} s", duration.as_secs_f64());
     Ok(())
 }
 
