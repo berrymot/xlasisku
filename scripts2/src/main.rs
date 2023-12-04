@@ -1,4 +1,4 @@
-use std::{fs, time::Instant};
+use std::{fs::{self, File}, time::Instant, io::{BufWriter, Write}};
 use xml::{attribute::OwnedAttribute, reader::{self, XmlEvent}};
 use serde::{Serialize, Deserialize};
 
@@ -12,7 +12,11 @@ struct Entry {
     score: i32,
     definition: String,
     #[serde(default, skip_serializing_if = "String::is_empty")]
-    notes: String
+    notes: String,
+    #[serde(skip)]
+    pos: String,
+    #[serde(skip)]
+    author: String,
 }
 impl Entry {
     fn new() -> Self {
@@ -22,8 +26,27 @@ impl Entry {
             selmaho: String::new(),
             score: 0,
             definition: String::new(),
-            notes: String::new()
+            notes: String::new(),
+            pos: String::new(),
+            author: String::new()
         }
+    }
+    fn to_datastring(self) -> String {
+        let mut s = self.word.replace(" ", "_").replace(".", "_").replace(r"^_|_$", "").replace(r"_+", "_");
+        s += &(" ".to_owned() + &self.pos);
+        if self.selmaho.len() > 0 {
+            s += &(" ".to_owned() + &self.selmaho);
+        }
+        if self.rafsi.len() > 0 {
+            s += &(" [-".to_owned() + &self.rafsi.join("-") + "-]");
+        }
+        s += &(" ".to_owned() + &self.author.to_lowercase().replace(r"[^a-z0-9]", ""));
+        s += &(" ".to_owned() + self.score.to_string().as_str());
+        s += &("\n".to_owned() + &self.definition);
+        if self.notes.len() > 0 {
+            s += &("\n-n\n".to_owned() + &self.notes);
+        }
+        s
     }
 }
 
@@ -49,6 +72,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
                         entry = Entry::new();
                         if !attr(&attributes, "type").starts_with('o') {
                             entry.word = attr(&attributes, "word");
+                            entry.pos = attr(&attributes, "type");
                             skip = false;
                         } else {
                             current_tag.clear();
@@ -56,14 +80,14 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
                             skip = true;
                         }
                     }
-                    "score" | "rafsi" | "selmaho" | "definition" | "notes" => {
+                    "score" | "rafsi" | "selmaho" | "definition" | "notes" | "username" => {
                         current_tag = tagname;
                     }
+                    "dictionary" | "direction" | "user" => {
+                        // go inside
+                    }
                     _ => {
-                        if tagname != "dictionary" && tagname != "direction" {
-                            // we don't care about this
-                            reader.skip()?;
-                        }
+                        reader.skip()?;
                     }
                 }
             }
@@ -89,6 +113,9 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
                     "notes" => {
                         entry.notes = text;
                     }
+                    "username" => {
+                        entry.author = text;
+                    }
                     _ => ()
                 }
                 current_tag.clear();
@@ -106,6 +133,13 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     println!("writing to json...");
     let json_str = serde_json::to_string(&words)?;
     fs::write("output.json", json_str)?;
+    // make data.txt
+    println!("writing to data.txt...");
+    let mut f = BufWriter::new(File::create("data.txt")?);
+    writeln!(f, "---")?;
+    for word in words {
+        writeln!(f, "{}\n---", word.to_datastring())?;
+    }
     // .i mulno .ui
     let duration = start.elapsed();
     println!("done :3 took {:?} s", duration.as_secs_f64());
