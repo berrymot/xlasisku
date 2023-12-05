@@ -63,22 +63,23 @@ function search(query) {
         for (const entry of jbo) {
             const bonus = (entry.score >= 1000 ? 0.375 : 0) + (xusegismu_zo(entry.word) ? 0.125 : 0);
             var score = 3;
-            if (entry.word.toLowerCase().startsWith(h(query))) {
-                results.push([entry, score + 0.5 + query.length / entry.word.length / 2]);
-            } else if (entry.word.toLowerCase().includes(h(query))) {
-                results.push([entry, score + query.length / entry.word.length / 2]);
-            }
             score = 4;
             if (rafsilist.get(entry.word) && rafsilist.get(entry.word).includes(h(query))) {
                 results.push([entry, score]);
             }
-            score = 2;
+            score = 3;
             const rgx = query.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
             if (new RegExp(`(^|[^a-z0-9])${rgx}e?s?($|[^a-z0-9])`, "iu").test(entry.definition)) {
                 results.push([entry, score + bonus]);
             }
+            score = 2;
+            if (entry.word.toLowerCase().startsWith(h(query))) {
+                results.push([entry, score + 0.5]);
+            } else if (entry.word.toLowerCase().includes(h(query))) {
+                results.push([entry, score]);
+            }
             score = 1;
-            if (entry.definition && new RegExp(`(^|[^a-z0-9])${rgx}e?s?($|[^a-z0-9])`, "iu").test(entry.definition)) {
+            if (entry.notes && new RegExp(`(^|[^a-z0-9])${rgx}e?s?($|[^a-z0-9])`, "iu").test(entry.notes)) {
                 results.push([entry, score + bonus]);
             }
         }
