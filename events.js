@@ -113,7 +113,7 @@ id("search").addEventListener("input", function() {
                     id("info").append(createHTMLElement("p", null, [e.message.split(": ").slice(-1)[0].toLowerCase()]));
                 }
             }
-            worker.postMessage({"query": q, "config": config});
+            worker.postMessage({"query": q, "config": config, "rafsilist": RAFSI});
         } else {
             results = null;
             clearResults();

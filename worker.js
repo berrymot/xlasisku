@@ -1,10 +1,7 @@
 import {jbo} from "./jbo.js";
-var config;
+var config, rafsilist;
 function h(t) {
     return t.replace(/[h‘’]/igu, "'");
-}
-function fields(json) {
-    return [json.selmaho || null, json.rafsi || null, json.definition, json.word, json.notes || null];
 }
 // TODO: selmaho() - parse into ↓
 function selmahois(x, y) {
@@ -64,43 +61,25 @@ function search(query) {
             }
         }
         for (const entry of jbo) {
-            for (var field of fields(entry)) {
-                var score = 6 - fields(entry).indexOf(field);
-                const bonus = (entry.score >= 1000 ? 0.375 : 0) + (xusegismu_zo(entry.word) ? 0.125 : 0);
-                switch (field) {
-                    case entry.word:
-                        if (field.toLowerCase().startsWith(h(query))) {
-                            results.push([entry, score + 0.5 + query.length / field.length / 2]);
-                        } else if (field.toLowerCase().includes(h(query))) {
-                            results.push([entry, score + query.length / field.length / 2]);
-                        }
-                        break;
-                    case entry.rafsi:
-                        if (field) {
-                            score = 8;
-                            for (const r of field) {
-                                if (r == h(query)) {
-                                    results.push([entry, score]);
-                                }
-                            }
-                        }
-                        break;
-                    case entry.selmaho:
-                        // const bits = selmaho(query);
-                        // console.log(bits);
-                        // if (field) {
-                        //     if (selmahois(bits, selmaho(field))) {
-                        //         results.push([html, score]);
-                        //     }
-                        // }
-                        break;
-                    default:
-                        const rgx = query.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-                        if (field && new RegExp(`(^|[^a-z0-9])${rgx}e?s?($|[^a-z0-9])`, "iu").test(field)) {
-                            results.push([entry, score + bonus]);
-                        }
-                        break;
-                }
+            const bonus = (entry.score >= 1000 ? 0.375 : 0) + (xusegismu_zo(entry.word) ? 0.125 : 0);
+            var score = 3;
+            if (entry.word.toLowerCase().startsWith(h(query))) {
+                results.push([entry, score + 0.5 + query.length / entry.word.length / 2]);
+            } else if (entry.word.toLowerCase().includes(h(query))) {
+                results.push([entry, score + query.length / entry.word.length / 2]);
+            }
+            score = 4;
+            if (rafsilist.get(entry.word) && rafsilist.get(entry.word).includes(h(query))) {
+                results.push([entry, score]);
+            }
+            score = 2;
+            const rgx = query.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+            if (new RegExp(`(^|[^a-z0-9])${rgx}e?s?($|[^a-z0-9])`, "iu").test(entry.definition)) {
+                results.push([entry, score + bonus]);
+            }
+            score = 1;
+            if (entry.definition && new RegExp(`(^|[^a-z0-9])${rgx}e?s?($|[^a-z0-9])`, "iu").test(entry.definition)) {
+                results.push([entry, score + bonus]);
             }
         }
     }
@@ -120,6 +99,7 @@ function removeDuplicates(list) {
 onmessage = function(e) {
     const query = e.data.query;
     config = e.data.config;
+    rafsilist = e.data.rafsilist;
     const res = search(query);
     postMessage(res);
 };

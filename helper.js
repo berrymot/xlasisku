@@ -19,8 +19,8 @@ function convertJSONToHTMLElement(json) {
                 createHTMLElement("b", null, [json.word])
             ]),
             " ",
-            json.rafsi ? createHTMLElement("i", {"className": "rafsi"}, [
-                ...json.rafsi.map(i => "-" + i), "-"
+            RAFSI.get(json.word) ? createHTMLElement("i", {"className": "rafsi"}, [
+                "-", ...RAFSI.get(json.word).join("-"), "-"
             ]) : null,
             " ",
             json.selmaho ? createHTMLElement("code", {"className": "selmaho"}, [json.selmaho]) : null,
