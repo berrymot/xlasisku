@@ -10,6 +10,7 @@ function createHTMLElement(tag, props, children) {
     return element;
 }
 function convertJSONToHTMLElement(json) {
+    const r = RAFSI.get(json.word);
     const entry = createHTMLElement("div", {"className": "entry"}, [
         createHTMLElement("p", null, [
             createHTMLElement("a", {
@@ -19,8 +20,8 @@ function convertJSONToHTMLElement(json) {
                 createHTMLElement("b", null, [json.word])
             ]),
             " ",
-            RAFSI.get(json.word) ? createHTMLElement("i", {"className": "rafsi"}, [
-                "-", ...RAFSI.get(json.word).join("-"), "-"
+            r && r.length ? createHTMLElement("i", {"className": "rafsi"}, [
+                "-", ...r.join("-"), "-"
             ]) : null,
             " ",
             json.selmaho ? createHTMLElement("code", {"className": "selmaho"}, [json.selmaho]) : null,
