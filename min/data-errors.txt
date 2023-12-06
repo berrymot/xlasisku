@@ -66,6 +66,7 @@ benre: Unrecognized part of speech
 benzo: Unrecognized part of speech
 be'oi: Unrecognized part of speech
 bergu: Unrecognized part of speech
+berlÃÆÃâÃâÃÂ¬n: Not a word
 besto: Unrecognized part of speech
 betka: Unrecognized part of speech
 be'ucu'i: Unrecognized part of speech
@@ -199,6 +200,7 @@ ci'o'au: Unrecognized part of speech
 ci'oi: Unrecognized part of speech
 ciroi: Unrecognized part of speech
 cisni: Unrecognized part of speech
+ciztolnei: Not a word
 ciztolnei: Unrecognized part of speech
 clafi: Unrecognized part of speech
 claxu bu: Unrecognized part of speech
@@ -473,6 +475,7 @@ gau'i'o: Unrecognized part of speech
 gau'o: Unrecognized part of speech
 ga'u re'o: Unrecognized part of speech
 ga'u re'o: Bad selma'o or rafsi list
+gaurkihu: Not a word
 ge'ai: Unrecognized part of speech
 ge'ei: Unrecognized part of speech
 gei'ai: Unrecognized part of speech
@@ -907,6 +910,7 @@ mapra: Unrecognized part of speech
 maska: Unrecognized part of speech
 matce: Unrecognized part of speech
 matxe: Unrecognized part of speech
+ma;u: Not a word
 ma;u: Unrecognized part of speech
 mau'a: Unrecognized part of speech
 mau'au: Unrecognized part of speech
@@ -1079,6 +1083,7 @@ nu bu: Unrecognized part of speech
 nudle: Unrecognized part of speech
 nu'ecu'i: Unrecognized part of speech
 nu'enai: Unrecognized part of speech
+nuhempcr: Not a word
 nuktu: Unrecognized part of speech
 nulpa: Unrecognized part of speech
 numje: Unrecognized part of speech
@@ -1846,6 +1851,7 @@ vu'oi: Unrecognized part of speech
 vy.bu: Unrecognized part of speech
 vybu: Unrecognized part of speech
 vy'y: Unrecognized part of speech
+xa!: Not a word
 xa!: Unrecognized part of speech
 xa'a: Unrecognized part of speech
 xa'a'a: Unrecognized part of speech

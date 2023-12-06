@@ -23,7 +23,7 @@ public class Dataparse {
                 String[] rafsilist = null;
                 ArrayList<String> defns = new ArrayList<>();
                 ArrayList<String> notes = new ArrayList<>();
-                if (word.matches("[^a-g'i-pr-vxyz., ]|[cfkpstx][bdgjvz]|[bdgjvz][cfkpstx]|[cjsz]{2}|[ck]x|x[ck]|mz|nt[cs]|nd[jz]")) {
+                if (word.matches(".*([^a-g'i-pr-vxyzA-GI-PR-VXYZ., ]|[cfkpstx][bdgjvz]|[bdgjvz][cfkpstx]|[cjsz]{2}|[ck]x|x[ck]|mz|nt[cs]|nd[jz]).*")) {
                     errors.add(word + ": Not a word");
                 }
                 if (wordline.length < 4) {
