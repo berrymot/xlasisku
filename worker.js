@@ -62,8 +62,7 @@ function search(query) {
         }
         for (const entry of jbo) {
             const bonus = (entry.score >= 1000 ? 0.375 : 0) + (xusegismu_zo(entry.word) ? 0.125 : 0);
-            var score = 3;
-            score = 4;
+            var score = 4;
             if (rafsilist.get(entry.word) && rafsilist.get(entry.word).includes(h(query))) {
                 results.push([entry, score]);
             }
