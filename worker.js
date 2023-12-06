@@ -69,7 +69,8 @@ function search(query) {
             }
             score = 3;
             const rgx = query.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-            if (new RegExp(`(^|[^a-z0-9])${rgx}e?s?($|[^a-z0-9])`, "iu").test(entry.definition)) {
+            const regex = `\\b${rgx}e?s?\\b`; // doi la bavyse'i ko ba'e *na* galfe ti. you tried that like 4,0000 times
+            if (new RegExp(regex, "iu").test(entry.definition)) {
                 results.push([entry, score + bonus]);
             }
             score = 2;
@@ -79,7 +80,7 @@ function search(query) {
                 results.push([entry, score]);
             }
             score = 1;
-            if (entry.notes && new RegExp(`(^|[^a-z0-9])${rgx}e?s?($|[^a-z0-9])`, "iu").test(entry.notes)) {
+            if (entry.notes && new RegExp(regex, "iu").test(entry.notes)) {
                 results.push([entry, score + bonus]);
             }
         }
