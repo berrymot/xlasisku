@@ -8489,6 +8489,7 @@ en   bikyda'i
 en   bikydai
 en   bikydamri
 en   bilbo
+en   bilduranga
 en   bilga
 en   bilma
 en   bilmrtuberkulosi
@@ -12028,6 +12029,7 @@ en   fretaimlunra
 en   fri'ai
 en   frica
 en   fricau
+en   fricaute'a
 en   fridjisku
 en   frigau
 en   frikadeli
@@ -17623,6 +17625,8 @@ en   orka
 en   orkestra
 en   orko
 en   orne
+en   ornitforinku
+en   ornyle'u
 en   orsi
 en   ortodoksi
 en   orvalu
@@ -19287,7 +19291,9 @@ en   rukyjinme
 en   rulbakfu
 en   rulbifce
 en   rulcmapezli
+en   rulfe'iganti
 en   rulkemjinziljivbu
+en   rulnakyganti
 en   rulpezli
 en   rulpurdi
 en   rulralpezli
