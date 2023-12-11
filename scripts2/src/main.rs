@@ -1,4 +1,4 @@
-use std::{fs::{self, File}, time::Instant, io::{BufWriter, Write}};
+use std::{fs::{self, File}, time::Instant, io::{BufWriter, Write}, collections::HashSet};
 use xml::{attribute::OwnedAttribute, reader::{self, XmlEvent}};
 use serde::{Serialize, Deserialize};
 
@@ -53,82 +53,88 @@ impl Entry {
 fn main() -> Result<(), Box<dyn std::error::Error>> {
     let start = Instant::now();
     // parse the xml
-    let f = fs::File::open("../jvs/jbovlaste-en.xml")?;
-    let mut reader = reader::EventReader::new(f); // we don't need the file anymore
+    let langs = ["en", "am", "ar", "art-guaspi", "art-loglan", "be", "bg", "br", "ca", "ch", "cs", "cy", "da", "de", "el", "en-bpfk", "en-simple", "eo", "es", "et", "eu", "fa", "fi", "fr-facile", "fr", "ga", "gl", "gu", "he", "hi", "hr", "hu", "ia", "id", "it", "ja", "jbo", "ka", "ko", "kw", "la", "lt", "lv", "mg", "ne", "nl", "no", "pl", "pt-br", "pt", "ro", "ru", "sa", "sk", "sl", "so", "sq", "sr", "sv", "ta", "test", "tlh", "tok", "tpi", "tr", "uk", "vi", "wa", "zh"];
     let mut words = Vec::<Entry>::new();
     let mut current_tag = String::new();
     let mut entry = Entry::new();
     let mut skip = false;
-    println!("parsing xml...");
-    loop {
-        match reader.next()? {
-            XmlEvent::EndDocument { .. } => {
-                break;
-            }
-            XmlEvent::StartElement { name, attributes, .. } => {
-                let tagname = name.local_name;
-                match tagname.as_str() {
-                    "valsi" => {
-                        entry = Entry::new();
-                        if !attr(&attributes, "type").starts_with('o') {
-                            entry.word = attr(&attributes, "word");
-                            entry.pos = attr(&attributes, "type");
-                            skip = false;
-                        } else {
-                            current_tag.clear();
+    for lang in langs {
+        let f = fs::File::open(format!("../jvs/jbovlaste-{lang}.xml"))?;
+        let mut reader = reader::EventReader::new(f); // we don't need the file anymore
+        println!("parsing `{lang}`...");
+        loop {
+            match reader.next()? {
+                XmlEvent::EndDocument { .. } => {
+                    break;
+                }
+                XmlEvent::StartElement { name, attributes, .. } => {
+                    let tagname = name.local_name;
+                    match tagname.as_str() {
+                        "valsi" => {
+                            entry = Entry::new();
+                            if !attr(&attributes, "type").starts_with('o') {
+                                entry.word = attr(&attributes, "word");
+                                entry.pos = attr(&attributes, "type");
+                                skip = false;
+                            } else {
+                                current_tag.clear();
+                                reader.skip()?;
+                                skip = true;
+                            }
+                        }
+                        "score" | "rafsi" | "selmaho" | "definition" | "notes" | "username" => {
+                            current_tag = tagname;
+                        }
+                        "dictionary" | "direction" | "user" => {
+                            // go inside
+                        }
+                        _ => {
                             reader.skip()?;
-                            skip = true;
                         }
                     }
-                    "score" | "rafsi" | "selmaho" | "definition" | "notes" | "username" => {
-                        current_tag = tagname;
-                    }
-                    "dictionary" | "direction" | "user" => {
-                        // go inside
-                    }
-                    _ => {
-                        reader.skip()?;
-                    }
                 }
-            }
-            XmlEvent::Characters(text) => {
-                match current_tag.as_str() {
-                    "score" => {
-                        let int = text.parse::<i32>().unwrap();
-                        if int >= -1 {
-                            entry.score = int;
-                        } else {
-                            skip = true;
+                XmlEvent::Characters(text) => {
+                    match current_tag.as_str() {
+                        "score" => {
+                            let int = text.parse::<i32>().unwrap();
+                            if int >= -1 {
+                                entry.score = int;
+                            } else {
+                                skip = true;
+                            }
                         }
+                        "rafsi" => {
+                            entry.rafsi.push(text);
+                        }
+                        "selmaho" => {
+                            entry.selmaho = text;
+                        }
+                        "definition" => {
+                            entry.definition = text;
+                        }
+                        "notes" => {
+                            entry.notes = text;
+                        }
+                        "username" => {
+                            entry.author = text;
+                        }
+                        _ => ()
                     }
-                    "rafsi" => {
-                        entry.rafsi.push(text);
-                    }
-                    "selmaho" => {
-                        entry.selmaho = text;
-                    }
-                    "definition" => {
-                        entry.definition = text;
-                    }
-                    "notes" => {
-                        entry.notes = text;
-                    }
-                    "username" => {
-                        entry.author = text;
-                    }
-                    _ => ()
+                    current_tag.clear();
                 }
-                current_tag.clear();
-            }
-            XmlEvent::EndElement { name } => {
-                let tagname = name.local_name;
-                if tagname == "valsi" && !skip {
-                    words.push(entry.clone());
+                XmlEvent::EndElement { name } => {
+                    let tagname = name.local_name;
+                    if tagname == "valsi" && !skip {
+                        words.push(entry.clone());
+                    }
                 }
+                _ => ()
             }
-            _ => ()
         }
     }
+    // remove duplicates
+    let mut unique_words = HashSet::new();
+    words.retain(|word| unique_words.insert(word.word.clone()));
     // write to json
     println!("writing to json...");
     let json_str = serde_json::to_string(&words)?;
