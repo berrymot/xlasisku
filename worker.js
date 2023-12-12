@@ -1,5 +1,4 @@
-var jbo;
-fetch("./jbo.json").then(response => response.json()).then(data => {jbo = data;}).catch(e => {console.error(e);});
+import {jbo} from "./jbo.js";
 var config, rafsilist;
 function h(t) {
     return t.replace(/[h‘’]/igu, "'");

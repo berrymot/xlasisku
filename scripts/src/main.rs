@@ -138,7 +138,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     // write to json
     println!("writing to json...");
     let json_str = serde_json::to_string(&words)?;
-    fs::write("../jbo.json", json_str)?;
+    fs::write("../jbo.js", "export const jbo = ".to_owned() + &json_str)?;
     // make data.txt
     println!("writing to data.txt...");
     let mut f = BufWriter::new(File::create("../data.txt")?);
