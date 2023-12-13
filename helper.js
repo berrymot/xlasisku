@@ -15,7 +15,6 @@ function convertJSONToHTMLElement(json) {
         createHTMLElement("p", null, [
             createHTMLElement("a", {
                 "href": "?q=" + json.word,
-                "target": config["rhyme"] || config["regex"] ? "_blank" : "_self"
             }, [
                 createHTMLElement("b", null, [json.word])
             ]),
@@ -35,31 +34,45 @@ function convertJSONToHTMLElement(json) {
                 "\u{a0}↗"
             ])
         ]),
-        createHTMLElement("p", null, replaceLinks(json.definition)),
+        createHTMLElement("p", null, replaceLinks(json.definition).els),
         json.notes ? createHTMLElement("details", null, [
-            createHTMLElement("summary", null, ["more info"]),
-            createHTMLElement("p", null, replaceLinks(json.notes))
+            createHTMLElement("summary", null, [
+                "more info",
+                createHTMLElement("span", null, [
+                    " • ",
+                    createHTMLElement("a", {
+                        "href": "?q=" + encodeURIComponent(replaceLinks(json.notes).text)
+                    }, ["open all links"])
+                ])
+            ]),
+            createHTMLElement("p", null, replaceLinks(json.notes).els)
         ]) : null
     ]);
+    console.log(encodeURIComponent(replaceLinks(json.definition).text));
     return entry;
 }
 function replaceLinks(str) {
     var bits = str.replace(/\$/g, "💵$").split("💵");
+    var text = "";
     for (var i = 0; i < bits.length; i++) {
         if (i % 2 == 0 || i == bits.length - 1) {
             if (i) {
                 bits[i] = bits[i].slice(1);
                 bits[i - 1] = bits[i - 1] + "$";
             }
-            bits[i] = bits[i].replace(/\{/g, "📦{").replace(/\}/g, "}📦").split("📦").map((item) =>
-                /\{[a-g'i-pr-vx-z., ]+\}/i.test(item) ? createHTMLElement("a", {
-                    "href": "?q=" + item.slice(1, -1) + "&fromwordlink",
-                    "target": config["rhyme"] || config["regex"] ? "_blank" : "_self"
-                }, item.slice(1, -1)) : item
-            );
+            bits[i] = bits[i].replace(/\{/g, "📦{").replace(/\}/g, "}📦").split("📦").map((item) => {
+                if (/\{[a-g'i-pr-vx-z., ]+\}/i.test(item)) {
+                    text += " " + item.slice(1, -1);
+                    return createHTMLElement("a", {
+                        "href": "?q=" + item.slice(1, -1) + "&fromwordlink",
+                    }, item.slice(1, -1))
+                } else {
+                    return item;
+                }
+            });
         }
     }
-    return bits.flat();
+    return {"els": bits.flat(), "text": text.trim()};
 }
 function load(res, page) {
     const start = page * 100;

@@ -178,6 +178,9 @@ summary {
     font-weight: bold;
     cursor: pointer;
 }
+:not([open]) > summary span {
+    display: none;
+}
 .entry .glosswords {
     font-style: italic;
 }
