@@ -38,12 +38,12 @@ function convertJSONToHTMLElement(json) {
         json.notes ? createHTMLElement("details", null, [
             createHTMLElement("summary", null, [
                 "more info",
-                createHTMLElement("span", null, [
+                replaceLinks(json.notes).text ? createHTMLElement("span", null, [
                     " • ",
                     createHTMLElement("a", {
                         "href": "?q=" + encodeURIComponent(replaceLinks(json.notes).text)
                     }, ["open all links"])
-                ])
+                ]) : null
             ]),
             createHTMLElement("p", null, replaceLinks(json.notes).els)
         ]) : null
