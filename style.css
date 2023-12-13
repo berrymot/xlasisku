@@ -69,6 +69,7 @@
     --op-2: calc(2/15);
     --link: 0, 105, 204;
     --err: 209, 41, 41;
+    --focus: 255, 174, 12;
     --sans: "IBM Plex Sans", ui-sans-serif, sans-serif;
     --mono: "IBM Plex Mono", ui-monospace, monospace;
 }
@@ -278,12 +279,13 @@ h2 {
     font-size: 1rem;
 }
 /* hover/focus */
-:is(a, summary, #fakebox):is(:hover, :focus-visible, :focus-within) {
-    background: rgba(var(--fg), var(--op-2));
-    outline: none;
+:is(a, summary):is(:hover, :focus-visible), #fakebox:is(:hover, :focus-within) {
+    outline: 2px solid rgb(var(--focus));
+    background-color: rgba(var(--focus), var(--op-2));
 }
-#search:focus-visible {
+#search:focus-visible, summary:has(a:hover):hover {
     outline: none;
+    background: none;
 }
 .opt ::before {
     content: "";
@@ -301,7 +303,8 @@ h2 {
 }
 .opt :is(:hover, :focus-visible)::before {
     z-index: 1;
-    background: rgba(var(--fg), var(--op-2));
+    outline: 2px solid rgb(var(--focus));
+    background-color: rgba(var(--focus), var(--op-2));
 }
 /* dark mode */
 :root.dark {
@@ -317,12 +320,6 @@ h2 {
 :root.dark body.rhyme {
     --bg: 22, 10, 36;
     --checked: 143, 72, 224;
-}
-:root.dark :is(a, summary, #fakebox):is(:hover, :focus-visible, :focus-within) {
-    background: rgba(var(--fg), var(--op-4));
-}
-:root.dark .opt :is(:hover, :focus-visible)::before {
-    background: rgba(var(--fg), var(--op-4));
 }
 /* other media queries */
 @media (prefers-contrast: more) {
