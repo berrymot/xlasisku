@@ -92,30 +92,31 @@
                 vars = vars.replace(/\?&/g, "?").replace(/=&/g, "&").replace(/[=?]$/, "");
                 window.history.pushState(null, null, window.location.href.split("?")[0] + vars);
             }
-            function redirectTo(str) {
-                window.history.pushState(null, null, window.location.href.split("?")[0] + str);
+            function hardRedirect(str) {
+                window.location.href = window.location.href.split("?")[0] + str;
             }
             window.addEventListener("DOMContentLoaded", (e) => {
                 const params = new URLSearchParams(window.location.search);
                 if (!params.has("q") && params.has("gc")) {
                     const gcq = getConflictRegex(params.get("gc"));
                     console.log(gcq);
-                    redirectTo("?q=" + encodeURIComponent(gcq) + "&regex=tight");
-                }
-                const qpar = params.get("q");
-                if (params.has("rhyme")) {
-                    rhymeMode(params.get("rhyme") == "y");
-                }
-                if (params.has("regex")) {
-                    var options = params.get("regex").split(",");
-                    regexMode(options.includes("i"), options.includes("tight"));
-                }
-                if (!params.has("regex") && !params.has("rhyme")) {
-                    searchMode();
-                }
-                if (qpar) {
-                    id("search").value = qpar;
-                    dispatchSearchInputEvent();
+                    hardRedirect("?q=" + encodeURIComponent(gcq) + "&regex=tight");
+                } else {
+                    const qpar = params.get("q");
+                    if (params.has("rhyme")) {
+                        rhymeMode(params.get("rhyme") == "y");
+                    }
+                    if (params.has("regex")) {
+                        var options = params.get("regex").split(",");
+                        regexMode(options.includes("i"), options.includes("tight"));
+                    }
+                    if (!params.has("regex") && !params.has("rhyme")) {
+                        searchMode();
+                    }
+                    if (qpar) {
+                        id("search").value = qpar;
+                        dispatchSearchInputEvent();
+                    }
                 }
             });
         </script>
