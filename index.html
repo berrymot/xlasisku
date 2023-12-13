@@ -89,8 +89,6 @@
                     if (config["regex.tight"]) options.push("tight");
                     vars += "&regex=" + options.join(",");
                 }
-                if (config["fromwordlink"])
-                    vars += "&fromwordlink";
                 vars = vars.replace(/\?&/g, "?").replace(/=&/g, "&").replace(/[=?]$/, "");
                 window.history.pushState(null, null, window.location.href.split("?")[0] + vars);
             }
@@ -106,9 +104,6 @@
                 }
                 if (!params.has("regex") && !params.has("rhyme")) {
                     searchMode();
-                }
-                if (params.has("fromwordlink")) {
-                    config["fromwordlink"] = true;
                 }
                 if (qpar) {
                     id("search").value = qpar;

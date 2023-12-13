@@ -64,7 +64,7 @@ function replaceLinks(str) {
                 if (/\{[a-g'i-pr-vx-z., ]+\}/i.test(item)) {
                     text += " " + item.slice(1, -1);
                     return createHTMLElement("a", {
-                        "href": "?q=" + item.slice(1, -1) + "&fromwordlink",
+                        "href": "?q=" + item.slice(1, -1),
                     }, item.slice(1, -1))
                 } else {
                     return item;
