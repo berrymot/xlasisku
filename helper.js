@@ -48,7 +48,6 @@ function convertJSONToHTMLElement(json) {
             createHTMLElement("p", null, replaceLinks(json.notes).els)
         ]) : null
     ]);
-    console.log(encodeURIComponent(replaceLinks(json.definition).text));
     return entry;
 }
 function replaceLinks(str) {

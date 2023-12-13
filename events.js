@@ -6,6 +6,26 @@ var results;
 function h(t) {
     return t.replace(/[h‘’]/igu, "'");
 }
+function xusegismu_zo(g) {
+    return /^[bcdfgjklmnprstvxz]([aeiou][bcdfgjklmnprstvxz]|[bcdfgjklmnprstvxz][aeiou])[bcdfgjklmnprstvxz][aeiou]$/.test(g);
+}
+function getConflictRegex(g) {
+    var conflict = [...g];
+    for (var i = 0; i < conflict.length; i++) {
+        if (i == conflict.length - 1) {
+            conflict[i] = "[aeiou]";
+        }
+        conflict[i] = conflict[i]
+        .replace(/[bfpv]/, "[bfpv]")
+        .replace(/[cjsz]/, "[cjsz]")
+        .replace(/[dt]/, "[dt]")
+        .replace(/[gkx]/, "[gkx]")
+        .replace(/[lr]/, "[lr]")
+        .replace(/[mn]/, "[mn]");
+    }
+    conflict = conflict.join("");
+    return conflict;
+}
 worker.addEventListener("message", function(e) {
     results = e.data;
     id("results").innerHTML = "";
@@ -88,6 +108,11 @@ id("search").addEventListener("input", function() {
                     }
                 } catch (e) {
                     // not lujvo
+                }
+                if (xusegismu_zo(q)) {
+                    id("info").append(createHTMLElement("p", null, [
+                        createHTMLElement("a", {"href": "?q=" + encodeURIComponent(getConflictRegex(q)) + "&regex=tight"}, ["↑ find potential gismu conflicts?"])
+                    ]));
                 }
             } else if (config["regex"]) {
                 // bad regex

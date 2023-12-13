@@ -92,8 +92,16 @@
                 vars = vars.replace(/\?&/g, "?").replace(/=&/g, "&").replace(/[=?]$/, "");
                 window.history.pushState(null, null, window.location.href.split("?")[0] + vars);
             }
-            window.addEventListener("DOMContentLoaded", () => {
+            function redirectTo(str) {
+                window.history.pushState(null, null, window.location.href.split("?")[0] + str);
+            }
+            window.addEventListener("DOMContentLoaded", (e) => {
                 const params = new URLSearchParams(window.location.search);
+                if (!params.has("q") && params.has("gc")) {
+                    const gcq = getConflictRegex(params.get("gc"));
+                    console.log(gcq);
+                    redirectTo("?q=" + encodeURIComponent(gcq) + "&regex=tight");
+                }
                 const qpar = params.get("q");
                 if (params.has("rhyme")) {
                     rhymeMode(params.get("rhyme") == "y");
