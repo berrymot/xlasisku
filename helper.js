@@ -38,7 +38,7 @@ function convertJSONToHTMLElement(json) {
         json.notes ? createHTMLElement("details", null, [
             createHTMLElement("summary", null, [
                 "more info",
-                replaceLinks(json.notes).text ? createHTMLElement("span", null, [
+                / /.test(replaceLinks(json.notes).text) ? createHTMLElement("span", null, [
                     " • ",
                     createHTMLElement("a", {
                         "href": "?q=" + encodeURIComponent(replaceLinks(json.notes).text)
