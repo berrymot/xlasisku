@@ -32,19 +32,19 @@ impl Entry {
             author: String::new()
         }
     }
-    fn to_datastring(self) -> String {
-        let mut s = self.word.replace(" ", "_").replace(".", "_").replace(r"^_|_$", "").replace(r"_+", "_");
+    fn to_datastring(&self) -> String {
+        let mut s = self.word.replace(r"[. ]", "_").replace(r"^_|_$", "").replace(r"_+", "_");
         s += &(" ".to_owned() + &self.pos);
-        if self.selmaho.len() > 0 {
+        if !self.selmaho.is_empty() {
             s += &(" ".to_owned() + &self.selmaho);
         }
-        if self.rafsi.len() > 0 {
+        if !self.rafsi.is_empty() {
             s += &(" [-".to_owned() + &self.rafsi.join("-") + "-]");
         }
         s += &(" ".to_owned() + &self.author.to_lowercase().replace(r"[^a-z0-9]", ""));
         s += &(" ".to_owned() + self.score.to_string().as_str());
         s += &("\n".to_owned() + &self.definition);
-        if self.notes.len() > 0 {
+        if !self.notes.is_empty() {
             s += &("\n-n\n".to_owned() + &self.notes);
         }
         s
