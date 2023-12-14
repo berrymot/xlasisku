@@ -79,7 +79,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
                     match tagname.as_str() {
                         "valsi" => {
                             entry = Entry::new();
-                            if !attr(&attributes, "type").starts_with('o') {
+                            if !attr(&attributes, "type").starts_with('o') && attr(&attributes, "word") != ".i" {
                                 entry.word = attr(&attributes, "word");
                                 entry.pos = attr(&attributes, "type");
                                 skip = false;
