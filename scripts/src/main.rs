@@ -2,13 +2,14 @@ use std::{fs::{self, File}, time::Instant, io::{BufWriter, Write, Cursor}, colle
 use xml::{attribute::OwnedAttribute, reader::{self, XmlEvent}};
 use serde::{Serialize, Deserialize};
 use reqwest::blocking;
+use regex::Regex;
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 struct Entry {
     word: String,
-    #[serde(default, skip_serializing_if = "String::is_empty")]
+    #[serde(skip_serializing_if = "String::is_empty")]
     selmaho: String,
-    #[serde(default, skip_serializing_if = "Vec::is_empty")]
+    #[serde(skip_serializing_if = "Vec::is_empty")]
     rafsi: Vec<String>,
     score: i32,
     definition: String,
@@ -33,7 +34,11 @@ impl Entry {
         }
     }
     fn to_datastring(&self) -> String {
-        let mut s = self.word.replace(r"[. ]", "_").replace(r"^_|_$", "").replace(r"_+", "_");
+        let mut s = self.word.to_owned();
+        // regex replacements
+        s = Regex::new(r"[. ]").unwrap().replace_all(&s, "_").to_string();
+        s = Regex::new(r"^_|_$").unwrap().replace_all(&s, "").to_string();
+        s = Regex::new(r"_+").unwrap().replace_all(&s, "_").to_string();
         s += &(" ".to_owned() + &self.pos);
         if !self.selmaho.is_empty() {
             s += &(" ".to_owned() + &self.selmaho);
