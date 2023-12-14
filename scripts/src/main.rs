@@ -1,6 +1,7 @@
-use std::{fs::{self, File}, time::Instant, io::{BufWriter, Write}, collections::HashSet};
+use std::{fs::{self, File}, time::Instant, io::{BufWriter, Write, Cursor}, collections::HashSet};
 use xml::{attribute::OwnedAttribute, reader::{self, XmlEvent}};
 use serde::{Serialize, Deserialize};
+use reqwest::blocking;
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 struct Entry {
@@ -58,10 +59,11 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     let mut current_tag = String::new();
     let mut entry = Entry::new();
     let mut skip = false;
+    let client = blocking::Client::new();
     for lang in langs {
-        let f = fs::File::open(format!("../jvs/jbovlaste-{lang}.xml"))?;
-        let mut reader = reader::EventReader::new(f); // we don't need the file anymore
-        println!("parsing `{lang}`...");
+        println!("curling & parsing `{lang}`...");
+        let xml = client.get(format!("https://jbovlaste.lojban.org/export/xml-export.html?lang={lang}&positive_scores_only=0&bot_key=z2BsnKYJhAB0VNsl")).send()?.bytes()?;
+        let mut reader = reader::EventReader::new(Cursor::new(xml));
         loop {
             match reader.next()? {
                 XmlEvent::EndDocument { .. } => {
