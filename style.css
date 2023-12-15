@@ -117,6 +117,7 @@ body {
     color: rgb(var(--fg)) !important;
     height: 1lh;
     box-sizing: content-box;
+    caret-color: rgb(var(--fg));
 }
 #fakebox:has(> #search:disabled) {
     opacity: 1;
