@@ -24,25 +24,25 @@
     font-style: italic;
 }
 @font-face {
-    font-family: "IBM Plex Mono";
-    src: url("plex/IBM-Plex-Mono/fonts/complete/ttf/IBMPlexMono-Text.ttf");
+    font-family: "Iosevka";
+    src: url("iosevka/Iosevka-Regular.ttf");
     font-display: swap;
 }
 @font-face {
-    font-family: "IBM Plex Mono";
-    src: url("plex/IBM-Plex-Mono/fonts/complete/ttf/IBMPlexMono-TextItalic.ttf");
+    font-family: "Iosevka";
+    src: url("iosevka/Iosevka-Italic.ttf");
     font-display: swap;
     font-style: italic;
 }
 @font-face {
-    font-family: "IBM Plex Mono";
-    src: url("plex/IBM-Plex-Mono/fonts/complete/ttf/IBMPlexMono-Bold.ttf");
+    font-family: "Iosevka";
+    src: url("iosevka/Iosevka-Bold.ttf");
     font-display: swap;
     font-weight: bold;
 }
 @font-face {
-    font-family: "IBM Plex Mono";
-    src: url("plex/IBM-Plex-Mono/fonts/complete/ttf/IBMPlexMono-BoldItalic.ttf");
+    font-family: "Iosevka";
+    src: url("iosevka/Iosevka-BoldItalic.ttf");
     font-display: swap;
     font-weight: bold;
     font-style: italic;
@@ -71,7 +71,7 @@
     --err: 209, 41, 41;
     --focus: 255, 174, 12;
     --sans: "IBM Plex Sans", ui-sans-serif, sans-serif;
-    --mono: "IBM Plex Mono", ui-monospace, monospace;
+    --mono: "Iosevka", ui-monospace, monospace;
 }
 body.regex {
     --bg: 224, 242, 240;
