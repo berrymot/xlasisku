@@ -55,11 +55,16 @@ function search(query) {
                 results.push([entry, 1]);
             }
         }
-    } else if (/[CV*?]/.test(original)) {
+    } else if (/[CV*?(|)]/.test(original)) {
         // also stolen from lynn of lidysisku etc fame
-        const rgx = new RegExp(
-            `^${original.replace(/C/g, "[bcdfgjklmnprstvxz]").replace(/V/g, "[aeiou]").replace(/\?/g, ".").replace(/\*+/g, ".*")}$`, "i"
-        );
+        var rgx;
+        try {
+            rgx = new RegExp(
+                `^${h(original).replace(/C/g, "[bcdfgjklmnprstvxz]").replace(/V/g, "[aeiou]").replace(/\?/g, ".").replace(/\*+/g, ".*")}$`, "i"
+            );
+        } catch {
+            return [];
+        }
         for (const entry of jbo) {
             if (rgx.test(entry.word)) {
                 results.push([entry, 9]);
