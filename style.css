@@ -139,6 +139,15 @@ body {
     color: rgba(var(--fg), var(--op-c));
     padding: 0;
 }
+#clear-wrap {
+    display: none;
+}
+#clear-wrap.show {
+    display: inline;
+}
+#clear {
+    color: rgb(var(--err));
+}
 /* lujvo things / regex errors */
 #info {
     font-size: 1.25em;
@@ -208,10 +217,7 @@ a {
 p:has(.opt) {
     text-align: center;
 }
-.opt button {
-    padding: 4px 8px;
-    display: inline-block;
-    border-radius: 16px;
+button {
     cursor: pointer;
     background: rgb(var(--checked), 0);
     border: none;
@@ -219,6 +225,11 @@ p:has(.opt) {
     font-size: 1em;
     font-family: var(--sans);
     position: relative;
+}
+.opt button {
+    padding: 4px 8px;
+    display: inline-block;
+    border-radius: 16px;
 }
 .opt button:not(:last-child) {
     margin-right: -8px;
@@ -280,7 +291,7 @@ h2 {
     font-size: 1rem;
 }
 /* hover/focus */
-:is(a, summary):is(:hover, :focus-visible), #fakebox:is(:hover, :focus-within) {
+:is(a, summary, :not(.opt) > button):is(:hover, :focus-visible), #fakebox:is(:hover, :focus-within) {
     outline: 2px solid rgb(var(--focus));
     background-color: rgba(var(--focus), var(--op-2));
 }

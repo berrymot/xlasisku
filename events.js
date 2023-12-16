@@ -56,6 +56,11 @@ var timer;
 id("search").addEventListener("input", function() {
     clearTimeout(timer);
     q = id("search").value;
+    if (q.length) {
+        addClassById("clear-wrap", "show");
+    } else {
+        removeClassById("clear-wrap", "show");
+    }
     if (!config["regex"]) q = q.trim();
     results = null;
     clearResults();
@@ -222,6 +227,10 @@ function rhymeMode(toggle) {
     }
     dispatchSearchInputEvent();
 }
+id("clear").addEventListener("click", function() {
+    id("search").value = "";
+    dispatchSearchInputEvent();
+});
 // theme (mi lebna ti la lalxu)
 function setTheme(dark) {
     document.documentElement.className = dark ? "dark" : "";
