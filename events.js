@@ -56,7 +56,7 @@ var timer;
 id("search").addEventListener("input", function() {
     clearTimeout(timer);
     q = id("search").value;
-    if (!config["regex"]) q = q.trim().toLowerCase();
+    if (!config["regex"]) q = q.trim();
     results = null;
     clearResults();
     redirect();

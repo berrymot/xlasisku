@@ -27,6 +27,10 @@ function xusegismu_zo(g) {
     return /^[bcdfgjklmnprstvxz]([aeiou][bcdfgjklmnprstvxz]|[bcdfgjklmnprstvxz][aeiou])[bcdfgjklmnprstvxz][aeiou]$/.test(g);
 }
 function search(query) {
+    const original = query;
+    if (!config["regex"]) {
+        query = query.toLowerCase();
+    }
     var results = [];
     if (config["rhyme"]) {
         const v = getVowelsFrom(query);
@@ -38,7 +42,6 @@ function search(query) {
         }
     } else if (config["regex"]) {
         var rgx;
-        query = query.replace(/\\C/g, "[bcdfgjklmnprstvxz]").replace(/\\V/g, "[aeiou]")
         try {
             rgx = new RegExp(
                 config["regex.tight"] ? "^" + query + "$" : query,
@@ -52,6 +55,18 @@ function search(query) {
                 results.push([entry, 1]);
             }
         }
+    } else if (/[CV*?]/.test(original)) {
+        // also stolen from lynn of lidysisku etc fame
+        const rgx = new RegExp(
+            `^${original.replace(/C/g, "[bcdfgjklmnprstvxz]").replace(/V/g, "[aeiou]").replace(/\?/g, ".").replace(/\*+/g, ".*")}$`, "i"
+        );
+        for (const entry of jbo) {
+            if (rgx.test(entry.word)) {
+                results.push([entry, 9]);
+            }
+        }
+    } else if (/^[A-GI-PR-VX-Z][A-GhI-PR-VX-Zabc0-9*]*$/.test(original)) {
+        // TODO: make this work (issue #1)
     } else {
         // exact matches
         for (const w of query.split(/[\s.]+/)) {
