@@ -51,8 +51,6 @@
 *, input, button {
     box-sizing: border-box;
     -webkit-text-size-adjust: 100%;
-    -webkit-appearance: none;
-    appearance: none;
 }
 *:not(body), input, button {
     transition: background 0.2s;
