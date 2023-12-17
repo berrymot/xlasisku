@@ -133,7 +133,7 @@ body {
 #search:disabled::placeholder {
     color: rgba(var(--fg), var(--op-8));
 }
-.always {
+#fakebox :not(input) {
     color: rgba(var(--fg), var(--op-c));
     padding: 0;
 }
@@ -144,7 +144,7 @@ body {
     display: inline;
 }
 #clear {
-    color: rgb(var(--err));
+    color: rgb(var(--err)) !important;
 }
 /* lujvo things / regex errors */
 #info {
@@ -261,7 +261,7 @@ math {
 hr {
     border: 1px solid rgb(var(--fg));
 }
-:not(input, hr, br, .always):empty {
+:not(hr, br, #fakebox *):empty {
     display: none;
 }
 h1, h1 + p {
