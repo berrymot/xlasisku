@@ -119,7 +119,7 @@ id("search").addEventListener("input", function() {
                         createHTMLElement("a", {"href": "?q=" + encodeURIComponent(getConflictRegex(q)) + "&regex=tight"}, ["↑ find potential gismu conflicts?"])
                     ]));
                 }
-                if (/[CV*?(|)]/.test(q)) {
+                if (/^[CV*?(|)a-pr-vx-z' ]+$/.test(q)) {
                     try {
                         _ = new RegExp(
                             `^${h(q).replace(/C/g, "[bcdfgjklmnprstvxz]").replace(/V/g, "[aeiou]").replace(/\?/g, ".").replace(/\*+/g, ".*")}$`, "i"

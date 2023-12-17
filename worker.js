@@ -55,7 +55,7 @@ function search(query) {
                 results.push([entry, 1]);
             }
         }
-    } else if (/[CV*?(|)]/.test(original)) {
+    } else if (/^[CV*?(|)a-pr-vx-z' ]+$/.test(original)) {
         // also stolen from lynn of lidysisku etc fame
         var rgx;
         try {
