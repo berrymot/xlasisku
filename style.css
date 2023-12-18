@@ -293,7 +293,7 @@ h2 {
     outline: 2px solid rgb(var(--focus));
     background-color: rgba(var(--focus), var(--op-2));
 }
-#search:focus-visible, :has(> :hover):hover {
+#search:focus-visible, summary:has(a:hover):hover {
     outline: none;
     background: none;
 }
