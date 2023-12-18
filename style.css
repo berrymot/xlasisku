@@ -297,7 +297,7 @@ h2 {
     outline: none;
     background: none;
 }
-.opt ::before {
+.opt ::after {
     content: "";
     top: 0;
     right: 0;
@@ -311,7 +311,7 @@ h2 {
 .opt :is(:hover, :focus-visible) {
     outline: none;
 }
-.opt :is(:hover, :focus-visible)::before {
+.opt :is(:hover, :focus-visible)::after {
     z-index: 1;
     outline: 2px solid rgb(var(--focus));
     background-color: rgba(var(--focus), var(--op-2));
