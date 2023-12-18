@@ -100,7 +100,6 @@
                 const params = new URLSearchParams(window.location.search);
                 if (!params.has("q") && params.has("gc")) {
                     const gcq = getConflictRegex(params.get("gc"));
-                    console.log(gcq);
                     hardRedirect("?q=" + encodeURIComponent(gcq) + "&regex=tight");
                 } else {
                     const qpar = params.get("q");

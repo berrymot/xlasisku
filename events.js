@@ -93,7 +93,6 @@ id("search").addEventListener("input", function() {
                             ]));
                             const mabla = jvokaha(h(q));
                             const best = jvokaha(getLujvo(veljvo)[0]);
-                            console.log(mabla, best);
                             const hyphens = ["r", "n", "y", "'y", "y'", "'y'"];
                             for (var m = 0, b = 0; m < mabla.length; m++, b++) {
                                 if (hyphens.includes(mabla[m])) {
