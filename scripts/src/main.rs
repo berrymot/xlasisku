@@ -71,10 +71,10 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         let mut reader = reader::EventReader::new(Cursor::new(xml));
         loop {
             match reader.next()? {
-                XmlEvent::EndDocument { .. } => {
+                XmlEvent::EndDocument{..} => {
                     break;
                 }
-                XmlEvent::StartElement { name, attributes, .. } => {
+                XmlEvent::StartElement{name, attributes, ..} => {
                     let tagname = name.local_name;
                     match tagname.as_str() {
                         "valsi" => {
@@ -129,7 +129,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
                     }
                     current_tag.clear();
                 }
-                XmlEvent::EndElement { name } => {
+                XmlEvent::EndElement{name} => {
                     let tagname = name.local_name;
                     if tagname == "valsi" && !skip {
                         words.push(entry.clone());
