@@ -39,7 +39,8 @@ impl Entry {
         s = Regex::new(r"[. ]").unwrap().replace_all(&s, "_").to_string();
         s = Regex::new(r"^_|_$").unwrap().replace_all(&s, "").to_string();
         s = Regex::new(r"_+").unwrap().replace_all(&s, "_").to_string();
-        s += &(" ".to_owned() + &self.pos);
+        // we get rid of obsolete words and non-experimental words have a vote boost anyway
+        s += &(" ".to_owned() + &self.pos.split(" ").nth(1).unwrap_or(&self.pos));
         if !self.selmaho.is_empty() {
             s += &(" ".to_owned() + &self.selmaho);
         }
