@@ -1,4 +1,4 @@
-import {jbo} from "./jbo.js";
+import {jbo} from "./data/jbo.js";
 var config, rafsilist;
 function h(t) {
     return t.replace(/[h‘’]/igu, "'");

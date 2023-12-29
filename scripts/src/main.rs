@@ -19,6 +19,8 @@ struct Entry {
     pos: String,
     #[serde(skip)]
     author: String,
+    #[serde(skip)]
+    lang: String
 }
 impl Entry {
     fn new() -> Self {
@@ -30,7 +32,8 @@ impl Entry {
             definition: String::new(),
             notes: String::new(),
             pos: String::new(),
-            author: String::new()
+            author: String::new(),
+            lang: String::new()
         }
     }
     fn to_datastring(&self) -> String {
@@ -40,18 +43,18 @@ impl Entry {
         s = Regex::new(r"^_|_$").unwrap().replace_all(&s, "").to_string();
         s = Regex::new(r"_+").unwrap().replace_all(&s, "_").to_string();
         // we get rid of obsolete words and non-experimental words have a vote boost anyway
-        s += &(" ".to_owned() + &self.pos.split(" ").nth(1).unwrap_or(&self.pos));
+        s = s + " " + &self.pos.split(" ").nth(1).unwrap_or(&self.pos);
         if !self.selmaho.is_empty() {
-            s += &(" ".to_owned() + &self.selmaho);
+            s = s + " " + &self.selmaho;
         }
         if !self.rafsi.is_empty() {
-            s += &(" [-".to_owned() + &self.rafsi.join("-") + "-]");
+            s = s + " [-" + &self.rafsi.join("-") + "-]";
         }
-        s += &(" ".to_owned() + &self.author.to_lowercase().replace(r"[^a-z0-9]", ""));
-        s += &(" ".to_owned() + self.score.to_string().as_str());
-        s += &("\n".to_owned() + &self.definition);
+        s = s + " " + &Regex::new(r"[^a-z0-9]").unwrap().replace_all(&self.author.to_lowercase(), "");
+        s = s + " " + self.score.to_string().as_str();
+        s = s + "\n" + &self.definition;
         if !self.notes.is_empty() {
-            s += &("\n-n\n".to_owned() + &self.notes);
+            s = s + "\n-n\n" + &self.notes;
         }
         s
     }
@@ -67,7 +70,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     let mut skip = false;
     let client = blocking::Client::new();
     for lang in langs {
-        println!("curling & parsing `{lang}`...");
+        println!("`{lang}`");
         let xml = client.get(format!("https://jbovlaste.lojban.org/export/xml-export.html?lang={lang}&positive_scores_only=0&bot_key=z2BsnKYJhAB0VNsl")).send()?.bytes()?;
         let mut reader = reader::EventReader::new(Cursor::new(xml));
         loop {
@@ -80,6 +83,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
                     match tagname.as_str() {
                         "valsi" => {
                             entry = Entry::new();
+                            entry.lang = lang.to_string();
                             if !attr(&attributes, "type").starts_with('o') && attr(&attributes, "word") != ".i" {
                                 entry.word = attr(&attributes, "word");
                                 entry.pos = attr(&attributes, "type");
@@ -143,13 +147,16 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     // remove duplicates
     let mut unique_words = HashSet::new();
     words.retain(|word| unique_words.insert(word.word.clone()));
-    // write to json
-    println!("writing to json...");
+    // write
+    println!("writing to places");
+    let mut all = String::new();
+    for word in &words {
+        all = all + "\n" + &word.lang + "   " + &word.word;
+    }
+    fs::write("../data/allwords.txt", all)?;
     let json_str = serde_json::to_string(&words)?;
-    fs::write("../jbo.js", "export const jbo = ".to_owned() + &json_str)?;
-    // make data.txt
-    println!("writing to data.txt...");
-    let mut f = BufWriter::new(File::create("../data.txt")?);
+    fs::write("../data/jbo.js", "export const jbo = ".to_owned() + &json_str)?;
+    let mut f = BufWriter::new(File::create("../data/data.txt")?);
     writeln!(f, "---")?;
     for word in words {
         writeln!(f, "{}\n---", word.to_datastring())?;
