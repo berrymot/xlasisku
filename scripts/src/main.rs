@@ -108,7 +108,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
                 XmlEvent::Characters(text) => {
                     match current_tag.as_str() {
                         "score" => {
-                            let int = text.parse::<i32>().unwrap();
+                            let int = text.parse::<i32>()?;
                             if int >= -1 {
                                 entry.score = int;
                             } else {
