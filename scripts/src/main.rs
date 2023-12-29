@@ -43,7 +43,7 @@ impl Entry {
         s = Regex::new(r"^_|_$").unwrap().replace_all(&s, "").to_string();
         s = Regex::new(r"_+").unwrap().replace_all(&s, "_").to_string();
         // we get rid of obsolete words and non-experimental words have a vote boost anyway
-        s = s + " " + self.pos.split(' ').nth(1).unwrap_or(&self.pos);
+        s = s + " " + self.pos.split(" ").nth(1).unwrap_or(&self.pos);
         if !self.selmaho.is_empty() {
             s = s + " " + &self.selmaho;
         }
