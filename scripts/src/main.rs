@@ -3,6 +3,7 @@ use xml::{attribute::OwnedAttribute, reader::{self, XmlEvent}};
 use serde::{Serialize, Deserialize};
 use reqwest::blocking;
 use regex::Regex;
+use latkerlo_jvotci::*;
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 struct Entry {
@@ -69,6 +70,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     let mut entry = Entry::new();
     let mut skip = false;
     let client = blocking::Client::new();
+    let mut naljvo = Vec::<String>::new();
     for lang in langs {
         println!("`{lang}`");
         let xml = client.get(format!("https://jbovlaste.lojban.org/export/xml-export.html?lang={lang}&positive_scores_only=0&bot_key=z2BsnKYJhAB0VNsl")).send()?.bytes()?;
@@ -88,6 +90,9 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
                                 entry.word = attr(&attributes, "word");
                                 entry.pos = attr(&attributes, "type");
                                 skip = false;
+                                if attr(&attributes, "type").starts_with('l') && /* hack for now */ std::panic::catch_unwind(|| get_veljvo(&entry.word)).is_err() {
+                                    naljvo.push(entry.clone().word);
+                                }
                             } else {
                                 current_tag.clear();
                                 reader.skip()?;
@@ -145,8 +150,10 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         }
     }
     // remove duplicates
-    let mut unique_words = HashSet::new();
-    words.retain(|word| unique_words.insert(word.word.clone()));
+    let mut unique = HashSet::new();
+    words.retain(|word| unique.insert(word.word.clone()));
+    let mut unique = HashSet::new();
+    naljvo.retain(|v| unique.insert(v.clone()));
     // write
     println!("writing to places");
     let mut all = String::new();
@@ -161,6 +168,11 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     for word in words {
         writeln!(f, "{}\n---", word.to_datastring())?;
     }
+    let mut naljvo_string = String::new();
+    for v in &naljvo {
+        naljvo_string = naljvo_string + "\n" + &v;
+    }
+    fs::write("../data/naljvo.txt", naljvo_string)?;
     // .i mulno .ui
     let duration = start.elapsed();
     println!("done :3 took {:?} s", duration.as_secs_f64());

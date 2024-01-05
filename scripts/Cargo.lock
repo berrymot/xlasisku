@@ -367,6 +367,16 @@ dependencies = [
 ]
 
 [[package]]
+name = "latkerlo-jvotci"
+version = "1.0.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "0fd7d9b4d445d4c97d04886a708485305d5ce60a58597c1bb24f24b3d4374775"
+dependencies = [
+ "lazy_static",
+ "regex",
+]
+
+[[package]]
 name = "lazy_static"
 version = "1.4.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -665,6 +675,7 @@ dependencies = [
 name = "scripts"
 version = "0.1.0"
 dependencies = [
+ "latkerlo-jvotci",
  "regex",
  "reqwest",
  "serde",
