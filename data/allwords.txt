@@ -104,6 +104,7 @@ en   ambigu'i
 en   ambigu'o
 en   ambito
 en   amble
+en   amblipigi
 en   ambuci
 en   ambulance
 en   amfite'atro
@@ -13486,6 +13487,7 @@ en   jicla
 en   jicmrboro
 en   jicmu
 en   jicycma
+en   jicyjirna
 en   jicyjutsi'o
 en   jicymivykle
 en   jidge
@@ -15550,6 +15552,7 @@ en   mafnenlai
 en   mafni'u
 en   mafpli
 en   mafre'o
+en   mafta'a
 en   magdaro
 en   magmiltre
 en   magyxre
@@ -15905,6 +15908,8 @@ en   mentu
 en   mentufa
 en   menynunda'a
 en   menytcaci
+en   menzda
+en   menzdapla
 en   menzi'u
 en   me'o
 en   me'oi
@@ -18150,6 +18155,7 @@ en   prejumydu'a'y'utka
 en   prekarce
 en   prekoci
 en   premi
+en   premuje
 en   pren
 en   prenu
 en   prer
@@ -19198,6 +19204,7 @@ en   ru'urzu'aru
 en   ru'urzumuku
 en   ru'urzuvedu
 en   ruxmai
+en   ruxpe'o
 en   ruxse'i
 en   ruxyxadle'a
 en   ruxyzau
@@ -19782,7 +19789,6 @@ en   selju'o
 en   seljutsi
 en   selka'e
 en   selkafpu'o
-en   selkai
 en   selkajna
 en   selkakclu
 en   selkarlygau
@@ -22924,6 +22930,7 @@ en   venmi'i
 en   venrelu
 en   vensa
 en   vensraitu
+en   vensysenva
 en   vente
 en   ventile
 en   venvei
@@ -23678,6 +23685,7 @@ en   xlibakni
 en   xlima'i
 en   xlobi
 en   xlodu'uxukau
+en   xlolululu
 en   xlura
 en   xlusku
 en   xluzerma'esazri
@@ -23773,6 +23781,7 @@ en   xu'icmu
 en   xukmi
 en   xukmranoni
 en   xukske
+en   xuksle
 en   xulbuktci
 en   xulbu'u
 en   xulgani
