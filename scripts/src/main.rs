@@ -90,7 +90,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
                                 entry.word = attr(&attributes, "word");
                                 entry.pos = attr(&attributes, "type");
                                 skip = false;
-                                if attr(&attributes, "type").starts_with('l') && /* hack for now */ std::panic::catch_unwind(|| get_veljvo(&entry.word)).is_err() {
+                                if attr(&attributes, "type").starts_with('l') && get_veljvo(&entry.word).is_err() {
                                     naljvo.push(entry.clone().word);
                                 }
                             } else {

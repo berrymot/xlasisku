@@ -11927,6 +11927,7 @@ en   fu'a
 en   fu'a'ai
 en   fu'a'au
 en   fu'au
+en   fucking
 en   fu'e
 en   fu'ei
 en   fu'ei'a
