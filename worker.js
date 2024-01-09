@@ -67,25 +67,21 @@ function search(query) {
         }
         for (const entry of jbo) {
             const bonus = (entry.score >= 1000 ? 0.375 : 0) + (xusegismu_zo(entry.word) ? 0.125 : 0);
-            var score = 4;
             if (rafsilist.get(entry.word) && rafsilist.get(entry.word).includes(h(query))) {
-                results.push([entry, score]);
+                results.push([entry, 4]);
             }
-            score = 3;
             const rgx = query.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
             const regex = `\\b${rgx}e?s?\\b`; // doi la bavyse'i ko ba'e *na* galfi ti. you tried that like 4,0000 times
             if (new RegExp(regex, "iu").test(entry.definition)) {
-                results.push([entry, score + bonus]);
+                results.push([entry, 3 + bonus]);
             }
-            score = 2;
             if (entry.word.toLowerCase().startsWith(h(query))) {
-                results.push([entry, score + 0.5]);
+                results.push([entry, 2 + 0.5]);
             } else if (entry.word.toLowerCase().includes(h(query))) {
-                results.push([entry, score]);
+                results.push([entry, 2]);
             }
-            score = 1;
             if (entry.notes && new RegExp(regex, "iu").test(entry.notes)) {
-                results.push([entry, score + bonus]);
+                results.push([entry, 1 + bonus]);
             }
         }
     }

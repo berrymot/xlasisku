@@ -6,9 +6,6 @@ var results;
 function h(t) {
     return t.replace(/[h‘’]/igu, "'");
 }
-function xusegismu_zo(g) {
-    return /^[bcdfgjklmnprstvxz]([aeiou][bcdfgjklmnprstvxz]|[bcdfgjklmnprstvxz][aeiou])[bcdfgjklmnprstvxz][aeiou]$/.test(g);
-}
 function getConflictRegex(g) {
     var conflict = [...g];
     for (var i = 0; i < conflict.length; i++) {
@@ -113,7 +110,7 @@ id("search").addEventListener("input", function() {
                 } catch (e) {
                     // not lujvo
                 }
-                if (xusegismu_zo(q)) {
+                if (isGismu(q)) {
                     id("info").append(createHTMLElement("p", null, [
                         createHTMLElement("a", {"href": "?q=" + encodeURIComponent(getConflictRegex(q)) + "&regex=tight"}, ["↑ find potential gismu conflicts?"])
                     ]));
