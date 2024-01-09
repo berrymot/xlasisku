@@ -129,9 +129,11 @@ body {
 }
 #search::placeholder {
     color: rgba(var(--fg), var(--op-c));
+    opacity: 1;
 }
 #search:disabled::placeholder {
     color: rgba(var(--fg), var(--op-8));
+    opacity: 1;
 }
 #fakebox * {
     color: rgba(var(--fg), var(--op-c));
@@ -173,8 +175,8 @@ body {
 .entry p:first-child a:first-child {
     color: rgb(var(--fg));
 }
-.entry .selmaho {
-    font-family: var(--sans);
+.entry .selmaho, code, pre {
+    font-family: var(--mono);
 }
 .entry :is(.selmaho, .rafsi) {
     color: rgba(var(--fg), var(--op-c));
