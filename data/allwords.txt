@@ -343,6 +343,7 @@ en   baigle
 en   bai'i
 en   bai'i'i
 en   bainri
+en   ba'i'o
 en   baionet
 en   baitni
 en   bajbakni
@@ -19790,6 +19791,7 @@ en   selju'o
 en   seljutsi
 en   selka'e
 en   selkafpu'o
+en   selkai
 en   selkajna
 en   selkakclu
 en   selkarlygau
@@ -20626,6 +20628,7 @@ en   sorgugje'a
 en   sorjaknykarce
 en   sorjontai
 en   sorju'o
+en   sorkai
 en   sorkubli
 en   sorlutca'u
 en   sormau
@@ -22749,6 +22752,7 @@ en   va'inai
 en   vairsoi
 en   va'islinku'i
 en   vajlani
+en   vajmli
 en   vajni
 en   vajrai
 en   vajraiana
