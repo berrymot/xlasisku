@@ -9,18 +9,19 @@ function h(t) {
 function getConflictRegex(g) {
     var conflict = [...g];
     for (var i = 0; i < conflict.length; i++) {
-        if (i == conflict.length - 1) {
-            conflict[i] = "[aeiou]";
-        }
-        conflict[i] = conflict[i]
-        .replace(/[bfpv]/, "[bfpv]")
-        .replace(/[cjsz]/, "[cjsz]")
-        .replace(/[dt]/, "[dt]")
-        .replace(/[gkx]/, "[gkx]")
-        .replace(/[lr]/, "[lr]")
-        .replace(/[mn]/, "[mn]");
+        conflict[i] = !isVowel(conflict[i]) ?
+            (g.slice(0, i) || "") + g[i]
+            .replace(/[bfpv]/, "[bfpv]")
+            .replace(/[cjsz]/, "[cjsz]")
+            .replace(/[dt]/, "[dt]")
+            .replace(/[gkx]/, "[gkx]")
+            .replace(/[lr]/, "[lr]")
+            .replace(/[mn]/, "[mn]")
+            + (g.slice(i + 1, conflict.length) || "")
+        :
+            i == conflict.length - 1 ? g.slice(0, i) + "[aeiou]" : null;
     }
-    conflict = conflict.join("");
+    conflict = "(" + conflict.join("|").replace(/\|+/, "|") + ")";
     return conflict;
 }
 worker.addEventListener("message", function(e) {
@@ -112,7 +113,7 @@ id("search").addEventListener("input", function() {
                 }
                 if (isGismu(q)) {
                     id("info").append(createHTMLElement("p", null, [
-                        createHTMLElement("a", {"href": "?q=" + encodeURIComponent(getConflictRegex(q)) + "&regex=tight"}, ["↑ find potential gismu conflicts?"])
+                        createHTMLElement("a", {"href": "?q=" + encodeURIComponent(getConflictRegex(q)) + "&regex=tight"}, ["↑ find gismu conflicts?"])
                     ]));
                 }
             } else if (config["regex"]) {
