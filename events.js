@@ -111,7 +111,7 @@ id("search").addEventListener("input", function() {
                 } catch (e) {
                     // not lujvo
                 }
-                if (isGismu(q)) {
+                if (isGismu(q) && (VALID.includes(q.slice(0, 2)) || VALID.includes(q.slice(2, 4)))) {
                     id("info").append(createHTMLElement("p", null, [
                         createHTMLElement("a", {"href": "?q=" + encodeURIComponent(getConflictRegex(q)) + "&regex=tight"}, ["↑ find gismu conflicts?"])
                     ]));
