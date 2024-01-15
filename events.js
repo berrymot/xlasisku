@@ -11,8 +11,10 @@ function getConflictRegex(g) {
     for (var i = 0; i < conflict.length; i++) {
         conflict[i] = !isVowel(conflict[i]) ?
             (g.slice(0, i) || "") + g[i]
-            .replace(/[bfpv]/, "[bfpv]")
-            .replace(/[cjsz]/, "[cjsz]")
+            .replace(/[bfp]/, "[bfp]")
+            .replace(/[bfv]/, "[bfv]")
+            .replace(/[csz]/, "[csz]")
+            .replace(/[cjz]/, "[cjz]")
             .replace(/[dt]/, "[dt]")
             .replace(/[gkx]/, "[gkx]")
             .replace(/[lr]/, "[lr]")
