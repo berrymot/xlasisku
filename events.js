@@ -162,10 +162,6 @@ function toggleClassById(_id, className) {
 function dispatchSearchInputEvent() {
     id("search").dispatchEvent(new Event("input", {"bubbles": true}));
 }
-function wrapSearchbar(before, after) {
-    id("before").innerHTML = before;
-    id("after").innerHTML = after;
-}
 function searchMode() {
     clearTimeout(timer);
     removeClasses();
@@ -174,7 +170,6 @@ function searchMode() {
     addClassById("sm", "checked");
     config["rhyme"] = false;
     config["regex"] = false;
-    wrapSearchbar("<wbr />", "<wbr />");
     dispatchSearchInputEvent();
 }
 function regexMode(togglei, toggletight) {
@@ -194,10 +189,6 @@ function regexMode(togglei, toggletight) {
         toggleClassById("regex-tight", "checked");
         config["regex.tight"] = !config["regex.tight"];
     }
-    wrapSearchbar(
-        "/" + (config["regex.tight"] ? "^" : ""),
-        (config["regex.tight"] ? "$" : "") + "/" + (config["regex.insensitive"] ? "i" : "")
-    );
     dispatchSearchInputEvent();
 }
 function rhymeMode(toggle) {
@@ -209,7 +200,6 @@ function rhymeMode(toggle) {
     addClassById("rm", "checked");
     config["rhyme"] = true;
     config["regex"] = false;
-    wrapSearchbar("<wbr />", "<wbr />");
     if (toggle) {
         toggleClassById("rhyme-y", "checked");
         config["rhyme.ignorey"] = !config["rhyme.ignorey"];
