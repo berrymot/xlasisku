@@ -11339,6 +11339,7 @@ en   ersokso
 en   ertso
 en   ertu
 en   erve
+en   erveperdu
 en   ervinda
 en   eska
 en   eskorta
@@ -19211,6 +19212,7 @@ en   ruxse'i
 en   ruxyxadle'a
 en   ruxyzau
 en   ry
+en   .rymy.
 en   ry zei sance
 en   sa
 en   sa'a
@@ -20183,9 +20185,11 @@ en   si'ei
 en   si'erboi
 en   si'ercarvi
 en   si'ercutci
+en   si'erda'a
 en   si'erdi'u
 en   si'erjoijaucarvi
 en   si'ermatryma'e
+en   si'ernunda'a
 en   si'erskiji
 en   si'erta'o
 en   si'exra
