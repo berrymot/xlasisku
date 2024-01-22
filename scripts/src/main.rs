@@ -1,4 +1,4 @@
-use std::{fs::{self, File}, time::Instant, io::{BufWriter, Write, Cursor}, collections::HashSet};
+use std::{fs, time::Instant, io::Cursor, collections::HashSet};
 use xml::{attribute::OwnedAttribute, reader::{self, XmlEvent}};
 use serde::{Serialize, Deserialize};
 use reqwest::blocking;
@@ -156,18 +156,25 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     naljvo.retain(|v| unique.insert(v.clone()));
     // write
     println!("writing to places");
+    // allwords.txt
     let mut all = String::new();
     for word in &words {
-        all = all + "\n" + &word.lang + "   " + &word.word;
+        all = all + &word.lang + "   " + &word.word + "\n";
     }
     fs::write("../data/allwords.txt", all)?;
+    // jbo.js
     let json_str = serde_json::to_string(&words)?;
-    fs::write("../data/jbo.js", "export const jbo = ".to_owned() + &json_str)?;
-    let mut f = BufWriter::new(File::create("../data/data.txt")?);
-    writeln!(f, "---")?;
+    fs::write("../data/jbo.js", "const jbo = ".to_owned() + &json_str)?;
+    // data.txt
+    let mut data = "---".to_string();
     for word in words {
-        writeln!(f, "{}\n---", word.to_datastring())?;
+        data = format!("{data}\n{}\n---", word.to_datastring());
     }
+    fs::write("../data/data.txt", &data)?;
+    // chars.txt
+    let chars: String = {let mut v = data.chars().collect::<Vec<char>>(); v.sort(); v.dedup(); v.into_iter().collect()};
+    fs::write("../data/chars.txt", chars)?;
+    // naljvo.txt
     let mut naljvo_string = String::new();
     for v in &naljvo {
         naljvo_string = naljvo_string + "\n" + &v;
