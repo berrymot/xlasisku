@@ -1,4 +1,4 @@
-var worker = {"postMessage": function(a) {console.log("no");}};
+var worker = {"postMessage": function(a) {}}; // very hack
 var config = {};
 let page;
 var q = "";
