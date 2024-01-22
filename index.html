@@ -66,10 +66,39 @@
         <div id="length"></div>
         <div id="results"></div>
         <div id="bottom"></div>
+        <script>
+            // theme (mi lebna ti la lalxu)
+            function setTheme(dark) {
+                document.documentElement.className = dark ? "dark" : "";
+                try {
+                    localStorage.setItem("theme", dark ? "dark" : "light");
+                } catch (e) {
+                    //
+                }
+            }
+            var theme = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)") ? "dark" : "light";
+            try {
+                theme = localStorage.getItem("theme") || theme;
+            } catch (e) {
+                //
+            }
+            setTheme(theme == "dark");
+            setTimeout(() => {document.body.style.transition = "background 0.2s"}, 0);
+        </script>
         <script src="helper.js"></script>
+        <script src="data/jbo.js"></script>
         <script src="events.js"></script>
         <script>
             // ready for stuff to happen
+            worker = new Worker("worker.js", {"type": "module"});
+            worker.addEventListener("message", function(e) {
+                results = e.data;
+                id("results").innerHTML = "";
+                id("length").innerHTML = results.length + " result" + (results.length == 1 ? "" : "s");
+                page = 0;
+                load(results, page);
+                checkLength();
+            });
             id("sm").removeAttribute("disabled");
             id("rm").removeAttribute("disabled");
             id("xm").removeAttribute("disabled");

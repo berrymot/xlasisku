@@ -1,4 +1,4 @@
-const worker = new Worker("worker.js", {"type": "module"});
+var worker = {"postMessage": function(a) {console.log("no");}};
 var config = {};
 let page;
 var q = "";
@@ -25,14 +25,6 @@ function getConflictRegex(g) {
     conflict = "(" + conflict.join("|").replace(/\|+/, "|") + ")";
     return conflict;
 }
-worker.addEventListener("message", function(e) {
-    results = e.data;
-    id("results").innerHTML = "";
-    id("length").innerHTML = results.length + " result" + (results.length == 1 ? "" : "s");
-    page = 0;
-    load(results, page);
-    checkLength();
-});
 window.addEventListener("scroll", function(e) {
     if (window.innerHeight + window.scrollY >= document.body.scrollHeight - 100) {
         page++;
@@ -125,7 +117,7 @@ id("search").addEventListener("input", function() {
                     id("info").append(createHTMLElement("p", null, [e.message.split(": ").slice(-1)[0].toLowerCase()]));
                 }
             }
-            worker.postMessage({"query": q, "config": config, "rafsilist": RAFSI});
+            worker.postMessage({"query": q, "config": config, "rafsilist": RAFSI, "jbo": jbo});
         } else {
             results = null;
             clearResults();
@@ -210,23 +202,6 @@ id("clear").addEventListener("click", function() {
     id("search").value = "";
     dispatchSearchInputEvent();
 });
-// theme (mi lebna ti la lalxu)
-function setTheme(dark) {
-    document.documentElement.className = dark ? "dark" : "";
-    try {
-        localStorage.setItem("theme", dark ? "dark" : "light");
-    } catch (e) {
-        //
-    }
-}
-var theme = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)") ? "dark" : "light";
-try {
-    theme = localStorage.getItem("theme") || theme;
-} catch (e) {
-    //
-}
-setTheme(theme == "dark");
-setTimeout(() => {document.body.style.transition = "background 0.2s"}, 0);
 id("theme").addEventListener("click", function() {
     setTheme(document.documentElement.className != "dark");
 });

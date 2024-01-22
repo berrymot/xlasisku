@@ -68,7 +68,7 @@
     --link: 0, 105, 204;
     --err: 209, 41, 41;
     --focus: 255, 174, 12;
-    --sans: "IBM Plex Sans", ui-sans-serif, sans-serif;
+    --sans: "Noto Sans", "Noto Sans Math", ui-sans-serif, sans-serif;
     --mono: "Iosevka", ui-monospace, monospace;
 }
 body.regex {

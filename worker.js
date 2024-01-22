@@ -1,5 +1,4 @@
-import {jbo} from "./data/jbo.js";
-var config, rafsilist;
+var config, rafsilist, jbo;
 function h(t) {
     return t.replace(/[h‘’]/igu, "'");
 }
@@ -102,6 +101,7 @@ onmessage = function(e) {
     const query = e.data.query;
     config = e.data.config;
     rafsilist = e.data.rafsilist;
+    jbo = e.data.jbo;
     const res = search(query);
     postMessage(res);
 };
