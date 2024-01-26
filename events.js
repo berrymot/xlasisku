@@ -57,10 +57,6 @@ id("search").addEventListener("input", function() {
     clearResults();
     redirect();
     timer = setTimeout(function() {
-        if (q == "hi" && !config["regex"] && !config["rhyme"]) {
-            id("length").innerHTML = "<p>the word you're looking for is <a href='?q=coi'><i>coi</i></a></p><small>just trust me</small>";
-            return;
-        }
         if (q.length) {
             id("bottom").innerHTML = "loading...";
             if (!config["rhyme"] && !config["regex"]) {

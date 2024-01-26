@@ -57,6 +57,11 @@ function search(query) {
     } else if (/^[A-GI-PR-VX-Z][A-GhI-PR-VX-Zabc0-9*]*$/.test(original)) {
         // TODO: make this work (issue #1)
     } else {
+        // hi
+        if (query == "hi") {
+            results.push([jbo.find(entry => entry.word == "coi"), 3]);
+            return results;
+        }
         // exact matches
         for (const w of query.split(/[\s.]+/)) {
             const exact = jbo.find(entry => entry.word.toLowerCase().replace(/\./g, "") == h(w));
