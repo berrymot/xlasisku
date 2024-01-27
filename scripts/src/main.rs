@@ -1,9 +1,12 @@
-use std::{fs, time::Instant, io::Cursor, collections::HashSet};
-use xml::{attribute::OwnedAttribute, reader::{self, XmlEvent}};
-use serde::{Serialize, Deserialize};
-use reqwest::blocking;
-use regex::Regex;
 use latkerlo_jvotci::*;
+use regex::Regex;
+use reqwest::blocking;
+use serde::{Deserialize, Serialize};
+use std::{collections::HashSet, fs, io::Cursor, time::Instant};
+use xml::{
+    attribute::OwnedAttribute,
+    reader::{self, XmlEvent},
+};
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 struct Entry {
@@ -21,7 +24,7 @@ struct Entry {
     #[serde(skip)]
     author: String,
     #[serde(skip)]
-    lang: String
+    lang: String,
 }
 impl Entry {
     fn new() -> Self {
@@ -34,14 +37,20 @@ impl Entry {
             notes: String::new(),
             pos: String::new(),
             author: String::new(),
-            lang: String::new()
+            lang: String::new(),
         }
     }
     fn to_datastring(&self) -> String {
         let mut s = self.word.to_owned();
         // regex replacements
-        s = Regex::new(r"[. ]").unwrap().replace_all(&s, "_").to_string();
-        s = Regex::new(r"^_|_$").unwrap().replace_all(&s, "").to_string();
+        s = Regex::new(r"[. ]")
+            .unwrap()
+            .replace_all(&s, "_")
+            .to_string();
+        s = Regex::new(r"^_|_$")
+            .unwrap()
+            .replace_all(&s, "")
+            .to_string();
         s = Regex::new(r"_+").unwrap().replace_all(&s, "_").to_string();
         // we get rid of obsolete words and non-experimental words have a vote boost anyway
         s = s + " " + self.pos.split(' ').nth(1).unwrap_or(&self.pos);
@@ -51,7 +60,11 @@ impl Entry {
         if !self.rafsi.is_empty() {
             s = s + " [-" + &self.rafsi.join("-") + "-]";
         }
-        s = s + " " + &Regex::new(r"[^a-z0-9]").unwrap().replace_all(&self.author.to_lowercase(), "");
+        s = s
+            + " "
+            + &Regex::new(r"[^a-z0-9]")
+                .unwrap()
+                .replace_all(&self.author.to_lowercase(), "");
         s = s + " " + self.score.to_string().as_str();
         s = s + "\n" + &self.definition;
         if !self.notes.is_empty() {
@@ -64,7 +77,77 @@ impl Entry {
 fn main() -> Result<(), Box<dyn std::error::Error>> {
     let start = Instant::now();
     // parse the xml
-    let langs = ["en", "am", "ar", "art-guaspi", "art-loglan", "be", "bg", "br", "ca", "ch", "cs", "cy", "da", "de", "el", "en-bpfk", "en-simple", "eo", "es", "et", "eu", "fa", "fi", "fr-facile", "fr", "ga", "gl", "gu", "he", "hi", "hr", "hu", "ia", "id", "it", "ja", "jbo", "ka", "ko", "kw", "la", "lt", "lv", "mg", "ne", "nl", "no", "pl", "pt-br", "pt", "ro", "ru", "sa", "sk", "sl", "so", "sq", "sr", "sv", "ta", "test", "tlh", "tok", "tpi", "tr", "uk", "vi", "wa", "zh"];
+    let langs = [
+        "en",
+        "am",
+        "ar",
+        "art-guaspi",
+        "art-loglan",
+        "be",
+        "bg",
+        "br",
+        "ca",
+        "ch",
+        "cs",
+        "cy",
+        "da",
+        "de",
+        "el",
+        "en-bpfk",
+        "en-simple",
+        "eo",
+        "es",
+        "et",
+        "eu",
+        "fa",
+        "fi",
+        "fr-facile",
+        "fr",
+        "ga",
+        "gl",
+        "gu",
+        "he",
+        "hi",
+        "hr",
+        "hu",
+        "ia",
+        "id",
+        "it",
+        "ja",
+        "jbo",
+        "ka",
+        "ko",
+        "kw",
+        "la",
+        "lt",
+        "lv",
+        "mg",
+        "ne",
+        "nl",
+        "no",
+        "pl",
+        "pt-br",
+        "pt",
+        "ro",
+        "ru",
+        "sa",
+        "sk",
+        "sl",
+        "so",
+        "sq",
+        "sr",
+        "sv",
+        "ta",
+        "test",
+        "tlh",
+        "tok",
+        "tpi",
+        "tr",
+        "uk",
+        "vi",
+        "wa",
+        "zh",
+    ];
     let mut words = Vec::<Entry>::new();
     let mut current_tag = String::new();
     let mut entry = Entry::new();
@@ -77,20 +160,26 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         let mut reader = reader::EventReader::new(Cursor::new(xml));
         loop {
             match reader.next()? {
-                XmlEvent::EndDocument{..} => {
+                XmlEvent::EndDocument { .. } => {
                     break;
                 }
-                XmlEvent::StartElement{name, attributes, ..} => {
+                XmlEvent::StartElement {
+                    name, attributes, ..
+                } => {
                     let tagname = name.local_name;
                     match tagname.as_str() {
                         "valsi" => {
                             entry = Entry::new();
                             entry.lang = lang.to_string();
-                            if !attr(&attributes, "type").starts_with('o') && attr(&attributes, "word") != ".i" {
+                            if !attr(&attributes, "type").starts_with('o')
+                                && attr(&attributes, "word") != ".i"
+                            {
                                 entry.word = attr(&attributes, "word");
                                 entry.pos = attr(&attributes, "type");
                                 skip = false;
-                                if attr(&attributes, "type").starts_with('l') && get_veljvo(&entry.word).is_err() {
+                                if attr(&attributes, "type").starts_with('l')
+                                    && get_veljvo(&entry.word).is_err()
+                                {
                                     naljvo.push(entry.clone().word);
                                 }
                             } else {
@@ -135,17 +224,17 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
                         "username" => {
                             entry.author = text;
                         }
-                        _ => ()
+                        _ => (),
                     }
                     current_tag.clear();
                 }
-                XmlEvent::EndElement{name} => {
+                XmlEvent::EndElement { name } => {
                     let tagname = name.local_name;
                     if tagname == "valsi" && !skip {
                         words.push(entry.clone());
                     }
                 }
-                _ => ()
+                _ => (),
             }
         }
     }
@@ -172,7 +261,12 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     }
     fs::write("../data/data.txt", &data)?;
     // chars.txt
-    let chars: String = {let mut v = data.chars().collect::<Vec<char>>(); v.sort(); v.dedup(); v.into_iter().collect()};
+    let chars: String = {
+        let mut v = data.chars().collect::<Vec<char>>();
+        v.sort();
+        v.dedup();
+        v.into_iter().collect()
+    };
     fs::write("../data/chars.txt", chars)?;
     // naljvo.txt
     let mut naljvo_string = String::new();
@@ -187,5 +281,9 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
 }
 
 fn attr(v: &[OwnedAttribute], n: &str) -> String {
-    v.iter().find(|&x| x.name.local_name == n).unwrap().value.to_string()
+    v.iter()
+        .find(|&x| x.name.local_name == n)
+        .unwrap()
+        .value
+        .to_string()
 }
