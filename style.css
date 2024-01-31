@@ -1,48 +1,48 @@
 /* fonts */
 @font-face {
     font-family: "Noto Sans";
-    src: url("noto/NotoSans-Regular.ttf");
+    src: url("fonts/NotoSans-Regular.ttf");
     font-display: swap;
 }
 @font-face {
     font-family: "Noto Sans";
-    src: url("noto/NotoSans-Italic.ttf");
+    src: url("fonts/NotoSans-Italic.ttf");
     font-display: swap;
     font-style: italic;
 }
 @font-face {
     font-family: "Noto Sans";
-    src: url("noto/NotoSans-Bold.ttf");
+    src: url("fonts/NotoSans-Bold.ttf");
     font-display: swap;
     font-weight: bold;
 }
 @font-face {
     font-family: "Noto Sans";
-    src: url("noto/NotoSans-BoldItalic.ttf");
+    src: url("fonts/NotoSans-BoldItalic.ttf");
     font-display: swap;
     font-weight: bold;
     font-style: italic;
 }
 @font-face {
     font-family: "Iosevka";
-    src: url("iosevka/Iosevka-Regular.ttf");
+    src: url("fonts/Iosevka-Regular.ttf");
     font-display: swap;
 }
 @font-face {
     font-family: "Iosevka";
-    src: url("iosevka/Iosevka-Italic.ttf");
+    src: url("fonts/Iosevka-Italic.ttf");
     font-display: swap;
     font-style: italic;
 }
 @font-face {
     font-family: "Iosevka";
-    src: url("iosevka/Iosevka-Bold.ttf");
+    src: url("fonts/Iosevka-Bold.ttf");
     font-display: swap;
     font-weight: bold;
 }
 @font-face {
     font-family: "Iosevka";
-    src: url("iosevka/Iosevka-BoldItalic.ttf");
+    src: url("fonts/Iosevka-BoldItalic.ttf");
     font-display: swap;
     font-weight: bold;
     font-style: italic;
