@@ -7456,6 +7456,7 @@ en   batxapa
 en   batyja'e
 en   ba'u
 en   bau
+en   baucli
 en   baucmu
 en   baucre
 en   ba'ucu'i
@@ -9249,6 +9250,7 @@ en   ce'o
 en   ce'oi
 en   ce'ol
 en   cercene
+en   cercti
 en   cerda
 en   cermurse
 en   cermursynalcando
@@ -10839,6 +10841,7 @@ en   dikcti
 en   dikle'i
 en   diklo
 en   dikni
+en   diknunkla
 en   diktcika
 en   dikyjvo
 en   dilcau
@@ -11011,6 +11014,7 @@ en   do'o
 en   do'oi
 en   do'o'o
 en   dorcte
+en   dorcti
 en   doris
 en   dorkada
 en   dorlunra
@@ -11267,6 +11271,7 @@ en   ekspekte
 en   eksplicite
 en   eksporte
 en   ek zei uanta
+en   elci
 en   eldicka'u
 en   elei'anor
 en   elfe
@@ -11339,6 +11344,7 @@ en   ersokso
 en   ertso
 en   ertu
 en   erve
+en   erveperdu
 en   ervinda
 en   eska
 en   eskorta
@@ -14505,6 +14511,7 @@ en   klanrxenri
 en   klanrxertsi
 en   klanrxomi
 en   klanrzimenzi
+en   kla'oma
 en   kla'ongo
 en   klapri
 en   klasazri
@@ -14698,6 +14705,7 @@ en   kovdipaso
 en   kra'anbe
 en   krafamtei
 en   kraga'igau
+en   krai'a
 en   kraice
 en   kraili
 en   kraislr
@@ -22934,6 +22942,7 @@ en   venci'e
 en   vencu'u
 en   vendaia
 en   vendeta
+en   vendu'a
 en   venfu
 en   venmi'i
 en   venrelu
@@ -23819,6 +23828,7 @@ en   xuncindu
 en   xundei
 en   xunkliru
 en   xunlo'u
+en   xunmusu
 en   xunplin
 en   xunre
 en   xunroki
