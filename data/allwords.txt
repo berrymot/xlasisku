@@ -9931,6 +9931,7 @@ en   cmaze'a
 en   cmazengau
 en   cmazvakemnoryraclyte'a
 en   cmazve
+en   cmazvove'u
 en   cmebasti
 en   cmecau
 en   cmeci'e
@@ -11644,6 +11645,7 @@ en   ferbruua
 en   ferengis
 en   ferti
 en   fertis
+en   feskevlu'a
 en   fesli'a
 en   fespli
 en   festerplakai
@@ -14137,6 +14139,7 @@ en   kanla
 en   kanmige
 en   kanpe
 en   kanpyclira
+en   kanpygei
 en   kanpylerci
 en   kanro
 en   kansa
@@ -15700,6 +15703,7 @@ en   mapni
 en   mapra
 en   maprtrilbi
 en   maprultricu
+en   maprykeitci
 en   maprysakta
 en   mapti
 en   mapybalni
@@ -15737,6 +15741,7 @@ en   marnyjoitankysigja
 en   marnysigja
 en   marnyva'u
 en   marsipane
+en   marsopa
 en   martiio
 en   marxa
 en   marxaka
@@ -18216,6 +18221,7 @@ en   prubi'o
 en   pruce
 en   pru'ei
 en   prugastcica
+en   prugei
 en   prujungau
 en   prula'i
 en   prula'ima'i
@@ -18340,9 +18346,11 @@ en   ra'erfaidi'u
 en   ra'erpo'e
 en   ra'erprali
 en   rafme'e
+en   rafmojborfli
 en   rafsi
 en   rafske
 en   rafsrfu'ivla
+en   rafybri
 en   ragbi
 en   ragrgolgi
 en   ragrmalpigi
@@ -18898,6 +18906,7 @@ en   rolpamcinse
 en   rolrafcre
 en   rolsixu
 en   rolsuki
+en   rolxracu'a
 en   rolza'i
 en   romai
 en   romas
@@ -22985,6 +22994,7 @@ en   veslelxe
 en   vetai
 en   veti'u
 en   ve'u
+en   ve'urzvocma
 en   vi
 en   vi'a
 en   vi'amde
