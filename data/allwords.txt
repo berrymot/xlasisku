@@ -8908,7 +8908,6 @@ en   burjuia
 en   burna
 en   burnanba
 en   burnygau
-en   burseldamri
 en   burzilska
 en   bu'u
 en   bu'udru
@@ -10592,7 +10591,6 @@ en   datpavycinglepre
 en   datpre
 en   datraujvevamdi'i
 en   datro
-en   datru
 en   datrytcika
 en   datxlaborfripu'a
 en   datxlagei
@@ -12884,7 +12882,6 @@ en   iju
 en   ike'as
 en   ikfiio
 en   iklki
-en   .iklkitu
 en   iklkitu
 en   iksodida
 en   iku'i
@@ -13460,6 +13457,7 @@ en   jgidu'esku
 en   jgina
 en   jgira
 en   jgita
+en   jgitrcamise
 en   jgitrgitara
 en   jgitrnikelarpa
 en   jgitrpipa
@@ -13961,7 +13959,6 @@ en   kadyto'a
 en   ka'e
 en   ka'ei
 en   ka'ei'a
-en   ka'ei'u
 en   ka'elre
 en   ka'enai
 en   ka'ezma
@@ -14104,7 +14101,6 @@ en   kampu'a
 en   kamra'a
 en   kamre
 en   kamrngogolo
-en   kamro
 en   kamsutra
 en   kamtatpi
 en   kamtende
@@ -14683,6 +14679,7 @@ en   korcu
 en   korfaipletomino
 en   korgretro
 en   korka
+en   korliiande
 en   korlma
 en   korlu'a
 en   korpora
@@ -14996,7 +14993,6 @@ en   labyxu'e
 en   labzilska
 en   lacni
 en   lacnycre
-en   lacpa
 en   lacpu
 en   lacri
 en   lactergu'e
@@ -15275,7 +15271,6 @@ en   li
 en   li'a
 en   li'ai
 en   li'anai
-en   li'anmi
 en   li'ansi
 en   li'ante
 en   li'armi
@@ -15397,7 +15392,6 @@ en   lo'a
 en   lo'ai
 en   lo'au
 en   lo'e
-en   lo'ei
 en   logji
 en   loglan
 en   loglo
@@ -15541,7 +15535,6 @@ en   mabrtenreci
 en   mabru
 en   macnu
 en   madagasikar
-en   madagasikara
 en   madgasikara
 en   madinas
 en   madni'i
@@ -15769,7 +15762,6 @@ en   masti
 en   masxiia
 en   masyce'u
 en   masyTCUsyts
-en   matce
 en   matce'u
 en   matci
 en   matkarozipcpi
@@ -16866,6 +16858,7 @@ en   nencausno
 en   nengatu
 en   nenri
 en   nenrxamilto
+en   nensanta
 en   nenymivyslerango
 en   nenzengau
 en   ne'o
@@ -20435,6 +20428,7 @@ en   slimuko
 en   slinkuui
 en   sliri
 en   sliryslami
+en   slisarxe
 en   slogane
 en   slosi'i
 en   sloska
@@ -22437,6 +22431,7 @@ en   tsaprcinamomu
 en   tsaprilici
 en   tsaprkanela
 en   tsaprkubeba
+en   tsaprkurminu
 en   tsaprlauru
 en   tsaprnigru
 en   tsaprpipali

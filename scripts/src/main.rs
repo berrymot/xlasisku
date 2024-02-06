@@ -172,7 +172,20 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
                             entry = Entry::new();
                             entry.lang = lang.to_string();
                             if !attr(&attributes, "type").starts_with('o')
-                                && attr(&attributes, "word") != ".i"
+                                && ![
+                                    ".i",
+                                    ".iklkitu",
+                                    "madagasikara",
+                                    "kamro",
+                                    "lacpa",
+                                    "matce",
+                                    "burseldamri",
+                                    "ka'ei'u",
+                                    "lo'ei",
+                                    "datru",
+                                    "li'anmi",
+                                ]
+                                .contains(&attr(&attributes, "word").as_str())
                             {
                                 entry.word = attr(&attributes, "word");
                                 entry.pos = attr(&attributes, "type");
@@ -257,7 +270,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     // data.txt
     let mut data = "---".to_string();
     for word in words {
-        data = format!("{data}\n{}\n---", word.to_datastring());
+        data =  data + "\n" + word.to_datastring().as_str() + "\n---";
     }
     fs::write("../data/data.txt", &data)?;
     // chars.txt
