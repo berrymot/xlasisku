@@ -9204,7 +9204,6 @@ en   cei'i
 en   ceikri
 en   cein
 en   ceinca'e
-en   cei'o
 en   ceirka'i
 en   ceirnalju'o
 en   ceirselcpe
@@ -11276,6 +11275,7 @@ en   elei'anor
 en   elfe
 en   eljbi
 en   elkoptero
+en   elniniio
 en   elois
 en   elotes
 en   elpensi
@@ -11841,6 +11841,7 @@ en   flecu
 en   flefa'u
 en   flese
 en   fletola
+en   fletroca'a
 en   fletrogusmi'i
 en   fletu'u
 en   fliba
