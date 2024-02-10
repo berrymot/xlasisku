@@ -244,10 +244,12 @@ button {
     color: white;
 }
 .opt .checked:has(+ .checked) {
-    border-radius: 16px 0 0 16px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
 }
 .opt .checked + .checked {
-    border-radius: 0 16px 16px 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
 }
 .opt :disabled {
     color: rgba(var(--fg), var(--op-c));

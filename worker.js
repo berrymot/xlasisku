@@ -43,7 +43,7 @@ function search(query) {
         var rgx;
         try {
             rgx = new RegExp(
-                config["regex.tight"] ? "^" + query + "$" : query,
+                config["regex.tight"] ? "^(" + query + ")$" : query,
                 config["regex.insensitive"] ? "i" : ""
             );
         } catch (e) {
