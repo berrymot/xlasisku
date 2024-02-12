@@ -234,10 +234,10 @@ button {
     padding: 4px 8px;
     display: inline-block;
     border-radius: 16px;
-    transition: background 0.2s, border-radius 0.2s;
+    transition: background 0.2s, border-radius 0.2s, padding 0.2s, margin 0.2s;
 }
 .opt button:not(:last-child) {
-    margin-right: -8px;
+    margin-right: -4px;
 }
 .opt .checked {
     background: rgb(var(--checked));
@@ -246,10 +246,13 @@ button {
 .opt .checked:has(+ .checked) {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
+    padding-right: 6px;
+    margin-right: 0;
 }
 .opt .checked + .checked {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
+    padding-left: 6px;
 }
 .opt :disabled {
     color: rgba(var(--fg), var(--op-c));
