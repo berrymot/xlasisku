@@ -22,7 +22,7 @@ function getConflictRegex(g) {
         :
             i == conflict.length - 1 ? g.slice(0, i) + "[aeiou]" : null;
     }
-    conflict = "(" + conflict.join("|").replace(/\|+/, "|") + ")";
+    conflict = conflict.join("|").replace(/\|+/, "|");
     return conflict;
 }
 window.addEventListener("scroll", function(e) {
