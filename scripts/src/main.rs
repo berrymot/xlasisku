@@ -1,4 +1,5 @@
 use latkerlo_jvotci::*;
+use notoize::notoize;
 use regex::Regex;
 use reqwest::blocking;
 use serde::{Deserialize, Serialize};
@@ -257,31 +258,42 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     let mut unique = HashSet::new();
     naljvo.retain(|v| unique.insert(v.clone()));
     // write
-    println!("writing to places");
     // allwords.txt
+    println!("allwords.txt");
     let mut all = String::new();
     for word in &words {
         all = all + &word.lang + "   " + &word.word + "\n";
     }
     fs::write("../data/allwords.txt", all)?;
     // jbo.js
+    println!("jbo.js");
     let json_str = serde_json::to_string(&words)?;
     fs::write("../data/jbo.js", "const jbo = ".to_owned() + &json_str)?;
     // data.txt
+    println!("data.txt");
     let mut data = "---".to_string();
     for word in words {
-        data =  data + "\n" + word.to_datastring().as_str() + "\n---";
+        data = data + "\n" + word.to_datastring().as_str() + "\n---";
     }
     fs::write("../data/data.txt", &data)?;
-    // chars.txt
+    // chars.txt, fonts
+    println!("chars.txt");
     let chars: String = {
         let mut v = data.chars().collect::<Vec<char>>();
         v.sort();
         v.dedup();
         v.into_iter().collect()
     };
-    fs::write("../data/chars.txt", chars)?;
+    fs::write("../data/chars.txt", &chars)?;
+    println!("fonts/");
+    let fonts = notoize(chars.as_str()).files();
+    fs::remove_dir_all(".notoize").unwrap();
+    for font in fonts {
+        fs::write(format!("../fonts/{}", font.filename), font.bytes)?;
+    }
+    let _ = fs::remove_file("../fonts/NotoFangsongKSSRotated.otf");
     // naljvo.txt
+    println!("naljvo.txt");
     let mut naljvo_string = String::new();
     for v in &naljvo {
         naljvo_string = naljvo_string + "\n" + &v;
