@@ -9167,6 +9167,7 @@ en   caurgau
 en   caurma
 en   cavgauri'i
 en   cavlu'i
+en   cavlumtci
 en   cavricfoi
 en   cavrictu'a
 en   cavyfle
@@ -11319,6 +11320,7 @@ en   ente'atro
 en   ente'ori
 en   entropi
 en   entuzi
+en   enva
 en   envaxire
 en   enzasti
 en   enzebra
@@ -11838,6 +11840,7 @@ en   flazautrugri
 en   fleca'e
 en   flecarvi
 en   flecu
+en   flefamtu'u
 en   flefa'u
 en   flese
 en   fletola
@@ -14211,6 +14214,7 @@ en   karpo'ijbe
 en   karsna
 en   kartamo
 en   kartapuno
+en   kartecu
 en   kartilago
 en   kartuli
 en   kartuna
@@ -16855,6 +16859,7 @@ en   nelrai
 en   nelti'i
 en   nemdu'a
 en   nemtoda
+en   nenbejbei
 en   nencausno
 en   nengatu
 en   nenri
@@ -16902,6 +16907,7 @@ en   nibysucyjvo
 en   nibyti'i
 en   nibzilvlina
 en   nicfa
+en   niclu
 en   nicpoi
 en   nicte
 en   nicygau
@@ -16968,7 +16974,6 @@ en   nindode
 en   ninfesyborpli
 en   ninga'igau
 en   ningau
-en   ninja
 en   ninke'u
 en   ninmu
 en   ninmu'o
@@ -18022,6 +18027,7 @@ en   plipe
 en   plipovypo'e
 en   pliri'a
 en   plise
+en   plisesumu
 en   plisyjisra
 en   plisymudri
 en   plisysmigrute
@@ -21557,7 +21563,6 @@ en   tcerimola
 en   tcernobi
 en   tceromuxa
 en   tcesa
-en   tcese
 en   tcesk
 en   tcesnosli
 en   tceta
@@ -24518,6 +24523,7 @@ ja   muvycpu
 ja   nanbi'e
 ja   nauspe
 ja   nimspe
+ja   ninja
 ja   nunka'okujbriju
 ja   pajnjalge
 ja   pajnyjalge
