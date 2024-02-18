@@ -47,6 +47,41 @@
     font-weight: bold;
     font-style: italic;
 }
+@font-face {
+    font-family: "Noto Kufi Arabic";
+    src: url("fonts/NotoKufiArabic-Regular.otf");
+    font-display: swap;
+}
+@font-face {
+    font-family: "Noto Rashi Hebrew";
+    src: url("fonts/NotoRashiHebrew-Regular.otf");
+    font-display: swap;
+}
+@font-face {
+    font-family: "Noto Sans Bengali";
+    src: url("fonts/NotoSansBengali-Regular.otf");
+    font-display: swap;
+}
+@font-face {
+    font-family: "Noto Sans CJK SC";
+    src: url("fonts/NotoSansCJKsc-Regular.otf");
+    font-display: swap;
+}
+@font-face {
+    font-family: "Noto Saans Devanagari";
+    src: url("fonts/NotoSansDevanagari-Regular.otf");
+    font-display: swap;
+}
+@font-face {
+    font-family: "Noto Sans Math";
+    src: url("fonts/NotoSansMath-Regular.otf");
+    font-display: swap;
+}
+@font-face {
+    font-family: "Noto Sans Myanmar";
+    src: url("fonts/NotoSansMyanmar-Regular.otf");
+    font-display: swap;
+}
 /* main */
 *, input, button {
     box-sizing: border-box;
@@ -68,7 +103,7 @@
     --link: 0, 105, 204;
     --err: 209, 41, 41;
     --focus: 255, 174, 12;
-    --sans: "Noto Sans", "Noto Sans Math", ui-sans-serif, sans-serif;
+    --sans: "Noto Sans", "Noto Kufi Arabic", "Noto Rashi Hebrew", "Noto Sans Bengali", "Noto Sans CJK SC", "Noto Saans Devanagari", "Noto Sans Math", "Noto Saans Myanmar", ui-sans-serif, sans-serif;
     --mono: "Iosevka", ui-monospace, monospace;
 }
 body.regex {

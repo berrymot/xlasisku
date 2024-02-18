@@ -19895,6 +19895,7 @@ en   selprejumydu'a'y'utka
 en   selpu'a
 en   selpu'o
 en   selratni
+en   selre'e
 en   selrespa
 en   selre'u
 en   selri'a
@@ -23438,6 +23439,7 @@ en   xancidykarli
 en   xancidykarlydi'o
 en   xancrcereme
 en   xandegji
+en   xandegji'o
 en   xandegycalku
 en   xandi'i
 en   xangle
@@ -24755,6 +24757,7 @@ jbo   kurbita
 jbo   lacyse'i
 jbo   lamja'e
 jbo   lamsi'u
+jbo   latkemsorprekarce
 jbo   lau'i
 jbo   lazyki'i
 jbo   lebyse'i

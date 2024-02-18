@@ -67,6 +67,7 @@ impl Entry {
                 .unwrap()
                 .replace_all(&self.author.to_lowercase(), "");
         s = s + " " + self.score.to_string().as_str();
+        s = s + " (" + &self.lang + ")";
         s = s + "\n" + &self.definition;
         if !self.notes.is_empty() {
             s = s + "\n-n\n" + &self.notes;
@@ -255,7 +256,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     // remove duplicates
     let mut unique = HashSet::new();
     words.retain(|word| unique.insert(word.word.clone()));
-    let mut unique = HashSet::new();
+    unique = HashSet::new();
     naljvo.retain(|v| unique.insert(v.clone()));
     // write
     // allwords.txt
@@ -286,12 +287,12 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     };
     fs::write("../data/chars.txt", &chars)?;
     println!("fonts/");
-    let fonts = notoize(chars.as_str()).files();
+    let mut fonts = notoize(chars.as_str()).files();
+    fonts = fonts.iter().filter(|f| !["Noto Fangsong KSS Rotated", "Noto Sans", "Noto Color Emoji"].contains(&f.fontname.as_str())).cloned().collect();
     fs::remove_dir_all(".notoize").unwrap();
     for font in fonts {
         fs::write(format!("../fonts/{}", font.filename), font.bytes)?;
     }
-    let _ = fs::remove_file("../fonts/NotoFangsongKSSRotated.otf");
     // naljvo.txt
     println!("naljvo.txt");
     let mut naljvo_string = String::new();
@@ -301,7 +302,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     fs::write("../data/naljvo.txt", naljvo_string)?;
     // .i mulno .ui
     let duration = start.elapsed();
-    println!("done :3 took {:?} s", duration.as_secs_f64());
+    println!("done :3 took {duration:?}");
     Ok(())
 }
 

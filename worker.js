@@ -75,7 +75,7 @@ function search(query) {
                 results.push([entry, 4]);
             }
             const rgx = query.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-            const regex = `\\b${rgx}e?s?\\b`; // doi la bavyse'i ko ba'e *na* galfi ti. you tried that like 4,0000 times
+            const regex = `(\\b|\\W)${rgx}e?s?(\\b|\\W)`; // doi la bavyse'i ko ba'e *na* galfi ti. you tried that like 4,0000 times
             if (new RegExp(regex, "iu").test(entry.definition)) {
                 results.push([entry, 3 + bonus]);
             }
