@@ -54,23 +54,27 @@ impl Entry {
             .to_string();
         s = Regex::new(r"_+").unwrap().replace_all(&s, "_").to_string();
         // we get rid of obsolete words and non-experimental words have a vote boost anyway
-        s = s + " " + self.pos.split(' ').nth(1).unwrap_or(&self.pos);
+        s = format!("{s} {}", self.pos.split(' ').nth(1).unwrap_or(&self.pos));
         if !self.selmaho.is_empty() {
-            s = s + " " + &self.selmaho;
+            s = format!("{s} {}", self.selmaho);
         }
         if !self.rafsi.is_empty() {
-            s = s + " [-" + &self.rafsi.join("-") + "-]";
+            s = format!("{s} [-{}-]", self.rafsi.join("-"));
         }
-        s = s
-            + " "
-            + &Regex::new(r"[^a-z0-9]")
+        s = format!(
+            "{s} {}",
+            Regex::new(r"[^a-z0-9]")
                 .unwrap()
-                .replace_all(&self.author.to_lowercase(), "");
-        s = s + " " + self.score.to_string().as_str();
-        s = s + " (" + &self.lang + ")";
-        s = s + "\n" + &self.definition;
+                .replace_all(&self.author.to_lowercase(), "")
+        );
+        s = format!(
+            "{s} {} ({})\n{}",
+            self.score.to_string().as_str(),
+            self.lang,
+            self.definition
+        );
         if !self.notes.is_empty() {
-            s = s + "\n-n\n" + &self.notes;
+            s = format!("{s}\n-n\n{}", self.notes);
         }
         s
     }
