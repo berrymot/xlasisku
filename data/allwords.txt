@@ -25030,7 +25030,6 @@ ru   arinas
 ru   arTUR
 ru   bagycelsoi
 ru   boRIS
-ru   campu
 ru   daNIL
 ru   deNIS
 ru   dmitris

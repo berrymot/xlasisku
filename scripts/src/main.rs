@@ -277,7 +277,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         data = data + "\n" + word.to_datastring().as_str() + "\n---";
     }
     fs::write("../data/data.txt", &data)?;
-    // chars.txt, fonts
+    // chars.txt, fonts, noto.css
     println!("chars.txt");
     let chars: String = {
         let mut v = data.chars().collect::<Vec<char>>();
@@ -292,10 +292,22 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         !["Noto Fangsong KSS Rotated", "Noto Sans", "Noto Color Emoji"]
             .contains(&f.fontname.as_str())
     });
-    fs::remove_dir_all(".notoize").unwrap();
-    for font in fonts {
+    fs::remove_dir_all(".notoize")?;
+    println!("noto.css");
+    let mut css = String::new();
+    for font in fonts.clone() {
         fs::write(format!("../fonts/{}", font.filename), font.bytes)?;
+        css = format!("{css}@font-face {{\n    font-family: \"{}\";\n    src: url(\"fonts/{}\");\n    font-display: swap;\n}}\n", font.fontname, font.filename);
     }
+    css = format!(
+        "{css}:root {{\n    --sans: \"Noto Sans\", {}, ui-sans-serif, sans-serif;\n}}",
+        fonts
+            .iter()
+            .map(|f| format!("\"{}\"", f.fontname))
+            .collect::<Vec<_>>()
+            .join(", ")
+    );
+    fs::write("../noto.css", css)?;
     // naljvo.txt
     println!("naljvo.txt");
     let mut naljvo_string = String::new();
