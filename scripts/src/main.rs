@@ -288,7 +288,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     fs::write("../data/chars.txt", &chars)?;
     println!("fonts/");
     let mut fonts = notoize(chars.as_str()).files();
-    fonts = fonts.iter().filter(|f| !["Noto Fangsong KSS Rotated", "Noto Sans", "Noto Color Emoji"].contains(&f.fontname.as_str())).cloned().collect();
+    fonts.retain(|f| !["Noto Fangsong KSS Rotated", "Noto Sans", "Noto Color Emoji"].contains(&f.fontname.as_str()));
     fs::remove_dir_all(".notoize").unwrap();
     for font in fonts {
         fs::write(format!("../fonts/{}", font.filename), font.bytes)?;
