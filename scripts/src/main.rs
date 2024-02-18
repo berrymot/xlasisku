@@ -1,5 +1,5 @@
 use latkerlo_jvotci::*;
-use notoize::notoize;
+use notoize::NotoizeClient;
 use regex::Regex;
 use reqwest::blocking;
 use serde::{Deserialize, Serialize};
@@ -291,12 +291,13 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     };
     fs::write("../data/chars.txt", &chars)?;
     println!("fonts/");
-    let mut fonts = notoize(chars.as_str()).files();
+    let client = NotoizeClient::new();
+    let mut fonts = client.clone().notoize(chars.as_str()).files();
     fonts.retain(|f| {
         !["Noto Fangsong KSS Rotated", "Noto Sans", "Noto Color Emoji"]
             .contains(&f.fontname.as_str())
     });
-    fs::remove_dir_all(".notoize")?;
+    drop(client);
     println!("noto.css");
     let mut css = String::new();
     for font in fonts.clone() {

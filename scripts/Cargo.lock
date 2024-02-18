@@ -109,12 +109,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "06ea2b9bc92be3c2baa9334a323ebca2d6f074ff852cd1d7b11064035cd3868f"
 
 [[package]]
-name = "dotenv"
-version = "0.15.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "77c90badedccf4105eca100756a0b1289e191f6fcbdadd3cee1d2f614f97da8f"
-
-[[package]]
 name = "either"
 version = "1.10.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -483,11 +477,10 @@ dependencies = [
 
 [[package]]
 name = "notoize"
-version = "1.5.0"
+version = "2.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "263b21ab256d6f10e9daa0337b7209d5d72e7760e1e96e02742aae330e170957"
+checksum = "9c19c4c1557c1f8efa923ce786632e14d5d26f5799d6678f6cbf48c8489f2b59"
 dependencies = [
- "dotenv",
  "gh-file-curler",
  "itertools",
  "serde",
