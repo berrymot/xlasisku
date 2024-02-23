@@ -17996,6 +17996,7 @@ en   plavzabu
 en   plebo'o
 en   pledakli
 en   pledi'i
+en   plejaita'o
 en   pleji
 en   plekarda
 en   plekarni
@@ -18928,7 +18929,6 @@ en   ronru'u
 en   ronru'u bu
 en   ronsa
 en   ronte
-en   ronti
 en   rontu'a
 en   rontysmimabru
 en   ronxasli
