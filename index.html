@@ -34,6 +34,9 @@
                     <button id="jvo-rn" disabled>CLL</button><button id="jvo-y" disabled>allow -'y-</button>
                 </span>
                 <span class="nobr opt">
+                    <button id="jvo-cme">cmevla</button>
+                </span>
+                <span class="nobr opt">
                     <button id="jvo-mz" disabled>-mz-</button>
                 </span>
                 <button class="clear" id="jvo-x" disabled>reset</button>
@@ -103,13 +106,15 @@
                     vars += "&q=" + encodeURIComponent(q);
                 if (config["rhyme"])
                     vars += "&rhyme=" + (config["rhyme.ignorey"] ? "y" : "");
-                if (config["regex"]) {
+                else if (config["regex"]) {
                     var options = [];
                     if (config["regex.insensitive"]) options.push("i");
                     if (config["regex.tight"]) options.push("tight");
                     vars += "&regex=" + options.join(",");
+                } else {
+                    vars += jvoptionsUrl();
                 }
-                vars = vars.replace(/\?&/g, "?").replace(/=&/g, "&").replace(/[=?]$/, "");
+                vars = vars.replace(/\?&/g, "?").replace(/=&/g, "&").replace(/[&=?]$/, "");
                 window.history.pushState(null, null, window.location.href.split("?")[0] + vars);
             }
             function hardRedirect(str) {
@@ -130,7 +135,8 @@
                         regexMode(options.includes("i"), options.includes("tight"));
                     }
                     if (!params.has("regex") && !params.has("rhyme")) {
-                        searchMode();
+                        var options = (params.get("lujvo") || "").split(",");
+                        searchMode(options.includes("cme"));
                     }
                     if (qpar) {
                         id("search").value = qpar;

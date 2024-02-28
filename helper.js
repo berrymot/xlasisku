@@ -9,12 +9,19 @@ function createHTMLElement(tag, props, children) {
     }
     return element;
 }
+function jvoptionsUrl() {
+    var vars = "";
+    var options = [];
+    if (config["lujvo.cmevla"]) options.push("cme");
+    if (options.length) vars += "&lujvo=" + options.join(",");
+    return vars;
+}
 function convertJSONToHTMLElement(json) {
     const r = RAFSI.get(json.word);
     const entry = createHTMLElement("div", {"className": "entry"}, [
         createHTMLElement("p", null, [
             createHTMLElement("a", {
-                "href": "?q=" + json.word,
+                "href": "?q=" + json.word + jvoptionsUrl(),
             }, [
                 createHTMLElement("b", null, [json.word])
             ]),

@@ -63,27 +63,27 @@ id("search").addEventListener("input", function() {
                 // lujvo things
                 try {
                     if (/\s/.test(q)) {
-                        const lujvo = getLujvo(h(q))[0];
+                        const lujvo = getLujvo(h(q), config["lujvo.cmevla"])[0];
                         id("info").append(createHTMLElement("p", null, [
                             "→\u{a0}",
-                            createHTMLElement("a", {"href": "?q=" + encodeURIComponent(lujvo)}, [createHTMLElement("i", null, [lujvo])])
+                            createHTMLElement("a", {"href": "?q=" + encodeURIComponent(lujvo) + jvoptionsUrl()}, [createHTMLElement("i", null, [lujvo])])
                         ]));
                     } else {
                         const veljvo = getVeljvo(h(q)).join(" ");
                         id("info").append(createHTMLElement("p", null, [
                             "↑\u{a0}",
-                            createHTMLElement("a", {"href": "?q=" + encodeURIComponent(veljvo)}, [createHTMLElement("i", null, [veljvo])])
+                            createHTMLElement("a", {"href": "?q=" + encodeURIComponent(veljvo) + jvoptionsUrl()}, [createHTMLElement("i", null, [veljvo])])
                         ]));
-                        if (h(q) != getLujvo(veljvo)[0]) {
+                        if (h(q) != getLujvo(veljvo, config["lujvo.cmevla"])[0]) {
                             id("info").append(createHTMLElement("p", null, [
                                 "best:\u{a0}",
                                 createHTMLElement("a", {
                                     "id": "best",
-                                    "href": "?q=" + encodeURIComponent(getLujvo(veljvo)[0])
+                                    "href": "?q=" + encodeURIComponent(getLujvo(veljvo, config["lujvo.cmevla"])[0]) + jvoptionsUrl()
                                 }, [])
                             ]));
                             const mabla = jvokaha(h(q));
-                            const best = jvokaha(getLujvo(veljvo)[0]);
+                            const best = jvokaha(getLujvo(veljvo, config["lujvo.cmevla"])[0]);
                             const hyphens = ["r", "n", "y", "'y", "y'", "'y'"];
                             for (var m = 0, b = 0; m < mabla.length; m++, b++) {
                                 if (hyphens.includes(mabla[m])) {
@@ -126,12 +126,30 @@ id("search").addEventListener("input", function() {
     }, 100);
 });
 // modes
-id("sm").addEventListener("click", searchMode);
-id("rm").addEventListener("click", function() {rhymeMode(false);});
-id("rhyme-y").addEventListener("click", function() {rhymeMode(true);});
-id("xm").addEventListener("click", function() {regexMode(false, false);});
-id("regex-i").addEventListener("click", function() {regexMode(true, false);});
-id("regex-tight").addEventListener("click", function() {regexMode(false, true);});
+id("sm").addEventListener("click", function() {
+    searchMode(false);
+});
+id("jvo-cme").addEventListener("click", function() {
+    searchMode(true);
+});
+id("jvo-x").addEventListener("click", function() {
+    searchMode(config["lujvo.cmevla"]);
+});
+id("rm").addEventListener("click", function() {
+    rhymeMode(false);
+});
+id("rhyme-y").addEventListener("click", function() {
+    rhymeMode(true);
+});
+id("xm").addEventListener("click", function() {
+    regexMode(false, false);
+});
+id("regex-i").addEventListener("click", function() {
+    regexMode(true, false);
+});
+id("regex-tight").addEventListener("click", function() {
+    regexMode(false, true);
+});
 function removeClasses() {
     document.body.classList.remove("rhyme");
     document.body.classList.remove("regex");
@@ -154,7 +172,7 @@ function toggleClassById(_id, className) {
 function dispatchSearchInputEvent() {
     id("search").dispatchEvent(new Event("input", {"bubbles": true}));
 }
-function searchMode() {
+function searchMode(togglecme) {
     clearTimeout(timer);
     removeClasses();
     removeClassById("rm", "checked");
@@ -162,6 +180,11 @@ function searchMode() {
     addClassById("sm", "checked");
     config["rhyme"] = false;
     config["regex"] = false;
+    if (togglecme) {
+        toggleClassById("jvo-cme", "checked");
+        config["lujvo.cmevla"] = !config["lujvo.cmevla"];
+    }
+    id("jvo-x").disabled = !(config["lujvo.cmevla"]); // will expand later
     dispatchSearchInputEvent();
 }
 function regexMode(togglei, toggletight) {
