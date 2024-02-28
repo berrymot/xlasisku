@@ -316,10 +316,14 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     // naljvo.txt
     println!("naljvo.txt");
     let mut naljvo_string = String::new();
+    let mut naljvo_list = "const naljvo = [".to_string();
     for v in &naljvo {
-        naljvo_string = naljvo_string + "\n" + &v;
+        naljvo_string = naljvo_string + v + "\n";
+        naljvo_list = format!("{naljvo_list}\"{v}\",");
     }
-    fs::write("../data/naljvo.txt", naljvo_string)?;
+    naljvo_list += "]";
+    fs::write("../data/naljvo.txt", &naljvo_string)?;
+    fs::write("../data/naljvo.js", naljvo_list)?;
     // .i mulno .ui
     let duration = start.elapsed();
     println!("done :3 took {duration:?}");

@@ -22518,6 +22518,7 @@ en   tulnu
 en   tulpana
 en   tumcakrespa
 en   tumcartu
+en   tumdesku
 en   tumfakli'u
 en   tumgapcripu
 en   tumgre
@@ -24708,6 +24709,7 @@ jbo   je'oi
 jbo   jikci'e
 jbo   jiksi'u
 jbo   jisrycfu
+jbo   jmibi'o
 jbo   jmivyckape
 jbo   jonma'o
 jbo   jufsle
