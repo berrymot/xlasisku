@@ -281,7 +281,7 @@ hr {
 :not(hr, br, #fakebox *):empty {
     display: none;
 }
-h1, h1 + p {
+h1, h1 + p.sub {
     margin: 0;
     text-align: center;
 }
