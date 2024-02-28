@@ -43,7 +43,7 @@
             fetch("data/naljvo.txt").then((res) => res.text()).then((data) => {
                 naljvo = data.split("\r\n").slice(1).map((x) => "<li>" + x + "</li>").join("");
                 document.getElementById("naljvo").innerHTML = naljvo;
-            });
+            }).catch((e) => console.error(e));
         </script>
     </body>
 </html>
