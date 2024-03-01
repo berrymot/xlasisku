@@ -25103,7 +25103,6 @@ sv   selkeima'e
 sv   velda'iglu
 test   cmuru
 test   testest
-test   vlali'ifa'o
 zh   gonJAUS
 zh   kenton
 zh   tipyboi
