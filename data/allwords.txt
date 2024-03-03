@@ -23128,6 +23128,7 @@ en   vlalerpoi
 en   vlalerpoici'e
 en   vlale'u
 en   vlali'i
+en   vlali'ifa'o
 en   vlalikei
 en   vlamei
 en   vlamojyzilcmi
@@ -25103,7 +25104,6 @@ sv   selkeima'e
 sv   velda'iglu
 test   cmuru
 test   testest
-test   vlali'ifa'o
 zh   gonJAUS
 zh   kenton
 zh   tipyboi
