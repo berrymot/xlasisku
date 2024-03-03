@@ -68,13 +68,13 @@ impl Entry {
                 .replace_all(&self.author.to_lowercase(), "")
         );
         s = format!(
-            "{s} {} ({})\n{}",
+            "{s} {} ({})\r\n{}",
             self.score.to_string().as_str(),
             self.lang,
             self.definition
         );
         if !self.notes.is_empty() {
-            s = format!("{s}\n-n\n{}", self.notes);
+            s = format!("{s}\r\n-n\r\n{}", self.notes);
         }
         s
     }
@@ -267,7 +267,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     println!("allwords.txt");
     let mut all = String::new();
     for word in &words {
-        all = all + &word.lang + "   " + &word.word + "\n";
+        all = all + &word.lang + "   " + &word.word + "\r\n";
     }
     fs::write("../data/allwords.txt", all)?;
     // jbo.js
@@ -278,7 +278,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     println!("data.txt");
     let mut data = "---".to_string();
     for word in words {
-        data = data + "\n" + word.to_datastring().as_str() + "\n---";
+        data = data + "\r\n" + word.to_datastring().as_str() + "\r\n---";
     }
     fs::write("../data/data.txt", &data)?;
     // chars.txt, fonts, noto.css
@@ -302,10 +302,10 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     let mut css = String::new();
     for font in fonts.clone() {
         fs::write(format!("../fonts/{}", font.filename), font.bytes)?;
-        css = format!("{css}@font-face {{\n    font-family: \"{}\";\n    src: url(\"fonts/{}\");\n    font-display: swap;\n}}\n", font.fontname, font.filename);
+        css = format!("{css}@font-face {{\r\n    font-family: \"{}\";\r\n    src: url(\"fonts/{}\");\r\n    font-display: swap;\r\n}}\r\n", font.fontname, font.filename);
     }
     css = format!(
-        "{css}:root {{\n    --sans: \"Noto Sans\", {}, ui-sans-serif, sans-serif;\n}}",
+        "{css}:root {{\r\n    --sans: \"Noto Sans\", {}, ui-sans-serif, sans-serif;\r\n}}",
         fonts
             .iter()
             .map(|f| format!("\"{}\"", f.fontname))
@@ -318,7 +318,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     let mut naljvo_string = String::new();
     let mut naljvo_list = "const naljvo = [".to_string();
     for v in &naljvo {
-        naljvo_string = naljvo_string + v + "\n";
+        naljvo_string = naljvo_string + v + "\r\n";
         naljvo_list = format!("{naljvo_list}\"{v}\",");
     }
     naljvo_list += "]";
