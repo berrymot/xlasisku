@@ -87,11 +87,13 @@ id("search").addEventListener("input", function() {
                             const hyphens = ["r", "n", "y", "'y", "y'", "'y'"];
                             for (var m = 0, b = 0; m < mabla.length; m++, b++) {
                                 if (hyphens.includes(mabla[m])) {
-                                    m++;
-                                }
-                                if (hyphens.includes(best[b])) {
-                                    id("best").append(createHTMLElement("i", null, [best[b]]));
-                                    b++;
+                                    if (!hyphens.includes(best[b])) {
+                                        m++;
+                                    } else if (hyphens.includes(best[b]) && mabla[m] == best[b]) {
+                                        m++; b++;
+                                    }
+                                } else if (hyphens.includes(best[b])) {
+                                    mabla.splice(m, 0, "");
                                 }
                                 if (mabla[m] != best[b]) {
                                     id("best").append(createHTMLElement("i", {"className": "err"}, [best[b]]));
