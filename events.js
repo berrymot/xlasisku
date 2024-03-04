@@ -91,6 +91,7 @@ id("search").addEventListener("input", function() {
                                         m++;
                                     } else if (hyphens.includes(best[b]) && mabla[m] == best[b]) {
                                         m++; b++;
+                                        id("best").append(createHTMLElement("i", null, [best[b]]));
                                     }
                                 } else if (hyphens.includes(best[b])) {
                                     mabla.splice(m, 0, "");
