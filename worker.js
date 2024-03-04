@@ -1,4 +1,13 @@
-var config, rafsilist, jbo;
+importScripts("data/jbo.js");
+importScripts(
+    "latkerlo-jvotci/js/docs/data.js",
+    "latkerlo-jvotci/js/docs/rafsi.js",
+    "latkerlo-jvotci/js/docs/tarmi.js",
+    "latkerlo-jvotci/js/docs/tools.js",
+    "latkerlo-jvotci/js/docs/jvozba.js",
+    "latkerlo-jvotci/js/docs/katna.js"
+);
+var config;
 function h(t) {
     return t.replace(/[h‘’]/igu, "'");
 }
@@ -54,6 +63,14 @@ function search(query) {
                 results.push([entry, 1]);
             }
         }
+    } else if (config["katna"]) {
+        for (const entry of jbo) {
+            try {
+                if (query.split(" ").every(v => getVeljvo(h(entry.word)).includes(v))) {
+                    results.push([entry, 1]);
+                }
+            } catch {}
+        }
     } else if (/^[A-GI-PR-VX-Z][A-GhI-PR-VX-Zabc0-9*]*$/.test(original)) {
         // TODO: make this work (issue #1)
     } else {
@@ -71,7 +88,7 @@ function search(query) {
         }
         for (const entry of jbo) {
             const bonus = (entry.score >= 1000 ? 0.375 : 0) + (xusegismu_zo(entry.word) ? 0.125 : 0);
-            if (rafsilist.get(entry.word) && rafsilist.get(entry.word).includes(h(query))) {
+            if (RAFSI.get(entry.word) && RAFSI.get(entry.word).includes(h(query))) {
                 results.push([entry, 4]);
             }
             const rgx = query.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
@@ -105,8 +122,6 @@ function removeDuplicates(list) {
 onmessage = function(e) {
     const query = e.data.query;
     config = e.data.config;
-    rafsilist = e.data.rafsilist;
-    jbo = e.data.jbo;
     const res = search(query);
     postMessage(res);
 };

@@ -23,7 +23,7 @@
         <p class="sub"><a href="https://github.com/berrymot/xlasisku" target="_blank">github repo</a></p>
         <p>
             <span class="nobr opt">
-                <button id="sm" disabled>normal</button><button id="xm" disabled>regex</button><button id="rm" disabled>rhyme</button>
+                <button id="sm" disabled>normal</button><button id="xm" disabled>regex</button><button id="rm" disabled>rhyme</button><button id="km" disabled>pieces</button>
             </span>
             <span class="nobr opt">
                 <button id="theme">theme</button>
@@ -81,11 +81,10 @@
             setTimeout(() => {document.body.style.transition = "background 0.2s"}, 0);
         </script>
         <script src="helper.js"></script>
-        <script src="data/jbo.js"></script>
         <script src="events.js"></script>
         <script>
             // ready for stuff to happen
-            worker = new Worker("worker.js", {"type": "module"});
+            worker = new Worker("worker.js");
             worker.addEventListener("message", function(e) {
                 results = e.data;
                 id("results").innerHTML = "";
@@ -97,6 +96,7 @@
             id("sm").removeAttribute("disabled");
             id("rm").removeAttribute("disabled");
             id("xm").removeAttribute("disabled");
+            id("km").removeAttribute("disabled");
             id("search").removeAttribute("disabled");
             id("search").setAttribute("placeholder", "search");
             // url things
@@ -111,6 +111,8 @@
                     if (config["regex.insensitive"]) options.push("i");
                     if (config["regex.tight"]) options.push("tight");
                     vars += "&regex=" + options.join(",");
+                } else if (config["katna"]) {
+                    vars += "&katna";
                 } else {
                     vars += jvoptionsUrl();
                 }
@@ -129,12 +131,12 @@
                     const qpar = params.get("q");
                     if (params.has("rhyme")) {
                         rhymeMode(params.get("rhyme") == "y");
-                    }
-                    if (params.has("regex")) {
+                    } else if (params.has("regex")) {
                         var options = params.get("regex").split(",");
                         regexMode(options.includes("i"), options.includes("tight"));
-                    }
-                    if (!params.has("regex") && !params.has("rhyme")) {
+                    } else if (params.has("katna")) {
+                        katnaMode();
+                    } else {
                         var options = (params.get("lujvo") || "").split(",");
                         searchMode(options.includes("cme"));
                     }
