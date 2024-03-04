@@ -90,8 +90,8 @@ id("search").addEventListener("input", function() {
                                     if (!hyphens.includes(best[b])) {
                                         m++;
                                     } else if (hyphens.includes(best[b]) && mabla[m] == best[b]) {
-                                        m++; b++;
                                         id("best").append(createHTMLElement("i", null, [best[b]]));
+                                        m++; b++;
                                     }
                                 } else if (hyphens.includes(best[b])) {
                                     mabla.splice(m, 0, "");
