@@ -267,7 +267,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     println!("allwords.txt");
     let mut all = String::new();
     for word in &words {
-        all = all + &word.lang + "   " + &word.word + "\r\n";
+        all = format!("{all}{} {}\r\n", word.lang, word.word);
     }
     fs::write("../data/allwords.txt", all)?;
     // jbo.js
@@ -278,7 +278,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     println!("data.txt");
     let mut data = "---".to_string();
     for word in words {
-        data = data + "\r\n" + word.to_datastring().as_str() + "\r\n---";
+        data = format!("{data}\r\n{}\r\n---", word.to_datastring());
     }
     fs::write("../data/data.txt", &data)?;
     // chars.txt, fonts, noto.css
@@ -294,7 +294,10 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     for font in fs::read_dir("../fonts/")? {
         let font = font?;
         if let Some(name) = font.file_name().to_str() {
-            if !["NotoSans-", "Iosevka-"].iter().any(|x| name.starts_with(x)) {
+            if !["NotoSans-", "Iosevka-"]
+                .iter()
+                .any(|x| name.starts_with(x))
+            {
                 fs::remove_file(font.path())?;
             }
         }
@@ -326,7 +329,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     let mut naljvo_string = String::new();
     let mut naljvo_list = "const naljvo = [".to_string();
     for v in &naljvo {
-        naljvo_string = naljvo_string + v + "\r\n";
+        naljvo_string = format!("{naljvo_string}{v}\r\n");
         naljvo_list = format!("{naljvo_list}\"{v}\",");
     }
     naljvo_list += "]";
