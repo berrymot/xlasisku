@@ -291,6 +291,14 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     };
     fs::write("../data/chars.txt", &chars)?;
     println!("fonts/");
+    for font in fs::read_dir("../fonts/")? {
+        let font = font?;
+        if let Some(name) = font.file_name().to_str() {
+            if !["NotoSans-", "Iosevka-"].iter().any(|x| name.starts_with(x)) {
+                fs::remove_file(font.path())?;
+            }
+        }
+    }
     let client = NotoizeClient::new();
     let mut fonts = client.clone().notoize(chars.as_str()).files();
     fonts.retain(|f| {

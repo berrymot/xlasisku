@@ -1,36 +1,36 @@
 @font-face {
     font-family: "Noto Rashi Hebrew";
-    src: url("fonts/NotoRashiHebrew-Regular.otf");
+    src: url("fonts/NotoRashiHebrew-Regular.ttf");
     font-display: swap;
 }
 @font-face {
     font-family: "Noto Kufi Arabic";
-    src: url("fonts/NotoKufiArabic-Regular.otf");
+    src: url("fonts/NotoKufiArabic-Regular.ttf");
     font-display: swap;
 }
 @font-face {
     font-family: "Noto Sans Devanagari";
-    src: url("fonts/NotoSansDevanagari-Regular.otf");
+    src: url("fonts/NotoSansDevanagari-Regular.ttf");
     font-display: swap;
 }
 @font-face {
     font-family: "Noto Sans Bengali";
-    src: url("fonts/NotoSansBengali-Regular.otf");
+    src: url("fonts/NotoSansBengali-Regular.ttf");
     font-display: swap;
 }
 @font-face {
     font-family: "Noto Sans Myanmar";
-    src: url("fonts/NotoSansMyanmar-Regular.otf");
+    src: url("fonts/NotoSansMyanmar-Regular.ttf");
     font-display: swap;
 }
 @font-face {
     font-family: "Noto Sans CJK HK";
-    src: url("fonts/NotoSansCJKsc-Regular.otf");
+    src: url("fonts/NotoSansCJKsc-Regular.ttf");
     font-display: swap;
 }
 @font-face {
     font-family: "Noto Sans Math";
-    src: url("fonts/NotoSansMath-Regular.otf");
+    src: url("fonts/NotoSansMath-Regular.ttf");
     font-display: swap;
 }
 :root {
