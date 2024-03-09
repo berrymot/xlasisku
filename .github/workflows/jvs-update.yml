@@ -14,16 +14,6 @@ jobs:
       - name: fetch, parse
         run: cd scripts; cargo run
 
-      - name: create pr
-        id: cpr
-        uses: peter-evans/create-pull-request@v5
+      - uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit-message: weekly jvs/font update
-          committer: GitHub <noreply@github.com>
-          author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
-          signoff: false
-          branch: jvs-update
-          delete-branch: true
-          title: 'weekly jvs/font update'
-          assignees: berrymot
-          reviewers: berrymot
+          commit_message: weekly jvs/font update
