@@ -1,0 +1,801 @@
+---
+bloblobloblo lujvo lamisotanis 1 (en)
+$x_0$: word used to test the efficiency of a lujvo-building computer program. (nullary predicate)
+-n
+Also anything longer than four syllables of "blo" (rafsi of the gismu {bloti}). The test of building lujvo like these helps distinguish between lujvo building algorithms in polynomial time from those in exponential time, especially given that {bloti} has five rafsi. For example, the sozysozbot jvozba will take a significant amount of time to build the lujvo from eight {bloti}. See also: {bloti}.
+---
+brarafsi lujvo krtisfranks 1 (en)
+$x_1$ ("ra'oi"-quote) is a long (unreduced) rafsi/combining form of word/concept $x_2$ in language $x_3$.
+-n
+In Lojban, these exist only for gismu and maybe zi'evla and are the four- or five-letter rafsi (where the final "-y" is not counted as a letter in the four-letter case, and may or may not be considered to be part of the rafsi itself). Compare: "{cmarafsi}".
+---
+bunxa gismu zozeizeizeizeifaho 1 (en)
+$x_1$ is a $x_2$osity, a $x_2$onger, an absolute $x_2$ I tell you (augmentative)
+-n
+Proposed rafsi -bu or -xa. See {mabla}, {zabna}, {barda}
+---
+celdi gismu blamaa 2 (en)
+$x_1$ is a group of people who love each other in a sexual or non-sexual way, which includes the individuals $x_2$, $x_3$, $x_4$, $x_5$, etc., etc., etc.
+-n
+The most common {celdi} is a couple, but the word also covers polyamorous collectives, polygyny, polyandry, etc. Could even cover {lanzu}. Proposed rafsi is -cle-.
+---
+cimjvo lujvo daniel 1 (en)
+$l_1$ is an implicitly metaphorical lujvo with meaning $l_2$ and arguments $l_3$ built from metaphor $l_4$.
+-n
+Used to refer to metaphorical lujvo that do not contain any -pev- rafsi (for “{pe'a}”). The word “{cimjvo}” is itself an example of cimjvo. Synonym of “cimjvo” with explicit metaphor: “{pevycimjvo}”.
+---
+cmarafsi lujvo krtisfranks 1 (en)
+$x_1$ ("ra'oi"-quote) is a short (reduced) rafsi/combining form of word/concept $x_2$ in language $x_3$.
+-n
+In Lojban, these are the three-letter rafsi for gismu and some cmavo (where .y'y is not counted as a letter for these purposes). Compare to "{brarafsi}".
+---
+cmazve lujvo krtisfranks 1 (en)
+$x_1$ is a small zevla meaning $x_2$.
+-n
+This word uses the experimental rafsi "-zve-" for the experimental gismu "{zevla}". This word is mostly intended for {zevla} which imitate {gismu}, such as "{raunte} for "{ronte}" or hypothetical "{gro'oxe}", perhaps "{xlei'eva}", etc. The boundaries of this category are fuzzy.
+---
+co'ai cmavo COhAI lamisotanis 3 (en)
+placed after a tanru with CO, following sumti return to the place structure of the left tanru unit.
+-n
+"broda co brode do" = "broda co brode be do", however "broda co brode co'ai do" = "broda be do co brode". Overrides the rule that sumti following a tanru with CO belong to the place structure of the right tanru unit. Scope of a single CO; "broda co brode co brodi" would need "co'ai" once to return to "brode" and twice to return to "broda". Proposed rafsi: -cox-. See also: {co}.
+---
+corci gismu krtisfranks 2 (en)
+$x_1$ is a gesture/facial expression/body part motion/body language/expressive (nonverbal or nonvocal) feature/microexpression/stature/posture/sign/body signal [nonverbal expression made using only one's body parts and items on one's immediate person as extensions of the body in order to communicate; possibly nonlinguistic/extralinguistic] that conveys/expresses thought/emotion/command/idea $x_2$ (nu/si'o; possibly text and other types) made using body part/utensil/object/at locus $x_3$ in/by motion/action/means $x_4$
+-n
+Must be body-oriented; any other object involved is simply for the matter of convenience and acts as an extension of the body (and thus must be on the performer's immediate person at or near the locus of the gesture). Body language, posturing, and stature are usually considered to be nonlocalized (body-general), although they need not be (and technically are not in general). Must be externally visible and/or internally sensed. Any non-body-part utensil/item (including clothing) must function as an extension of the body in the gesture. Need not be conscious or performed by a person (note that agent/performer is not mentioned in this definition); can, but need not, be accompanied by vocalizations (not necessarily linguistic), but the gesture itself is not primarily noise-producing. Might include sign language words or cheremes, although a more explicit word for linguistically organized and “full” cheremes is preferred (and especially for the sign language as a whole). x1 is possibly best typed by {nu} and/or {si'o}. x4 might be best expressed as an event; for example, it could be "the event of the right hand touching the chest near the heart, with fist clenched" for a salute, whereas/wherein x3 would be merely the fist/hand (and the chest near the heart). Use "{cocygau}" resp. "{cocyzu'e}" for: "$x_1$ (agent resp. volitional entity) gestures; $x1$ agentively/actively makes gesture $x2$, communicating $x3$, performed with body part(s) $x4$ in motion $x5$"; this lujvo uses an unofficial cmarafsi. Proposed short rafsi: -coc-.
+---
+cramrmantikore fu'ivla krtisfranks 1 (en)
+$x_1$ is a manticore(/satyral?/lampago?) of mythos/form/species $x_2$
+-n
+The rafsi zi'evla-classifier for this word is experimental: {crami}.
+---
+ctera gismu krtisfranks 0 (en)
+$x_{1}$ is a lock/seal of/on/for sealing $x_{2}$ with/by locking mechanism $x_{3}$.
+-n
+Equivalent to "{stela}"; gismu similarity conflict with "{stero}" prohibited *"stera". In a dialect which prefers this word over "stela", the rafsi for this word would be "-ter-" and the rafsi for "{te}" would be "-tel-", thus normalizing and uniformizing the rafsi of the primary members of selma'o SE. See also: "{ckiku}".
+---
+cunrafsi lujvo xabju 1 (en)
+$r_1$ is an unpredictable/irregular affix for word/concept $r_2$, with form/properties $r_3$, in language $r_4$.
+-n
+In Lojban, cunrafsi are {rafsi} (bound combining forms) that derive unpredictably from {gismu} (root predicate-words). They are morphemes of the forms CCV, CVC, CVV, and CV'V (where C is a consonant, V is a vowel, and ' is the special sound /h/). Rafsi of these forms must be memorized alongside their source gismu, since they are assigned arbitrarily (within some constraints). By contrast, rafsi of the forms CCVC and CVCC are always predictable, and match up one-for-one with gismu; these may be called {jvarafsi} ('rule-rafsi'). Note also: cunrafsi are not 'irregular' in the sense of being assigned informally in a non-standard manner; they are a part of standard, official Lojban.
+---
+dau cmavo PA2 officialdata 100002 (en)
+digit/number: hex digit A (decimal 10) [ten].
+-n
+Experimental rafsi: -duv-
+---
+dinso gismu krtisfranks 2 (en)
+$x_1$ is a 'dinosaur' [very general: any ancient quasi-reptilian vertebrate or, possibly but probably not, modern bird] of type $x_2$ living in era $x_3$.
+-n
+A gismu version of "{dinsauru}"; contrast with "{rexsa}" (in particular, this word probably would not but could refer to modern birds whereas "{rexsa}" can always do so without any connotation to the contrary; meanwhile, "{rexsa}" cannot refer to pterosaurs, ichthyosaurs, vel sim. but this word can). The use of this word is not strictly only relevant to members of clade Dinosauria, although it does include them (and, specifically, modern birds, although it connotes ancientness and extinction unless it is part of an explicitly contrary or general context); its referent might also/alternatively include pterosaurs, icthyosaurs, plesiosaurs, mosasaurs, dimetrodons, avemetatarsaliads, and perhaps even other ancient synapsids (in other words, any prehistoric quasi-reptilian vertebrate). As such, it is a qualitative word that bears no particular or strong attention or respect to genealogy, cladistics, taxology/taxonomy, or scientific/academic classification of these animals. Basically, any prehistoric animal the name of which ends in "-saur" can be so-described, as well as others. It probably should not reference more modern-like mammals proper. Proposed short rafsi: -dis-. See also: "{rexsa}", "{ketslau}", "{ikfiio}", "{disrmuzo}", "{plesiio}".
+---
+dinti gismu krtisfranks 4 (en)
+$x_1$ is a non-binary/intersexed (probably also can include: asexual, nongendered, indeterminately gendered, gender-fluid, transgendered, two-spirited, alternatively gendered, or affirmatively non-binarily gendered or nongendered/graygendered) individual of species $x_2$ evidencing non-binary gender trait(s) $x_3$ (ka); $x_1$ is characterized by not following or fitting into some gender-binary.
+-n
+Co-equal to "{fetsi}" and "{nakni}". Proposed short rafsi: -dit-. See also "{fetsi}", "{nakni}", "{nunmu}".
+---
+disrmuzo fu'ivla krtisfranks 1 (en)
+$x_1$ is a mosasaur [member of family Mosasauridae] of subtaxon/type/genus/species/variety/breed $x_2$.
+-n
+Categorizer rafsi "dis" is meant (and experimentally proposed) to belong to the experimental gismu {dinso}; as such, it may not be the most elucidating; however, it is technically not essential to the interpretation of the lexeme. Technically, a extinct family of reptile order Squamata (which is extant), but {dinso} applies all the same (unlike {reksa}). See also: {dinso}, {respa}, {reskuamata}, {ikfio}, {plesio}, {dinsauru}, {reksa}, {ketslau}.
+---
+ditcu gismu xorxes 12 (en)
+$x_1$ is the time-duration/interval/period/[elapsed time] of event $x_2$.
+-n
+short rafsi is -dit-. Cf. {cedra}, {ranji}, {tcika}, {renvi}, {temci}, {canlu}, {kuspe}, {krafamtei}
+---
+dolna gismu janbe 3 (en)
+$x_1$ is a (topological) hole in object $x_2$
+-n
+Refers to a "hole" in the topological sense, i.e. one which goes all the way through an object, such as a hole in a sheet of paper. For non-topological holes (ones that do not go all the way through, such as a hole in the ground), use {kevna}. See also {canko}, {kalri}, {canlu}. Proposed rafsi -dol-
+---
+do'oi cmavo DOhOI danr 2 (en)
+generic single-word generic vocative marker; identifies intended listener with a single, possibly non-Lojban word, delimited by pauses (in speech) or by whitespace (in writing).
+-n
+The intent is that it is allowed everywhere in the grammar where DOI and COI are. See also {zo'oi}, {la'oi}, {me'oi}, {ra'oi}. Not similar to {co'oi}. Equivalent to {doi} {la'oi}.
+---
+dutso gismu krtisfranks 2 (en)
+$x_1$ is clockwise/right-turn-direction of[/to] $x_2$ along/following track $x_3$ [path] in frame of reference $x_4$ (where the axis is within the region defined by the track as the boundary, as viewed from and defined by view(er) $x_4$; see notes); $x_1$ is locally to the right of $x_2$, according to $x_4$, constrained along $x_3$; $x_1$ is along a right turn from $x_2$ along path $x_3$, as viewed in frame $x_4$.
+-n
+Angular/curling direction: clockwise. he orientation of the path determines x4 but does not factor into consideration for x3. Further glosses: clockwise, locally rightward, right-turning (with no bulk translation) in a way that would be characterized as "negative" by the right-hand rule (aligned with and in the direction of a basis vector, at least for a given component). x1 is left-handedly/clockwise(ly) oriented relative to x2 on/along x3 in frame of reference x4.  x1 is left-handed (one sense) from x2 [more accurately: moving from x2 to x1 requires a(n imaginary) motion that is left-handed about/along x3 as seen in frame/orientation/perspective x4]. x1 is to the path-following right of x2 (where the path is connected; as such, x1 is also be to the path-following left of x2, although there is an implication that the former is the smaller (or equal-length) path). See also: {zucna}, {du'ei} (left-handed vectorial cross product), {du'oi} (modal). Proposed short rafsi: -tso-.
+---
+duvma'i lujvo spheniscine 2 (en)
+$x_1$ is October/tenth month of year $x_2$ in calendar $x_3$.
+-n
+Note: Based on experimental rafsi for {dau} (duv). Use with caution. Alternative: {pavnonma'i}
+---
+dzama gismu zirenuovr 2 (en)
+$x1$ performs chore / menial duty / housework / errand $x2$ (nu/ka) for purpose / as obliged by $x3$.
+-n
+Compare with {zdagu'a}, but much broader in scope, as not limited to house work.  Includes, for example, bills and shopping.  The little tasks we do to maintain our daily lives.  x3 is the motivation for doing the chore, compare {zukte}3.  Suggested rafsi: -zam- and also proposed to steal -dza- from {da}.  See also {bilga}, {gunka}. Generated with gismu algorithm: gismu[...]score.py dzaci, kama, tcor, lata, domashnie, rutini
+---
+ecre fu'ivla selckiku 3 (en)
+$x_1$ practices/exercises/studies/improves at doing/being $x_2$ by doing/being $x_3$
+-n
+Somewhat based on the rafsi -cre-
+---
+fei cmavo PA2 officialdata 100001 (en)
+digit/number: hex digit B (decimal 11) [eleven].
+-n
+Experimental rafsi: -fel-
+---
+felma'i lujvo spheniscine 2 (en)
+$x_1$ is November/eleventh month of year $x_2$ in calendar $x_3$.
+-n
+Note: Based on experimental rafsi for {fei} (fel). Use with caution. Alternative: {pavypavma'i}
+---
+fidna gismu janbe 2 (en)
+$x_1$ pretends/feigns that $x_2$ is true in activity $x_3$; $x_1$ does $x_3$ as though $x_2$ were true
+-n
+See also {frati}, {stace}, {natfe}. Proposed rafsi -fid-
+---
+fizde gismu krtisfranks 1 (en)
+$x_1$ awaits for $x_2$ (event) with bated breath; $x_1$ waits for the occurrence of $x_2$ excitedly/restlessly; colloquially: $x_1$ just cannot wait for $x_2$ to happen; $x_1$ is eager for event $x_2$.
+-n
+The colloquial definition is figurative: the waiting must and will be performed, but $x_1$ wants $x_2$ to happen as soon as possible/to just come already- for time to flow faster. This is how a child feels on Christmas Eve night for Christmas Day. Usually positive; the negative version is essentially "dread". There should be a sense of longing (but future-oriented), intensity, and/or aching for what $x_1$ vaguely expects to happen (independent of what actually does end up happening). See also: {fizbu} (which lacks the sense of waiting), {denpa} (which lacks the sense of excitement and which has too many terbri). Proposed rafsi: "-fiz-".
+---
+flese gismu krtisfranks 2 (en)
+$x_1$ is (a) philosophy/ideology (one sense) about/of/pertaining to topic/subfield (one sense) $x_2$ with subfield (different sense)/features/details/specifics/specific idea(s) $x_3$, with methodology $x_4$, followed/thought/considered by $x_5$ (thinker/philosopher/individual); philosophy $x_1$ is characterized by values/thoughts/opinions/ruminations $x_3$ about topic/subject $x_2$.
+-n
+May also include code of conduct, ethical protocol, mode of thought, life-musings, etc.. x5 need not be an ardent supporter of the philosophy, although a certain degree of substance might be implied by the connection of being a philosophy (rather than a passing thought or idea) thereof; x5 does not need to be professional. Proposed short rafsi: -les-. See also: {pijyske}, {filsofiia}, {filsofo}, {marde}, {lijda}, {saske}, {jinvi}, {sidbo}, {pensi}, {prije}, {djuno}, {krici}, {menli}, {jijnu}, {senpi}, {birti}.
+---
+fukyvlarafsi lujvo wuzzy 1 (en)
+$r_1$ is the rafsi prefix used in stage-3 fu'ivla $v_1=f_1$, rafsi based on word $r_2$.
+-n
+“rafsi prefix” is a term specific to Lojban and refers to the initial part of a stage-3 fu'ivla which is a rafsi. $x_2$ is the word in which the rafsi is used, $x_3$ is the word from which the rafsi has been derived. See also: {cibyfu'ivla}, {fu'ivla}, {rafsi}.
+---
+ga'ei cmavo NU spheniscine 2 (en)
+abstractor: sensation / qualia abstractor; $x_1$ is the sensation / qualia associated with objects with property [bridi, bound to ce'u], via sense $x_2$, as sensed by $x_3$
+-n
+Semantically linked to {ganseti}. {lo} {ga'ei} ({ce'u}) {xunre} = {lo} {ganseti} {be} {lo} {ka} ({ce'u}) {xunre}. Is one proposed way of dealing with abstractions of colors ({zilska}) and other "elemental" sense experiences. Proposed rafsi: -gel-
+---
+gai cmavo PA2 officialdata 100001 (en)
+digit/number: hex digit C (decimal 12) [twelve].
+-n
+Experimental rafsi: -gam-
+---
+gamyma'i lujvo spheniscine 2 (en)
+$x_1$ is December/twelfth month of year $x_2$ in calendar $x_3$.
+-n
+Note: Based on experimental rafsi for {gai} (gam). Use with caution. Alternative: {pavrelma'i}
+---
+gansetifri fu'ivla spheniscine 1 (en)
+$x_1$ feels sensation / qualia $x_2$ via sense $x_3$ (ka) // {ka'e gansetifri} = $x_1$ is sentient (able to feel subjective conscious experiences)
+-n
+$x_2$ is a {ganseti}-type. Proposed gismu form: {gelse}, with rafsi -ges- and -ge'e-. See {lifri}, {ganse}.
+---
+gimrafrimna lujvo selgugbad 2 (en)
+$x_1$ is a rhythmic conjugation of word $x_2$, rhyming with word $x_3$ in language $x_4$, with changed final vowel/ending $x_5$.
+-n
+This word refers to the uncommon practice of changing the last vowel of a brivla in order to have it rhyme with surrounding words in its spoken context.  This can only be done to gismu and lujvo ending in 5-letter rafsi. x2 should be the orthodox spelling of x1.  Use "{me'o} [vowel]" to describe x5. This word is an autonym, being a {gimrafrimna} of the word {gimrafrimni}.  See also {rimni} {abu} {ebu} {ibu} {obu} {ubu} {sezyskivla}.
+---
+gimrafrimni lujvo selgugbad 2 (en)
+$x_1$ is a rhythmic conjugation of word $x_2$, rhyming with word $x_3$ in language $x_4$, with changed final vowel/ending $x_5$.
+-n
+This word refers to the uncommon practice of changing the last vowel of a brivla in order to have it rhyme with surrounding words in its spoken context.  This can only be done to gismu and lujvo ending in 5-letter rafsi. x2 should be the orthodox spelling of x1.  Use "{me'o} [vowel]" to describe x5. This word is a {se} {gimrafrimni}, and has the four rhythmic conjugations "{gimrafrimna}", "gimrafrimne", "gimrafrimno", and "gimrafrimnu".  See also {rimni} {abu} {ebu} {ibu} {obu} {ubu}.
+---
+grafnseljimca fu'ivla krtisfranks 1 (en)
+$x_1$ is a tree graph on nodes $x_2$ (set of points), with edges $x_3$ (set of ordered or unordered 2-tuples), with additional properties $x_4$.
+-n
+A graph with no cycles. The classifier rafsi of this word comes from the experimental gismu "{grafu}".
+---
+grava gismu krtisfranks 4 (en)
+$x_1$ pertains/is related to/reflects (the) gravitational interaction [fundamental]/gravity in manner/with properties/in state/with realization $x_2$, coupling to $x_3$ in manner/with strength $x_4$
+-n
+Proposed short rafsi: -gav-. See also: {jikfi}, {dicma}, {vubla}, {tsaba}, {xigzo}, {junta}.
+---
+gugle gismu krtisfranks 0 (en)
+$x_1$ searches network or collection of information/data/facts, etc. (especially the Internet) for information on topic/quote $x_2$ using service/tool/search resource/function $x_3$ provided by (host, company, etc.) $x_4$ with accessed information sources (websites, network, documents, books, etc.) $x_5$. $x_3$ is a search engine that provides information/resource/output on topic/query $x_2$ by way of organized and (semi-)automated/quick information search through many providers/sources of information including $x_5$, with search service provided by $x_4$ and provided to/used by/accessible to (potential or actual) user $x_1$ (who does not actually perform the initial search/sorting/recruiting of information). $x_4$ is a search engine service provider able to present search results via service/tool $x_3$. 
+-n
+Key word search, academic search, picture search, video search, map search, etc. can be expressed by x3; the algorithm and other means of searching through, organizing and ranking, and presenting the massive amount of information (provided by x5) may likewise be expressed by x3 (in brief). The creation and/or use of this word does not endorse Google or any other search engine service provider. Proposed short rafsi form: –gul–. See also: {valfa}
+---
+guglyzamgri lujvo spheniscine 1 (en)
+$x_1$ is a Google Group for $x_2$ to discuss/talk about subject $x_3$
+-n
+-zam- is the rafsi of {zai'e}, indicating a jargon word, and the divorce of {girzu} from its normal meaning. Place structure based off of {snustu}.
+---
+itlnrasno fu'ivla krtisfranks 2 (en)
+$x_1$ is/reflects/pertains to Etruscan culture in aspect $x_2$
+-n
+Categorization rafsi is from fu'ivla .{itlo}.
+---
+jau cmavo PA2 officialdata 100001 (en)
+digit/number: hex digit D (decimal 13) [thirteen].
+-n
+Experimental rafsi: -juz-
+---
+jaxpu'a lujvo djeikyb 3 (en)
+$x_1=p_{1j}$ (object/person) seems pleasant to/pleases $x_2=p_2$ in property $x_3$, in that $x_1$ does/is/partakes in $x_4=p_{fai}$
+-n
+This is the first defined lujvo using -jax-, the proposed rafsi for {jai}. See also {pluka}.
+---
+je'ebzi fu'ivla selckiku 2 (en)
+$x_1$ is following / subscribed to messages from $x_2$ on website / social media network $x_3$
+-n
+blalalavla but with some similarity to {jersi} and {je'e}, rafsi -jeb-
+---
+jidge gismu janbe 3 (en)
+$x_1$ has the opportunity to do/be $x_2$ (event/property) under conditions $x_3$; $x_1$ gets to do $x_2$ 
+-n
+Parallels {kakne}, but with emphasis on opportunity rather than potential. See also {prali}, {xamgu}, {zukte}. Proposed rafsi -jid-
+---
+jisrxananase fu'ivla wuzzy -1 (en)
+$x_1$ is a quantitiy of pineapple juice made from pineapple/pineapples $x_2$.
+-n
+Malformed short-rafsi fu'ivla: Made from “jis” + “xananase”. “jis” is the rafsi of “jinsa”, not “jisra”. Use {jisrnxananase} instead.
+---
+jonse gismu spheniscine 5 (en)
+$x_1$ accesses $x_2$ for purpose $x_3$, access/interaction in manner $x_4$; $x_1$ approaches / reaches / interacts with / reads / uses $x_2$.
+-n
+See {kargau}, {jorne}, {cpacu}, {tcidu}, {pilno}, {gasnu}. This word is intended to have a very broad meaning. Proposed rafsi: "-jos-".
+---
+jvarafsi lujvo xabju 1 (en)
+$r_1$ is a predictable/regular affix for word/concept $r_2$, with form/properties $r_3$, in language $r_4$.
+-n
+Literally 'rule affix'. In Lojban, jvarafsi are the familiar four-letter (or, more precisely, four-segment) {rafsi}, which are fully predictable in form, and of which each {gismu} has only one. For example, -badn- is the jvarafsi of {badna} 'banana', and can belong to no other word. The form of the affix -badn- may be inferred from the form of the word badna, and vice versa (if the final vowel of badna is known).
+---
+jvocmevla lujvo durka42 4 (en)
+$x_1$ is a cmevla meaning $x_2$ in Lojban, which looks like a lujvo but ends with a non-terminal rafsi
+-n
+Examples include {lojban}, {mergug}, {camgusmis}. Officially, of course, these are just {cmevla} but the rafsi are often suggestive of the meaning. See also {cmevla}, {lujvo}.
+---
+jvocmevo lujvo spheniscine 2 (en)
+$x_1$ is a lujvo-like cmevla meaning $x_2$
+-n
+Refers to words like {lojban}, which are built from {rafsi} like {lujvo}, but ends in a consonant and is therefore a {cmevla} rather than a {lujvo}. See {cmevo}. Syn. {jvocmevla}.
+---
+jvokatna lujvo arj 1 (en)
+$k_1$ separates affix compound $k_2$ into its constituent affixes $k_3$; $k_1$ does morphological analysis.
+-n
+Cf. {lujvo}, {katna}, {rafsi}, {lanli}, {rafske}, {genturfa'i}
+---
+kazra gismu krtisfranks -1 (en)
+$x_1$ is quantum mechanical in property $x_2$ with behavior/traits/result $x_3$; $x_1$ demonstrates quantum weirdness/quantum mechanical nature.
+-n
+For "quantumness", use {kamkazra}. Proposed short rafsi: -kaz-. See also: {kantu}, {namra}, {klaso}, {slabu}, {mairsau} (physically behaves expectedly/familiarly, normally; displays no physical weirdness/exoticness), {cizra}, {maircizra} (physically behaves unexpectedly; displays physical weirdness/exoticness), {cizyfau} (exotic event/phenomenon/signal), {cizmai} ((physically) exotic material/matter/substance), {cizykantu} (new/exotic/unknown/unfamiliar particle/quanton), {cizratni} (exotic atom/bound state), {rartni}.
+---
+ke'ai cmavo KEhAI ues 2 (en)
+Toggles to no grouping
+-n
+rafsi -ked- The grouping of gismu/rafsi is left ambiguous. So with a statement like: ke'ai melbi cmalu nixli ckule   or   kedmlecmaxlicu'e it is unclear whether this is referring to a (((pretty little)girls)school), (pretty(little(girls(school))), etc. Overridden by ke'ei or ke'ei'a. (Applies only to next selbri.)
+---
+ke'ei cmavo KEhEI ues 2 (en)
+Toggles to right grouping of tanru/lujvo.
+-n
+rafsi -keb- "ke'ei'a" toggles back to left grouping. (Applies only to next selbri.)
+---
+ke'ei'a cmavo KEhEIhA ues 2 (en)
+Toggles to left grouping of tanru.
+-n
+rafsi -kex- Toggles back to left grouping after ke'ei toggles right grouping or ke'ai toggles to no grouping.
+---
+kei'ei cmavo PA2 ues 1 (en)
+digit/number: hex digit E (decimal 14) [fourteen].
+-n
+Used as an alternative to {rei}/{xei} due to unique consonant. Useful in crowded situations. Experimental rafsi: -kim-
+---
+kibro gismu daniel 20 (en)
+$x_1$ pertains to the internet/cyberspace in aspect $x_2$.
+-n
+Proposed by xorxes. Short rafsi -kib-. Cf. {mujysamseltcana}.
+---
+kibyse'u lujvo gusnikantu 3 (en)
+$x_1=k_1=s_1$ is a server on the Internet for a client $x_2=k_1=s_2$ of service $x_3=s_3$.
+-n
+-kib- is a short rafsi of experimental gismu {kibro}. See ${samseltcana}_2$ for nodes of a network, {kibro} {selfu}, {kibdu'a}, {kibycpa}, {kibyca'o}
+---
+klo'aka fu'ivla xabju 2 (en)
+$x_1$ is a cloaca of $x_2$.
+-n
+Common orifice of the urinary, genital and digestive systems in some animals. Present in reptiles, amphibians and monotremes ({klo'akymabru}?), among others. See also {ganxo}, {kalci}, {pinxe}, {pinji} {zargu}; {respa}, {banfi}, {since}, {cipni}. Proposed {zevlyrafsi}: klo'ak.
+---
+lai'ai cmavo PA2 ues 1 (en)
+digit/number: hex digit F (decimal 15) [fifteen].
+-n
+Used as an alternative to {vai} due to unique consonant. Useful in crowded situations. Experimental rafsi: -lav-
+---
+lelxe gismu vesrul 2 (en)
+$x_1$ is a lily [Lilium] of species/strain $x_2$
+-n
+cf. {rozgu}. lel- is short rafsi
+---
+lesrplatono fu'ivla krtisfranks 1 (en)
+$x_1$ is Platonic/a Platonistic ideal/philosophy about topic $x_2$ characterized by thoughts/ideals $x_3$ and methodology $x_4$, according to thinker/user/standard $x_5$
+-n
+See also: {flese} (an experimental gismu with short rafsi -les- (not yet officially accepted))
+---
+lesrxapsurde fu'ivla lakanro 1 (en)
+$x_1$ (notion) is Absurd/is characterized by an Absurd nature in aspect $x_2$, belonging to school of philosophy/type of Absurdism $x_3$, according to standards/methodology/classification/claim $x_4$
+-n
+{flese} is an experimental gismu and the short rafsi -les- is not officially assigned. For the term "Absurdism" itself, consider: te lesrxapsurdie. The Absurd in this case is that associated with, for example, Albert Camus and other philosophers.
+---
+li'enrafsi lujvo gusek 2 (en)
+$x_1=r_1=l_1$ is a prefix for word/concept $x_2=r_2=l_2$, form/properties $x_3=r_3$, language $x_4=r_4$
+-n
+Cf. {selyli'erafsi}, {rafsi}, {valsi}, {lujvo}, {pagbu}
+---
+likse gismu zozeizeizeizeifaho 2 (en)
+$x_1$ is a $x_2$y, a $x_2$boo, a $x_2$ums (diminutive)
+-n
+Proposed rafsi -le, -li or -ke. See {mabla}, {zabna}, {cmalu}
+---
+lujvo gismu [-luv-jvo-] officialdata 100000 (en)
+$x_{1}$ (text) is a compound predicate word with meaning $x_{2}$ and arguments $x_{3}$ built from metaphor $x_{4}$.
+-n
+See also {stura}, {cmavo}, {gismu}, {rafsi}, {smuni}.
+---
+luksi gismu durka42 2 (en)
+$x_1$ is electric [adjective] producing electric field $x_2$.
+-n
+Proposed rafsi -luk-. See also {maksi}, {dikca}.
+---
+malglixlu lujvo spheniscine 2 (en)
+$x_1=m_1=g_1=xl_3$ is an inappropriate anglicism made by $x_2=xl_2$, inappropriate according to $x_3=m_3$
+-n
+Refers to any kind of inappropriate reliance upon English in a Lojban (or non-English language) expression, but is most common for calques. Is sometimes even extended to cover reliance upon cultural assumptions. This lujvo is made to have more-specific rafsi-connotations than the historical lujvo-term "malglico" (under {malgli}), and to avoid possible clashing with the common lujvo construction of "malbroda" meaning "d**ned broda / broda in a bad way". The $xl_2$ place is also useful, allowing (mi se malglixlu) and (di'u malglixlu mi)
+---
+mam cmevla remod 2 (en)
+Mom/Mum
+-n
+The rafsi for {mamta} used as a familiar name. See also {paf}, {bes}, {tix}, {bun}, {mes}.
+---
+ma'oi cmavo ZO latros 4 (en)
+selma'o quote; quotes a word (a cmavo) and uses it to name a selma'o.
+-n
+The output is the selma'o to which the quoted cmavo belongs (according to the relevant frammar/standards/version); thus any cmavo in the same given selma'o could be used in order to reference that selma'o (not just the canonical cmavo works). Example: "ma'oi coi" is equivalent to COI, as is "ma'oi co'o". For the most part, this will ignore sub-selma'o classes (such as VUhU1 versus VUhU2; both would be treated as simply VUhU). See also: "{ra'oi}".
+---
+mlat cmevla xabju 2 (en)
+Cat
+-n
+'Cat' as a personal name, derived from the {jvarafsi} of {mlatu}. May have a playful or diminutive sense in Western languages, but this is probably not universal. May be a humorous or simply uncreative name for an actual feline ({mlatu}). See also {lat}, {pevmlat}, {pevlat}, {ger}, {gerk}, {rib}, {crib}.
+---
+mlirumjvesimjonxonslanybafkemclenykukrypaxryja'i lujvo krtisfranks 0 (en)
+$x_1$ is ornamentation which exhibits the property of being or being similar to millefiori, and which adorns $x_2$ and has composition/arrangement/pattern $x_3$
+-n
+This word uses experimental rafsi for experimental words: {xo'ei} ("-xon-"), {clenu}, {kukru}, {paxra}. $x_3$ also can detail the types of materials (glasses, metals, plastics, etc.) used and their colors. This is any ornamentation which is made by arranging rods or wires of aterial and fusing them together so that their axes are parallel, being fashioned so that a viewer observes a cross-section perpendicular to these axes (so that each rod can be partially seen). Perler bead art typically does this, for example.
+---
+mu'o'u cmavo MUhOhU krtisfranks 1 (en)
+Marks an endpoint of a quote/string/expression and specifies that (relative to the original) the quote/string/expression so marked is complete, accurate, and well-portrayed by the quote/string/expression on the relevant side of the excerpt, including wrt all relevant information and when factoring in the content and context of the quotation-external discourse in which said quote/string/expression appears.
+-n
+Must be adjacent to a quotation marker (including terminator or delimiter) or "{sedu'u}" or similar; it attaches to the/such a marker such that it is external to the scope of the quote/expression produced/contained/terminated by that marker. For example, in "lu mu'o'u lu coi li'u li'u mu'o'u", the first instance of this word attaches to the second "{lu}" (because it is inside the quotation produced by the first "lu") and the second instance of this word attaches to the second instance of "{li'u}"; it cannot appear adjacent to "{coi}" in this example and yet function in application to the expressed quotation markers because it would then be inside all of the available quotations (nested, in this case), although such is allowed as a pure string (because being able to quote an expression such as "He did say "mu'o'u"" is utile). In a quotation (such as a "lu"-"li'u" quotation) with two markers (initiation and termination), even if one of them is implicit: if this word appears before the quote (at its initiation), then it means that there is no relevant and material information preceding the original version of the presented quote which would drastically alter its interpretation (for example: if the original is "not big", then "big" is technically a quote/substring thereof but there is information prior to this substring which materially alters the interpretation, namely "not"; likewise, cutting out the subject of a sentence which is being quoted and then using the quote in a context in which the subject is implied to be someone or something other than the original constitutes a material change in meaning due to incompleteness and this word would specify against that); if the word appears after the quote (at its termination), then it means that there is no relevant and material information following the original version of the presented quote which would drastically alter its interpretation (for example: if the original is "he chose the men and the women" but the presented quote/substring is "he chose the men" (in a context such that sexism is being accused), then there is information following the presented quote/substring which alters the interpretation, namely "and the women"); note that the interpretation-altering information need not immediately precede or follow the presented quote. For singly-marked quotes (such as by "{zo}") it means that the presented quote/string/expression is complete on both ends (including being the complete word / all relevant rafsi in a lujvo). Modifying this word with "-{nai}" indicates that there definitely is a material change in the meaning of the quote due in part to completeness or lack of appropriate context (textual or otherwise). See also: "{rau'o}", "{rau'oi}", "{boi'o'u}" (for a solution to a technical catch with this word).
+---
+nei'ai cmavo NEIhAI krtisfranks 1 (en)
+double-negative toggle: every odd-counted explicit usage makes negation additive; unmentioned or every even-counted explicit usage makes negation multiplicative.
+-n
+It applies to the entirety of the current bridi and all future ones until toggled again; multiple but separated usages of this word within the same bridi behave as if they were adjacent. "Additive negation" means that multiple negatives just intensify, but do not cancel, one another. For example in English: "I ain't seen nothin'" means that the speaker is very emphatically claiming to have seen nothing of interest. This is the standard operation for negation in Spanish. "Multiplicative negation" means that negatives cancel, but do not intensify, one another (possibly taking a neutral or abstentional state). "I did not see nothing" in this mode means that the speaker did indeed see something. Note that multiplicative double-negatives are not necessarily equivalent to affirmatives in general. "I like cheese" is an affirmative statement and is not equivalent to "I do not dislike cheese", which is a multiplicative double-negative (and which may indicate a reluctant acceptance of cheese or a neutral feeling toward cheese). In this mode, an even number of negatives in a given statement is not negative and an odd number of negatives in a given statement is not positive. This word applies to all negatives in the text, whether they are free words or rafsi. This word also, but less dramatically, applies to affirmations: in additive mode, multiple affirmatives intensify one another ("I am indeed very much so going!" is a strongly emphasized positive statement); in multiplicative mode, they simply reduce to a single affirmation (for like example, "I am going"). This means that care must be taken: In additive mode, an affirmative marker will partially cancel with a negative particle in some way, reducing its intensity and possibly bringing it to a neutral statement ("I am indeed - not - going" is a neutral statement in this mode, similar to "I may be going"; English does not really have the ability to express such things); in multiplicative mode, an affirmative coupled with a negative simply reduces to the negative, possibly strengthened by a factor equivalent to the intensity of the affirmer ("I am indeed not going" is a clear way of saying that the speaker will not go).
+---
+nicfa gismu krtisfranks 1 (en)
+$x_1$ (vector) is the displacement of $x_2$ (object/point) relative to $x_3$ (object/point; contextless default: origin) in coordinate system/frame of reference/as measured by $x_4$ according to definition/standard/(meta)physics $x_5$
+-n
+x1 is (four-)vector-valued; it is a function that maps to a tensor (probably a vector or scalar) to a (four-)vector. Units are handled in x1, which will be a (four-)vector of {mitre} or the like. Time of measurement is just «ca» or the argument of the function(s) in x1, or can be defined instantaneously by x4. Proposed short rafsi: -nif-. See also: {nifkemtemsalri}.
+---
+nifkemtemsalri lujvo krtisfranks 1 (en)
+$x_1$ (vector) is the differintegral (with respect to time) of order $x_2$ of the displacement of $x_3$ (object/point) relative to $x_4$ (object/point/frame of reference; contextless default: the origin in the home frame) in coordinate system/frame of reference/as measured by $x_5$ according to definition/standard/(meta)physics $x_6$, taken with starting point $x_7$
+-n
+This word uses two experimental gismu (one with an experimental rafsi): {nicfa} and {salri}. If x2 is negative, then x1 is a time-derivative (velocity, acceleration, jerk, etc. (for whole number values)); if it is positive, then x1 is a time-integral (moments); if it is 0, then x1 is displacement itself. The first and last options are the most common. All differintegrals are based on displacement, rather than one of its differintegrals. x1 is vector-valued.
+---
+nokselvai lujvo suskeyhose 1 (en)
+$x_1=v_2=n_1$ finds it important to be alone in doing/being $x_2=n_2$ (event/state/action) for purpose $x_3=v_3$; $x_1$ is introverted
+-n
+-nok- is a rafsi for {nonka}, a gismu form of {nonseka}, unrelated to apples.
+---
+nonka gismu suskeyhose 4 (en)
+$x_1$ is alone in event/state/action $x_2$
+-n
+gismu form of {nonseka}. Experimental rafsi: -nok-
+---
+nordrvikingra fu'ivla krtisfranks 0 (en)
+$x_1$ reflects Viking culture in aspect $x_2$; $x_1$ is (a) Viking
+-n
+The classifier rafsi is from experimental gismu {nordo}.
+---
+paf cmevla remod 2 (en)
+Dad
+-n
+The rafsi for {patfu} used as a familar name. See also {mam}, {bes}, {tix}, {bun}, {mes}.
+---
+pagbu gismu [-pag-pau-] officialdata 100001 (en)
+$x_{1}$ is a part/component/piece/portion/segment of $x_{2}$ [where $x_{2}$ is a whole/mass]; $x_{2}$ is partly $x_{1}$.
+-n
+Partly (= {selpau}).  See also cmavo list {pa'u}, {mulno}, {xadba}, {spisa}, {gunma}, {rafsi}.
+---
+panrkolone fu'ivla hzrn 1 (en)
+$x_1$ is cologne with scent $x_2$
+-n
+rafsi prefix from {panci}
+---
+pegva gismu krtisfranks -1 (en)
+$x_1$ is an example of a Parsing Expression Grammar (PEG) and it has implementation $x_2$.
+-n
+Proposed cmarafsi: "-peg-".
+---
+pevycimjvo lujvo wuzzy 1 (en)
+$l_1$ is an implicitly metaphorical lujvo with meaning $l_2$ and arguments $l_3$ built from metaphor $l_4$.
+-n
+Used to refer to metaphorical lujvo that do not contain any -pev- rafsi (for “{pe'a}”). The word “{cimjvo}” is an example of such a lujvo and synonymous to pevycimjvo.
+---
+plipovypo'e lujvo krtisfranks 1 (en)
+$x_1$ possess/is permitted only the right to use $x_2$ (and possibly physically possess $x_2$ as well) under law $x_3$
+-n
+This word is useful for ownership of a movie, or a rented house, or a do at work/school, among other things; one does not really own theset things, only the right to use them. One may or may not have the object in one's physical or immediate possession; the concept of what constitutes "having in one's physical possession" is left semantically ambiguous. Permanence of this status or authority over it is not specified. This word uses the experimental rafsi "-pov-" for the word {po'o}.
+---
+proga gismu gleki 7 (en)
+$x_1$ is a program, computer application for doing $x_2$ (clause)
+-n
+See also {skami}, {tutci}. Proposed rafsi -pog-
+---
+pupsu gismu krtisfranks 2 (en)
+$x_1$ is a waterfall (geological and hydrological, semi-permanent feature) with source/flowing fluid $x_2$ (fluid need not be water), with rock/terrain characteristics/grade (slope)/features $x_3$ in potential (gravitational well/field) $x_4$; mass/quantity of fluid x2 flows over feature x3 so as to fall /tumble down it (continuously)
+-n
+Despite the gloss, the waterfall need not constitute falling water specifically, just a falling-tumbling fluid. x3 might be (but is not necessarily strictly) a terrain feature underlying the flow of the fluid. Proposed short rafsi: -pup-. Confer: {falri'e}, {jacfa'u}, {jacfalstu}.
+---
+rafme'e lujvo tijlan 0 (en)
+$c_1=r_1$ is a title of $c_2=r_2$ used by $c_3$.
+-n
+Cf. {cmene}, {rafsi}.
+---
+ra'oi cmavo ZOhOI eimi 4 (en)
+single-word rafsi quote; quotes a single word delimited by pauses (in speech) or whitespace (in writing) and treats it as a rafsi
+-n
+Useful for quoting rafsi that aren't legal words on their own. See http://mw.lojban.org/papri/unspeakable_rafsi_gotcha for details.
+---
+ra'oijbo fu'ivla lamisotanis 2 (en)
+$x_1$ is someone who constantly annoyingly reminds other Lojbanists including $x_2$ to not forget about mandatory pauses in speech
+-n
+u'ivla made by forgetting about the pause in "{ra'oi} jbo". See also {coilojban}.
+---
+raunte fu'ivla krtisfranks 1 (en)
+$x_1$ is a rodent [can be a member of eutherian mammal Rodentia; semantic broadening might subjectively generalize the concept somewhat] of subtaxon/type/genus/species/breed/variety $x_2$.
+-n
+A {zevla} form of "{ronte}" which retains its general sound and approximate word/string length and which has similar possibilities for rafsi. This word is intended to replace "ronte" if the Lojban community decides to favor "{ronti}" over "ronte" when resolving the conflict. This word is a near-{gismu} {cmazve} version of: "{ratcnrodentia}", "{rontnrodentia}". Meant for any rodent in general (more general than "{ratcu}", "{smacu}"). Semantic broadening may allow for any 'small, scurrying mammal' to be so named (such as lagomorphs; such description should be avoided in technical contexts and is not necessarily disparaging (unlike in English)). For the subjective generalization of concept to any 'small scurrying mammal' made explicit, unambiguous, and clear, use: "{rauntysmimabru}".
+---
+raunzu fu'ivla selpahi 2 (en)
+$x_1$ is sufficiently $x_2$ (ka) to be/do $x_3$ (ka)
+-n
+Created to match the cmavo {rau}. Proposed rafsi -rau-. See also {banzu}, {rau}.
+---
+reljvo lujvo spheniscine 2 (en)
+$x_1$ is a lujvo consisting of two rafsi, with meaning $x_2$, arguments $x_3$, built from tanru $x_4$
+-n
+See {lujvo}, {rafsi}, {tanru}.
+---
+rexsa gismu krtisfranks 2 (en)
+$x_1$ is a dinosaur [specific: only clade Dinosauria] of type $x_2$ living in era $x_3$.
+-n
+A gismu version of {dinsauru}; contrast with {dinso}; ignoring connotations relevant to modern birds, the set of rexsa is a strict and nonempty subset of the set of dinso. Includes modern birds; there is no connotation to the contrary in general. Proposed short rafsi: -rex-. Preferred to {reksa} (for the sake of short rafsi and etymology). See also: {ketslau}.
+---
+rolrafcre lujvo spheniscine 2 (en)
+$x_1$ knows all the rafsi/morphemes of language $x_2$
+-n
+See {ro}, {rafsi}, {certu}
+---
+ronci gismu krtisfranks 4 (en)
+$x_1$ is $10^{(-27)}$ of $x_2$ in dimension/aspect $x_3$ (default is units).
+-n
+Alternative to "{ronti}"; see comment section there. Proposed {cmarafsi}: "-roc-". See also: "{ronro}".
+---
+ronro gismu krtisfranks 4 (en)
+$x_1$ is $10^{27}$ of $x_2$ in dimension/aspect $x_3$ (default is units).
+-n
+Adapts (2022) SI prefix "ronna-". Unfortunately, no good cmarafsi is available. See also: "{ronti}"/"{ronci}", "{ketro}", "{kekti}", "{gotro}", etc.
+---
+samyzamsmacu lujvo spheniscine 1 (en)
+$x_1$ is a computer mouse (physical object)
+-n
+Defined to demonstrate use of -zam-, rafsi of {zai'e}; the existing synonyms {pevysmacu} and {sma'acu} are probably much more convenient for actual use however.
+---
+sefsi gismu xorxes 2 (en)
+$x_1$ is/are related to itself/himself/herself/themselves by relation $x_2$
+-n
+Compare with {sevzi} and {simxu}. -se'i- proposed as rafsi for "sefsi" since "sevzi" doesn't really need much a final rafsi.
+---
+selja'e lujvo ilmen 4 (en)
+$x_1$ (event) results in $x_2$ (event)
+-n
+Possibly synonymous to {banzu}. Proposed rafsi: -se'e- (for paralleling the other causal suffixes). See also {jalge}, {rinka}, {krinu}, {banzu}, {nibli}, {mukti}.
+---
+selkicrypoi lujvo krtisfranks 1 (en)
+$x_1$ is an ordered series of podcast episodes/podcast serial, ordered by conparison rule $x_2$ (contextless default: production order or intended listening order, or reverse of these), and being entirely composed of all of the individual episodes belonging to set $x_3$.
+-n
+Technically, any sequence of any podcast episodes is such a thing. Moreover, some podcasts are just a collection of episodes which have no intended listening order (if old episodes are meant to be listened to at all). However, this word is meant to encompass only canonical serial productions of closely related episodes in a certain listening order. Thus, a playlist on shuffle breaks the spirit/intent of this term but not its technical definition; every episode in a certian program, though, satisfies the intention (especially if $x_2$ is a reasonable listening order thereof) - although complications arise if there is no reasonable listening order to be endowed upon the set of episodes. This word uses a rafsi of an experimental gismu: {kicra}.
+---
+selyli'erafsi lujvo gusek 2 (en)
+$x_1=r_1=l_1$ is a suffix for word/concept $x_2=r_2=l_2$, form/properties $x_3=r_3$, language $x_4=r_4$
+-n
+Cf. {li'enrafsi}, {rafsi}, {valsi}, {lujvo}, {pagbu}
+---
+sfite gismu janbe 2 (en)
+$x_1$ is an appointment/date between persons (individual/mass) $x_2$ scheduled for time $x_3$
+-n
+See also {penmi}, {cuntu}, {fasnu}. Proposed rafsi -sfi-
+---
+sfopu gismu merrybot 2 (en)
+$x_1$ is borked/borken and can no longer perform function $x_2$
+-n
+see also {spofu}. Proposed rafsi -fop- and/or -fo'u-.
+---
+skuna gismu ractu 3 (en)
+$x_1$ (agent) expresses/says $x_2$ (sedu'u/text/lu'e concept) for audience $x_3$ via expressive medium $x_4$.
+-n
+Syn. {cusku}. It's an alternative to {cusku} that removes the C sound which, according to some, appears way too often in the language ({cu} {cusku} being an example of it being common indeed). {cusku}'s rafsi are retained, though. This word is used often enough to have it in the dictionary, so here you go.
+---
+smusu gismu spheniscine 1 (en)
+$x_1$ expresses meaning $x_2$ (du'u/si'o) to addressee/audience $x_3$ by doing $x_4$ (property of $x_1$)
+-n
+Gismu form of {smusku}. The act ($x_4$) may or may not be linguistic. Proposed rafsi: -sus-. See also {cusku}, {smuni}, {corci}
+---
+su'ei cmavo SE gleki 2 (en)
+shows that the first two places have a reciprocal relation
+-n
+'mi do su'ei damba' is the same as 'mi do se xi vei pa .e re damba' and means "We fight with each other". Proposed rafsi: -sem-.
+---
+supso gismu xabju 3 (en)
+$x_1$ is a/the nipple/papilla [body-part] of $x_2$.
+-n
+Suggested {cmarafsi}: -sus-. Synonym: {tatyji'o}. For 'breast', see {tatru}.
+---
+tau'u cmavo PA5 ues 5 (en)
+digit/number: tau (denoted "τ": approximately 6.2831...). The constant defined by the ratio of the circumference to the radius of all circles (default: in Euclidean geometry).
+-n
+Defaults to Euclidean geometric case (with the 2-norm). Context or explicit specification of overriding this default or of a different geometry can alter its value. See also: "{pai}", "{pai'i}". Proposed (experimental) {cmarafsi}: "-tux-".
+---
+taxfrdulbande fu'ivla krtisfranks 1 (en)
+$x_1=taxfu_1$ is a turban (head/hair-covering garment which is wrapped and often built into a somewhat prominent three-dimensional structure) to be worn by $x_1=taxfu_2$ for purpose $x_3=taxfu_3$.
+-n
+Equivalent to "{tafrdulbande}"; this is for those who do not like three-letter zi'evla-classifier rafsi.
+---
+tende gismu glekizmiku 4 (en)
+$x_1$ (entity) tends, has tendency to $x_2$ (property of $x_1$)
+-n
+See {dikni}, {lakne}. Proposed rafsi: -te'e-
+---
+terkraunydze lujvo krtisfranks 1 (en)
+$x_1$ is a member of the stem group of crown group/clade $x_2$ according to classification/methodology/graph/scheme/rule $x_3$.
+-n
+Uses experimental {rafsi} of {zevla} "{kraune}". Can be generalized to scenarios outside of biological cladistics. $x_2$ should represent a collection/set of nodes.
+---
+tezyfrinu lujvo krtisfranks 1 (en)
+$x_1$  is a fraction with $x_2$ divided by e (natural exponential base)
+-n
+Experimental rafsi "-tez- (for  {te'o}) is used.
+---
+to'ai cmavo SE selpahi 6 (en)
+conversion: move/promote ['drag-and-drop'] 3rd place to 1st position. Everything else stays in the same order.
+-n
+Before: x1 x2 x3 x4 x5, after: x3 x1 x2 x4 x5. Has the same effect as "te se". Proposed rafsi: -toz-. See also {vo'ai}, {xo'ai}.
+---
+tokpono fu'ivla krtisfranks 1 (en)
+$x_1$ reflects Toki Pona culture/nationality/language in aspect $x_2$
+-n
+Completely equivalent to "{tokpona}", including in rafsi; however, this is okay due to a proposed equivalence of zi'evla under exchange of final vowel string/cluster. This word maintains the general pattern that cultural valsi end with "-o".
+---
+tunri'a lujvo djeikyb 1 (en)
+$x_1=r_1$ (nu) physically causes $x_2=t_1$ (object, usually pointed) to poke $x_3=t_2$ (experiencer) under conditions $x_4=r_3$
+-n
+$x_4$ are the conditions of the causation. Use {jai} or tack its rafsi -jax- on the front to make the $x_1$ into an concrete sumti, presumably the person doing the poking.
+---
+u'ivla fu'ivla daniel 4 (en)
+$x_1$ is a word meaning $x_2$ in language $x_3$ and silly/funny/clever for reason $x_4$ (usually etymological).
+-n
+The word {u'ivla} is itself an u'ivla, as it is an unconventional portmanteau of {u'i} and -vla- (a rafsi of {valsi}) and also a pun on the word {fu'ivla}. Another example is {u'imla}.
+---
+vai cmavo PA2 officialdata 100001 (en)
+digit/number: hex digit F (decimal 15) [fifteen].
+-n
+Experimental rafsi: -vav-
+---
+valfa gismu krtisfranks -1 (en)
+$x_1$ queries knowledge engine for data/facts/information/answer related to topic/problem/quote $x_2$ using service/tool/knowledge engine resource/function $x_3$ provided by (host, company, etc.) $x_4$ with accessed information sources (websites, network, documents, books, data lists, set of facts, algorithms, etc.) $x_5$. $x_3$ is a knowledge engine that provides information/resource/calculation/output on topic/query $x_2$ by way of organized and (semi-)automated/quick information search through many providers/sources of information including $x_5$, with search service provided by $x_4$ and provided to/used by/accessible to (potential or actual) user $x_1$ (who does not actually perform the initial search/sorting/recruiting of information). $x_4$ is a knowledge engine service provider able to perform calculations/provide facts by service/tool $x_3$.
+-n
+A knowledge engine is not merely a calculator nor a provider of factoids, and is not equivalent to a search engine. Various query-style-handlers can be expressed by x3; the algorithm and other means of searching through, interpreting, calculating, relating, organizing and ranking, and presenting the massive amount of information and "knowledge" (provided in part by curated information bank x5) may likewise be expressed by x3 (in brief). The creation and/or use of this word does not endorse Wolfram|Alpha or any other knowledge engine service provider. Proposed short rafsi: -vaf-. See also: {gugle}
+---
+valsi gismu [-val-vla-] officialdata 100001 (en)
+$x_{1}$ is a word meaning/causing $x_{2}$ in language $x_{3}$; (adjective: $x_{1}$ is lexical/verbal).
+-n
+See also {slaka}, {bangu}, {cmavo}, {cmene}, {gismu}, {jufra}, {rafsi}, {smuni}.
+---
+valtcizbaga lujvo durka42 2 (en)
+$x_1$ is a tcizbaga word
+-n
+A {tcizbaga} word looks like a {lujvo} morphologically (though it may contain undefined {gismu} or {rafsi}) but it is defined as a {fu'ivla}/{zi'evla}.
+---
+vedli gismu gleki 7 (en)
+$x_1$ remembers experience $x_2$ (li'i)
+-n
+$x_1$ lifri $x_2$ is implied. See also {morji}, {lifri}. Proposed short rafsi -ve'i-.
+---
+ve'irsau lujvo krtisfranks 1 (en)
+$x_1$ is familiar to the memories of $x_2$ in feature $x_3$ (ka) and by standard $x_4$; $x_2$ knows/is familiar with/has lived memory of $x_2$.
+-n
+For example: A person may know/have known/remember their grandparents, even if the latter are dead. The general emphasis is that the familiarity was gained in and might be applicable to only/primarily the past, or might strictly belong to the past/memory. Considering that events end and people change or die, it is hard to say that something which belongs strictly to the past or which may have evolved beyond recognition in some respects remains presently 'familiar' ({slabu}), even if it was experienced formerly. This word uses the proposed/experimental rafsi '-ve'i-' of the experimental gismu "{vedli}"; it also relies on "slabu" taking a greater connotation of familiarity/'knowledge' (in the Spanish "conocer" sense) due to the introduction of the experimental gismu "{laldo}" for other meanings of "old".
+---
+ve'irsau'utka fu'ivla krtisfranks 1 (en)
+$x_1$ is remembered by someone/something which remembers ... which remembers someone/something which is remembered by $x_2$ via intermediate nodes/steps $x_3$ (ce'o; ordered list).
+-n
+The type of remembrance here is that of "{ve'irsau}" (recommended that that entry be referenced before usage of this word); make sure that $x_1$, $x_2$, and all members of $x_3$ are compatible with this meaning. This word uses experimental rafsi forms for the experimental gismu "{vedli}" and the {zevla} ".{utka}", and relies on experimental gismu "{laldo}" in order to inform and restrict the meaning of "{slabu}". Example: This word can be used in order to approximate the meaning of "the living memory of anyone who was in the living memory of anyone who ... who was in the living memory of anyone who was in the living memory of $x_2$.
+---
+vlasle lujvo krtisfranks 2 (en)
+$s_1$=$v_1$ (quote) is a linguistic/conceptual lexeme for word/concept $v_2$, being the most basic subunit of $s_2$, in language $v_3$
+-n
+x1 may not be a proper word on its own (may require error/foreign/rafsi quotes or the like). See also: {veljvo}, {rafsi}.
+---
+vlatai lujvo arj 1 (en)
+$t_1$ is the pattern/shape of word $v_1=t_2$ with meaning $v_2$ in language $v_3$.
+-n
+Cf. {valsi}, {tarmi}, {rafsi}, {rafske}
+---
+vo'ai cmavo SE selpahi 4 (en)
+conversion: move/promote 4th place to 1st position. Everything else stays in the same order.
+-n
+Before: x1 x2 x3 x4 x5, after: x4 x1 x2 x3 x5. Has the same effect as "ve te se". Proposed rafsi: -voz-. See also {to'ai}, {xo'ai}.
+---
+vubla gismu krtisfranks 1 (en)
+$x1$ pertains/is related to/reflects (the) weak nuclear force [fundamental interaction] in manner/with properties/in state/with realization $x2$, coupling to $x3$ in manner/with strength $x4$
+-n
+Also: possibly radioactive/nuclear/atomic decay/emission/fission (especially in connection with {dirce}). Proposed short rafsi: -vul-. See also: {jikfi}, {tsaba}, {dicma}, {grava}, {xigzo}
+---
+vujnu gismu spheniscine 2 (en)
+$x_1$ is the subtraction-difference of $x_2$ and $x_3$ (and $x_4$ etc.); $x_1 = x_2 - x_3$ [ $- x_4$ etc.]
+-n
+Near-synonymous to {selsumji}, but better conveys the concept of "subtraction", as opposed to merely "addend", as well as being more convenient for lujvo. See {vu'u}, {sumji}, {pilji}, {dilcu}, {frinu}. Proposed rafsi: -vuj-, -vu'u-
+---
+xaudbo fu'ivla krtisfranks 3 (en)
+$x_1$ is $\sqrt{A} = \sqrt{2*5}$ [decimal: $1\times10^{+(1/2)}$] of $x_2$ in dimension/aspect $x_3$ (default is units).
+-n
+This works as all other Metric prefixes do. In decimal, $10^{(1/2)}=\sqrt{(10)}=3.16227766\dots$ (also expressed/represented in decimal). In different bases, this value may change; for example, in hexadecimal, it might be exactly four ($4$); however, this is an outstanding as-of-yet unsolidified area in the Lojban grammar/semantics (do "{ki'o}" and Metric prefixes change according to the base?). This number is nice, as it is close to both 3 and and the circle constant pi ($\pi$) in decimal usage; these three values arise fairly frequently and a great trick in decimal Fermi estimation is to use their approximate identity in order to simplify expressions. Now, when the quantity is dimensionful (has units), if the mantissa approximates this value, then one can instead express the mantissa as approximately 1 and the unit as being augmented by this prefix. This word is also good for short-hand/quick expressions. This word has no English equivalent and is not part of the official set of SI prefixes, but it does generalize them. "{xaudbo}" = "{kamre} {li} {dau} {te'a} {fi'u} {re}" in decimal (if it generalizes for other bases, change "dau" into the base; in other words, "dau" generally becomes "pano" in such case, where the base is given by context). While this suggestion is not perfectly compatible with SI (which allows only one prefix at a time), the negative-power version of this ("kamre li dau te'a {ni'u} fi'u re", where "dau" has the aforementioned caveats; $1\times10^{-(1/2)}$) can just be expressed as a lujvo/rafsi/tanru containing both "{decti}" and this word (as veljvo/selrafsi/{seljavytertau}), because $A^{(-1/2)}=\sqrt{(1/A)}=A^{(+1/2)}/A$, and $A$ (ten in at least decimal) is the base. A "{xaudbydectre}" is a single unit which (in decimal) happens to approximate an imperial/U.S. customary foot (unit). See also: "{namcrgogolo}"/"{kamrngogolo}", "{kacmre}", "{zilkacmre}", "{kancu}", "{merli}", "{radno}", "{stero}", "{molro}", "{gradu}", "{centi}", "{decti}", "{dekto}", "{femti}", "{gigdo}", "{gocti}", "{gotro}", "{kilto}", "{megdo}", "{mikri}", "{milti}", "{nanvi}", "{petso}", "{picti}", "{terto}", "{xatsi}", "{xecto}", "{xexso}", "{zepti}", "{zetro}", "{kamre}", "{nulpa}".
+---
+xei cmavo PA2 spheniscine 6 (en)
+digit/number: hex digit E (decimal 14) [fourteen]
+-n
+Used as an alternative to {rei} to avoid confusion with {re}. Experimental rafsi: -xem-
+---
+xigzo gismu krtisfranks -1 (en)
+$x_1$ pertains/is related to/reflects the 'Higgs' mechanism in manner/with properties/in state/with realization $x_2$, coupling to $x_3$ in manner/with strength $x_4$
+-n
+The quality of being in the antiparticle/particle realization (for arbitrarily chosen realization being labelled "particle") can be specified in x2. Neither the gismu nor the definition is intended to be other than neutral with respect to those who have contributed significantly in investigations concerning this aspect of nature. Proposed short rafsi: -xig-. See also: {jikfi},{tsaba}, {dicma}, {vubla}, {grava}, {kantu}, {kantrbocuni}.
+---
+xilva gismu janbe 3 (en)
+$x_1$ heals/recovers from $x_2$ (event/property) by means $x_3$
+-n
+See also {bilma}, {kanro}, {mikce}. Proposed rafsi -xiv-
+---
+xo'ai cmavo SE selpahi 4 (en)
+conversion: move/promote 5th place to 1st position. Everything else stays in the same order.
+-n
+Before: x1 x2 x3 x4 x5, after: x5 x1 x2 x3 x4. Has the same effect as "xe ve te se". Proposed rafsi: -xoz- See also {to'ai}, {vo'ai}.
+---
+xo'ei cmavo VUhU krtisfranks 3 (en)
+unary mekso operator: produces a string of n consecutive "xo'e"'s, treated as digits (concatenated into a single string of digits)
+-n
+n can be any nonnegative integer, (countable) infinity, or vague (in which case it could mean a nonnegative integer or (countable) infinity). The default value of n is vague/elliptical, thus transforming this word into a 0-ary operator. The output is a string of digits, not a number; thus, it automatically attaches to a string of PA's if immediately preceding this word; following digits must be concatenated on; it might be necessary to convert this string into a number (especially if it is isolated and/or is being acted upon an operator that is defined as desired for numbers but not for digits or strings), but the conversion may be automatic according to the grammar (at least in some contexts). {xo'e} is considered to represent exactly one 'digit' (really: PA member) in the given base until it is converted into a number. Since {pi} belongs to PA, technically at least zero {xo'e}'s can actually be meant to be radix point(s); at most, the total allowable number of radix points in a digit string, less the number of explicitly mentioned {pi}'s that occur therein (within the macrodigit), is the number of {pi}'s that can be referenced elliptically by this means. {ma'u} and {ni'u} are possible references for microdigits where allowed by the base.  This word 'knows where it lives', meaning that it will only produce digit strings that are composed of PA's that are allowed by the base and notation given the rest of the context, which form allowed macrodigits, and which will represent part of a context-allowed number. Proposed rafsi: "-xon-", where the default case (n is vague) is assumed (thus, as a rafsi, "-xon-" represents any number that is expressible in the base by a string of concatenated digits and radix point(s) and which makes sense/satisfies implicit conditions placed upon it (such as signum, or being integer, etc.); this meaning is usually described by using variables "n" or "x" in English, such as in: "n-ary", "n-many", "x-meter-long", etc.).
+---
+xoi'ei'a cmavo XOIhEIhA krtisfranks 1 (en)
+Toggles grammar so that every mention of a number $n$ is interpreted as "at least $n$".
+-n
+If one owns five cats, then in normal Lojban grammar, if they were to say "I have two cats", then they would be incorrect/lying; numbers are exact. But often, allowing for such statements is desirable, at least because one can be less mindful of the exactitude requirement. For example, some criminal statutes say things like "if the defendant has four criminal history points, then...", but they actually mean "if the defendant has four or more criminal history points, then...". Likewise, it is almost always a lie in Lojban to say "I am $t$ years old", because one is almost never exactly $t$ years old (this expression is usually the result of rounding down to the nearest integer or half-integer); one should actually say "I am between $t$ years old and $t+1$ years old" – but toggling the grammar with this word would more closely approximate the natlang phrase (although an eighty-year-old could still correctly say, perhaps with some philosophical correctness too, that they are six years old). An even number of uses of this word return the grammar back to numeric exactitude. The "at least" interpretation applies to rafsi as well: a car is a bicycle after this word has been used an odd number of times because "bicycle" would actually mean "at-least-two-wheeler". Again, this could have some applicability in law, such as when banning the usage of vehicles, for example. "{su'e} will operate normally under this word (so, "su'e {re}" would mean "at most 2" and not "at most at-least-2"; meaning that 3 is definitely excluded from the realm of possible numbers), but "su'o" is converted so as to mean "exactly" (given that it is otherwise useless; in other words, the exactitudes of unmarked numhers and "su'o"-marked ones swap with one another). This word does not affect brivla or modals, unless the former involve numeric rafsi; in particular, "{zmadu}", "{satci}", "{mau}", and the like are not affected. This word affects non-integer numbers as well, as demonstrated by the time example; after this toggle, one could accurately say that Cleopatra died five hundred years ago (because she died ealier than that). Explocit approximation via "{ji'i}" is unaffected by this word, in a manner similar to "su'e". Technically, "1+1 =2" is still true under this toggle effect because the sum of at least 1 with at least 1 is indeed at least 2. Both exactitude and this modification to it have their respective problem cases, so use each carefully.
+---
+xrojai lujvo lamisotanis 1 (en)
+$x_1=xr_1=j_1$ (affectionately) hugs $x_2=xr_2=j_2$ with $x_3=j_3$ on $x_4=j_4$.
+-n
+Uses experimental rafsi -xro- from {xrotu}. Near synonyms: {pamjai}, {dibjai}. See also {xrotu}, {jgari}, {prami}, {se} {dirba}, {pamjai}, {dibjai}.
+---
+xulta gismu krtisfranks 0 (en)
+$x_1$ is beyond/beside/abstract/meta (older sense) to $x_2$ so as to be an abstraction thereof/external thereto, being so beyond/abstract in property/aspect $x_3$, and having features $x_4$, governed by/considered in system/considerations/epistemology/theory $x_5$; x1 is conceptually beyond/external to/higher up than $x_2$ (in, for example, existential or consideration precedence)
+-n
+x1 need not be an abstraction *of* x2, but must be abstract *to* it.  The word "metaphysics" could be translated with/using this word. All meta things (in the sense of {cmeta}) are necessarily xulta, but the converse is not true; may also include all things that are {sucta}. This word is different from {sucta} in that no concept or properties need to be generalized/simplified/idealized/abstracted from x2 in order to produce x1 (by some rules); x1 is just an object/concept/system/etc. that exists beyond/external to x2 (in some "higher plane", so to speak). Do not confuse with: {xutla}. Proposed short rafsi: -xut-. See also: {cmeta}, {sucta}.
+---
+zai'e cmavo BAhE spheniscine 3 (en)
+jargon word indicator; indicates next word is a jargon word
+-n
+Jargon words are to have a single, defined, specialized meaning within one particular narrow context (e.g. a game, field of study, or industry), but may also be assigned to other meanings in other contexts. // Proposed rafsi: -zam-. Afterthought variant: {zi'ai}  // Jargonic context, if needed, may be explicated using tanru, including with {bo'ei} / {me} {la}...{ku} clauses, or even defined with a specific meaning using the assigned rafsi e.g. {samyzamsmacu} or {gugyl zei zamgri}
+---
+zancari fu'ivla cogas 2 (en)
+$x_1$ properly (in a good sense) simplify $x_2$ in $x_3$ (ka); $x_1$ minimize $x_2$
+-n
+A bit joke word. From "zabna" rafsi + "断捨離 (danshari)", a Japanese word. Also "minimalist". In terms of original danshari, $x_1$ zancari lo nunji'e be $x_1$.
+---
+zandi gismu janbe 1 (en)
+$x_1$ is dirty/contaminated with debris/contaminant $x_2$ by standard $x_3$
+-n
+Antonym of {jinsa}. See also {dertu}, {pulce}, {purmo}. Proposed rafsi -zad-
+---
+zei'e cmavo BAhE lamisotanis 2 (en)
+marks a construct as used for its form only, not its meaning.
+-n
+While a word like "tanru'i" must always mean "tsani zei pruxi", using {zei'e} overrides that; "zei'e tanru'i" does not necessarily mean that, it could mean "tanru u'i". Proposed rafsi: -zex-.
+---
+zei'ei cmavo ZEIhEI krtisfranks 1 (en)
+begin quote that is converted into rafsi
+-n
+Terminated by {zei'oi}. Quotes an utterance (must be grammatical) and converts it (as a whole) into a single rafsi with the meaning of "something to do with the referent of "[insert quoted text]"". Notably, does not distribute through the text, treating each word individually with left-grouping (it does not distribute {zei} before and/or after each word (as needed)); the quoted utterance is taken as a whole unit of meaning unto itself; for the former purpose, see {zei'ei'au}. This word is useful for forming quotes and mathematical expressions (formal, evaluated, or otherwise) into lujvo. This rafsi is assumed to begin the next word if the preceding text/utterance does not end with an otherwise standalone and ungrammatical rafsi (the grammar in such a situation should be discussed); in order to connect it as a rafsi within a lujvo that began before it, precede the quotation with {zei}. In order to finish a lujvo or treat the quotation as a brivla on its own, follow it with {co'e}, which is treated as if the preceding utterance (the quote) is a single word followed immediately by {zei}; in order to string multiple ZEIhEI-ZEIhOI rafsi together follow this formula: zei'ei broda zei'oi co'e zei zei'ei brode zei'oi (co'e (zei...))... . Individual rafsi outside of lujvo are typically not grammatical (except in certain quotation structures, vel sim.).
+---
+zei'ei'au cmavo ZEIhEI krtisfranks 1 (en)
+begin quote that is converted into rafsi, distributing lujvo-glue between quoted words
+-n
+Terminated by {zei'oi}. Begins a quote of a grammatical utterance. Between each word in the utterance, {zei} is to be interpreted and any grouping that might be applied is left-grouping. In other words, {zei} is distributed left-groupingly between each word; each word is treated on its own, individually; the quote is not treated as a whole. The final word is interpreted to have {zei} after it as well (this is a quirk of {zei'oi}), thus the quote is a string of rafsi, left-groupingly considered to be a rafsi. In order to end the lujvo formed with such a quote, follow it by {co'e}. This word compactifies large {zei}-clauses/-statements. For the perhaps generally more useful, if slightly more ambiguous, quote marker that treats the quote as a whole entity and converts it singly and wholly into a rafsi (rather than a rafsi string, as is done by this word), see: {zei'ei}. This word works as {zei'ei} does in all other regards (including as a marker for a new word (specifically a lujvo) unless preceded by {zei} or possibly by a standalone and otherwise ungrammatical rafsi). For the purpose of quoting with {ra'oi}, the result of a {zei'ei'au}-quote is treated as a single rafsi.
+---
+zei'o cmavo ZIhOI krtisfranks 1 (en)
+Delete all sumti slots of the immediately preceding word which are not explicitly filled excepting the first n (specified by subscript; contextless default: n=0).
+-n
+Use SE in order to reorder the sumti slots. Typically, the word in question should be a non-cmavo brivla, but this is not always the case. When used as a rafsi, it modifies the last veljvo and deletes all except the first $n$ (subscripted) sumti slots (regardless of any inferred relations between them and the sumti slots of other companion veljvo,  or of any implied filling (unless such is actually explicit), which otherwise would or could exist); in rafsi form, the subscript is implied to be 1 (meaning that all except the first unfilled sumti slot is deleted) unless explicitly specified otherwise, else veljvo structure no longer makes much sense; the subscript marker "{xi}" (proposed rafsi: "-xix-") is required for explicit specification of the subscript unless there is a veljvo bracket or tanru-grouping modifier (such as  "{ke'e}") which makes such interpretation the only possible option from a syntactic, semantic, AND practical standpoint. Proposed rafsi: "-zes-" (because the last letteral for it should be able to cluster tightly with "-xix-").
+---
+zei'oi cmavo ZEI'OI krtisfranks 1 (en)
+end rafsi-converting quote: terminates ZEIhEI quote
+-n
+Elidable terminator (rarely elidable). Ends ZEIhEI quotes. See also: {zei'ei}, {zei'ei'au}. Treats quoted utterance as a rafsi; in order to make it end a lujvo (or act on its own as a brivla), follow it with {co'e} (wherein the the quote is treated as a single word followed by {zei}).
+---
+zevla gismu spheniscine 3 (en)
+$x_1$ is a zi'evla-form word meaning $x_2$ (in Lojban); $x_1$ is morphologically a zi'evla
+-n
+Synonymous to "{zi'evla}". Proposed {cmarafsi}: "-zve-".
+---
+zevlyrafsi lujvo xabju 1 (en)
+$r_1$ is an affix/combining form for zi'evla word $r_2=z_1$, form/properties $r_3$.
+-n
+From {zi'evla}+{rafsi}. {zi'evla} are predicate words of an open class in Lojban, defined by their morphology. Compare {zevlyjvo}, a compound word made of one or more zevlyrafsi. See also {zevla}, {lujvo}, {brapagjvo}, {cmapagjvo}, {fu'ivla}.
+---
+zi'ai cmavo UI3a spheniscine 1 (en)
+jargon word indicator; indicates previous word is a jargon word
+-n
+Jargon words are to have a single, defined, specialized meaning within one particular narrow context (e.g. a game, field of study, or industry), but may also be assigned to other meanings in other contexts. Proposed rafsi: -zam- (technically rafsi for {zai'e}; this rafsi is always placed *before* the modified morpheme(s)) Forethought variant: {zai'e}
+---
+zi'ejvo lujvo spheniscine 3 (en)
+$x_1$ is a lujvo with irregular rafsi, meaning $x_2$, with arguments $x_3$, built from tanru/compound-phrase $x_4$
+-n
+Refers to a somewhat controversial idea that formal {rafsi} should be abolished, with coiners of {lujvo} being able to pick rafsi other than the formally assigned ones. One example might be shortening {mitysisku} into {mitsku}. See {lujvo}, {zi'evla}
+---
+zifyvlaklerafsi lujvo krtisfranks 1 (en)
+$x_1$ (quote) is a zi'evla/fu'ivla categorizer particle/morpheme/unit with meaning/indicating category $x_2$, having properties $x_3$, and that is appended in zi'evla (full word) $x_4$, in language $x_5$
+-n
+Applies to any categorizer particle/word/morpheme/lexeme/string/unit; does not necessarily have to be a single jborafsi (even in Lojban zi'evla). Does not include the hyphen letter, nor the rest of the word (including any letter prefixed thereto if the rest of the word would otherwise start with a vowel). Quote the empty string (lu li'u) if the explicit categorizer is absent; in general, the quote will likely be improper in Lojban. See also: {zifyvlavelvi'u}, {ra'oi}, {zi'evla}, {fu'ivla}
+---
+zifyvlavelvi'u lujvo krtisfranks 1 (en)
+$x_1$ (quote) is the non-categorizer and non-hyphen remainder of zi'evla/fu'ivla $x_2$ (quote), with properties/form $x_3$ in language [of zi'evla] $x_4$
+-n
+Quotation may be improper. This is the part of the zi'evla that carries the specific meaning of the word; in stage-4 fu'ivla, the entirety of the word is this remainder; the categorizer rafsi and hyphen letter(s) are not included. See also: {zifyvlaklerafsi}
+---
+zmico gismu krtisfranks -1 (en)
+$x_1$ belongs to a particular class of cmavo concerned with terbri default specifications and values; $x_1$ is such a default-concerned cmavo with function/definition $x_2$ that works at level/with construct-orientation $x_3$ and with discourse duration $x_4$, in language $x_5$
+-n
+This class of cmavo includes but is not limited to default specification modifiers as well as default-value-referencing pro-sumti; it is a subset of the set of all cmavo. "Class" in the definition does not necessarily mean {selma'o}. Proposed short rafsi: -zic-. For "default specification modifer" use {gafyzmico}; for "default-value-referencing pro-sumti" use {sumyzmico} or {zicysu'i}.
+---
+zucna gismu krtisfranks 3 (en)
+$x_1$ is counterclockwise/left-turn-direction of[/to] $x_2$ along/following track $x_3$ [path] in frame of reference $x_4$ (where the axis is within the region defined by the track as the boundary, as viewed from and defined by view(er) $x_4$; see notes); $x_1$ is locally to the left of $x_2$, according to $x_4$, constrained along $x_3$; $x_1$ is along a left turn from $x_2$ along path $x_3$, as viewed in frame $x_4$.
+-n
+Angular/curling direction: counterclockwise. The orientation of the path determines x4 but does not factor into consideration for x3. Further glosses: counterclockwise, locally leftward, left-turning (with no bulk translation) in a way that would be characterized as "positive" by the right-hand rule (aligned with and in the direction of a basis vector, at least for a given component). x1 is right-handedly/counterclockwise(ly) oriented relative to x2 on/along x3 in frame of reference x4  x1 is right-handed (one sense) from x2 [more accurately: moving from x2 to x1 requires a(n imaginary) motion that is right-handed along x3 as seen in frame/orientation/perspective x4]. x1 is to the path-following left of x2 (where the path is connected; as such, x1 is also be to the path-following right of x2, although there is an implication that the former is the smaller (or equal-length) path). See also: {dutso}, {za'ei} (vectorial cross product), {zu'au} (modal). Proposed short rafsi: -zuc-, -zu'a-. (If “zn” ever becomes a permissible initial consonant pair, krtisfranks proposes that “-zna-” become a rafsi of this word- it makes {zucna} and {dutso} more parallel in lujvo formation, and he is of the opinion that this word is useful and basic enough to warrant such a prized rafsi assignment; after this addition, the current two rafsi proposals can be done away with, reassigned, maintained, vel sim. as desired by the community at the time. In particular, he recognizes that “-zu’a-” might be confusing as a rafsi for this word while being a modal cmavo for {zunle}; but he does believe that this word deserves a vowel-final short rafsi.)
+---
+zurja gismu savrujanbe 1 (en)
+$x_1$ persuades/convinces $x_2$ to do/be $x_3$ (event/property) with action $x_4$
+-n
+cf. {zu'erdjigau}. For "coerce," see {bapyzurja}. Proposed rafsi -zuj-
+---
+zviki gismu spheniscine 3 (en)
+$x_1$ (agent) creates 'hack' $x_2$ (nu/zu'o/si'o) for system/tool $x_3$ from inspiration $x_4$; $x_2$ is an emergent use/purpose for $x_3$, unexpected by the original creators or users
+-n
+Contains no positive or negative connotations, can refer both to 'cool/elegant hacks' ({se} {mlezvi}) and 'kludge/ugly hacks' ({se} {feglyzvi}). Hack as in 'gain unauthorized or unexpected access to' = {zvijonse}, 'White-hat' hacking = {vudzvi}/{vudzvijonse}, 'black-hat' hacking = {pacyzvi}/{pacyzvijonse}, 'grey-hat' hacking = {norvudzvi}/{norvudzvijonse}. Proposed rafsi: -zvi-. See {kosmu}, {finti}, {jonse}
+---
+demni gismu krtisfranks -1 (jbo)
+$x_1$ denmi $x_2$ $x_3$ [...].
+-n
+dunselvla zo "{denmi}" .i ra'oi "-dem-" rafsi ti
+---
+mu'umgu fu'ivla selckiku 4 (jbo)
+$x_1$ finti $x_2$ lo nu $x_3$ tcaci $x_4$
+-n
+lo'e se mu'umgu cu valsi .i lo'e mu'umgu cu krici lo du'u lo da'i nu lo se mu'umgu cu zasti cu zmadu lo da'i nu lo se mu'umgu cu na'e zasti kei lo ka lo noi lo mu'umgu cu djica ke'a ku'o nu lo te mu'umgu cu tcaci lo ve mu'umgu cu lakne ce'u .i zo mu'umgu cu se'o sezysarxe se mu'umgu la .telselkik. lo nu mu'umgu kei loi jbopre .i ra'oi -mug- rafsi ca'e zo mu'umgu
+---
+va'arga fu'ivla selckiku 1 (jbo)
+$x_1$ pluja .i je ku'i $x_2$ ka'e pilno $x_3$ noi slabu vo'a ku'o lo nu sapygau lo go'i lo se go'i
+-n
+ra'oi -va'a- rafsi zo va'arga
+---
+xekto gismu krtisfranks 1 (jbo)
+$x_1$ xecto $x_2$ $x_3$
+-n
+zo "xekto" {smumi'u} zo "{xecto}" .i ra'oi "-xet-" rafsi ti
+---
+zmo'una fu'ivla selckiku 1 (jbo)
+$x_1$ pilno $x_2$ lo nu lifri $x_3$
+-n
+ra'oi -zmo- noi la .telselkik. finti cu ca'e rafsi zo zmo'una noi la cirko cu mapti finti ba lo nu TSK finti lo rafsi lo nu plixau lujvo zbasu kei lo se cuxna be fi lo'i na'e selpli rafsi
+---
