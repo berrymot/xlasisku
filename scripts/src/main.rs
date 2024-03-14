@@ -263,7 +263,15 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     unique = HashSet::new();
     naljvo.retain(|v| unique.insert(v.clone()));
     // prop/exp rafsi
-    let unofficial_rafsi = words.iter().filter(|word| (word.notes.contains("rafsi") || word.notes.contains("ra'oi")) && (!rafsi::RAFSI.contains_key(word.word.as_str()) || rafsi::RAFSI.get(word.word.as_str()).unwrap().is_empty())).cloned().collect::<Vec<_>>();
+    let unofficial_rafsi = words
+        .iter()
+        .filter(|word| {
+            (word.notes.contains("rafsi") || word.notes.contains("ra'oi"))
+                && (!rafsi::RAFSI.contains_key(word.word.as_str())
+                    || rafsi::RAFSI.get(word.word.as_str()).unwrap().is_empty())
+        })
+        .cloned()
+        .collect::<Vec<_>>();
     // write
     println!("writing:");
     // allwords.txt
