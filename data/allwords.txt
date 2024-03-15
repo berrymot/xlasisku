@@ -10375,6 +10375,7 @@ en dadgenxu
 en dadgreku
 en dadja'i
 en dadjo
+en dadmrotsina
 en dadne'ota'u
 en dadycatra
 en dadycka
@@ -13584,7 +13585,6 @@ en jincarna
 en jinci
 en jincla
 en jincyba'e
-en jinda
 en jinga
 en jinjmifa
 en jinjongau
@@ -16815,6 +16815,7 @@ en nau
 en nau'a
 en nauas
 en nau'atli
+en nau'e
 en na'ujbi
 en naun
 en naunmu
@@ -20156,6 +20157,7 @@ en sezyxra
 en sezyxu'a
 en sezyze'a
 en sfaile
+en sfailrdjepe
 en sfailrpidife
 en sfane'u
 en sfani
@@ -21195,7 +21197,6 @@ en su'i'e
 en su'ifa'uvu'u
 en su'ijavu'u
 en su'i'o
-en su'i'u
 en sujna'o
 en sujypau
 en sujysi'u
