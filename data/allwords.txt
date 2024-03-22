@@ -8657,6 +8657,7 @@ en bo'e
 en bo'ei
 en bofkosta
 en bofsnipa
+en bofsru
 en bofyglajbu
 en bogda'u
 en bogjimro'i
@@ -8930,6 +8931,7 @@ en caba'o
 en cabda'o
 en cabdei
 en cabdeicerni
+en cabdo'i
 en cabjbi
 en cabjeftu
 en cabjvezva
@@ -9389,6 +9391,7 @@ en cidni
 en cidro
 en cidydzu
 en cidytse
+en cidytsecorci
 en ci'e
 en ci'erkei
 en ci'erkeilai
@@ -10030,6 +10033,7 @@ en co'arbi'o
 en co'asku
 en co'au'a
 en co'au'e
+en cocyborcidytse
 en cocyci'ekei
 en co'e
 en co'e'o'e
@@ -12327,6 +12331,7 @@ en go'ai
 en go'au
 en gocti
 en go'e
+en go'ei
 en go'i
 en goi
 en goi'e
@@ -14299,6 +14304,7 @@ en keirmu'u
 en keirta'o
 en keitci
 en kekti
+en kelbe'e
 en kelboi
 en kelci
 en kelci'e
