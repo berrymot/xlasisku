@@ -16,8 +16,16 @@ function jvoptionsUrl() {
     if (options.length) vars += "&lujvo=" + options.join(",");
     return vars;
 }
+function isLujvo(s) {
+    try {
+        jvokaha(s);
+        return true;
+    } catch (e) {
+        return false;
+    }
+}
 function convertJSONToHTMLElement(json) {
-    const r = RAFSI.get(json.word);
+    const r = RAFSI.get(json.word) ?? [];
     const entry = createHTMLElement("div", {"className": "entry"}, [
         createHTMLElement("p", null, [
             createHTMLElement("a", {
@@ -26,9 +34,13 @@ function convertJSONToHTMLElement(json) {
                 createHTMLElement("b", null, [json.word])
             ]),
             " ",
-            r && r.length ? createHTMLElement("i", {"className": "rafsi"}, [
-                "-", ...r.join("-"), "-"
-            ]) : null,
+            r.length || isLujvo(json.word) ? createHTMLElement("i", {"className": "rafsi"}, [
+                r.join(" ") || [
+                    createHTMLElement("span", {}, ["→ "]),
+                    createHTMLElement("a", {
+                        "href": "?q=" + encodeURIComponent(getVeljvo(json.word).join(" ")) + jvoptionsUrl()
+                    }, [getVeljvo(json.word).join(" ")])
+            ]].flat()) : null,
             " ",
             json.selmaho ? createHTMLElement("code", {"className": "selmaho"}, [json.selmaho]) : null,
             " ",
@@ -48,7 +60,7 @@ function convertJSONToHTMLElement(json) {
                 / /.test(replaceLinks(json.notes).text) ? createHTMLElement("span", null, [
                     " • ",
                     createHTMLElement("a", {
-                        "href": "?q=" + encodeURIComponent(replaceLinks(json.notes).text)
+                        "href": "?q=" + encodeURIComponent(replaceLinks(json.notes).text) + jvoptionsUrl()
                     }, ["open all links"])
                 ]) : null
             ]),
@@ -70,7 +82,7 @@ function replaceLinks(str) {
                 if (/\{[a-g'i-pr-vx-z., ]+\}/i.test(item)) {
                     text += " " + item.slice(1, -1);
                     return createHTMLElement("a", {
-                        "href": "?q=" + item.slice(1, -1),
+                        "href": "?q=" + item.slice(1, -1) + jvoptionsUrl(),
                     }, item.slice(1, -1))
                 } else {
                     return item;

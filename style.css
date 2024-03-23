@@ -164,7 +164,7 @@ body {
 #info p {
     margin: 6px 0;
 }
-#info :not(.err) {
+#info :not(.err), .rafsi a {
     color: rgba(var(--fg), var(--op-c));
 }
 /* results */
@@ -308,6 +308,9 @@ h2 {
 }
 :is(#length, #bottom) small {
     font-size: 1rem;
+}
+i span {
+    font-style: normal;
 }
 /* hover/focus */
 :is(a, summary, :not(.opt) > button):is(:hover, :focus-visible), #fakebox:is(:hover, :focus-within) {
