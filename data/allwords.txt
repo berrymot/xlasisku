@@ -8551,7 +8551,6 @@ en bivma'i
 en bivmast
 en bivmasti
 en bivmoija'a
-en bivykemsamka'u
 en bivykemsamsle
 en bivykulpikta
 en bivyplin
@@ -14451,6 +14450,7 @@ en kilrangytunta
 en kilto
 en kimbali
 en kinda
+en kindali
 en kindi'u
 en kinfi
 en kinjazu
@@ -23678,6 +23678,7 @@ en xinko'i
 en xinmo
 en xinro
 en xi'o
+en xi'oi'ei
 en xipnoti
 en xiptamu
 en xipxunsanso
@@ -24316,6 +24317,7 @@ en zingibero
 en zinki
 en zi'o
 en zi'oi
+en zi'oi'oi
 en zipcpi
 en zipkembraxamsi
 en ziptu'a
