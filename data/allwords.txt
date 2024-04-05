@@ -259,6 +259,7 @@ en au'e
 en aufklerunge
 en augji
 en au'i
+en auksetike
 en a'unai
 en aunai
 en aunde
@@ -11137,6 +11138,7 @@ en dunav
 en duncfalygu'i
 en dunda
 en dunja
+en dunjavzma
 en dunkanpe
 en dunku
 en dunlei
@@ -14340,6 +14342,7 @@ en kentauru
 en KEnydys
 en ke'o
 en ke'o'a
+en ke'o'e
 en ke'oi
 en ke'o'o
 en ke'o'u
