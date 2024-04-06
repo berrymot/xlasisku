@@ -63,14 +63,6 @@ function search(query) {
                 results.push([entry, 1]);
             }
         }
-    } else if (config["katna"]) {
-        for (const entry of jbo) {
-            try {
-                if (query.split(" ").every(v => getVeljvo(h(entry.word)).includes(v))) {
-                    results.push([entry, 1]);
-                }
-            } catch {}
-        }
     } else if (/^[A-GI-PR-VX-Z][A-GhI-PR-VX-Zabc0-9*]*$/.test(original)) {
         // TODO: make this work (issue #1)
     } else {

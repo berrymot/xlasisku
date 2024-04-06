@@ -23,7 +23,7 @@
         <p class="sub"><a href="https://github.com/berrymot/xlasisku" target="_blank">github repo</a></p>
         <p>
             <span class="nobr opt">
-                <button id="sm" disabled>normal</button><button id="xm" disabled>regex</button><button id="rm" disabled>rhyme</button><button id="km" disabled>pieces</button>
+                <button id="sm" disabled>normal</button><button id="xm" disabled>regex</button><button id="rm" disabled>rhyme</button>
             </span>
             <span class="nobr opt">
                 <button id="theme">theme</button>
@@ -80,6 +80,7 @@
             setTheme(theme == "dark");
             setTimeout(() => {document.body.style.transition = "background 0.2s"}, 0);
         </script>
+        <script src="data/jbo.js"></script>
         <script src="helper.js"></script>
         <script src="events.js"></script>
         <script>
@@ -96,7 +97,6 @@
             id("sm").removeAttribute("disabled");
             id("rm").removeAttribute("disabled");
             id("xm").removeAttribute("disabled");
-            id("km").removeAttribute("disabled");
             id("search").removeAttribute("disabled");
             id("search").setAttribute("placeholder", "search");
             // url things
@@ -111,8 +111,6 @@
                     if (config["regex.insensitive"]) options.push("i");
                     if (config["regex.tight"]) options.push("tight");
                     vars += "&regex=" + options.join(",");
-                } else if (config["katna"]) {
-                    vars += "&katna";
                 } else {
                     vars += jvoptionsUrl();
                 }
@@ -134,8 +132,6 @@
                     } else if (params.has("regex")) {
                         var options = params.get("regex").split(",");
                         regexMode(options.includes("i"), options.includes("tight"));
-                    } else if (params.has("katna")) {
-                        katnaMode();
                     } else {
                         var options = (params.get("lujvo") || "").split(",");
                         searchMode(options.includes("cme"));

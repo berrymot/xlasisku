@@ -59,7 +59,7 @@ id("search").addEventListener("input", function() {
     timer = setTimeout(function() {
         if (q.length) {
             id("bottom").innerHTML = "loading...";
-            if (!config["rhyme"] && !config["regex"] && !config["katna"]) {
+            if (!config["rhyme"] && !config["regex"]) {
                 // lujvo things
                 try {
                     if (/\s/.test(q)) {
@@ -153,13 +153,9 @@ id("regex-i").addEventListener("click", function() {
 id("regex-tight").addEventListener("click", function() {
     regexMode(false, true);
 });
-id("km").addEventListener("click", function() {
-    katnaMode();
-});
 function removeClasses() {
     document.body.classList.remove("rhyme");
     document.body.classList.remove("regex");
-    document.body.classList.remove("katna");
 }
 function setBodyClass(className) {
     document.body.classList.add(className);
@@ -184,11 +180,9 @@ function searchMode(togglecme) {
     removeClasses();
     removeClassById("rm", "checked");
     removeClassById("xm", "checked");
-    removeClassById("km", "checked");
     addClassById("sm", "checked");
     config["rhyme"] = false;
     config["regex"] = false;
-    config["katna"] = false;
     if (togglecme) {
         toggleClassById("jvo-cme", "checked");
         config["lujvo.cmevla"] = !config["lujvo.cmevla"];
@@ -202,11 +196,9 @@ function regexMode(togglei, toggletight) {
     setBodyClass("regex");
     removeClassById("sm", "checked");
     removeClassById("rm", "checked");
-    removeClassById("km", "checked");
     addClassById("xm", "checked");
     config["rhyme"] = false;
     config["regex"] = true;
-    config["katna"] = false;
     if (togglei) {
         toggleClassById("regex-i", "checked");
         config["regex.insensitive"] = !config["regex.insensitive"];
@@ -223,28 +215,13 @@ function rhymeMode(toggle) {
     setBodyClass("rhyme");
     removeClassById("sm", "checked");
     removeClassById("xm", "checked");
-    removeClassById("km", "checked");
     addClassById("rm", "checked");
     config["rhyme"] = true;
     config["regex"] = false;
-    config["katna"] = false;
     if (toggle) {
         toggleClassById("rhyme-y", "checked");
         config["rhyme.ignorey"] = !config["rhyme.ignorey"];
     }
-    dispatchSearchInputEvent();
-}
-function katnaMode() {
-    clearTimeout(timer);
-    removeClasses();
-    setBodyClass("katna");
-    removeClassById("sm", "checked");
-    removeClassById("xm", "checked");
-    removeClassById("rm", "checked");
-    addClassById("km", "checked");
-    config["rhyme"] = false;
-    config["regex"] = false;
-    config["katna"] = true;
     dispatchSearchInputEvent();
 }
 id("clear").addEventListener("click", function() {

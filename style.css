@@ -80,10 +80,6 @@
     --bg: 236, 230, 245;
     --checked: 113, 44, 232;
 }
-:root:has(> body.katna) {
-    --bg: 250, 229, 236;
-    --checked: 227, 38, 54;
-}
 body {
     font-family: var(--sans);
     margin: 0 auto;
@@ -354,9 +350,6 @@ i span {
 :root.dark:has(> body.rhyme) {
     --bg: 22, 10, 36;
     --checked: 143, 72, 224;
-}
-:root.dark:has(> body.katna) {
-    --bg: 31, 14, 3;
 }
 /* other media queries */
 @media (prefers-contrast: more) {
