@@ -4,8 +4,8 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-latkerlo-jvotci = "1.0.3"
-notoize = "2.2.4"
+latkerlo-jvotci = "1.0.4"
+notoize = "2.4.0"
 regex = "1.10.2"
 reqwest = { version = "0.11.22", features = ["blocking"] }
 serde = { version = "1.0.193", features = ["derive"] }

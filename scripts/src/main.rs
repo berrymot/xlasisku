@@ -14,7 +14,7 @@ struct Entry {
     word: String,
     #[serde(skip_serializing_if = "String::is_empty")]
     selmaho: String,
-    #[serde(skip_serializing_if = "Vec::is_empty")]
+    #[serde(skip)]
     rafsi: Vec<String>,
     score: i32,
     definition: String,
@@ -207,7 +207,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
                                 skip = true;
                             }
                         }
-                        "score" | "rafsi" | "selmaho" | "definition" | "notes" | "username" => {
+                        "score" | "selmaho" | "definition" | "notes" | "username" => {
                             current_tag = tagname;
                         }
                         "dictionary" | "direction" | "user" => {
@@ -228,9 +228,6 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
                                 skip = true;
                             }
                         }
-                        "rafsi" => {
-                            entry.rafsi.push(text);
-                        }
                         "selmaho" => {
                             entry.selmaho = text;
                         }
@@ -250,6 +247,12 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
                 XmlEvent::EndElement { name } => {
                     let tagname = name.local_name;
                     if tagname == "valsi" && !skip {
+                        entry.rafsi = rafsi::RAFSI
+                            .get(entry.word.as_str())
+                            .unwrap_or(&vec![])
+                            .iter()
+                            .map(|r| r.to_string())
+                            .collect();
                         words.push(entry.clone());
                     }
                 }

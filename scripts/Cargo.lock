@@ -225,9 +225,9 @@ dependencies = [
 
 [[package]]
 name = "gh-file-curler"
-version = "2.3.0"
+version = "2.4.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "aa728dba9a562d01011bb08d03e40d4d3ae0fd91466e8574d822399089825cab"
+checksum = "c0294e40043cfda0c92fbe1dd58aefbe4cb265044c12d72a0120a5c9f09df3e5"
 dependencies = [
  "reqwest",
  "serde_json",
@@ -393,9 +393,9 @@ dependencies = [
 
 [[package]]
 name = "latkerlo-jvotci"
-version = "1.0.3"
+version = "1.0.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "56e5699ac079d84f8671da3f8ae5d9a43f75d0a12b4e9b3820039daff3e15f7a"
+checksum = "2a3b64936fe6a08dcf846f8e83ae3ef8050d993e6f8d71e1b1698a22a6ff7d79"
 dependencies = [
  "lazy_static",
  "regex",
@@ -477,9 +477,9 @@ dependencies = [
 
 [[package]]
 name = "notoize"
-version = "2.2.4"
+version = "2.4.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4854c7e38deb19403fe3c24707eb492bf88e0a14a060e1b2609b28c77e994d72"
+checksum = "8296b10f0c3f70bc4b96bf31ee84e58f47d57003b426f6d119574abe927082be"
 dependencies = [
  "gh-file-curler",
  "itertools",
