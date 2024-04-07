@@ -283,18 +283,18 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     for word in &words {
         all = format!("{all}{} {}\r\n", word.lang, word.word);
     }
-    fs::write("../data/allwords.txt", all)?;
+    fs::write("data/allwords.txt", all)?;
     // jbo.js
     println!("json");
     let json_str = serde_json::to_string(&words)?;
-    fs::write("../data/jbo.js", "const jbo = ".to_owned() + &json_str)?;
+    fs::write("data/jbo.js", "const jbo = ".to_owned() + &json_str)?;
     // data.txt
     println!("plaintext");
     let mut data = "---".to_string();
     for word in words {
         data = format!("{data}\r\n{}\r\n---", word.to_datastring());
     }
-    fs::write("../data/data.txt", &data)?;
+    fs::write("data/data.txt", &data)?;
     // chars.txt, fonts, noto.css
     println!("characters");
     let chars: String = {
@@ -303,9 +303,9 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         v.dedup();
         v.into_iter().collect()
     };
-    fs::write("../data/chars.txt", &chars)?;
+    fs::write("data/chars.txt", &chars)?;
     println!("fonts");
-    for font in fs::read_dir("../fonts/")? {
+    for font in fs::read_dir("fonts/")? {
         let font = font?;
         if let Some(name) = font.file_name().to_str() {
             if !["NotoSans-", "Iosevka-"]
@@ -326,7 +326,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     println!("css");
     let mut css = String::new();
     for font in fonts.clone() {
-        fs::write(format!("../fonts/{}", font.filename), font.bytes)?;
+        fs::write(format!("fonts/{}", font.filename), font.bytes)?;
         css = format!("{css}@font-face {{\r\n    font-family: \"{}\";\r\n    src: url(\"fonts/{}\");\r\n    font-display: swap;\r\n}}\r\n", font.fontname, font.filename);
     }
     css = format!(
@@ -337,7 +337,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
             .collect::<Vec<_>>()
             .join(", ")
     );
-    fs::write("../noto.css", css)?;
+    fs::write("noto.css", css)?;
     // naljvo.txt
     println!("naljvo");
     let mut naljvo_string = String::new();
@@ -347,15 +347,15 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         naljvo_list = format!("{naljvo_list}\"{v}\",");
     }
     naljvo_list += "]";
-    fs::write("../data/naljvo.txt", &naljvo_string)?;
-    fs::write("../data/naljvo.js", naljvo_list)?;
+    fs::write("data/naljvo.txt", &naljvo_string)?;
+    fs::write("data/naljvo.js", naljvo_list)?;
     // unofficial_rafsi.txt
     println!("unofficial rafsi");
     let mut data = "---".to_string();
     for word in unofficial_rafsi {
         data = format!("{data}\r\n{}\r\n---", word.to_datastring());
     }
-    fs::write("../data/unofficial_rafsi_maybe.txt", &data)?;
+    fs::write("data/unofficial_rafsi_maybe.txt", &data)?;
     // .i mulno .ui
     let duration = start.elapsed();
     println!("done :3 took {duration:?}");
