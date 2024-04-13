@@ -22540,6 +22540,7 @@ en tumdesku
 en tumfakli'u
 en tumgapcripu
 en tumgre
+en tumjvejaumapti
 en tumkupypaumerko
 en tumla
 en tumrmadagaskara

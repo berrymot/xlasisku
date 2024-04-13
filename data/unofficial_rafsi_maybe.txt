@@ -309,6 +309,11 @@ $x_1$ is $10^{27}$ of $x_2$ in dimension/aspect $x_3$ (default is units).
 -n
 Adapts (2022) SI prefix "ronna-". Unfortunately, no good cmarafsi is available. See also: "{ronti}"/"{ronci}", "{ketro}", "{kekti}", "{gotro}", etc.
 ---
+sa cmavo SA officialdata 100001 (en)
+erase complete or partial utterance; next word shows how much erasing to do.
+-n
+Proposed rafsi -saf-; in a lujvo this erases the current/previous group ({bo}, {ke}-{ke'e}, {nu}-{kei}, etc). Ex gim[kamsmikezysaf]pro = gim[kamsmisaf]pro = gimpro
+---
 samyzamsmacu lujvo spheniscine 1 (en)
 $x_1$ is a computer mouse (physical object)
 -n
@@ -334,6 +339,11 @@ $x_1=r_1=l_1$ is a suffix for word/concept $x_2=r_2=l_2$, form/properties $x_3=r
 -n
 Cf. {li'enrafsi}, {rafsi}, {valsi}, {lujvo}, {pagbu}
 ---
+si cmavo SI officialdata 100001 (en)
+erase the last Lojban word, treating non-Lojban text as a single word.
+-n
+Proposed rafsi -sif-; in a lujvo this erases the previous rafsi. Ex [blasif]xe'izda = xe'izda
+---
 skuna gismu ractu 3 (en)
 $x_1$ (agent) expresses/says $x_2$ (sedu'u/text/lu'e concept) for audience $x_3$ via expressive medium $x_4$.
 -n
@@ -343,6 +353,11 @@ smusu gismu spheniscine 1 (en)
 $x_1$ expresses meaning $x_2$ (du'u/si'o) to addressee/audience $x_3$ by doing $x_4$ (property of $x_1$)
 -n
 Gismu form of {smusku}. The act ($x_4$) may or may not be linguistic. Proposed rafsi: -sus-. See also {cusku}, {smuni}, {corci}
+---
+su cmavo SU officialdata 100001 (en)
+erase to start of discourse or text; drop subject or start over.
+-n
+Proposed rafsi -suf-; in a lujvo this removes every preceding rafsi and starts over.
 ---
 taxfrdulbande fu'ivla krtisfranks 1 (en)
 $x_1=taxfu_1$ is a turban (head/hair-covering garment which is wrapped and often built into a somewhat prominent three-dimensional structure) to be worn by $x_1=taxfu_2$ for purpose $x_3=taxfu_3$.
