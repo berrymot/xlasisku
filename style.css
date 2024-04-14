@@ -118,7 +118,6 @@ body {
 }
 #fakebox:has(> #search:disabled) {
     opacity: 1;
-    color: rgba(var(--fg), var(--op-8));
     border-color: rgba(var(--fg), var(--op-8));
     background-color: rgba(var(--inv), var(--op-8));
     box-shadow: rgba(var(--fg), var(--op-8)) 0 3px;
@@ -146,9 +145,11 @@ body {
 }
 .clear {
     color: rgb(var(--err));
+}
+.nopad {
     padding: 0;
 }
-.clear:disabled {
+:disabled {
     color: rgba(var(--fg), var(--op-c));
 }
 /* lujvo things / regex errors */
@@ -252,9 +253,6 @@ button {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
     padding-left: 6px;
-}
-.opt :disabled {
-    color: rgba(var(--fg), var(--op-c));
 }
 .opt .checked:disabled {
     color: #fffd;
