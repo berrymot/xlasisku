@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: dtolnay/rust-toolchain@stable
       - name: fetch, parse
-        run: cargo run
+        run: cargo run --release
 
       - uses: stefanzweifel/git-auto-commit-action@v5
         with:
