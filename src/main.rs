@@ -162,7 +162,12 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     let mut naljvo = Vec::<String>::new();
     for lang in langs {
         println!("`{lang}`");
-        let xml = client.get(format!("https://jbovlaste.lojban.org/export/xml-export.html?lang={lang}&positive_scores_only=0&bot_key=z2BsnKYJhAB0VNsl")).send()?.bytes()?;
+        let xml = client
+            .get(format!(
+                "https://jbovlaste.lojban.org/export/xml-export.html?lang={lang}&positive_scores_only=0&bot_key=z2BsnKYJhAB0VNsl"
+            ))
+            .send()?
+            .bytes()?;
         let mut reader = reader::EventReader::new(Cursor::new(xml));
         loop {
             match reader.next()? {
@@ -327,7 +332,11 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     let mut css = String::new();
     for font in fonts.clone() {
         fs::write(format!("fonts/{}", font.filename), font.bytes)?;
-        css = format!("{css}@font-face {{\r\n    font-family: \"{}\";\r\n    src: url(\"fonts/{}\");\r\n    font-display: swap;\r\n}}\r\n", font.fontname, font.filename);
+        css = format!(
+            "{css}@font-face {{\r\n    font-family: \"{}\";\r\n    src: url(\"fonts/{}\");\r\n    \
+             font-display: swap;\r\n}}\r\n",
+            font.fontname, font.filename
+        );
     }
     css = format!(
         "{css}:root {{\r\n    --sans: \"Noto Sans\", {}, ui-sans-serif, sans-serif;\r\n}}",
