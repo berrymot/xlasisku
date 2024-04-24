@@ -4,10 +4,7 @@ use regex::Regex;
 use reqwest::blocking;
 use serde::{Deserialize, Serialize};
 use std::{collections::HashSet, fs, io::Cursor, time::Instant};
-use xml::{
-    attribute::OwnedAttribute,
-    reader::{self, XmlEvent},
-};
+use xml::{attribute::OwnedAttribute, reader::XmlEvent, EventReader};
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
 struct Entry {
@@ -80,7 +77,7 @@ impl Entry {
     }
 }
 
-fn main() -> Result<(), Box<dyn std::error::Error>> {
+fn main() {
     let start = Instant::now();
     // parse the xml
     let langs = [
@@ -166,11 +163,11 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
             .get(format!(
                 "https://jbovlaste.lojban.org/export/xml-export.html?lang={lang}&positive_scores_only=0&bot_key=z2BsnKYJhAB0VNsl"
             ))
-            .send()?
-            .bytes()?;
-        let mut reader = reader::EventReader::new(Cursor::new(xml));
+            .send().unwrap()
+            .bytes().unwrap();
+        let mut reader = EventReader::new(Cursor::new(xml));
         loop {
-            match reader.next()? {
+            match reader.next().unwrap() {
                 XmlEvent::EndDocument { .. } => {
                     break;
                 }
@@ -208,7 +205,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
                                 }
                             } else {
                                 current_tag.clear();
-                                reader.skip()?;
+                                reader.skip().unwrap();
                                 skip = true;
                             }
                         }
@@ -219,14 +216,14 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
                             // go inside
                         }
                         _ => {
-                            reader.skip()?;
+                            reader.skip().unwrap();
                         }
                     }
                 }
                 XmlEvent::Characters(text) => {
                     match current_tag.as_str() {
                         "score" => {
-                            let int = text.parse::<i32>()?;
+                            let int = text.parse::<i32>().unwrap();
                             if int >= -1 {
                                 entry.score = int;
                             } else {
@@ -288,18 +285,18 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     for word in &words {
         all = format!("{all}{} {}\r\n", word.lang, word.word);
     }
-    fs::write("data/allwords.txt", all)?;
+    fs::write("data/allwords.txt", all).unwrap();
     // jbo.js
     println!("json");
-    let json_str = serde_json::to_string(&words)?;
-    fs::write("data/jbo.js", "const jbo = ".to_owned() + &json_str)?;
+    let json_str = serde_json::to_string(&words).unwrap();
+    fs::write("data/jbo.js", "const jbo = ".to_owned() + &json_str).unwrap();
     // data.txt
     println!("plaintext");
     let mut data = "---".to_string();
     for word in words {
         data = format!("{data}\r\n{}\r\n---", word.to_datastring());
     }
-    fs::write("data/data.txt", &data)?;
+    fs::write("data/data.txt", &data).unwrap();
     // chars.txt, fonts, noto.css
     println!("characters");
     let chars: String = {
@@ -308,16 +305,16 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         v.dedup();
         v.into_iter().collect()
     };
-    fs::write("data/chars.txt", &chars)?;
+    fs::write("data/chars.txt", &chars).unwrap();
     println!("fonts");
-    for font in fs::read_dir("fonts/")? {
-        let font = font?;
+    for font in fs::read_dir("fonts/").unwrap() {
+        let font = font.unwrap();
         if let Some(name) = font.file_name().to_str() {
             if !["NotoSans-", "Iosevka-"]
                 .iter()
                 .any(|x| name.starts_with(x))
             {
-                fs::remove_file(font.path())?;
+                fs::remove_file(font.path()).unwrap();
             }
         }
     }
@@ -331,7 +328,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     println!("css");
     let mut css = String::new();
     for font in fonts.clone() {
-        fs::write(format!("fonts/{}", font.filename), font.bytes)?;
+        fs::write(format!("fonts/{}", font.filename), font.bytes).unwrap();
         css = format!(
             "{css}@font-face {{\r\n    font-family: \"{}\";\r\n    src: url(\"fonts/{}\");\r\n    \
              font-display: swap;\r\n}}\r\n",
@@ -346,7 +343,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
             .collect::<Vec<_>>()
             .join(", ")
     );
-    fs::write("noto.css", css)?;
+    fs::write("noto.css", css).unwrap();
     // naljvo.txt
     println!("naljvo");
     let mut naljvo_string = String::new();
@@ -356,19 +353,18 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
         naljvo_list = format!("{naljvo_list}\"{v}\",");
     }
     naljvo_list += "]";
-    fs::write("data/naljvo.txt", &naljvo_string)?;
-    fs::write("data/naljvo.js", naljvo_list)?;
+    fs::write("data/naljvo.txt", &naljvo_string).unwrap();
+    fs::write("data/naljvo.js", naljvo_list).unwrap();
     // unofficial_rafsi.txt
     println!("unofficial rafsi");
     let mut data = "---".to_string();
     for word in unofficial_rafsi {
         data = format!("{data}\r\n{}\r\n---", word.to_datastring());
     }
-    fs::write("data/unofficial_rafsi_maybe.txt", &data)?;
+    fs::write("data/unofficial_rafsi_maybe.txt", &data).unwrap();
     // .i mulno .ui
     let duration = start.elapsed();
     println!("done :3 took {duration:?}");
-    Ok(())
 }
 
 fn attr(v: &[OwnedAttribute], n: &str) -> String {
