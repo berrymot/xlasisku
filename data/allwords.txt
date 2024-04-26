@@ -13524,6 +13524,7 @@ en ji'efri
 en ji'ei
 en ji'einai
 en ji'erslegreku
+en ji'erslerango
 en ji'eske
 en ji'esle
 en ji'exru
@@ -18603,6 +18604,8 @@ en relseltu'e
 en relskacindu
 en reltefpi'i
 en reltracinse
+en reltranyselcy'anmona'yborbi'okemyji'eslerango
+en reltranyselcy'anmona'yborbi'okemymulslemijyji'e
 en reltu'edzu
 en relvanci
 en relveljvojvo
@@ -24336,6 +24339,7 @@ en zirxu'e
 en zirxu'ejme
 en zirxunjme
 en zirzilska
+en zi'u
 en zivle
 en zma'anga
 en zmadu
