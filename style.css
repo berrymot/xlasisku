@@ -66,7 +66,7 @@
     --op-4: calc(4/15);
     --op-2: calc(2/15);
     --link: 0, 105, 204;
-    --err: 209, 41, 41;
+    --err: 200, 41, 41;
     --focus: 255, 174, 12;
     --mono: "Iosevka", ui-monospace, monospace;
     background: rgb(var(--bg));
