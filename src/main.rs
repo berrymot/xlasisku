@@ -41,15 +41,9 @@ impl Entry {
     fn to_datastring(&self) -> String {
         let mut s = self.word.to_owned();
         // regex replacements
-        s = Regex::new(r"[. ]")
-            .unwrap()
-            .replace_all(&s, "_")
-            .to_string();
-        s = Regex::new(r"^_|_$")
-            .unwrap()
-            .replace_all(&s, "")
-            .to_string();
-        s = Regex::new(r"_+").unwrap().replace_all(&s, "_").to_string();
+        s = Regex::new("[. ]").unwrap().replace_all(&s, "_").to_string();
+        s = Regex::new("^_|_$").unwrap().replace_all(&s, "").to_string();
+        s = Regex::new("_+").unwrap().replace_all(&s, "_").to_string();
         // we get rid of obsolete words and non-experimental words have a vote boost anyway
         s = format!("{s} {}", self.pos.split(' ').nth(1).unwrap_or(&self.pos));
         if !self.selmaho.is_empty() {
@@ -60,7 +54,7 @@ impl Entry {
         }
         s = format!(
             "{s} {}",
-            Regex::new(r"[^a-z0-9]")
+            Regex::new("[^a-z0-9]")
                 .unwrap()
                 .replace_all(&self.author.to_lowercase(), "")
         );
