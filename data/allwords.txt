@@ -15529,7 +15529,6 @@ en lutfa'o
 en lutnilcla
 en lu'u
 en luvrzei
-en luvzba
 en luzbarcreka
 en luzdandu
 en luzycreka
@@ -17185,7 +17184,6 @@ en nudle
 en nu'e
 en nu'ecu'i
 en nu'enai
-en nuhempcr
 en nu'i
 en nu,IORK
 en nukni
