@@ -312,8 +312,8 @@ fn main() {
             }
         }
     }
-    let client = NotoizeClient::new();
-    let mut fonts = client.clone().notoize(chars.as_str()).files();
+    let mut client = NotoizeClient::new();
+    let mut fonts = client.notoize(chars.as_str()).files();
     fonts.retain(|f| {
         !["Noto Fangsong KSS Rotated", "Noto Sans", "Noto Color Emoji"]
             .contains(&f.fontname.as_str())
