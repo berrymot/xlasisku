@@ -384,9 +384,9 @@ dependencies = [
 
 [[package]]
 name = "latkerlo-jvotci"
-version = "1.0.4"
+version = "1.0.6"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "2a3b64936fe6a08dcf846f8e83ae3ef8050d993e6f8d71e1b1698a22a6ff7d79"
+checksum = "7fb819ddc6e24d132e8bb3617ae8be45fd3cfc09bdf0e45693ba9ffd260e2d41"
 dependencies = [
  "lazy_static",
  "regex",
@@ -468,7 +468,9 @@ dependencies = [
 
 [[package]]
 name = "notoize"
-version = "2.9.1"
+version = "2.9.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "3dea4b57e7b9dbfefbc5e3ad42f7532ac05bf9e1897d06aec369d2fd1412f446"
 dependencies = [
  "gh-file-curler",
  "itertools",
