@@ -16140,6 +16140,7 @@ en mi'u
 en mivdalmuzga
 en mivgau
 en mivjdu
+en mivjoimi'i
 en mivmro
 en mivmu'e
 en mivmu'i
@@ -19485,6 +19486,7 @@ en sarxeva
 en saryrutyjisra
 en sasfoi
 en sasfro
+en saska'ami'i
 en saske
 en saskrcereme
 en saskrsporte
@@ -19963,6 +19965,7 @@ en selspa
 en selspaji
 en selspe
 en selspoblo
+en selsre
 en selsrito
 en selsrustu
 en selsuckancydi'a
