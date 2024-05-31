@@ -8658,6 +8658,7 @@ en bo'ei
 en bofkosta
 en bofsnipa
 en bofsru
+en bofxa'e
 en bofyglajbu
 en bogda'u
 en bogjimro'i
@@ -8711,6 +8712,7 @@ en boltipterjvi
 en boltipyboi
 en boltipyjvi
 en boltsemaku
+en bolxada
 en bolxadba
 en bolxa'e
 en bombiksiia
@@ -9088,6 +9090,7 @@ en cankyuidje
 en canlu
 en canlu bu
 en canpa
+en canpyxa'e
 en canratni
 en canre
 en canro'i
@@ -9512,6 +9515,7 @@ en cintyfaigau
 en cintypu'i
 en cinvi'i
 en cinza
+en cinzybatci
 en cinzyxadji
 en ci'o
 en ci'o'au
@@ -11934,6 +11938,7 @@ en friko
 en frikytu'a
 en frikyxasli
 en frili
+en frimartine
 en frimo'i
 en frinu
 en frinyna'u
@@ -13422,6 +13427,7 @@ en jenai
 en jenca
 en jendu
 en jenje
+en jenjigu
 en jenmi
 en jenselte'a
 en jensi
@@ -15175,6 +15181,7 @@ en la'uske
 en lausku
 en lautci
 en lau'u
+en laxfi'uga'e
 en laxma'i
 en laxsfani
 en laxte
@@ -23458,6 +23465,7 @@ en xamsi
 en xamsku
 en xamxeinmo
 en xanbau
+en xanbe'u
 en xanboi
 en xance
 en xancidja'i
