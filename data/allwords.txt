@@ -8359,6 +8359,8 @@ en bemcinfo
 en bemjoitco
 en bemro
 en bemtu'a
+en benbogda'i
+en benbo'u
 en bencra
 en bende
 en bendicfancyxra
@@ -9099,6 +9101,7 @@ en canti
 en cantrau
 en cantu'a
 en cantybargau
+en canxada
 en canxais
 en ca'o
 en ca'o'a
@@ -10052,7 +10055,6 @@ en coi'o'e
 en coisna
 en cokcu
 en cokte
-en colkla
 en colzu'e
 en comco'e
 en comgau
@@ -13344,6 +13346,7 @@ en jdasoi
 en jdatro
 en jdatru
 en jdazei
+en jdegalxycmo
 en jdenoi
 en jdesna
 en jdice
@@ -19584,6 +19587,7 @@ en sedvre
 en sedycaugau
 en sedycra
 en sedycro
+en sedyda'i
 en sedykrecau
 en sedyta'u
 en sedyti'ebo'u
@@ -23226,6 +23230,7 @@ en volfanjacta'o
 en volmna
 en volratcu
 en volsmacu
+en volsu'u
 en voltolka'ecpi
 en volve
 en volvygau
