@@ -8687,6 +8687,7 @@ en bolbi'o
 en bolcartu
 en bolci
 en boldi'u
+en boldymor
 en bolga'axa'i
 en bolgaro
 en bolgrijvi
@@ -14633,6 +14634,7 @@ en kobysalta
 en kocon
 en ko'e
 en ko'ei
+en kofimitcidus
 en kognato
 en kogno
 en ko'i
