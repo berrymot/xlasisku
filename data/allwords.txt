@@ -9132,6 +9132,7 @@ en cardikygau
 en carfu
 en cargau
 en carka'a
+en carkakpa
 en carkemkasygaukepyblikeitci
 en carkemkasygaukepyblikemkeitci
 en carlimcinki
@@ -9714,6 +9715,7 @@ en clakarce
 en clakemkamymeckezrai
 en clakercrida
 en clakeryractu
+en clakonde'i
 en clamau
 en clame'a
 en clanebda'u
@@ -14680,6 +14682,7 @@ en konamorjis
 en konceto
 en konceto zei pagbu
 en konclupa
+en konde'i
 en kondomo
 en konfabu
 en konfeti
@@ -18803,6 +18806,7 @@ en ri'irdansu
 en ri'irga'a
 en rijno
 en rijyska
+en rikpei
 en rikro
 en rikteropu
 en rikybauske
@@ -22324,6 +22328,7 @@ en tolzilo
 en tolzi'o
 en tonberi
 en tonga
+en tonsi
 en to'o
 en to'okla
 en torbrato'a
@@ -23682,6 +23687,7 @@ en xigzo
 en xi'i
 en xi'i'ei
 en xiIUM
+en xilba'e
 en xilbate
 en xilbati
 en xilcelxa'i
