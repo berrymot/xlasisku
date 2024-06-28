@@ -9304,6 +9304,7 @@ en cfinyvra
 en cfipu
 en cfisisku
 en cfiste
+en cfixu'a
 en ci
 en ci'a
 en ci'ai
@@ -11693,6 +11694,7 @@ en fetspe
 en fetsrmeido
 en fetydzetru
 en fetyganti
+en fetytcebra
 en fetytricinse
 en fe'u
 en fe'ucmo
@@ -11813,6 +11815,7 @@ en fipygundi
 en fipyrebla
 en firbo'u
 en firca
+en fircinta
 en fircku
 en firenzes
 en firfra
@@ -13439,10 +13442,13 @@ en jenselte'a
 en jensi
 en jente'a
 en je'o
+en jerdi'i
 en jerjelino
+en jerle'i
 en jerna
 en jernysoi
 en jersi
+en jerxa'u
 en jerxo
 en jeske'a
 en jesni
@@ -18041,6 +18047,7 @@ en plesigja
 en plesiio
 en pleta'e
 en pletomino
+en pletu'u
 en plibu
 en plicme
 en plicru
@@ -20417,6 +20424,7 @@ en skomberu
 en sko'opu
 en skorbuti
 en skori
+en skoripi
 en skorpiio
 en skospa
 en skoto
@@ -23059,6 +23067,7 @@ en vidnyjarco
 en vidnyselclu
 en vidnysle
 en vidnyxra
+en vidrebjukni
 en vidru
 en vidvaubra
 en vidvi
@@ -23105,6 +23114,7 @@ en vindu
 en vinji
 en vinmirtci
 en vinpa
+en vinreju
 en vinsmi
 en vinta
 en vinti'e
@@ -23217,6 +23227,7 @@ en voi'e
 en voi'i
 en voikla
 en voinci
+en voiple
 en voisne
 en vokcinje
 en voki'o
