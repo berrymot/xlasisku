@@ -139,6 +139,11 @@ $x_1=p_{1j}$ (object/person) seems pleasant to/pleases $x_2=p_2$ in property $x_
 -n
 This is the first defined lujvo using -jax-, the proposed rafsi for {jai}. See also {pluka}.
 ---
+jguna gismu janbe 2 (en)
+$x_1$ is an institution in society/culture $x_2$
+-n
+Refers to significant cultural norms, practices, organizations, and other abstract notions like "the church", "the state", "the law" and so forth. Proposed rafsi -jgu-
+---
 jisrxananase fu'ivla wuzzy -1 (en)
 $x_1$ is a quantitiy of pineapple juice made from pineapple/pineapples $x_2$.
 -n
@@ -268,6 +273,11 @@ plipovypo'e lujvo krtisfranks 1 (en)
 $x_1$ possess/is permitted only the right to use $x_2$ (and possibly physically possess $x_2$ as well) under law $x_3$
 -n
 This word is useful for ownership of a movie, or a rented house, or a do at work/school, among other things; one does not really own theset things, only the right to use them. One may or may not have the object in one's physical or immediate possession; the concept of what constitutes "having in one's physical possession" is left semantically ambiguous. Permanence of this status or authority over it is not specified. This word uses the experimental rafsi "-pov-" for the word {po'o}.
+---
+pombo gismu janbe 2 (en)
+$x_1$ is unique in property $x_2$; $x_1$ is the only thing/all of the things that satisfy $x_2$
+-n
+See also {po'o}, {olkai}, {pavdzakai}. Proposed rafsi -pom-
 ---
 rafme'e lujvo tijlan 0 (en)
 $c_1=r_1$ is a title of $c_2=r_2$ used by $c_3$.

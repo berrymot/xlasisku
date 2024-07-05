@@ -12921,6 +12921,7 @@ en ilka'u
 en ilki
 en ilmismu
 en ilnu
+en ilpofu
 en imla
 en impera
 en imperative
@@ -13503,6 +13504,7 @@ en jgitrvolino
 en jgitrxu
 en jglandi
 en jgu'ai
+en jguna
 en jguvi
 en ji
 en ji'a
@@ -17487,6 +17489,7 @@ en pai
 en pai'e
 en pai'i
 en paijdi
+en paijgu
 en pairkamni
 en pairkamnycmi
 en pairnu'i
@@ -18133,6 +18136,7 @@ en polpeta
 en polsaka
 en polskas
 en poltervanci
+en pombo
 en ponbau
 en pongu'e
 en ponjda
@@ -22342,6 +22346,8 @@ en to'okla
 en torbrato'a
 en torceli
 en torcrida
+en tordakyxa'i
+en tordaxi
 en tordu
 en torluznaukosta
 en torneio
@@ -23957,6 +23963,7 @@ en zabdiia
 en zabna
 en zacfoncu'u
 en zacpanka
+en zadgau
 en za'e
 en za'ei
 en za'e zei lujvo
