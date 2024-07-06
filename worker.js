@@ -63,7 +63,7 @@ function search(query) {
                 results.push([entry, 1]);
             }
         }
-    } else if (/^[A-GI-PR-VX-Z][A-GhI-PR-VX-Zabc0-9*+]*$/.test(original)) {
+    } else if (/^[A-GI-PR-VX-Z][A-Gh'I-PR-VX-Zabc0-9*+]*$/.test(original)) {
         for (const entry of jbo) {
             if (entry.selmaho) {
                 let y = entry.selmaho;

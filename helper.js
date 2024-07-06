@@ -30,6 +30,7 @@ function convertJSONToHTMLElement(json) {
         createHTMLElement("p", null, [
             createHTMLElement("a", {
                 "href": "?q=" + json.word + jvoptionsUrl(),
+                "className": "w"
             }, [
                 createHTMLElement("b", null, [json.word])
             ]),
@@ -42,7 +43,9 @@ function convertJSONToHTMLElement(json) {
                     }, [getVeljvo(json.word).join(" ")])
             ]].flat()) : null,
             " ",
-            json.selmaho ? createHTMLElement("code", {"className": "selmaho"}, [json.selmaho]) : null,
+            json.selmaho ? createHTMLElement("code", {"className": "selmaho"}, [
+                createHTMLElement("a", {"href": "?q=" + encodeURIComponent(json.selmaho) + jvoptionsUrl()}, [json.selmaho])
+            ]) : null,
             " ",
             createHTMLElement("a", {
                 "href": "https://jbovlaste.lojban.org/dict/" + json.word.replace(/ /g, "%20"),
