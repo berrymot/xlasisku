@@ -43,8 +43,8 @@ function convertJSONToHTMLElement(json) {
                     }, [getVeljvo(json.word).join(" ")])
             ]].flat()) : null,
             " ",
-            json.selmaho ? createHTMLElement("code", {"className": "selmaho"}, [
-                createHTMLElement("a", {"href": "?q=" + encodeURIComponent(json.selmaho) + jvoptionsUrl()}, [json.selmaho])
+            json.selmaho ? createHTMLElement("a", {"href": "?q=" + encodeURIComponent(json.selmaho) + jvoptionsUrl()}, [
+                createHTMLElement("code", {"className": "selmaho"}, [json.selmaho])
             ]) : null,
             " ",
             createHTMLElement("a", {
