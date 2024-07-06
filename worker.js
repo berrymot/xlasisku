@@ -15,7 +15,7 @@ function h(t) {
 function selmahois(x, y) {
     const [xname, xdigit, xsub, xstar] = x;
     const [yname, ydigit, ysub, ystar] = y;
-    return xname == yname && (xdigit == ydigit || xdigit == null) && (xsub == ysub || xsub == null) && (!xstar || ystar);
+    return h(xname) == h(yname) && (xdigit == ydigit || xdigit == null) && (xsub == ysub || xsub == null) && (!xstar || ystar);
 }
 function getVowelsFrom(str) {
     var vowels = str.toLowerCase();
@@ -63,8 +63,24 @@ function search(query) {
                 results.push([entry, 1]);
             }
         }
-    } else if (/^[A-GI-PR-VX-Z][A-GhI-PR-VX-Zabc0-9*]*$/.test(original)) {
-        // TODO: make this work (issue #1)
+    } else if (/^[A-GI-PR-VX-Z][A-GhI-PR-VX-Zabc0-9*+]*$/.test(original)) {
+        for (const entry of jbo) {
+            if (entry.selmaho) {
+                let y = entry.selmaho;
+                let ystar = y.includes("*");
+                let ydigit = (y.match(/\d+/) ?? [null])[0];
+                let ysub = (y.match(/[abc]+/) ?? [null])[0];
+                let yname = (h(y).match(/[A-GI-PR-VX-Z][A-G'I-PR-VX-Z+]*/) ?? [null])[0];
+                let x = original;
+                let xstar = x.includes("*");
+                let xdigit = (x.match(/\d+/) ?? [null])[0];
+                let xsub = (x.match(/[abc]+/) ?? [null])[0];
+                let xname = (h(x).match(/[A-GI-PR-VX-Z][A-G'I-PR-VX-Z+]*/) ?? [null])[0];
+                if (selmahois([xname, xdigit, xsub, xstar], [yname, ydigit, ysub, ystar])) {
+                    results.push([entry, 1]);
+                }
+            }
+        }
     } else {
         // hi
         if (query == "hi") {
