@@ -13338,6 +13338,7 @@ en jbovlaste
 en jbovlazbakamnandu
 en jbovlazbakemsedycro
 en jbovoinci
+en jbuselkei
 en jbuskami
 en jdabe'e
 en jdaca'i
@@ -13972,6 +13973,7 @@ en ka'akce
 en ka'amru
 en ka'arbatci
 en ka'arbi
+en ka'arda'i
 en ka'arde'i
 en ka'arkomcu
 en ka'arvi'u
@@ -16479,6 +16481,7 @@ en mu'i'ai
 en mu'i ma
 en mu'inai
 en mu'i'u
+en mujgunma
 en mujybukyvro
 en mujykanji
 en mujyku'e
@@ -21477,6 +21480,7 @@ en ta'o
 en ta'oi
 en ta'onai
 en ta'ormu'a
+en ta'orselkei
 en ta'orskami
 en ta'orstizu
 en tapflifa'u
