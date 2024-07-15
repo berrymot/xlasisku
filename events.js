@@ -226,6 +226,7 @@ function rhymeMode(toggle) {
 }
 id("clear").addEventListener("click", function() {
     id("search").value = "";
+    id("search").focus();
     dispatchSearchInputEvent();
 });
 id("theme").addEventListener("click", function() {
