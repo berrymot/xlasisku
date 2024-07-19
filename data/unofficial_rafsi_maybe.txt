@@ -374,6 +374,11 @@ $x_1$ reflects Toki Pona culture/nationality/language in aspect $x_2$
 -n
 Completely equivalent to "{tokpona}", including in rafsi; however, this is okay due to a proposed equivalence of zi'evla under exchange of final vowel string/cluster. This word maintains the general pattern that cultural valsi end with "-o".
 ---
+tonsi gismu lalxu 2 (en)
+$x_1$ is transgender / nonbinary / gender-non-conforming
+-n
+See also {trangeni}, {lingeni}. Proposed rafsi -tos-.
+---
 tunri'a lujvo djeikyb 1 (en)
 $x_1=r_1$ (nu) physically causes $x_2=t_1$ (object, usually pointed) to poke $x_3=t_2$ (experiencer) under conditions $x_4=r_3$
 -n

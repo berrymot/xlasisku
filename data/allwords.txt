@@ -8485,6 +8485,7 @@ en bimvrogai
 en bimxra
 en bindo
 en binigNIT
+en binma
 en bino
 en binono
 en binonovo
@@ -15048,6 +15049,7 @@ en lacydu'a
 en lacy'inda
 en ladjvestagycti
 en ladlabrulspa
+en ladlo
 en ladmatne
 en la dontu'u
 en ladru
@@ -17256,6 +17258,7 @@ en nunflicabybandu
 en nunfusra
 en nungei
 en nungle
+en nungubycu'a
 en nungumcatra
 en nungumdjacaumro
 en nungumpra
@@ -21150,6 +21153,7 @@ en stasrgaspatco
 en stasu
 en stasysmuci
 en stati
+en statilju
 en staxanovite
 en steba
 en steci
