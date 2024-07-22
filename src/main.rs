@@ -1,4 +1,5 @@
 use latkerlo_jvotci::*;
+use lazy_static::lazy_static;
 use notoize::NotoizeClient;
 use regex::Regex;
 use reqwest::blocking;
@@ -24,6 +25,12 @@ struct Entry {
     #[serde(skip)]
     lang: String,
 }
+lazy_static! {
+    pub static ref PAUSE: Regex = Regex::new("[. ]").unwrap();
+    pub static ref TRIM: Regex = Regex::new("^_|_$").unwrap();
+    pub static ref MULTIPLE: Regex = Regex::new("_+").unwrap();
+    pub static ref NONWORD: Regex = Regex::new("[^a-z0-9]").unwrap();
+}
 impl Entry {
     fn new() -> Self {
         Self {
@@ -41,31 +48,26 @@ impl Entry {
     fn to_datastring(&self) -> String {
         let mut s = self.word.to_owned();
         // regex replacements
-        s = Regex::new("[. ]").unwrap().replace_all(&s, "_").to_string();
-        s = Regex::new("^_|_$").unwrap().replace_all(&s, "").to_string();
-        s = Regex::new("_+").unwrap().replace_all(&s, "_").to_string();
+        s = PAUSE.replace_all(&s, "_").to_string();
+        s = TRIM.replace_all(&s, "").to_string();
+        s = MULTIPLE.replace_all(&s, "_").to_string();
         // we get rid of obsolete words and non-experimental words have a vote boost anyway
-        s = format!("{s} {}", self.pos.split(' ').nth(1).unwrap_or(&self.pos));
+        s += &format!(" {}", self.pos.split(' ').nth(1).unwrap_or(&self.pos));
         if !self.selmaho.is_empty() {
-            s = format!("{s} {}", self.selmaho);
+            s += &format!(" {}", self.selmaho);
         }
         if !self.rafsi.is_empty() {
-            s = format!("{s} [-{}-]", self.rafsi.join("-"));
+            s += &format!(" [-{}-]", self.rafsi.join("-"));
         }
-        s = format!(
-            "{s} {}",
-            Regex::new("[^a-z0-9]")
-                .unwrap()
-                .replace_all(&self.author.to_lowercase(), "")
-        );
-        s = format!(
-            "{s} {} ({})\r\n{}",
+        s += &format!(" {}", NONWORD.replace_all(&self.author.to_lowercase(), ""));
+        s += &format!(
+            " {} ({})\r\n{}",
             self.score.to_string().as_str(),
             self.lang,
             self.definition
         );
         if !self.notes.is_empty() {
-            s = format!("{s}\r\n-n\r\n{}", self.notes);
+            s += &format!("\r\n-n\r\n{}", self.notes);
         }
         s
     }
@@ -277,7 +279,7 @@ fn main() {
     println!("all words");
     let mut all = String::new();
     for word in &words {
-        all = format!("{all}{} {}\r\n", word.lang, word.word);
+        all += &format!("{} {}\r\n", word.lang, word.word);
     }
     fs::write("data/allwords.txt", all).unwrap();
     // jbo.js
@@ -288,7 +290,7 @@ fn main() {
     println!("plaintext");
     let mut data = "---".to_string();
     for word in words {
-        data = format!("{data}\r\n{}\r\n---", word.to_datastring());
+        data += &format!("\r\n{}\r\n---", word.to_datastring());
     }
     fs::write("data/data.txt", &data).unwrap();
     // chars.txt, fonts, noto.css
@@ -323,14 +325,14 @@ fn main() {
     let mut css = String::new();
     for font in fonts.clone() {
         fs::write(format!("fonts/{}", font.filename), font.bytes).unwrap();
-        css = format!(
-            "{css}@font-face {{\r\n    font-family: \"{}\";\r\n    src: url(\"fonts/{}\");\r\n    \
+        css += &format!(
+            "@font-face {{\r\n    font-family: \"{}\";\r\n    src: url(\"fonts/{}\");\r\n    \
              font-display: swap;\r\n}}\r\n",
             font.fontname, font.filename
         );
     }
-    css = format!(
-        "{css}:root {{\r\n    --sans: \"Noto Sans\", {}, ui-sans-serif, sans-serif;\r\n}}",
+    css += &format!(
+        ":root {{\r\n    --sans: \"Noto Sans\", {}, ui-sans-serif, sans-serif;\r\n}}",
         fonts
             .iter()
             .map(|f| format!("\"{}\"", f.fontname))
@@ -343,8 +345,8 @@ fn main() {
     let mut naljvo_string = String::new();
     let mut naljvo_list = "const naljvo = [".to_string();
     for v in &naljvo {
-        naljvo_string = format!("{naljvo_string}{v}\r\n");
-        naljvo_list = format!("{naljvo_list}\"{v}\",");
+        naljvo_string += &format!("{v}\r\n");
+        naljvo_list += &format!("\"{v}\",");
     }
     naljvo_list += "]";
     fs::write("data/naljvo.txt", &naljvo_string).unwrap();
@@ -353,7 +355,7 @@ fn main() {
     println!("unofficial rafsi");
     let mut data = "---".to_string();
     for word in unofficial_rafsi {
-        data = format!("{data}\r\n{}\r\n---", word.to_datastring());
+        data += &format!("\r\n{}\r\n---", word.to_datastring());
     }
     fs::write("data/unofficial_rafsi_maybe.txt", &data).unwrap();
     // .i mulno .ui
