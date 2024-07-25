@@ -1,10 +1,9 @@
 use latkerlo_jvotci::*;
-use lazy_static::lazy_static;
 use notoize::NotoizeClient;
 use regex::Regex;
 use reqwest::blocking;
 use serde::{Deserialize, Serialize};
-use std::{collections::HashSet, fs, io::Cursor, time::Instant};
+use std::{collections::HashSet, fs, io::Cursor, sync::LazyLock, time::Instant};
 use xml::{attribute::OwnedAttribute, reader::XmlEvent, EventReader};
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
@@ -25,12 +24,10 @@ struct Entry {
     #[serde(skip)]
     lang: String,
 }
-lazy_static! {
-    pub static ref PAUSE: Regex = Regex::new("[. ]").unwrap();
-    pub static ref TRIM: Regex = Regex::new("^_|_$").unwrap();
-    pub static ref MULTIPLE: Regex = Regex::new("_+").unwrap();
-    pub static ref NONWORD: Regex = Regex::new("[^a-z0-9]").unwrap();
-}
+pub static PAUSE: LazyLock<Regex> = LazyLock::new(|| Regex::new("[. ]").unwrap());
+pub static TRIM: LazyLock<Regex> = LazyLock::new(|| Regex::new("^_|_$").unwrap());
+pub static MULTIPLE: LazyLock<Regex> = LazyLock::new(|| Regex::new("_+").unwrap());
+pub static NONWORD: LazyLock<Regex> = LazyLock::new(|| Regex::new("[^a-z0-9]").unwrap());
 impl Entry {
     fn new() -> Self {
         Self {

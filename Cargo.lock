@@ -696,7 +696,6 @@ name = "scripts"
 version = "0.1.0"
 dependencies = [
  "latkerlo-jvotci",
- "lazy_static",
  "notoize",
  "regex",
  "reqwest",
