@@ -24407,6 +24407,7 @@ en zmase
 en zmasydju
 en zmaumce
 en zmazau
+en zmiboto
 en zmico
 en zmicu'a
 en zmiku

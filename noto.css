@@ -1,11 +1,11 @@
 @font-face {
-    font-family: "Noto Rashi Hebrew";
-    src: url("fonts/NotoRashiHebrew-Regular.ttf");
+    font-family: "Noto Sans Hebrew";
+    src: url("fonts/NotoSansHebrew-Regular.ttf");
     font-display: swap;
 }
 @font-face {
-    font-family: "Noto Kufi Arabic";
-    src: url("fonts/NotoKufiArabic-Regular.ttf");
+    font-family: "Noto Sans Arabic";
+    src: url("fonts/NotoSansArabic-Regular.ttf");
     font-display: swap;
 }
 @font-face {
@@ -34,5 +34,5 @@
     font-display: swap;
 }
 :root {
-    --sans: "Noto Sans", "Noto Rashi Hebrew", "Noto Kufi Arabic", "Noto Sans Devanagari", "Noto Sans Bengali", "Noto Sans Myanmar", "Noto Sans CJK HK", "Noto Sans Math", ui-sans-serif, sans-serif;
+    --sans: "Noto Sans", "Noto Sans Hebrew", "Noto Sans Arabic", "Noto Sans Devanagari", "Noto Sans Bengali", "Noto Sans Myanmar", "Noto Sans CJK HK", "Noto Sans Math", ui-sans-serif, sans-serif;
 }
