@@ -19120,6 +19120,7 @@ en rutpurdi
 en rutrceraso
 en rutrcerimoia
 en rutrglabra
+en rutrkemali
 en rutrkenomele
 en rutrkoko
 en rutrle'ukena
@@ -19132,6 +19133,7 @@ en rutrpiripiri
 en rutrpisu
 en rutrprunu
 en rutrvanila
+en rutrxemali
 en rutrximene'a
 en rutsalta
 en rutsfani

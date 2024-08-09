@@ -274,7 +274,7 @@ $x_1$ possess/is permitted only the right to use $x_2$ (and possibly physically 
 -n
 This word is useful for ownership of a movie, or a rented house, or a do at work/school, among other things; one does not really own theset things, only the right to use them. One may or may not have the object in one's physical or immediate possession; the concept of what constitutes "having in one's physical possession" is left semantically ambiguous. Permanence of this status or authority over it is not specified. This word uses the experimental rafsi "-pov-" for the word {po'o}.
 ---
-pombo gismu janbe 3 (en)
+pombo gismu janbe 2 (en)
 $x_1$ is unique in property $x_2$; $x_1$ is the only thing/all of the things that satisfy $x_2$
 -n
 See also {po'o}, {olkai}, {pavdzakai}. Proposed rafsi -pom-
