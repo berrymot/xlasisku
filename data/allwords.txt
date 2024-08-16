@@ -10295,6 +10295,7 @@ en cuktaima'arbi'i
 en cuktermai
 en cukydagyterkruca
 en cukydjine
+en cukygolfyjvi
 en cukygu'ivelvei
 en cukyjinslu
 en cukyku'ovelvei
@@ -12355,6 +12356,7 @@ en goilbi'o
 en goilgau
 en goilka'i
 en go'ira'o
+en golfyjvi
 en gombesa
 en gomsi
 en gomsika
@@ -16340,6 +16342,7 @@ en molselputpracro
 en molselpu'u
 en moltenva'u
 en moltu'u
+en molvelylu'i
 en molylitki
 en momkai
 en momlai
@@ -17057,6 +17060,7 @@ en nitmau
 en nitmu'u
 en nitpiki
 en nitrai
+en nitre'e
 en nitsalpo
 en nityjinru
 en nityjirkla
@@ -19120,7 +19124,6 @@ en rutpurdi
 en rutrceraso
 en rutrcerimoia
 en rutrglabra
-en rutrkemali
 en rutrkenomele
 en rutrkoko
 en rutrle'ukena
@@ -20549,6 +20552,7 @@ en smimlu
 en smisi'u
 en smitra
 en smoka
+en smokino
 en smokrtabi
 en smorodina
 en smucau
@@ -21665,6 +21669,7 @@ en tcinguuo
 en tcingys
 en tcini
 en tcintrau
+en tcinysligau
 en tcipi
 en tciromei
 en tcita
@@ -22116,6 +22121,7 @@ en tirxrpardu
 en tirxrponka
 en tirxu
 en tirxyjvecinfo
+en tirxyxi'a
 en tisna
 en tisycanti
 en titla

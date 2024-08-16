@@ -24,11 +24,6 @@
     font-display: swap;
 }
 @font-face {
-    font-family: "Noto Sans Georgian";
-    src: url("fonts/NotoSansGeorgian-Regular.ttf");
-    font-display: swap;
-}
-@font-face {
     font-family: "Noto Sans CJK HK";
     src: url("fonts/NotoSansCJKhk-Regular.otf");
     font-display: swap;
@@ -39,5 +34,5 @@
     font-display: swap;
 }
 :root {
-    --sans: "Noto Sans", "Noto Sans Hebrew", "Noto Sans Arabic", "Noto Sans Devanagari", "Noto Sans Bengali", "Noto Sans Myanmar", "Noto Sans Georgian", "Noto Sans CJK HK", "Noto Sans Math", ui-sans-serif, sans-serif;
+    --sans: "Noto Sans", "Noto Sans Hebrew", "Noto Sans Arabic", "Noto Sans Devanagari", "Noto Sans Bengali", "Noto Sans Myanmar", "Noto Sans CJK HK", "Noto Sans Math", ui-sans-serif, sans-serif;
 }
