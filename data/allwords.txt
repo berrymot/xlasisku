@@ -11672,6 +11672,7 @@ en fertis
 en feskevlu'a
 en fesli'a
 en fespli
+en fespu'i
 en festerplakai
 en festerplatci
 en festi
