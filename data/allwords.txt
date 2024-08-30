@@ -80,6 +80,7 @@ en aldeia
 en alfabeta
 en alfabetagam
 en alga
+en alge
 en algebra
 en algoritma
 en alkai
@@ -9752,6 +9753,7 @@ en clite
 en cliva
 en clugau
 en clupa
+en cma'alge
 en cmabacyborvi'a
 en cmabakfu
 en cmabatci
@@ -14926,6 +14928,7 @@ en kulnu
 en kulpikta
 en kulselgu'a
 en kumbartu
+en kumdru
 en kumfa
 en kumjoibimja'i
 en kumjoibimselvauja'i
@@ -18298,6 +18301,7 @@ en prurai
 en pruri
 en prurolmoi
 en pruslemijyji'e
+en prusmi
 en pruspe
 en pru'uxfri
 en pruxi
