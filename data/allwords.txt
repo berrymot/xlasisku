@@ -8542,6 +8542,7 @@ en bitmu
 en bitni
 en bitnrkrati
 en bitnymei
+en bitnymo'a
 en bitybi'o
 en bitydu'a
 en bitygau
@@ -11574,6 +11575,7 @@ en faumlu
 en faunca'a
 en faunjdikpe
 en faunli
+en faunsa
 en faunxa'o
 en faurbanzu
 en faurdu'e
@@ -18118,6 +18120,7 @@ en po
 en po'a
 en po'afli
 en po'asna
+en po'aspo
 en pocli
 en po'e
 en po'edji
@@ -19287,6 +19290,7 @@ en ru'urxuputu
 en ru'urzu'aru
 en ru'urzumuku
 en ru'urzuvedu
+en ruxla'a
 en ruxmai
 en ruxpe'o
 en ruxse'i
