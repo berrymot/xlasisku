@@ -10298,7 +10298,6 @@ en cuktaima'arbi'i
 en cuktermai
 en cukydagyterkruca
 en cukydjine
-en cukygolfyjvi
 en cukygu'ivelvei
 en cukyjinslu
 en cukyku'ovelvei
@@ -12282,6 +12281,7 @@ en girzrdau
 en girzu
 en gismu
 en gismyjvo
+en gitrbanjo
 en gitsko
 en gitytortci
 en gi'u
@@ -14435,6 +14435,7 @@ en ki'arzau
 en ki'asku
 en ki'au
 en kibdu'a
+en kibjo'e
 en kibmalmri
 en kibmeme
 en kibrbrauzero
@@ -14808,8 +14809,10 @@ en krilacri
 en krilami
 en krili
 en krilogji
+en krilrkalsaiti
 en krilrkartso
 en kriluui
+en krilykevro'i
 en Krim
 en krimtauri
 en krimuri
@@ -21909,6 +21912,7 @@ en tercanre
 en tercelpu'o
 en terckasu
 en tercma
+en tercneparbi
 en tercra
 en terctu
 en tercu'e
