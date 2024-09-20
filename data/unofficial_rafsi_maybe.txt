@@ -74,7 +74,7 @@ $x_1$ is October/tenth month of year $x_2$ in calendar $x_3$.
 -n
 Note: Based on experimental rafsi for {dau} (duv). Use with caution. Alternative: {pavnonma'i}
 ---
-dzama gismu zirenuovr 2 (en)
+dzama gismu zirenuovr 3 (en)
 $x1$ performs chore / menial duty / housework / errand $x2$ (nu/ka) for purpose / as obliged by $x3$.
 -n
 Compare with {zdagu'a}, but much broader in scope, as not limited to house work.  Includes, for example, bills and shopping.  The little tasks we do to maintain our daily lives.  x3 is the motivation for doing the chore, compare {zukte}3.  Suggested rafsi: -zam- and also proposed to steal -dza- from {da}.  See also {bilga}, {gunka}. Generated with gismu algorithm: gismu[...]score.py dzaci, kama, tcor, lata, domashnie, rutini

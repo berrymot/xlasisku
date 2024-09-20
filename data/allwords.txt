@@ -11326,6 +11326,7 @@ en endo
 en enfa
 en enfasnu
 en enfoka
+en engabadiro
 en enge
 en engranaje
 en enka
@@ -14733,6 +14734,7 @@ en kopteri
 en korbi
 en korbipe
 en korcu
+en kordu
 en korfaipletomino
 en korgretro
 en korka
@@ -24292,6 +24294,7 @@ en zgiselfi'i
 en zgiske
 en zgitci
 en zgito'a
+en zgito'acmi
 en zgito'apoi
 en zgito'axre
 en zgizba
