@@ -9522,6 +9522,7 @@ en cintolcadvi'i
 en cintrau
 en cintyfaigau
 en cintypu'i
+en cintyzbe
 en cinvi'i
 en cinza
 en cinzybatci
@@ -14140,6 +14141,7 @@ en kamjinsa
 en kamju
 en kamjunmre
 en kamjybo'u
+en kamjyro'i
 en kamjysunga
 en kamka'o
 en kamlsu
@@ -16876,6 +16878,7 @@ en nau'o
 en naurso'a
 en nau'u
 en na'uvla
+en navdine
 en navni
 en navnlrado
 en navnrargo
@@ -17135,6 +17138,7 @@ en noltrufe'i
 en noltrunau
 en noltruni'u
 en noltruti'u
+en nolxampre
 en nolzda
 en nolzgi
 en nomei
@@ -20163,6 +20167,7 @@ en seti'u
 en setmice
 en setmima
 en setpistabno
+en setro'i
 en setu'i
 en setxeve
 en se'u
@@ -23843,6 +23848,7 @@ en xonxoli
 en xo'o
 en xo'oi
 en xo'onai
+en xopfeni
 en xorban
 en xorbo
 en xorjina
