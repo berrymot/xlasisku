@@ -10929,6 +10929,7 @@ en djabege
 en djabei
 en djabeipre
 en djabevycripu
+en djaburito
 en djacaumro
 en djacickebaba
 en djacpi
@@ -10937,6 +10938,7 @@ en djagru
 en djagu'ara
 en djainu
 en djakare
+en djakari
 en djakartas
 en djaka'u
 en djakebaba
@@ -10957,6 +10959,7 @@ en djasluni
 en djasnuji
 en djaspi
 en djata'e
+en djatako
 en djatsiku'u
 en djaule
 en djaumo
@@ -13197,7 +13200,6 @@ en jasybriju
 en jatna
 en jatnrpapa
 en jatny'utka
-en jatsu
 en ja'u
 en jau
 en jau'au
@@ -16402,6 +16404,7 @@ en mraigo
 en mraji
 en mrajymledi
 en mranmar
+en mratipi
 en mrecmu
 en mrena'u
 en mrenilglamlu
@@ -21622,6 +21625,7 @@ en tcecrogau
 en tce'exo
 en tcegei
 en tcejarso'a
+en tcejunri
 en tcekau
 en tcekitau
 en tcekitaujau
@@ -23495,6 +23499,7 @@ en xaklogji
 en xaksu
 en xakto
 en xaktoni
+en xakyxau
 en xakyziflogji
 en xalbarja
 en xalbebna
@@ -24142,6 +24147,7 @@ en zdaselgu'a
 en zdase'u
 en zdasta
 en zdatru
+en zdaxogani
 en zdazva
 en zdeltadirake
 en zdeltakronekre
@@ -24259,6 +24265,7 @@ en zetro
 en ze'u
 en ze'u zei seldejni
 en zevla
+en zevle'o
 en zevlyjvo
 en zevlyrafsi
 en zevykla
@@ -24473,6 +24480,7 @@ en zo'ombi
 en zo'onai
 en zo'oro'u
 en zorkru
+en zorle'o
 en zorpinji
 en zorti
 en zo'u
@@ -24573,6 +24581,7 @@ art-loglan felonei
 art-loglan filonei
 art-loglan folonei
 art-loglan sezyctu
+de jatsu
 de pagbirti
 de pagbybirti
 de vormygreku
