@@ -8615,6 +8615,7 @@ en blofarga'a
 en blogre
 en bloibu
 en bloja'a
+en blokanu
 en blokla
 en blokle
 en bloklu
@@ -13499,6 +13500,7 @@ en jezystisni
 en jgalu
 en jganu
 en jgari
+en jgaunla
 en jgegau
 en jgena
 en jgenanba
@@ -22089,6 +22091,7 @@ en tigbalan
 en tigdansu
 en tigni
 en tigra
+en tigytsina
 en ti'i
 en ti'ivni
 en tijdzu
