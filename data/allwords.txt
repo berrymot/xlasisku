@@ -13518,6 +13518,7 @@ en jgitrsita
 en jgitrvolino
 en jgitrxu
 en jglandi
+en jgorila
 en jgu'ai
 en jguna
 en jguvi
@@ -16349,6 +16350,7 @@ en molgle
 en molja'u
 en molki
 en molko'a
+en molkordu
 en molku'o
 en molmarxa
 en molmla
@@ -23559,6 +23561,7 @@ en xanjaisi'u
 en xanjalgau
 en xanjirnymirli
 en xanka
+en xankordu
 en xankydji
 en xanlai
 en xanle'u
@@ -23920,6 +23923,7 @@ en xubrnrumeksa
 en xudvu
 en xu'e
 en xu'icmu
+en xukfuri
 en xukmi
 en xukmranoni
 en xukske
@@ -24037,6 +24041,7 @@ en zalmlo
 en zaltapla
 en zalvi
 en ZAMbiias
+en zamveka
 en zanbebna
 en zanbe'icku
 en zancari
