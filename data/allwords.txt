@@ -13105,6 +13105,7 @@ en jaclu'a
 en jacmakfa
 en jacmivbormro
 en jacmlo
+en jacna'i
 en jacpi'o
 en jacra'erbi'u
 en jacre'ipenbi
@@ -15054,9 +15055,11 @@ en labnyge'u
 en labnyjba
 en labru'o
 en labybi'o
+en labybla
 en labyblu
 en labyblusle
 en labyfi'e
+en labyska
 en labyterbi'a
 en labyxu'e
 en labzilska
@@ -22623,6 +22626,7 @@ en tumdesku
 en tumfakli'u
 en tumgapcripu
 en tumgre
+en tumje'e
 en tumjvejaumapti
 en tumkupypaumerko
 en tumla
@@ -23710,7 +23714,9 @@ en xekcindu
 en xekckafi
 en xekcpi
 en xekri
+en xekri'o
 en xekselskapi
+en xekska
 en xeksodva
 en xekykrexruba
 en xekyzilska
