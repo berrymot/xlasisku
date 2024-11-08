@@ -9672,6 +9672,7 @@ en ckasu
 en ckeji
 en ckemono
 en ckenderu
+en ckeno
 en cketake
 en ckiku
 en ckilu
@@ -9959,6 +9960,7 @@ en cmeci'u
 en cmeclax
 en cmene
 en cmenrline
+en cmero
 en cmesanji
 en cmeske
 en cmeste
@@ -11918,6 +11920,7 @@ en fonmo
 en fonselrango
 en fonskami
 en fonta'a
+en fonto
 en fonxa
 en fonynoi
 en fo'o
@@ -15395,6 +15398,7 @@ en lilmudri
 en lilneia
 en lilneia zei cmene
 en lilrkerozine
+en lilvo
 en limfa
 en limla'u
 en limna
@@ -16373,6 +16377,7 @@ en momkai
 en momlai
 en momrai
 en momvelru'e
+en mondo
 en monfu'i
 en monfu'igau
 en mongolo
@@ -16684,6 +16689,7 @@ en najyzilska
 en nakcei
 en nakcinse
 en nakfamti
+en nakmli
 en naknakcinse
 en naknalspe
 en nakni
@@ -16872,6 +16878,7 @@ en natadekokos
 en natfe
 en natficima
 en natladekoko
+en natlo
 en natmi
 en natpa'i
 en natpamtrusi'o
@@ -16902,6 +16909,7 @@ en navytre
 en navzmi
 en naxle
 en nazbi
+en nazmo
 en ne
 en ne'a
 en ne'au
@@ -20624,6 +20632,7 @@ en snaveitci
 en snavi
 en snazga
 en snecrofant
+en snejo
 en sneju'e
 en snicmaci
 en snicne

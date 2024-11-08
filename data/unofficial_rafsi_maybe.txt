@@ -379,7 +379,7 @@ $x_1$ reflects Toki Pona culture/nationality/language in aspect $x_2$
 -n
 Completely equivalent to "{tokpona}", including in rafsi; however, this is okay due to a proposed equivalence of zi'evla under exchange of final vowel string/cluster. This word maintains the general pattern that cultural valsi end with "-o".
 ---
-tonsi gismu lalxu 3 (en)
+tonsi gismu lalxu 4 (en)
 $x_1$ is transgender / nonbinary / gender-non-conforming
 -n
 See also {trangeni}, {lingeni}. Proposed rafsi -tos-.
