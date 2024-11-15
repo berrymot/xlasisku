@@ -69,7 +69,7 @@ generic single-word generic vocative marker; identifies intended listener with a
 -n
 The intent is that it is allowed everywhere in the grammar where DOI and COI are. See also {zo'oi}, {la'oi}, {me'oi}, {ra'oi}. Not similar to {co'oi}. Equivalent to {doi} {la'oi}.
 ---
-duvma'i lujvo spheniscine 2 (en)
+duvma'i lujvo spheniscine 3 (en)
 $x_1$ is October/tenth month of year $x_2$ in calendar $x_3$.
 -n
 Note: Based on experimental rafsi for {dau} (duv). Use with caution. Alternative: {pavnonma'i}
@@ -84,7 +84,7 @@ $x_1$ practices/exercises/studies/improves at doing/being $x_2$ by doing/being $
 -n
 Somewhat based on the rafsi -cre-
 ---
-felma'i lujvo spheniscine 2 (en)
+felma'i lujvo spheniscine 3 (en)
 $x_1$ is November/eleventh month of year $x_2$ in calendar $x_3$.
 -n
 Note: Based on experimental rafsi for {fei} (fel). Use with caution. Alternative: {pavypavma'i}
@@ -94,7 +94,7 @@ $r_1$ is the rafsi prefix used in stage-3 fu'ivla $v_1=f_1$, rafsi based on word
 -n
 “rafsi prefix” is a term specific to Lojban and refers to the initial part of a stage-3 fu'ivla which is a rafsi. $x_2$ is the word in which the rafsi is used, $x_3$ is the word from which the rafsi has been derived. See also: {cibyfu'ivla}, {fu'ivla}, {rafsi}.
 ---
-gamyma'i lujvo spheniscine 2 (en)
+gamyma'i lujvo spheniscine 3 (en)
 $x_1$ is December/twelfth month of year $x_2$ in calendar $x_3$.
 -n
 Note: Based on experimental rafsi for {gai} (gam). Use with caution. Alternative: {pavrelma'i}

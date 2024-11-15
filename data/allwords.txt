@@ -11240,6 +11240,7 @@ en dzuga'a
 en dzukicau
 en dzukla
 en dzuklaji
+en dzuma
 en dzumlo
 en dzupoi
 en dzusoi
@@ -23758,6 +23759,7 @@ en xelvet
 en xelvetik
 en xelveto
 en xendo
+en xenmu
 en xenru
 en xe'o
 en xermeti
@@ -23848,6 +23850,7 @@ en xlarafsrejvo
 en xlarai
 en xlatce
 en xlati'a
+en xlatra
 en xlatsu'aci
 en xle'edi
 en xlesterole
@@ -23949,6 +23952,7 @@ en xubrnre'u
 en xubrnrumeksa
 en xudvu
 en xu'e
+en xugri
 en xu'icmu
 en xukfuri
 en xukmi
