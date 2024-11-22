@@ -10006,6 +10006,7 @@ en cnegau
 en cnei'i
 en cnemu
 en cneparbi
+en cnible
 en cnici
 en cnicni
 en cnicro
@@ -10034,6 +10035,7 @@ en cnisku
 en cnita
 en cnita'u
 en cnitcini
+en cnitsa
 en cniva'u
 en cnivelmikce
 en cnixai
@@ -17061,6 +17063,7 @@ en nindode
 en ninfesyborpli
 en ninga'igau
 en ningau
+en ninja
 en ninke'u
 en ninmu
 en ninmu'o
@@ -21434,6 +21437,7 @@ en tadjycu'a
 en tadjytcini
 en tadni
 en tadyseljibri
+en tadzgi
 en ta'e
 en ta'ei
 en ta'einai
@@ -24681,7 +24685,6 @@ ja muvycpu
 ja nanbi'e
 ja nauspe
 ja nimspe
-ja ninja
 ja nunka'okujbriju
 ja pajnjalge
 ja pajnyjalge
