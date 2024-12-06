@@ -18881,6 +18881,8 @@ en rilsletei
 en rilti
 en rimni
 en rinci
+en rincyju'e
+en rincykabri
 en rindo
 en ringei
 en rinju
@@ -22236,6 +22238,7 @@ en to'i
 en toi
 en toi'e
 en toi'o
+en to'itci
 en tokmeki
 en toknoma
 en toknu
