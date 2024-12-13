@@ -1,6 +1,6 @@
 # xlasisku
 
-can be visited [here](https://berrymot.github.io/xlasisku)
+can be visited [here](https://mi2ebi.github.io/xlasisku)
 
 ## credits
 
