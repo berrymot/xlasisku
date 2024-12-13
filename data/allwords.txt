@@ -10472,6 +10472,7 @@ en dalsauia
 en dalske
 en daltrixe
 en daltsi
+en daltsivi'i
 en damba
 en damfri
 en damri
@@ -18003,6 +18004,7 @@ en pinpau
 en pinpaudu'i
 en pinpedi
 en pinplin
+en pinselba'e
 en pinseljupso'a
 en pinsi
 en pinsi'a
