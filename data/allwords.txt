@@ -8887,6 +8887,7 @@ en bukcilta
 en bukfa'u
 en bukfe'a
 en buklolgai
+en bukmapra
 en bukmra
 en bukmu'a
 en bukprgingamu
@@ -11152,6 +11153,7 @@ en dukri'a
 en dukse
 en dukseni
 en dukti
+en dulnu
 en dulrkaramela
 en dulrtsau
 en dumdu'o
@@ -13443,9 +13445,11 @@ en jek zei uanta
 en jelbo'i
 en jelca
 en jelgau
+en jeljupmi'i
 en jelka'e
 en jelnanba
 en jelspo
+en jeltoknu
 en jemja'a
 en jemna
 en jemnrsapfiro
@@ -21618,6 +21622,7 @@ en tcaci
 en tcacpi
 en tcadu
 en tcaika
+en tcaka
 en tcakali
 en tcakamni
 en tcamoru
@@ -23955,6 +23960,7 @@ en xubrnrumeksa
 en xudvu
 en xu'e
 en xugri
+en xu'i
 en xu'icmu
 en xukfuri
 en xukmi
