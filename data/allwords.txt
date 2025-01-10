@@ -9156,6 +9156,7 @@ en carvrama'ecarce
 en carvyrictu'a
 en casnce
 en casnu
+en catcku
 en catke
 en catke zei uidje
 en catlpero
@@ -16731,6 +16732,7 @@ en naldu'e
 en nalfadni
 en nalfau
 en nalfi
+en nalfo
 en nalgundei
 en nalju'i
 en nalju'ikei
@@ -18880,8 +18882,10 @@ en rilsletei
 en rilti
 en rimni
 en rinci
+en rincyca'o
 en rincyju'e
 en rincykabri
+en rincytu'u
 en rindo
 en ringei
 en rinju
