@@ -1,4 +1,4 @@
-use latkerlo_jvotci::*;
+use latkerlo_jvotci::{get_veljvo, rafsi};
 use notoize::NotoizeClient;
 use regex::Regex;
 use reqwest::blocking;
@@ -43,7 +43,7 @@ impl Entry {
         }
     }
     fn to_datastring(&self) -> String {
-        let mut s = self.word.to_owned();
+        let mut s = self.word.clone();
         // regex replacements
         s = PAUSE.replace_all(&s, "_").to_string();
         s = TRIM.replace_all(&s, "").to_string();
@@ -246,7 +246,7 @@ fn main() {
                             .get(entry.word.as_str())
                             .unwrap_or(&vec![])
                             .iter()
-                            .map(|r| r.to_string())
+                            .map(ToString::to_string)
                             .collect();
                         words.push(entry.clone());
                     }
@@ -294,7 +294,7 @@ fn main() {
     println!("characters");
     let chars: String = {
         let mut v = data.chars().collect::<Vec<char>>();
-        v.sort();
+        v.sort_unstable();
         v.dedup();
         v.into_iter().collect()
     };
