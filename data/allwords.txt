@@ -10764,6 +10764,8 @@ en densrumikce
 en denstela
 en denterjo'e
 en denxi'u
+en denzalgomboi
+en denzalgomja
 en denzalvi
 en de'o
 en de'oi
@@ -11362,6 +11364,7 @@ en entropi
 en entuzi
 en enva
 en envaxire
+en enxoiurodni
 en enzasti
 en enzebra
 en enzima
@@ -12057,6 +12060,7 @@ en ga'avro
 en gacri
 en gacybo'i
 en gacydunja
+en gacyjau
 en gadri
 en ga'e
 en ga'ei
@@ -12377,6 +12381,7 @@ en goilka'i
 en go'ira'o
 en golfyjvi
 en gombesa
+en gomja
 en gomsi
 en gomsika
 en gonai
@@ -12816,6 +12821,7 @@ en gurmu'a
 en gurmu'u
 en gurni
 en gurnrbulguru
+en gurnrfagopirumu
 en gurnrtefi
 en gusfarborcne
 en guska
@@ -13807,6 +13813,7 @@ en jongau
 en jonpoi
 en jonse
 en jonsimgau
+en jonsimje'a
 en jonsi'u
 en jonsnu
 en jonsumji
@@ -17984,6 +17991,7 @@ en pincyvi'itcuga'e
 en pindi
 en pinflani
 en pinfu
+en pingau
 en Pingo
 en pinji
 en pinjyca'a
@@ -18003,6 +18011,7 @@ en pinpau
 en pinpaudu'i
 en pinpedi
 en pinplin
+en pinpu'i
 en pinselba'e
 en pinseljupso'a
 en pinsi
@@ -18478,6 +18487,7 @@ en ra'irzunsna
 en ra,isas
 en ra'isna
 en rajbi'o
+en rajgau
 en rajgreke'a
 en rajnacmei
 en rajroksfe
@@ -18486,6 +18496,7 @@ en rajyclamau
 en rajyclarai
 en rajypau
 en rajypaudu'i
+en rajypu'i
 en rajyserti
 en rakci'a
 en rakcro
@@ -19089,6 +19100,7 @@ en rucyca'a
 en rucyzu'e
 en ru'e
 en ru'ei
+en rufple
 en rufsfe
 en rufsu
 en rufta'u
@@ -19348,6 +19360,7 @@ en sa'angu
 en sa'au
 en sabis
 en sabji
+en sabmi'i
 en sabnu
 en sacki
 en sackycmu
@@ -20682,6 +20695,8 @@ en sobyxinmo
 en socku'a
 en socni
 en socnrpanrnji'akobi
+en sodgau
+en sodjau
 en sodna
 en sodnlrubidi
 en sodnrcesi
@@ -20689,6 +20704,7 @@ en sodnrfransi
 en sodnrkali
 en sodnrlito
 en sodnysodna
+en sodri'a
 en sodva
 en so'e
 en so'e'a
@@ -21517,6 +21533,7 @@ en tamji
 en tamjycausmani
 en tamle
 en tamne
+en tamseingu
 en tamsmi
 en tamtigypre
 en tamxri
@@ -22187,6 +22204,7 @@ en tirxyjvecinfo
 en tirxyxi'a
 en tisna
 en tisycanti
+en tisydakli
 en titla
 en titnanba
 en titselsai
@@ -22966,6 +22984,8 @@ en varbasygauca'a
 en varboi
 en varcavas
 en varganu
+en varjau
+en varjaumi'i
 en varkiclaflo'i
 en varmebri
 en varmuvgau
@@ -23974,6 +23994,7 @@ en xuksle
 en xulbuktci
 en xulbu'u
 en xulgani
+en xulgau
 en xulta
 en xumbe
 en xumjimcelxa'i
