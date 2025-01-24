@@ -8734,6 +8734,7 @@ en bonjarple
 en bonmaksi
 en bonsaie
 en bonsfe
+en bonta
 en bo'o
 en bo'oi
 en bordelo
@@ -12098,6 +12099,7 @@ en galkla
 en galmu'u
 en galprurci
 en galraipau
+en galsinma'e
 en galto'a
 en galtu
 en galtupcra
@@ -14663,6 +14665,7 @@ en klupau
 en klupe
 en klura'a
 en kluske
+en klusni
 en kluza
 en kluzei
 en kmir
@@ -14819,13 +14822,16 @@ en kreiva
 en kreivi
 en krekalsa
 en krelu'i
+en krelumxu'i
 en kre'ole
 en kreplini
 en kresi'e
+en kresudyca'a
 en krevelylu'i
 en kreveta
 en krevi'u
 en krevi'udakfu
+en krexulxu'i
 en kricetu
 en krici
 en kricili
@@ -15105,6 +15111,8 @@ en la'edi'u
 en la'ei
 en la'erji'i
 en la'erlai
+en lafca'a
+en lafma'e
 en lafmi'i
 en lafmuvgau
 en lafre'e
@@ -15573,6 +15581,7 @@ en lumku'a
 en lumpatxu
 en lumpu'o
 en lumtansi
+en lumxu'i
 en lunbe
 en lunmes
 en lunra
@@ -18384,6 +18393,7 @@ en pulce
 en pulji
 en pulmeduza
 en pulni
+en pumbli
 en pumlumci
 en pumvau
 en punckabu
@@ -20664,13 +20674,16 @@ en snigau
 en sniju
 en snile'u
 en snime
+en snimyma'a
 en snipa
 en snipeitcini
 en snisimsumji
 en snisku
+en snisna
 en snitatu
 en snitc
 en sniuenzi
+en snixra
 en snocanci
 en snomabru
 en snomau
@@ -21466,13 +21479,17 @@ en ta'enai
 en ta'erda
 en tafkemlumxu'i
 en tafkemvelylumxu'i
+en taflu'imi'i
 en taflumca'a
+en taflumxu'i
 en tafrcemize
 en tafrdulbande
 en tafrjerzi
 en tafrkardiga
 en tafrkimono
+en tafsudmi'i
 en taftcaci
+en tafxulca'a
 en tafydi'o
 en tafyfe'a
 en tafygenxu
@@ -23939,6 +23956,7 @@ en xrani
 en xrapoi
 en xrarucyca'a
 en xraselci'a
+en xrasni
 en xratai
 en xrebau
 en xrejvejdikybau
@@ -24010,6 +24028,7 @@ en xumrvanila
 en xumske
 en xumsle
 en xumsne
+en xumspi
 en xumsutri'a
 en xumtau
 en xumymelmydi'e
@@ -24152,6 +24171,7 @@ en zargu
 en zasmo'isro
 en zasnce
 en zasni
+en zasrirni
 en zasti
 en zastru
 en zasxa'u

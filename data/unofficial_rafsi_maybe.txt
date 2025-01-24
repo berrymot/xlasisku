@@ -114,7 +114,7 @@ $x_1$ is a rhythmic conjugation of word $x_2$, rhyming with word $x_3$ in langua
 -n
 This word refers to the uncommon practice of changing the last vowel of a brivla in order to have it rhyme with surrounding words in its spoken context.  This can only be done to gismu and lujvo ending in 5-letter rafsi. x2 should be the orthodox spelling of x1.  Use "{me'o} [vowel]" to describe x5. This word is a {se} {gimrafrimni}, and has the four rhythmic conjugations "{gimrafrimna}", "gimrafrimne", "gimrafrimno", and "gimrafrimnu".  See also {rimni} {abu} {ebu} {ibu} {obu} {ubu}.
 ---
-gomja gismu janbe 2 (en)
+gomja gismu janbe 3 (en)
 $x_1$ is a gum/resin/glue of composition $x_2$; $x_1$ is gummy/chewy/glutinous
 -n
 See also {viknu}, {snipa}, {pruni}. Proposed rafsi -gom-
