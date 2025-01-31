@@ -10055,6 +10055,7 @@ en co'arbi'o
 en co'asku
 en co'au'a
 en co'au'e
+en cocybau
 en cocyborcidytse
 en cocyci'ekei
 en co'e
@@ -15210,6 +15211,7 @@ en lastu
 en la su'oda
 en lasybo'i
 en lasydakli
+en latci
 en latcmo
 en latcribe
 en latfekspa
@@ -23761,6 +23763,7 @@ en xe'ei
 en xe'enai
 en xe'e'o
 en xe'e'u
+en xe'i
 en xei
 en xei'a
 en xei'e
