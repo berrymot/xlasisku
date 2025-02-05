@@ -12,6 +12,7 @@
         <script defer src="temml/dist/temml.min.js"></script>
         <script defer src="temml/contrib/auto-render/dist/auto-render.min.js"></script>
         <script defer src="latkerlo-jvotci/js/docs/data.js"></script>
+        <script defer src="latkerlo-jvotci/js/docs/exceptions.js"></script>
         <script defer src="latkerlo-jvotci/js/docs/rafsi.js"></script>
         <script defer src="latkerlo-jvotci/js/docs/tarmi.js"></script>
         <script defer src="latkerlo-jvotci/js/docs/tools.js"></script>
@@ -20,7 +21,7 @@
     </head>
     <body id="main">
         <h1>la xlasisku</h1>
-        <p class="sub"><a href="https://github.com/berrymot/xlasisku" target="_blank">github repo</a></p>
+        <p class="sub"><a href="https://github.com/mi2ebi/xlasisku" target="_blank">github repo</a></p>
         <p>
             <span class="nobr opt">
                 <button id="sm" disabled>normal</button><button id="xm" disabled>regex</button><button id="rm" disabled>rhyme</button>
@@ -104,12 +105,12 @@
                 var vars = "?";
                 if (q)
                     vars += "&q=" + encodeURIComponent(q);
-                if (config["rhyme"])
-                    vars += "&rhyme=" + (config["rhyme.ignorey"] ? "y" : "");
-                else if (config["regex"]) {
+                if (config.rhyme.on)
+                    vars += "&rhyme=" + (config.rhyme.ignorey ? "y" : "");
+                else if (config.regex.on) {
                     var options = [];
-                    if (config["regex.insensitive"]) options.push("i");
-                    if (config["regex.tight"]) options.push("tight");
+                    if (config.regex.i) options.push("i");
+                    if (config.regex.tight) options.push("tight");
                     vars += "&regex=" + options.join(",");
                 } else {
                     vars += jvoptionsUrl();

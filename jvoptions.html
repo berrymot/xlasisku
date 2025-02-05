@@ -36,12 +36,12 @@
             kumzda or ku'azda &larr; kumfa zdani
         </blockquote>
         <h1>lujvo that aren't</h1>
-        <p>here are the words marked as lujvo in jvs that are invalid per latkerlo-jvotci. most of these are zvejvo, as the zi'evlupdate has yet to be released.</p>
+        <p>here are the words marked as lujvo in jvs that are invalid per latkerlo-jvotci.</p>
         <ul id="naljvo"></ul>
         <script src="data/naljvo.js"></script>
         <script>
             if (localStorage.getItem("theme") == "dark") document.documentElement.classList.add("dark");
-            document.getElementById("naljvo").innerHTML = naljvo.map((x) => "<li>" + x + "</li>").join("");
+            document.getElementById("naljvo").innerHTML = (naljvo.length ? naljvo : ["there aren't any!"]).map((x) => "<li>" + x + "</li>").join("");
         </script>
     </body>
 </html>

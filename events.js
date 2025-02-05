@@ -1,5 +1,5 @@
 var worker = {"postMessage": function(a) {}}; // very hack
-var config = {};
+var config = {lujvo:{}, rhyme:{}, regex:{}};
 let page;
 var q = "";
 var results;
@@ -20,9 +20,9 @@ function getConflictRegex(g) {
             .replace(/[mn]/, "[mn]")
             + (g.slice(i + 1, conflict.length) || "")
         :
-            i == conflict.length - 1 ? g.slice(0, i) + "[aeiou]" : null;
+            i == conflict.length - 1 ? g.slice(0, i) + "[aeiou]" : "";
     }
-    conflict = conflict.join("|").replace(/\|+/, "|");
+    conflict = conflict.join("|").replace(/\|+/g, "|");
     return conflict;
 }
 window.addEventListener("scroll", function(e) {
@@ -52,18 +52,18 @@ id("search").addEventListener("input", function() {
     } else {
         removeClassById("clear-wrap", "show");
     }
-    if (!config["regex"]) q = q.trim();
+    if (!config.regex.on) q = q.trim();
     results = null;
     clearResults();
     redirect();
     timer = setTimeout(function() {
         if (q.length) {
             id("bottom").innerHTML = "loading...";
-            if (!config["rhyme"] && !config["regex"]) {
+            if (!config.rhyme.on && !config.regex.on) {
                 // lujvo things
                 try {
                     if (/\s/.test(q)) {
-                        const lujvo = getLujvo(h(q), config["lujvo.cmevla"])[0];
+                        const lujvo = getLujvo(h(q), {generateCmevla: config.lujvo.cmevla});
                         id("info").append(createHTMLElement("p", null, [
                             "→\u{a0}",
                             createHTMLElement("a", {"href": "?q=" + encodeURIComponent(lujvo) + jvoptionsUrl()}, [createHTMLElement("i", null, [lujvo])])
@@ -74,20 +74,27 @@ id("search").addEventListener("input", function() {
                             "↑\u{a0}",
                             createHTMLElement("a", {"href": "?q=" + encodeURIComponent(veljvo) + jvoptionsUrl()}, [createHTMLElement("i", null, [veljvo])])
                         ]));
-                        if (h(q) != getLujvo(veljvo, config["lujvo.cmevla"])[0]) {
+                        let the = getLujvo(veljvo, {generateCmevla: config.lujvo.cmevla});
+                        if (h(q) != the) {
                             id("info").append(createHTMLElement("p", null, [
                                 "best:\u{a0}",
                                 createHTMLElement("a", {
                                     "id": "best",
-                                    "href": "?q=" + encodeURIComponent(getLujvo(veljvo, config["lujvo.cmevla"])[0]) + jvoptionsUrl()
+                                    "href": "?q=" + encodeURIComponent(the) + jvoptionsUrl()
                                 }, [])
                             ]));
-                            const mabla = jvokaha(h(q));
-                            const best = jvokaha(getLujvo(veljvo, config["lujvo.cmevla"])[0]);
+                            const best = analyseBrivla(the)[1];
+                            const mabla = analyseBrivla(h(q))[1];
                             const hyphens = ["r", "n", "y", "'y", "y'", "'y'"];
                             for (var m = 0, b = 0; m < mabla.length; m++, b++) {
                                 if (hyphens.includes(mabla[m])) {
                                     if (!hyphens.includes(best[b])) {
+                                        if (
+                                            best[b] == mabla[m + 1] &&
+                                            !id("best").children[id("best").children.length - 1].classList.contains("err")
+                                        ) {
+                                            id("best").append(createHTMLElement("i", {"className": "err"}, ["͜"]))
+                                        }
                                         m++;
                                     } else if (hyphens.includes(best[b]) && mabla[m] == best[b]) {
                                         id("best").append(createHTMLElement("i", null, [best[b]]));
@@ -112,7 +119,7 @@ id("search").addEventListener("input", function() {
                         createHTMLElement("a", {"href": "?q=" + encodeURIComponent(getConflictRegex(q)) + "&regex=tight"}, ["↑ find gismu conflicts?"])
                     ]));
                 }
-            } else if (config["regex"]) {
+            } else if (config.regex.on) {
                 // bad regex
                 try {
                     _ = new RegExp(q);
@@ -136,7 +143,7 @@ id("jvo-cme").addEventListener("click", function() {
     searchMode(true);
 });
 id("jvo-x").addEventListener("click", function() {
-    searchMode(config["lujvo.cmevla"]);
+    searchMode(config.lujvo.cmevla);
 });
 id("rm").addEventListener("click", function() {
     rhymeMode(false);
@@ -181,13 +188,13 @@ function searchMode(togglecme) {
     removeClassById("rm", "checked");
     removeClassById("xm", "checked");
     addClassById("sm", "checked");
-    config["rhyme"] = false;
-    config["regex"] = false;
+    config.rhyme.on = false;
+    config.regex.on = false;
     if (togglecme) {
         toggleClassById("jvo-cme", "checked");
-        config["lujvo.cmevla"] = !config["lujvo.cmevla"];
+        config.lujvo.cmevla = !config.lujvo.cmevla;
     }
-    id("jvo-x").disabled = !(config["lujvo.cmevla"]); // will expand later
+    id("jvo-x").disabled = !(config.lujvo.cmevla); // will expand later
     dispatchSearchInputEvent();
 }
 function regexMode(togglei, toggletight) {
@@ -197,15 +204,15 @@ function regexMode(togglei, toggletight) {
     removeClassById("sm", "checked");
     removeClassById("rm", "checked");
     addClassById("xm", "checked");
-    config["rhyme"] = false;
-    config["regex"] = true;
+    config.rhyme.on = false;
+    config.regex.on = true;
     if (togglei) {
         toggleClassById("regex-i", "checked");
-        config["regex.insensitive"] = !config["regex.insensitive"];
+        config.regex.i = !config.regex.i;
     }
     if (toggletight) {
         toggleClassById("regex-tight", "checked");
-        config["regex.tight"] = !config["regex.tight"];
+        config.regex.tight = !config.regex.tight;
     }
     dispatchSearchInputEvent();
 }
@@ -216,11 +223,11 @@ function rhymeMode(toggle) {
     removeClassById("sm", "checked");
     removeClassById("xm", "checked");
     addClassById("rm", "checked");
-    config["rhyme"] = true;
-    config["regex"] = false;
+    config.rhyme.on = true;
+    config.regex.on = false;
     if (toggle) {
         toggleClassById("rhyme-y", "checked");
-        config["rhyme.ignorey"] = !config["rhyme.ignorey"];
+        config.rhyme.ignorey = !config.rhyme.ignorey;
     }
     dispatchSearchInputEvent();
 }

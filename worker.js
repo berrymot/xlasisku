@@ -25,7 +25,7 @@ function getVowelsFrom(str) {
         .replace(/i(?![aeiouyīū])/gu, "ī").replace(/u(?![aeiouyīū])/gu, "ū")
         .replace(/i(?=[aeoyīū])/gu, "ị").replace(/u(?=[aeīoūy])/gu, "ụ");
     }
-    if (config["rhyme.ignorey"])
+    if (config.rhyme.ignorey)
         vowels = vowels.replace(/[^aeiouĭŭīūịụ]/gu, "");
     else
         vowels = vowels.replace(/[^aeiouyĭŭīūịụ]/gu, "");
@@ -36,11 +36,11 @@ function xusegismu_zo(g) {
 }
 function search(query) {
     const original = query;
-    if (!config["regex"]) {
+    if (!config.regex.on) {
         query = query.toLowerCase();
     }
     var results = [];
-    if (config["rhyme"]) {
+    if (config.rhyme.on) {
         const v = getVowelsFrom(query);
         for (const entry of jbo) {
             var text = getVowelsFrom(entry.word);
@@ -48,12 +48,12 @@ function search(query) {
                 results.push([entry, v.length - text.length]);
             }
         }
-    } else if (config["regex"]) {
+    } else if (config.regex.on) {
         var rgx;
         try {
             rgx = new RegExp(
-                config["regex.tight"] ? "^(" + query + ")$" : query,
-                config["regex.insensitive"] ? "i" : ""
+                config.regex.tight ? "^(" + query + ")$" : query,
+                config.regex.i ? "i" : ""
             );
         } catch (e) {
             return [];
@@ -96,7 +96,7 @@ function search(query) {
         }
         for (const entry of jbo) {
             const bonus = (entry.score >= 1000 ? 0.375 : 0) + (xusegismu_zo(entry.word) ? 0.125 : 0);
-            if (RAFSI.get(entry.word) && RAFSI.get(entry.word).includes(h(query))) {
+            if (RAFSI_LIST.get(entry.word) && RAFSI_LIST.get(entry.word).includes(h(query))) {
                 results.push([entry, 4]);
             }
             const rgx = query.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");

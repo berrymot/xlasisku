@@ -1,4 +1,4 @@
-use latkerlo_jvotci::{get_veljvo, rafsi};
+use latkerlo_jvotci::{get_veljvo, rafsi, Settings};
 use notoize::NotoizeClient;
 use regex::Regex;
 use reqwest::blocking;
@@ -70,6 +70,7 @@ impl Entry {
     }
 }
 
+#[allow(clippy::too_many_lines)]
 fn main() {
     let start = Instant::now();
     // parse the xml
@@ -192,7 +193,7 @@ fn main() {
                                 entry.pos = attr(&attributes, "type");
                                 skip = false;
                                 if attr(&attributes, "type").starts_with('l')
-                                    && get_veljvo(&entry.word).is_err()
+                                    && get_veljvo(&entry.word, &Settings::default()).is_err()
                                 {
                                     naljvo.push(entry.clone().word);
                                 }

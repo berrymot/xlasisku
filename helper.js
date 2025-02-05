@@ -12,20 +12,19 @@ function createHTMLElement(tag, props, children) {
 function jvoptionsUrl() {
     var vars = "";
     var options = [];
-    if (config["lujvo.cmevla"]) options.push("cme");
+    if (config.lujvo.cmevla) options.push("cme");
     if (options.length) vars += "&lujvo=" + options.join(",");
     return vars;
 }
 function isLujvo(s) {
     try {
-        jvokaha(s);
-        return true;
+        return ["LUJVO", "EXTENDED_LUJVO"].includes(analyseBrivla(s)[0])
     } catch (e) {
         return false;
     }
 }
 function convertJSONToHTMLElement(json) {
-    const r = RAFSI.get(json.word) ?? [];
+    const r = RAFSI_LIST.get(json.word) ?? [];
     const entry = createHTMLElement("div", {"className": "entry"}, [
         createHTMLElement("p", null, [
             createHTMLElement("a", {

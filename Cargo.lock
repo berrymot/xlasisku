@@ -257,9 +257,9 @@ dependencies = [
 
 [[package]]
 name = "hashbrown"
-version = "0.14.3"
+version = "0.15.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "290f1a1d9242c78d09ce40a5e87e7554ee637af1351968159f4952f028f75604"
+checksum = "bf151400ff0baff5465007dd2f3e717f3fe502074ca563069ce3a6629d07b289"
 
 [[package]]
 name = "http"
@@ -344,9 +344,9 @@ dependencies = [
 
 [[package]]
 name = "indexmap"
-version = "2.2.6"
+version = "2.7.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "168fb715dda47215e360912c096649d23d58bf392ac62f73919e831745e40f26"
+checksum = "62f822373a4fe84d4bb149bf54e584a7f4abec90e072ed49cda0edea5b95471f"
 dependencies = [
  "equivalent",
  "hashbrown",
@@ -368,6 +368,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "itertools"
+version = "0.13.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "413ee7dfc52ee1a4949ceeb7dbc8a33f2d6c088194d9f922fb8318faf1f01186"
+dependencies = [
+ "either",
+]
+
+[[package]]
 name = "itoa"
 version = "1.0.11"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -384,11 +393,12 @@ dependencies = [
 
 [[package]]
 name = "latkerlo-jvotci"
-version = "1.0.9"
+version = "2.0.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a31cc628c49166f6b30d49d04a685c2288650bea7870d1ca5a3ea98c9308d4dc"
+checksum = "b374cf9773d3f3e6cbeb4366c9e9fd976057b4332af5fdb21eadba1f8452266d"
 dependencies = [
- "lazy_static",
+ "indexmap",
+ "itertools 0.13.0",
  "regex",
 ]
 
@@ -473,7 +483,7 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "1963e385e883cc78573015646c86136d35bab0d6632e5306c9fc246fbc4a8b5e"
 dependencies = [
  "gh-file-curler",
- "itertools",
+ "itertools 0.12.1",
  "serde",
  "serde_json",
 ]
