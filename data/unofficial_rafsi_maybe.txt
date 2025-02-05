@@ -114,6 +114,11 @@ $x_1$ is a rhythmic conjugation of word $x_2$, rhyming with word $x_3$ in langua
 -n
 This word refers to the uncommon practice of changing the last vowel of a brivla in order to have it rhyme with surrounding words in its spoken context.  This can only be done to gismu and lujvo ending in 5-letter rafsi. x2 should be the orthodox spelling of x1.  Use "{me'o} [vowel]" to describe x5. This word is a {se} {gimrafrimni}, and has the four rhythmic conjugations "{gimrafrimna}", "gimrafrimne", "gimrafrimno", and "gimrafrimnu".  See also {rimni} {abu} {ebu} {ibu} {obu} {ubu}.
 ---
+gomja gismu janbe 3 (en)
+$x_1$ is a gum/resin/glue of composition $x_2$; $x_1$ is gummy/chewy/glutinous
+-n
+See also {viknu}, {snipa}, {pruni}. Proposed rafsi -gom-
+---
 grafnseljimca fu'ivla krtisfranks 1 (en)
 $x_1$ is a tree graph on nodes $x_2$ (set of points), with edges $x_3$ (set of ordered or unordered 2-tuples), with additional properties $x_4$.
 -n
@@ -379,7 +384,7 @@ $x_1$ reflects Toki Pona culture/nationality/language in aspect $x_2$
 -n
 Completely equivalent to "{tokpona}", including in rafsi; however, this is okay due to a proposed equivalence of zi'evla under exchange of final vowel string/cluster. This word maintains the general pattern that cultural valsi end with "-o".
 ---
-tonsi gismu lalxu 4 (en)
+tonsi gismu lalxu 5 (en)
 $x_1$ is transgender / nonbinary / gender-non-conforming
 -n
 See also {trangeni}, {lingeni}. Proposed rafsi -tos-.

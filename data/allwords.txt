@@ -8734,6 +8734,7 @@ en bonjarple
 en bonmaksi
 en bonsaie
 en bonsfe
+en bonta
 en bo'o
 en bo'oi
 en bordelo
@@ -10054,6 +10055,7 @@ en co'arbi'o
 en co'asku
 en co'au'a
 en co'au'e
+en cocybau
 en cocyborcidytse
 en cocyci'ekei
 en co'e
@@ -10764,6 +10766,8 @@ en densrumikce
 en denstela
 en denterjo'e
 en denxi'u
+en denzalgomboi
+en denzalgomja
 en denzalvi
 en de'o
 en de'oi
@@ -11362,6 +11366,7 @@ en entropi
 en entuzi
 en enva
 en envaxire
+en enxoiurodni
 en enzasti
 en enzebra
 en enzima
@@ -12057,6 +12062,7 @@ en ga'avro
 en gacri
 en gacybo'i
 en gacydunja
+en gacyjau
 en gadri
 en ga'e
 en ga'ei
@@ -12094,6 +12100,7 @@ en galkla
 en galmu'u
 en galprurci
 en galraipau
+en galsinma'e
 en galto'a
 en galtu
 en galtupcra
@@ -12377,6 +12384,7 @@ en goilka'i
 en go'ira'o
 en golfyjvi
 en gombesa
+en gomja
 en gomsi
 en gomsika
 en gonai
@@ -12816,6 +12824,7 @@ en gurmu'a
 en gurmu'u
 en gurni
 en gurnrbulguru
+en gurnrfagopirumu
 en gurnrtefi
 en gusfarborcne
 en guska
@@ -13807,6 +13816,7 @@ en jongau
 en jonpoi
 en jonse
 en jonsimgau
+en jonsimje'a
 en jonsi'u
 en jonsnu
 en jonsumji
@@ -14656,6 +14666,7 @@ en klupau
 en klupe
 en klura'a
 en kluske
+en klusni
 en kluza
 en kluzei
 en kmir
@@ -14812,13 +14823,16 @@ en kreiva
 en kreivi
 en krekalsa
 en krelu'i
+en krelumxu'i
 en kre'ole
 en kreplini
 en kresi'e
+en kresudyca'a
 en krevelylu'i
 en kreveta
 en krevi'u
 en krevi'udakfu
+en krexulxu'i
 en kricetu
 en krici
 en kricili
@@ -15098,6 +15112,8 @@ en la'edi'u
 en la'ei
 en la'erji'i
 en la'erlai
+en lafca'a
+en lafma'e
 en lafmi'i
 en lafmuvgau
 en lafre'e
@@ -15195,6 +15211,7 @@ en lastu
 en la su'oda
 en lasybo'i
 en lasydakli
+en latci
 en latcmo
 en latcribe
 en latfekspa
@@ -15566,6 +15583,7 @@ en lumku'a
 en lumpatxu
 en lumpu'o
 en lumtansi
+en lumxu'i
 en lunbe
 en lunmes
 en lunra
@@ -17984,6 +18002,7 @@ en pincyvi'itcuga'e
 en pindi
 en pinflani
 en pinfu
+en pingau
 en Pingo
 en pinji
 en pinjyca'a
@@ -18003,6 +18022,7 @@ en pinpau
 en pinpaudu'i
 en pinpedi
 en pinplin
+en pinpu'i
 en pinselba'e
 en pinseljupso'a
 en pinsi
@@ -18375,6 +18395,7 @@ en pulce
 en pulji
 en pulmeduza
 en pulni
+en pumbli
 en pumlumci
 en pumvau
 en punckabu
@@ -18478,6 +18499,7 @@ en ra'irzunsna
 en ra,isas
 en ra'isna
 en rajbi'o
+en rajgau
 en rajgreke'a
 en rajnacmei
 en rajroksfe
@@ -18486,6 +18508,7 @@ en rajyclamau
 en rajyclarai
 en rajypau
 en rajypaudu'i
+en rajypu'i
 en rajyserti
 en rakci'a
 en rakcro
@@ -19089,6 +19112,7 @@ en rucyca'a
 en rucyzu'e
 en ru'e
 en ru'ei
+en rufple
 en rufsfe
 en rufsu
 en rufta'u
@@ -19348,6 +19372,7 @@ en sa'angu
 en sa'au
 en sabis
 en sabji
+en sabmi'i
 en sabnu
 en sacki
 en sackycmu
@@ -20651,13 +20676,16 @@ en snigau
 en sniju
 en snile'u
 en snime
+en snimyma'a
 en snipa
 en snipeitcini
 en snisimsumji
 en snisku
+en snisna
 en snitatu
 en snitc
 en sniuenzi
+en snixra
 en snocanci
 en snomabru
 en snomau
@@ -20682,6 +20710,8 @@ en sobyxinmo
 en socku'a
 en socni
 en socnrpanrnji'akobi
+en sodgau
+en sodjau
 en sodna
 en sodnlrubidi
 en sodnrcesi
@@ -20689,6 +20719,7 @@ en sodnrfransi
 en sodnrkali
 en sodnrlito
 en sodnysodna
+en sodri'a
 en sodva
 en so'e
 en so'e'a
@@ -21450,13 +21481,17 @@ en ta'enai
 en ta'erda
 en tafkemlumxu'i
 en tafkemvelylumxu'i
+en taflu'imi'i
 en taflumca'a
+en taflumxu'i
 en tafrcemize
 en tafrdulbande
 en tafrjerzi
 en tafrkardiga
 en tafrkimono
+en tafsudmi'i
 en taftcaci
+en tafxulca'a
 en tafydi'o
 en tafyfe'a
 en tafygenxu
@@ -21517,6 +21552,7 @@ en tamji
 en tamjycausmani
 en tamle
 en tamne
+en tamseingu
 en tamsmi
 en tamtigypre
 en tamxri
@@ -22187,6 +22223,7 @@ en tirxyjvecinfo
 en tirxyxi'a
 en tisna
 en tisycanti
+en tisydakli
 en titla
 en titnanba
 en titselsai
@@ -22966,6 +23003,8 @@ en varbasygauca'a
 en varboi
 en varcavas
 en varganu
+en varjau
+en varjaumi'i
 en varkiclaflo'i
 en varmebri
 en varmuvgau
@@ -23724,6 +23763,7 @@ en xe'ei
 en xe'enai
 en xe'e'o
 en xe'e'u
+en xe'i
 en xei
 en xei'a
 en xei'e
@@ -23919,6 +23959,7 @@ en xrani
 en xrapoi
 en xrarucyca'a
 en xraselci'a
+en xrasni
 en xratai
 en xrebau
 en xrejvejdikybau
@@ -23974,6 +24015,7 @@ en xuksle
 en xulbuktci
 en xulbu'u
 en xulgani
+en xulgau
 en xulta
 en xumbe
 en xumjimcelxa'i
@@ -23989,6 +24031,7 @@ en xumrvanila
 en xumske
 en xumsle
 en xumsne
+en xumspi
 en xumsutri'a
 en xumtau
 en xumymelmydi'e
@@ -24131,6 +24174,7 @@ en zargu
 en zasmo'isro
 en zasnce
 en zasni
+en zasrirni
 en zasti
 en zastru
 en zasxa'u
