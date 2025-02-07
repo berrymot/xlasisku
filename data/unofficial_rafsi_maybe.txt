@@ -144,11 +144,6 @@ $x_1=p_{1j}$ (object/person) seems pleasant to/pleases $x_2=p_2$ in property $x_
 -n
 This is the first defined lujvo using -jax-, the proposed rafsi for {jai}. See also {pluka}.
 ---
-jguna gismu janbe 2 (en)
-$x_1$ is an institution in society/culture $x_2$
--n
-Refers to significant cultural norms, practices, organizations, and other abstract notions like "the church", "the state", "the law" and so forth. Proposed rafsi -jgu-
----
 jisrxananase fu'ivla wuzzy -1 (en)
 $x_1$ is a quantitiy of pineapple juice made from pineapple/pineapples $x_2$.
 -n
@@ -284,11 +279,6 @@ $x_1$ possess/is permitted only the right to use $x_2$ (and possibly physically 
 -n
 This word is useful for ownership of a movie, or a rented house, or a do at work/school, among other things; one does not really own theset things, only the right to use them. One may or may not have the object in one's physical or immediate possession; the concept of what constitutes "having in one's physical possession" is left semantically ambiguous. Permanence of this status or authority over it is not specified. This word uses the experimental rafsi "-pov-" for the word {po'o}.
 ---
-pombo gismu janbe 3 (en)
-$x_1$ is unique in property $x_2$; $x_1$ is the only thing/all of the things that satisfy $x_2$
--n
-See also {po'o}, {olkai}, {pavdzakai}. Proposed rafsi -pom-
----
 rafme'e lujvo tijlan 0 (en)
 $c_1=r_1$ is a title of $c_2=r_2$ used by $c_3$.
 -n
@@ -384,11 +374,6 @@ $x_1$ reflects Toki Pona culture/nationality/language in aspect $x_2$
 -n
 Completely equivalent to "{tokpona}", including in rafsi; however, this is okay due to a proposed equivalence of zi'evla under exchange of final vowel string/cluster. This word maintains the general pattern that cultural valsi end with "-o".
 ---
-tonsi gismu lalxu 5 (en)
-$x_1$ is transgender / nonbinary / gender-non-conforming
--n
-See also {trangeni}, {lingeni}. Proposed rafsi -tos-.
----
 tunri'a lujvo djeikyb 1 (en)
 $x_1=r_1$ (nu) physically causes $x_2=t_1$ (object, usually pointed) to poke $x_3=t_2$ (experiencer) under conditions $x_4=r_3$
 -n
@@ -428,11 +413,6 @@ xaudbo fu'ivla krtisfranks 3 (en)
 $x_1$ is $\sqrt{A} = \sqrt{2*5}$ [decimal: $1\times10^{+(1/2)}$] of $x_2$ in dimension/aspect $x_3$ (default is units).
 -n
 This works as all other Metric prefixes do. In decimal, $10^{(1/2)}=\sqrt{(10)}=3.16227766\dots$ (also expressed/represented in decimal). In different bases, this value may change; for example, in hexadecimal, it might be exactly four ($4$); however, this is an outstanding as-of-yet unsolidified area in the Lojban grammar/semantics (do "{ki'o}" and Metric prefixes change according to the base?). This number is nice, as it is close to both 3 and and the circle constant pi ($\pi$) in decimal usage; these three values arise fairly frequently and a great trick in decimal Fermi estimation is to use their approximate identity in order to simplify expressions. Now, when the quantity is dimensionful (has units), if the mantissa approximates this value, then one can instead express the mantissa as approximately 1 and the unit as being augmented by this prefix. This word is also good for short-hand/quick expressions. This word has no English equivalent and is not part of the official set of SI prefixes, but it does generalize them. "{xaudbo}" = "{kamre} {li} {dau} {te'a} {fi'u} {re}" in decimal (if it generalizes for other bases, change "dau" into the base; in other words, "dau" generally becomes "pano" in such case, where the base is given by context). While this suggestion is not perfectly compatible with SI (which allows only one prefix at a time), the negative-power version of this ("kamre li dau te'a {ni'u} fi'u re", where "dau" has the aforementioned caveats; $1\times10^{-(1/2)}$) can just be expressed as a lujvo/rafsi/tanru containing both "{decti}" and this word (as veljvo/selrafsi/{seljavytertau}), because $A^{(-1/2)}=\sqrt{(1/A)}=A^{(+1/2)}/A$, and $A$ (ten in at least decimal) is the base. A "{xaudbydectre}" is a single unit which (in decimal) happens to approximate an imperial/U.S. customary foot (unit). See also: "{namcrgogolo}"/"{kamrngogolo}", "{kacmre}", "{zilkacmre}", "{kancu}", "{merli}", "{radno}", "{stero}", "{molro}", "{gradu}", "{centi}", "{decti}", "{dekto}", "{femti}", "{gigdo}", "{gocti}", "{gotro}", "{kilto}", "{megdo}", "{mikri}", "{milti}", "{nanvi}", "{petso}", "{picti}", "{terto}", "{xatsi}", "{xecto}", "{xexso}", "{zepti}", "{zetro}", "{kamre}", "{nulpa}".
----
-xekce gismu ractu 5 (en)
-$x_1$ acts Lojbanically cruel/pedantic toward $x_2$ in manner $x_3$ (ka)
--n
-Refers to a particular, infamous cultural phenomenon in the Lojban community wherein many conversations between speakers in or tangential to Lojban tend to very quickly devolve into an argument over grammar, semantics, or usage, with the result that it becomes difficult if not impossible to hold an ordinary conversation in the language on any subject in forums where this behavior is not explicitly discouraged. Originally a clipping of {xekcedipasopa}, i.e. "XKCD #191," in which R. Munroe observes that Lojban's utility as a means of expression is severely hampered by the fact that speaking it requires you to interact with "the kind of people who learn Lojban." Proposed rafsi -xec- and -xe'e-
 ---
 xekska lujvo zirenuovr 1 (en)
 $x_1$ is darkly colored with color $x_2$ [ka]

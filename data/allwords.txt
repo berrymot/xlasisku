@@ -8346,6 +8346,7 @@ en bei'e
 en bei'oi
 en beipre
 en beircarce
+en beirce'i
 en beitlaxum
 en beitrau
 en bei'u'i
@@ -10156,6 +10157,7 @@ en cravro
 en craxra
 en crebi'o
 en crecipra
+en crecli
 en crejibri
 en creka
 en crekafpra
@@ -12207,6 +12209,7 @@ en gekmau
 en geknimi
 en gekpanpi
 en gek zei uanta
+en gelga
 en gendra
 en genja
 en genjrdauko
@@ -15195,6 +15198,7 @@ en larcu
 en lardai
 en larfi'i
 en larja'ostu
+en larki
 en larkosmylarcu
 en larlarborterdau
 en larlei
@@ -18103,6 +18107,7 @@ en plantago
 en plargoni
 en plasema
 en plasimi
+en plaske
 en platano
 en platesa
 en platipu
@@ -20423,6 +20428,7 @@ en si'o ze'ei du'u
 en si'o ze'ei ka
 en si'o ze'ei nu
 en si'o ze'ei poi'i
+en sipfli
 en sipfru
 en sipkemdjusa'a
 en sipku'a
