@@ -30,6 +30,7 @@ en adverbu
 en adzau
 en a'e
 en a'ei
+en a'e'i'o'u
 en a'enai
 en a'enmo
 en afta
@@ -8864,6 +8865,7 @@ en bromeli
 en bronis
 en bropre
 en broralmalsi
+en bruci
 en brukobli
 en bruloni
 en brulu'i
@@ -18123,6 +18125,7 @@ en plekarni
 en pleke'atci
 en pleplolarcmaci
 en pleplolarcu
+en pleroma
 en plesigja
 en plesiio
 en pleta'e
@@ -20642,6 +20645,7 @@ en smudra
 en smudu'a
 en smudu'i
 en smudukti
+en smudu'o
 en smugau
 en smujbi
 en smujmi
@@ -21190,6 +21194,7 @@ en sputnike
 en sputu
 en sra'akpa
 en sradjine
+en srafanu
 en srai'a
 en sraji
 en sraku
