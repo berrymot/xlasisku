@@ -2163,6 +2163,7 @@ en-simple burna
 en-simple cabna
 en-simple cabra
 en-simple cacra
+en-simple cadga
 en-simple cadzu
 en-simple cafne
 en-simple cagna
@@ -3345,6 +3346,7 @@ en-simple turko
 en-simple turni
 en-simple tutci
 en-simple tutra
+en-simple tuvju
 en-simple upsi
 en-simple vacri
 en-simple vajni
@@ -5074,6 +5076,7 @@ es a'ucu'i
 es aucu'i
 es a'unai
 es aunai
+es avju
 es axlte
 es ba
 es ba'a
@@ -5775,6 +5778,7 @@ es goi
 es go'ira'o
 es gonai
 es go'o
+es gosymantodi
 es gotro
 es go'u
 es gradu
@@ -7147,6 +7151,7 @@ es stidi
 es stika
 es stizu
 es stodi
+es stomatopo
 es stuna
 es stura
 es stuzi
@@ -7356,6 +7361,7 @@ es turni
 es tutci
 es tutra
 es tu'u
+es tuvju
 es ty
 es u
 es u'a
@@ -22997,10 +23003,12 @@ sv zelmast
 sv zelplin
 sv zepti
 sv zetro
+test cadga
 test ci cipra
 test cipra
 test klama
 test testest
+test vlasisku
 tlh bevri
 tlh bi
 tlh bifce
@@ -23120,6 +23128,7 @@ zh ainmu
 zh alfabeta
 zh alkelna
 zh alzaitu
+zh amfizbai
 zh angeli
 zh angila
 zh a'o
@@ -23130,6 +23139,7 @@ zh asycy'i'is
 zh a'u
 zh au
 zh auskalerik
+zh avju
 zh babilon
 zh bacru
 zh badna
@@ -23525,11 +23535,13 @@ zh dzibili
 zh dzip
 zh dzipo
 zh edvenki
+zh embiiodi
 zh enge
 zh facki
 zh fadni
 zh fagri
 zh falnu
+zh famsatodi
 zh famti
 zh fancu
 zh fange
@@ -23548,6 +23560,7 @@ zh fatne
 zh fatri
 zh fau'u
 zh febvi
+zh feljoua
 zh femti
 zh fendi
 zh fengu
@@ -23565,6 +23578,7 @@ zh finpe
 zh finprkiprinu
 zh finti
 zh fi'orlabno
+zh fi'ormantodi
 zh firca
 zh flalu
 zh flani
@@ -23664,6 +23678,7 @@ zh guzme
 zh gy
 zh iasmatle
 zh iaves
+zh ibjau
 zh ieRUcaly'im
 zh ioldrumu
 zh island
@@ -23700,6 +23715,8 @@ zh jbini
 zh jboselkei
 zh jbovlaste
 zh jbuskami
+zh jdailu
+zh jdainla
 zh jdaio
 zh jdari
 zh jdice
@@ -24041,6 +24058,7 @@ zh merli
 zh mexno
 zh mi'abmoi
 zh mi'ai
+zh mi'anma
 zh mibmoi
 zh midju
 zh mifra
@@ -24089,6 +24107,7 @@ zh mribriju
 zh mrilu
 zh mruli
 zh mucti
+zh mudmbe
 zh mudri
 zh mukti
 zh mulno
@@ -24160,10 +24179,13 @@ zh nuzlo
 zh ny
 zh okrindi
 zh opfete
+zh opfetnrupeli
 zh osteraix
 zh otan
 zh OTa,uas
 zh pacna
+zh pacru'i
+zh pacru'ivi'u
 zh pacycrida
 zh pagbu
 zh pagre
@@ -24198,6 +24220,7 @@ zh paupna
 zh pekin
 zh pelglar
 zh pelji
+zh pelkani
 zh pelxu
 zh pemci
 zh penbi
@@ -24235,6 +24258,7 @@ zh plana
 zh plank
 zh platu
 zh pleji
+zh plekoptera
 zh plibu
 zh plini
 zh plipe
@@ -24302,6 +24326,7 @@ zh ra'oi
 zh rapli
 zh rarna
 zh ratcu
+zh ratma
 zh ratni
 zh rauxsa
 zh rebla
@@ -24342,6 +24367,7 @@ zh rotsu
 zh rozgu
 zh ruble
 zh rufsu
+zh rulmantodi
 zh rulrsolidago
 zh runme
 zh runta
@@ -24534,6 +24560,7 @@ zh stika
 zh stimuje
 zh stizu
 zh stodi
+zh stomatopo
 zh strutiio
 zh stuna
 zh stura
@@ -24562,7 +24589,6 @@ zh tadni
 zh tagji
 zh taibeis
 zh tai,UAN
-zh taivno
 zh taksi
 zh talsa
 zh tamca
@@ -24669,6 +24695,7 @@ zh turko
 zh turni
 zh tutci
 zh tutra
+zh tuvju
 zh tuvytaivno
 zh ty
 zh tyrontos
@@ -24781,6 +24808,7 @@ zh xonkon
 zh xorbo
 zh xotli
 zh xrabo
+zh xrakaini
 zh xrani
 zh xriso
 zh xrison
@@ -24794,6 +24822,7 @@ zh xuky'opfete
 zh xunlabno
 zh xunlo'u
 zh xunre
+zh xurbela
 zh xurdo
 zh xusra
 zh xutla
@@ -24834,6 +24863,7 @@ zh zirpu
 zh zivle
 zh zmadu
 zh zmiku
+zh zorpate
 zh zu
 zh zu'a
 zh zukte
